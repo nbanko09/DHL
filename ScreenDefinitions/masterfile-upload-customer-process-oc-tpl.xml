@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<propertyTemplate
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/template.xsd">
+
+	<labels default="en">
+		<locale name="en">
+		<label name="tbdBoolean1" value="NVOCC"/>
+		<label name="tbdBoolean2" value="Ocean Carrier"/>
+		<label name="forward" value="Submit"/>
+		<label name="group" value="Control Station"/>
+		</locale>
+	</labels>
+
+	<section name="doc" collapsible="false" collapsed="false">
+		<properties>
+			<textArea row="1" col="1-2" name="voucherComments" readonly="true" styleClass="comment"/> 
+			<textArea row="2" col="1-2" name="processInformation.comment" styleClass="comment"/> 
+			<output row="3" col="1-2" name="processInformation.previousComment" readonly="true" styleClass="comment" escapeXml="false"/>
+			<valueAlias row="4" col="1-2" name="processInformation.queueName" readonly="true"/>
+		</properties>
+		<actions>
+			<getNext name="next" readonly="true" showLabel="true" toLeft="true"/>
+			<rejectButton name="reject" readonly="false" isAnchored="false" hotKey="r"/>
+			<button name="forward" command="forward" readonly="false" docType="upload" type="submit" isAnchored="false" title="forwardTitle" styleClass="button70"/>
+			<button name="update" command="update" readonly="false" visible="true" type="submit" hotKey="s"/>
+			<button name="release" command="release" readonly="false" visible="true" type="submit"/>
+		</actions>		
+	</section>		
+	
+	<section name="request" visible="true" collapsible="false" collapsed="false">
+		<properties>
+			<dropDown row="1" col="1" name="processCode" readonly="true" validation="required" choiceList="choice.product" onChange="reloadPage(this)"/> <!--Product-->
+			<dropDown row="1" col="2" name="subType" choiceList="choice.masterfileCustomerOcSubTypes" readonly="true" validation="required" onChange="reloadPage(this)"/> <!--Request Type-->
+			<dropDown row="1" col="3" name="routingCode" choiceList="choice.customerAccountTypeOc" readonly="true" validation="required"/> <!--Account Type-->
+			<dropDown row="2" col="1" name="docPriority" choiceList="choice.priority" defaultValue="1" readonly="true" validation="required"/> <!--Priority-->
+			<text row="2" col="2" name="custom4.contactNo" readonly="true" validation="required, noSpecialCharacters"/> <!--Contact No-->
+			<text row="2" col="3" name="seqId" readonly="true"/> <!--Request Ticket No-->
+			<dropDown row="3" col="1" name="businessUnit" choiceList="choice.creditUpdateAll" readonly="true"/> <!--Credit Request-->
+		</properties>
+		<actions>
+			<!-- The following set of actions are standard ManagedPay and should be included relatively unmodified from the baseline version in most templates -->
+			<iconAction name="print" icon="/images/ico-print-w24.png" width="24" height="24" link="javascript:window.print()" visible="true" alwaysActive="true"/>
+			<iconAction name="statusWindow" icon="/images/ico-history-w24.png" width="24" height="24" link="javascript:openStatusWindow('$seqId$', '$contextPath$');return false;" alwaysActive="true"/>
+			<iconAction name="help" icon="/images/ico-help-w24.png" width="24" height="24" link="javascript:openHelp('User_Interfaces/Working_with_Invoices.htm', '$contextPath$')" alwaysActive="true"/>
+		</actions>		
+		</section>
+		
+	<section name="customerDetails" visible="true" collapsible="false" collapsed="false">
+		<properties>
+			<text row ="1" col="1" name="custom4.accountNumber" readonly="true"/> <!--Account Code-->
+			<text row="2" col="1-5" name="custom4.name" readonly="true" validation="required" styleClass="fulllookup"/> <!--Account Name-->
+			<text row="3" col="1-4" name="custom4.fao" readonly="true" styleClass="fulllookup"/> <!--Attention-->
+			<text row="4" col="1-4" name="custom4.address1" readonly="true" styleClass="fulllookup" validation="required"/> <!--Address 1-->
+			<text row="5" col="1-4" name="custom4.address2" readonly="true" styleClass="fulllookup"/> <!--Address 2-->
+			<text row="5" col="5" name="custom4.ein" readonly="true" validation="required"/> <!--Tax Id-->
+			<text row="6" col="1" name="custom4.city" readonly="true" validation="required"/> <!--City-->
+			<text row="6" col="5" name="custom4.contactName" readonly="true" validation="required"/> <!--Contact Name-->
+			<dropDown row="7" col="1" name="custom4.state" choiceList="choice.states" readonly="true" validation="required"/> <!--State-->
+			<text row="7" col="5" name="custom4.phone" readonly="true" validation="required"/> <!--Phone-->
+			<text row="8" col="1" name="custom4.postalCode" readonly="true" validation="required"/> <!--Post Code-->
+			<text row="8" col="5" name="custom4.fax" readonly="true"/> <!--Fax-->	
+			<text row="9" col="1" name="custom4.country" readonly="true" defaultValue="USA" validation="required"/> <!--Country-->
+			<dynamicDropDown row="9" col="5" name="group" readonly="true" providerClass="com.miriasystems.ui.providers.GroupsChoiceListProvider" validation="required"/> <!--Control Station-->
+			<text row="10" col="1-2" name="custom4.contactEmail" styleClass="fulllookup" /> <!--E-mail-->
+		</properties>
+	</section>
+
+	
+	<section name="shipperInfo" visible="true" collapsible="false" collapsed="false">
+		<properties>
+			<checkbox row="1" col="1" name="custom4.knownShipper" readonly="true"/> <!--Known Shipper-->
+			<checkbox row="1" col="2" name="custom4.poaReceived" readonly="true"/> <!--POA Received-->
+			<checkbox row="1" col="3" name="custom4.untilRevoked" readonly="true"/> <!--Until Revoked-->
+			<date row="2" col="1" name="custom4.poaExpiryDate" readonly="true"/> <!--POA Expiry Date-->
+			<text row="2" col="2" name="custom4.poaLocation" readonly="true" /> <!--POA Location-->
+			<dropDown row="2" col="3" name="custom4.poaFl" choiceList="choice.poaFL" readonly="true" /> <!--POA F/L-->
+			<checkbox row="3" col="1" name="custom4.option4" readonly="true"/> <!--Option 4-->
+			<checkbox row="3" col="2" name="custom4.selfFilling" readonly="true"/> <!--Self Filling-->
+	    </properties>
+	</section>
+
+
+
+	<section name="additionalInformation" visible="true" collapsible="false" collapsed="false">
+		<properties>
+			<text row="1" col="1" name="custom4.accountingContact" readonly="true"/>  <!--Acc Contact Name-->
+			<text row="1" col="2" name="custom4.contactPhone" readonly="true"/> <!--Contact Tel #-->
+			<text row="2" col="1" name="custom4.salesRep" readonly="true"/>    <!--Sales Rep-->
+			<checkbox row="2" col="2" name="custom4.contractInEffect" readonly="true"/> <!--Contract In Effect-->
+			<text row="2" col="3" name="custom4.contractNo" readonly="true"/>   <!--Contract Number-->
+			<text row="3" col="1" name="custom4.linkToCorpContract" readonly="true"/>   <!--Link to Corp COntract-->
+			<text row="3" col="2" name="custom4.linkToCorpAccount" readonly="true"/>   <!--Link to Corp Acc-->
+			<text row="3" col="3" name="custom4.linkToArParent" readonly="true"/>  <!--Link to A/R Parent-->
+			<text row="4" col="1" name="custom4.brokerName" readonly="true"/>  <!--Broker-->
+			<text row="4" col="2" name="custom4.brokerAccount" readonly="true"/>  <!--Broker Ac-->
+			<text row="5" col="1" name="custom4.scac" readonly="false"/>  <!--SCAC-->
+			<checkbox row="5" col="2" name="tbdBoolean1" readonly="false"/>  <!--NVOCC-->
+			<checkbox row="5" col="3" name="tbdBoolean2" readonly="false"/>  <!--Ocean Carrier-->
+		</properties>
+	</section>
+
+	<hiddenFields>
+	<hidden name="requesterId"/>
+	<hidden name="type" defaultValue="CUSTOMER"/>
+	<hidden name="tbdNumber4" defaultValue="1.0"/>
+	<hidden name="uploadRef"/>
+	<hidden name="originatorId"/>
+	<hidden name="retentionBoxId" defaultValue="upload" forceDefault="true"/>
+    </hiddenFields>
+
+	<processors>
+	</processors>
+</propertyTemplate>

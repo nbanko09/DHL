@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="all-rescan-view" template="masterfile-misc-poa-tpl.xml"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/view.xsd">
+
+    <labels default="en">
+        <locale name="en">
+            <label name="forward" value="Complete"/>
+        </locale>
+    </labels>
+    
+    <property-overrides>
+     <text name="processCode" readonly="true"/>
+     <text name="custom4.chbAccountNo" readonly="true"/>
+     <text name="custom4.contactNo" readonly="true"/>
+     <text name="custom4.chbConsignee" readonly="true"/>
+     <text name="custom4.address1" readonly="true"/>
+     <text name="custom4.address2" readonly="true"/>
+     <text name="custom4.contactName" readonly="true"/>
+     <text name="custom4.brokerName" readonly="true"/>
+     <text name="custom6.chbBrkAddress1" readonly="true"/>
+     <text name="custom6.chbBrkAddress2" readonly="true"/>
+     <text name="custom6.chbBrkFax" readonly="true"/>
+     <text name="custom6.chbBrkTel" readonly="true"/>
+     <text name="custom6.chbBrkEmail" readonly="true"/>
+     <text name="custom6.chbDistrict" readonly="true"/>
+     <text name="custom6.chbPoaReq" readonly="true"/>
+     <text name="custom6.chbPoaTime" readonly="true"/>
+    <text name="custom6.chbPortcode" readonly="true"/>
+    <text name="custom6.chbFdaCountry" readonly="true"/>
+    <text name="custom6.chbFdaShipper" readonly="true"/>
+    <text name="custom6.chbFdaManid" readonly="true"/>
+    </property-overrides>
+
+    <hidden-overrides>
+        <hidden name="processInformation.response" defaultValue="Complete"/>
+    </hidden-overrides>
+    
+    <action-overrides>
+        	<getNext name="next" readonly="false" visible="true"/>
+   </action-overrides>
+   
+   <documentRejection>
+		<rejectionReasons>
+			 <reason name="Return to Requester" commentsRequired="true" note="message.requester">
+			 </reason>
+		 </rejectionReasons>
+     </documentRejection>
+
+<validations>
+</validations>
+</view>

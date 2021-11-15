@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="all-rescan-view" template="credit-request-chb-tpl.xml"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/view.xsd">
+
+    <labels default="en">
+        <locale name="en">
+            <label name="forward" value="Complete"/>
+            <label name="reject" value="Reject"/>
+            <label name="Process" value="Ready for Input by AP Retained"/>
+            
+        </locale>
+    </labels>
+    
+    <property-overrides>
+   	<text name="processCode" styleClass="twohundred"/>
+   	<text name="subType" styleClass="twohundred"/>
+    </property-overrides>
+    
+    <hidden-overrides>
+        <hidden name="processInformation.response" defaultValue="Complete"/>
+    </hidden-overrides>
+    
+    <action-overrides>
+        	<getNext name="next" readonly="false" visible="true"/>
+            	<iconAction name="addLineItem" readonly="true" visible="false"/>
+        	<iconAction name="removeLineItem" readonly="true" visible="false"/>
+   </action-overrides>
+    
+     <documentRejection>
+             <rejectionReasons>
+                 <reason name="Reject" commentsRequired="true"  note="message.requester">
+                 </reason>
+             </rejectionReasons>
+    </documentRejection>
+
+<validations>
+      
+    </validations>
+</view>

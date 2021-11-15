@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="all-rescan-view" template="eft-request-ocean-noprn-tpl.xml"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/view.xsd">
+
+    <labels default="en">
+        <locale name="en">
+            <label name="forward" value="Approve"/>
+        </locale>
+    </labels>
+    
+    <property-overrides>
+    	<date name="processInformation.deadline" readonly="true"/> <!--Required Date-->
+    	<text name="subType" readonly="true" /> <!--Request Type-->
+    	<text name="processCode" readonly="true" /> <!--Pages-->
+       	<text name="checkStubMessage" readonly="true"/> <!--station zip-->
+    	<text name="group" readonly="true"/> <!--Control Station-->
+    	<text name="seqId" readonly="true"/> <!--Request Ticket No-->
+    	<text name="voucherComments" readonly="true"/> 
+      	<text name="batchNumber" readonly="true"/>
+    	<text name="docPriority" readonly="true"/>
+    	<text name="businessUnit" readonly="true"/>
+    </property-overrides>
+    
+    <lineItem-overrides>
+    	<text name="itemCode" readonly="true"/> <!-- Voucher Number-->
+    	<date name="tbdString1" readonly="true"/> <!-- Vendor Code-->
+    	<date name="tbdString2" readonly="true"/> <!-- Vendor Code-->
+    	<date name="tbdString3" readonly="true"/> <!-- Vendor Code-->
+    	<text name="tbdString4" readonly="true"/> <!-- Vendor Code-->
+    	<currency name="lineTotal" readonly="true"/> <!--Amount-->
+    	<text name="itemDescription" readonly="true"/> <!-- Vendor Name-->
+    	<text name="uom" readonly="true"/>
+    	<text name="materialId" readonly="true"/>
+    </lineItem-overrides>
+    
+    <action-overrides>
+        <button name="release" readonly="true" visible="false"/>
+        <iconAction name="addLineItem" readonly="true" visible="false"/>
+    	<iconAction name="removeLineItem" readonly="true" visible="false"/>
+    	<getNext name="next" readonly="true" visible="false"/>
+   </action-overrides>
+    
+    
+    <hidden-overrides>
+        <hidden name="processInformation.response" defaultValue="Complete"/>
+    </hidden-overrides>
+
+     <documentRejection>
+        <rejectionReasons>
+            <reason name="Return to Requester" commentsRequired="true"  note="message.requester">
+            </reason>
+        </rejectionReasons>
+    </documentRejection>
+
+</view>

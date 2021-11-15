@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="all-rescan-view" template="masterfile-upload-customer-aircon-tpl.xml"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/view.xsd">
+
+    <labels default="en">
+        <locale name="en">
+        </locale>
+    </labels>
+    
+    <action-overrides>
+             <iconAction name="editRouting" visible="false" readonly="true"/>
+   </action-overrides>
+    
+    <property-overrides>
+        <textArea name="voucherComments" defaultValue="Request will be forwarded to Contracts Department for processing."/>
+        <text name="custom4.billToAccountCode" readonly="true"/> <!--Alt Bill To Ac-->
+	<text name="custom4.billToAccount" readonly="true"/> <!--Alt Bill To Name-->
+    </property-overrides>
+
+    <hidden-overrides>
+        <hidden name="processInformation.response" defaultValue="Complete"/>
+    </hidden-overrides>
+
+     <validations>
+                   <validation name="validation.stationProductvalidation"/>   
+    </validations>
+</view>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<propertyTemplate
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/template.xsd">
+
+	<labels default="en">
+		<locale name="en">
+		<label name="subType" value="Vendor"/>
+		<label name="processCode" value="Request Type"/>
+	        <label name="voucherComments" value="Message"/>
+	        <label name="tbdDate1" value="Paid Thru Date"/>
+	        <label name="shippingDocumentId" value="Terminal Location"/>
+	        <label name="number" value="Reference #"/>
+	        <label name="group" value="Control Station"/>
+	        <label name="custom5.name" value="Other Vendor"/>
+	        <label name="routingCode" value="Payment Type"/>
+	        <label name="custom5.accountNumber" value="Vendor Code"/>
+        </locale>
+	</labels>
+	
+	<section name="doc" collapsible="false" collapsed="false">		
+			<properties>
+				<textArea row="1" col="1-2" name="tbdComment1" styleClass="comment5"/> 
+				<output row="2" col="1-2" name="processInformation.previousComment" readonly="true" styleClass="comment" escapeXml="false"/>
+				<valueAlias row="3" col="1-2" name="processInformation.queueName" styleClass="fulllookup" readonly="true"/>
+			</properties>
+			<actions>
+			<getNext name="next" readonly="false" showLabel="true" visible="true" toLeft="true" styleClass="getNext70"/>
+			<rejectButton name="reject" readonly="false" isAnchored="false" title="rejectTitle" styleClass="button70"/>
+			<button name="release" command="release" readonly="false" visible="true" type="submit" title="releaseTitle" styleClass="button70"/>
+			<button name="updateRelease" command="updateRelease" readonly="false" visible="true" type="submit" title="updateReleaseTitle" styleClass="button70"/>
+			<button name="update" command="update" readonly="false" visible="true" type="submit" title="updateTitle" styleClass="button70"/>
+			<button name="forward" command="forward" readonly="false" type="submit" isAnchored="false" title="forwardTitle" styleClass="button70"/>
+			</actions>
+	</section>
+
+	<section name="Ocean Credit Card Payment" visible="true" collapsible="false" collapsed="false">
+			<properties>
+			<text row="1" col="1" name="requesterName" readonly="true"/>
+			<text row="1" col="2" name="requester.email" readonly="true" styleClass="fulllookup"/>
+			<date row="2" col="1" name="createDate" showTime="true" readonly="true" styleClass="90"/> <!--Request Date-->
+	        <date row="2" col="2" name="processInformation.deadline" showTime="true" styleClass="90" readonly="true"/> <!--Required Date-->
+	        <text row="2" col="3" name="seqId" readonly="true"/> <!--Request Ticket No-->
+	        <dropDown row="3" col="1" name="processCode" choiceList="choice.crdCrdRequestSubTypes" readonly="true" validation="required" onChange="reloadPage(this)"/> <!--Request Type-->
+	        <dropDown row="3" col="2" name="subType" readonly="true" validation="required" choiceList="choice.oceanVendors" onChange="reloadPage(this)"/> <!--Vendor-->
+	        <dynamicDropDown row="3" col="3" name="group" readonly="true" providerClass="com.miriasystems.ui.providers.GroupsChoiceListProvider" validation="required"/> <!--Control Station-->
+	        <date row="4" col="1" name="tbdDate1" styleClass="date" readonly="true"/> <!--Paid Thru Date-->
+	        <text row="4" col="2" name="shippingDocumentId" styleClass="twofifty" readonly="true"/> <!--Terminal Location-->
+	        <text row="4" col="3" name="number" readonly="true" styleClass="onefifty" validation="required"/> <!--Reference #-->
+	        <dropDown row="5" col="1" name="routingCode" choiceList="choice.chbPayType" readonly="true"/> <!--Payment Type #-->
+	        <text row="5" col="2" name="custom5.accountNumber" styleClass="twohundred" readonly="true"/> <!--Other Vendor #-->
+	        <text row="5" col="3" name="custom5.name" styleClass="threehundred" readonly="true"/> <!--Other Vendor #-->
+			<label row="6" col="1" name="" position="left"/><!--blank line-->
+			<text row="7" col="1-3" name="voucherComments" styleClass="fulllookup" defaultValue="THIS IS FOR STORAGE, EXAM OR LIFT PAYMENTS ONLY." forceDefault="true" readonly="true"/>
+			</properties>
+			<actions>
+				<!-- The following set of actions are standard ManagedPay and should be included relatively unmodified from the baseline version in most templates -->
+			<postingReplyAction name="postings" icon="/images/ico-paid-w24.png" width="24" height="24" link="javascript:openPostingReplyWindow('$contextPath$', '$wobNumber$')" visible="true"/>
+			<iconAction name="editRouting" icon="/images/ico-route-w24.png" width="24" height="24" readOnlyLink="javascript:openViewRoutingWindow('$contextPath$', '$wobNumber$', 'nonPo')" link="javascript:openRoutingWindow('$contextPath$', '$wobNumber$', 'nonPo', 'MP_Approver1')" alwaysActive="true" readonly="false"/>			
+			<iconAction name="email" icon="/images/ico-mail-w24.png" width="24" height="24" link="javascript:openSendEmailWindow('$contextPath$', '$imageGUID$', '$wobNumber$')" alwaysActive="true"/>
+			<iconAction name="attachments" icon="/images/ico-attachment-w24.png" width="24" height="24" link="javascript:openAttachmentsWindow('$contextPath$', '$wobNumber$')" alwaysActive="true"/>
+			<attachmentCountAction name="attachmentCount" visible="true"/>
+			<!--iconAction name="vendorHistory" icon="/images/ico-vhistory-w24.png" width="24" height="24" link="javascript:openVendorHistoryWindow('$contextPath$', '$wobNumber$')" alwaysActive="true"/-->
+			<iconAction name="print" icon="/images/ico-print-w24.png" width="24" height="24" link="javascript:window.print()" visible="true" alwaysActive="true"/>
+			<!--iconAction name="barcode" icon="/images/ico-barcode-w24.png" width="24" height="24" link="javascript:openPrintBarcodeWindow('$contextPath$', '$uploadRef$', '$seqId$')" alwaysActive="true"/-->			<iconAction name="statusWindow" icon="/images/ico-history-w24.png" width="24" height="24" link="javascript:openStatusWindow('$seqId$', '$contextPath$');return false;" alwaysActive="true"/>
+			<iconAction name="help" icon="/images/ico-help-w24.png" width="24" height="24" link="javascript:openHelp('User_Interfaces/Working_with_Invoices.htm', '$contextPath$')" alwaysActive="true"/>
+			</actions>
+	</section>
+	
+		
+	<section name="invoiceDetails" visible="true" collapsible="false" collapsed="false">
+			<lineItemProperties showTotal="true" showTaxTotal="false">
+			<text row="1" col="1" name="partNumber" labelKey="Container Number" readonly="true" styleClass="110" validation="required"/> <!-- Container Number-->
+			<currency row="1" col="2" name="lineTotal" labelKey="Amount Per Cntr" readonly="true" validation="required, nonZero" styleClass="currency" onBlur="reloadPage(this)"/> <!--Amount-->
+			<text row="1" col="3" name="manfPartNumber" labelKey="Voucher Number" readonly="true" styleClass="110" validation="required"/> <!-- Vocher Number-->
+			<currency row="1" col="4" name="tbdCurrency1" labelKey="Voucher Amount" readonly="true" validation="required" styleClass="currency"/> <!-- Voucher Amount-->
+			<lineItemHidden row="0" col="0" name="accountERPId"/>
+			<lineItemHidden row="0" col="0" name="companyCode"/>
+			<lineItemHidden row="0" col="0" name="costObjectTypeId1"/>
+			<lineItemHidden row="0" col="0" name="costObjectTypeId2"/>
+			</lineItemProperties>
+		<actions>
+			<iconAction name="addLineItem" icon="/images/ico-add-line-w24.png" width="24" height="24" link="javascript:submitCommandUpload(this,'addLineItem','anchor_lineItems')" visible="true" alwaysActive="false"/>
+			<iconAction name="removeLineItem" icon="/images/ico-del-line-w24.png" width="24" height="24" link="javascript:submitCommandUpload(this,'deleteLineItem','anchor_lineItems')" visible="true" alwaysActive="false"/>
+		</actions>
+	</section>
+	
+	<processors>
+			<processor name="com.miriasystems.processors.TotalLineAmountProcessor"/>	
+    	</processors>
+
+		
+
+	<hiddenFields>
+	<hidden name="requesterId"/>
+	<hidden name="postingERPId" defaultValue="ERP1"/>
+	<hidden name="vendorERPId" defaultValue="ERP1"/>
+    <hidden name="newBatchNumber"/>
+    <hidden name="paymentTermERPId" defaultValue="ERP1"/>
+	<hidden name="type" defaultValue="CHECKREQ"/>
+	<hidden name="processInformation.comment"/>
+    </hiddenFields>
+
+    	
+</propertyTemplate>

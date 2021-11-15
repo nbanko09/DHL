@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="all-rescan-view" template="masterfile-vendor-tpl.xml"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/view.xsd">
+
+    <labels default="en">
+        <locale name="en">
+            <label name="forward" value="Complete"/>
+        </locale>
+    </labels>
+    
+    <property-overrides>
+    <text name="custom5.accountNumber" validation="required" readonly="false" />
+    <text name="custom5.accountingAccountNumber" readonly="false" />
+	<text name="custom5.name" readonly="true" />
+	<text name="custom5.taxId" readonly="true" />
+	<text name="custom5.paymentTerms" readonly="true" />
+	<text name="custom5.address1" readonly="true" />
+	<text name="custom5.address2" readonly="true" />
+	<text name="custom5.fao" readonly="true" />
+	<text name="custom5.contact" readonly="true" />
+	<text name="custom5.phone" readonly="true" />
+	<text name="custom5.city" readonly="true" />
+	<text name="custom5.state" readonly="true" />
+	<text name="custom5.fax" readonly="true" />
+	<text name="custom5.postalCode" readonly="true" />
+	<text name="subType" styleClass="fulllookup" readonly="true" />
+	<text name="custom5.accountType" readonly="true" />
+	<text name="processCode" readonly="true" />
+	<text name="custom5.contactName" readonly="true" />
+	<dropDown name="docPriority" readonly="true" />
+	<text name="tbdString11" readonly="true" />
+	<text name="custom5.contactNo" readonly="true" />
+        <text name="custom5.country" readonly="true" />
+        <text name="routingCode" readonly="true" />
+        <text name="tbdBoolean2" readonly="true" />
+        <textArea name="tbdComment1" readonly="true"/>
+        <textArea name="group" readonly="true"/>
+    </property-overrides>
+
+    <hidden-overrides>
+        <hidden name="processInformation.response" defaultValue="Complete"/>
+    </hidden-overrides>
+    
+    <action-overrides>
+        	<getNext name="next" readonly="false" visible="true"/>
+		<iconAction name="editRouting" readonly="true"/>
+   </action-overrides>
+
+     <documentRejection>
+		   <rejectionReasons>
+		   <reason name="Return to Requester" commentsRequired="true" note="message.rejectProcesser">
+		   </reason>
+			<reason name="Reject" commentsRequired="true" note="message.rejectProcesser">
+		   </reason>
+		   </rejectionReasons>
+    </documentRejection>
+
+</view>

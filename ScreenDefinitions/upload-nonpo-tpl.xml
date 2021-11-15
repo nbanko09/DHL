@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<propertyTemplate
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/template.xsd">
+        
+     <labels>
+	<locale name="en">
+	</locale>
+	</labels>
+	
+	<section name="invoice" visible="true" collapsible="false" collapsed="false">
+		<properties>
+		<dropDown row="1" col="1" name="type" choiceList="choice.voucherInvoiceTypes" readonly="true" defaultValue="NON-PO" forceDefault="true"/>
+		<dropDown row="1" col="2" name="subType" choiceList="choice.invoiceSubTypes.NONPO" readonly="false" validation="required" onChange="reloadPage(this)"/>
+		<text row="2" col="1" name="number" validation="noSpecialCharacters"/>
+        <date row="2" col="2" name="date" readonly="false" validation="required" styleClass="date"/>
+		<dynamicDropDown row="3" col="1" name="companyCode" providerClass="com.miriasystems.ui.providers.CompanyChoiceListProvider" readonly="false"/>
+		</properties>
+		<actions>
+			<iconAction name="selectApprovers" icon="/images/ico-route-w24.png" width="24" height="24" readOnlyLink="javascript:openViewRoutingWindow('$contextPath$', '$wobNumber$', 'nonPo')" link="javascript:openUploadRoutingWindow('/ManagedPay/custom', 'routing/upload.action','nonPo', 'MP_APPROVER1')" alwaysActive="true" readonly="false"/>
+			<iconAction name="print" icon="/images/ico-print-w24.png" width="24" height="24" link="javascript:window.print()" visible="true" alwaysActive="true"/>
+			<iconAction name="statusWindow" icon="/images/ico-history-w24.png" width="24" height="24" link="javascript:openStatusWindow('$seqId$', '$contextPath$');return false;" alwaysActive="true"/>
+			<iconAction name="help" icon="/images/ico-help-w24.png" width="24" height="24" link="javascript:openHelp('User_Interfaces/Working_with_Invoices.htm', '$contextPath$')" alwaysActive="true"/>
+			<button name="forward" command="forward" readonly="false" docType="upload" type="submit" isAnchored="false" title="forwardTitle" styleClass="button70"/>
+		</actions>
+	</section>
+	
+	<section name="invoiceDetails" visible="true" collapsible="true" collapsed="false">
+		<properties>
+			<lookup row="1" col="1" name="vendorId" lookupType="lookup.vendorCode" readonly="true" inputReadonly="true"/>
+			<checkbox row="1" col="2" name="alternatevendor" onClick="reloadPage(this)"/>
+			<lookup row="2" col="1-2" name="vendor.name" lookupType="lookup.vendorCode" readonly="true" inputReadonly="true" styleClass="fulllookup"/>
+			<lookup row="3" col="1" name="routingCode" lookupType="lookup.costObject1" readonly="true" inputReadonly="true" styleClass="onehundredpercent"/>
+			<lookup row="3" col="2" name="firstApproverName" lookupType="lookup.costObject1" readonly="true" inputReadonly="true" styleClass="onehundredpercent"/>
+			<currency row="4" col="1" name="grossAmount" validation="required, nonZero" styleClass="currency" defaultValue="0.00"/>
+			<dynamicDropDown row="4" col="2" name="paymentTypeId" providerClass="com.miriasystems.ui.providers.PaymentTypeChoiceListProvider" validation="required"/>
+			<currency row="5" col="1" name="taxAmount2" readonly="true" validation="decimal" styleClass="currency"/>
+			<dropDown row="6" col="1" name="paymentTermId" choiceList="choice.paymentTerms" validation="required" onChange="reloadPage(this)" />
+			<date row="6" col="2" readonly="true" name="dueDate" styleClass="date" validation="required"/>
+			<textArea row="7" col="1-2" name="voucherComments" styleClass="comment"/>
+		</properties>
+	</section>
+
+	<section name="vendorDetails" visible="true" collapsible="true" collapsed="false">
+		<properties>
+			<text row="1" col="1-4" name="vendor.address1" readonly="true" styleClass="fulllookup"/>
+			<text row="2" col="1" name="vendor.city" readonly="true" />
+			<text row="2" col="2" name="vendor.state" readonly="true"/>
+			<text row="2" col="3" name="vendor.postalCode" readonly="true"/>
+			<text row="3" col="1" name="vendor.address2" readonly="true"/>
+			<text row="3" col="2-4" name="vendor.name2" readonly="true"/>
+	    </properties>
+	</section>
+	
+	<section name="New Vendor Details" visible="false" collapsible="true" collapsed="false">
+		<properties>
+			<label row ="1" col="1" name="Default Address" position="left"/>
+			<text row="2" col="1-4" name="custom2.name" readonly="false" styleClass="fulllookup"/>
+			<text row="3" col="1-4" name="custom2.address1" readonly="false" styleClass="fulllookup"/>
+			<text row="4" col="1" name="custom2.city" readonly="false" />
+			<text row="4" col="2" name="custom2.state" readonly="false"/>
+			<text row="4" col="3" name="custom2.postalCode" readonly="false"/>
+			<text row="5" col="1" name="custom2.address2" readonly="false"/>
+			<text row="5" col="2-4" name="custom2.address3" readonly="false"/>
+			<label row ="6" col="1" name="Remit Address" position="left"/>
+			<text row="7" col="1-4" name="custom2.rmtName" readonly="false" styleClass="fulllookup"/>
+			<text row="8" col="1-4" name="custom2.rmtAddress1" readonly="false" styleClass="fulllookup"/>
+			<text row="9" col="1" name="custom2.rmtCity" readonly="false" />
+			<text row="9" col="2" name="custom2.rmtState" readonly="false"/>
+			<text row="9" col="3" name="custom2.rmtPostalCode" readonly="false"/>
+	    </properties>
+	</section>
+	
+	<section name="Payment Information" visible="false" collapsible="true" collapsed="false">
+		<properties>
+			<text row="1" col="1-2" name="custom2.bankName" readonly="false" styleClass="fulllookup"/>
+			<text row="2" col="1" name="custom2.tbdString1" readonly="false" styleClass="fourhundred"/>
+			<text row="2" col="2" name="custom2.tbdString2" readonly="false" styleClass="fourhundred"/>
+	    </properties>
+	</section>
+	
+	<section name="lineItems" visible="true" collapsible="true" collapsed="false">
+		<lineItemProperties showTotal="true" showTaxTotal="false">
+			<lookup row="1" col="1" name="accountCode" lookupType="lookup.accountCode" readonly="true" inputReadonly="true" validation="required" styleClass="twohundred"/>
+			<text row="1" col="2" name="account.description" readonly="true" styleClass="twohundred"/>
+			<text row="1" col="3" name="itemDescription" readonly="false" styleClass="twohundred"/>
+			<currency row="1" col="4" name="lineTotal" readonly="false" validation="required, nonZero" styleClass="currency" />
+			<checkbox row="1" col="5" name="matched" visible="false" styleClass="ten" />					 
+			<lineItemHidden row="0" col="0" name="accountERPId"/>
+			<lineItemHidden row="0" col="0" name="companyCode"/>
+		</lineItemProperties>
+		<actions>
+				<!-- The following set of actions are standard ActivePay and should be included relatively unmodified from the baseline version in most templates -->
+			<iconAction name="RemoveAllItems" icon="/images/ico-del-all-w24.png" width="24" height="24" link="javascript:submitCommand(this,'deleteAllLineItems','anchor_lineItems')" visible="true" alwaysActive="false"/>
+			<iconAction name="RemoveMarkedItems" icon="/images/ico-del-match-w24.png" docType="upload" width="24" height="24" link="javascript:submitCommand(this,'deleteMarkedLines','anchor_lineItems')" visible="true" alwaysActive="false"/>
+			<iconAction name="RemoveUnMarkedItems" icon="/images/ico-del-unmatched-w24.png" docType="upload" width="24" height="24" link="javascript:submitCommand(this,'deleteUnMarkedLines','anchor_lineItems')" visible="true" alwaysActive="false"/>
+			<!-- The following set of actions are standard ManagedPay and should be included relatively unmodified from the baseline version in most templates -->
+			<iconAction name="selectTemplate" icon="/images/ico-gltemplate-w24.png" width="24" height="24" link="javascript:openTemplateWindow('$contextPath$')" alwaysActive="false" />
+			<dropDown name="lineitemsdropdown" choiceList="choice.lineitemsdropdown" alwaysActive="false" onChange="javascript:submitCommandFromDropdown(this,'addLineItem','anchor_lineItems')"/>
+			<iconAction name="addLineItem" icon="/images/ico-add-line-w24.png" docType="upload" width="24" height="24" link="javascript:submitCommandUpload(this,'addLineItem','anchor_lineItems')" visible="true" alwaysActive="false"/>
+			<iconAction name="removeLineItem" icon="/images/ico-del-line-w24.png" docType="upload" width="24" height="24" link="javascript:submitCommandUpload(this,'deleteLineItem','anchor_lineItems')" visible="true" alwaysActive="false"/>	
+
+		</actions>
+	</section>
+
+	<hiddenFields>
+		<hidden name="postingERPId" defaultValue="AOPS001"/>
+		<hidden name="vendorERPId"/>
+        <hidden name="newBatchNumber"/>
+       	<hidden name="paymentTermERPId" defaultValue="AOPS001"/>
+		<hidden name="paymentTypeERPId" defaultValue="AOPS001"/>
+       	<hidden name="vendor.status" defaultValue="1"/>
+		<hidden name="uploadRef"/>
+		<hidden name="originatorId"/>
+		<hidden name="requesterId"/>
+		<hidden name="scanSource" defaultValue="Direct Entry" forceDefault="true"/>
+		<hidden name="scanType" defaultValue="Expense" forceDefault="true"/>
+		<hidden name="requester.userName"/>
+		<hidden name="AFENumber" defaultValue="2" forceDefault="true"/>
+		<hidden name="processInformation.comment"/>
+		<hidden name="custom1.tbdComment1" defaultValue="1." forceDefault="true" readonly="true"/>
+		</hiddenFields>
+	<processors>
+		<processor name="com.miriasystems.processors.NetAmountNoDiscountProcessor"/>
+		<processor name="com.miriasystems.processors.TotalLineAmountProcessor"/>
+		<processor name="com.custom.processors.DueDateProcessor"/>
+    </processors>
+</propertyTemplate>

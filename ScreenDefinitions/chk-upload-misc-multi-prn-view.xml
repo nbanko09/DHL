@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="all-rescan-view" template="check-request-upload-misc-multi-tpl.xml"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/view.xsd">
+
+    <labels default="en">
+        <locale name="en">
+            <label name="forward" value="Submit"/>
+        </locale>
+    </labels>
+    
+    <property-overrides>
+		<text name="routingCode" defaultValue="STN"/>
+		<text name="voucherComments" defaultValue="" forceDefault="true"/> 
+    </property-overrides>
+
+    <hidden-overrides>
+        <hidden name="processInformation.response" defaultValue="Complete"/>
+    </hidden-overrides>
+    
+    <action-overrides>
+    </action-overrides>
+
+	<validations>
+	   <validation name="validation.stationProductvalidation"/>
+	   <validation name="validation.checkTempRouting"/>
+    </validations>
+
+</view>

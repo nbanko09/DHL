@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<view name="travel-expense-view" template="travel-request-tpl.xml"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/view.xsd">
+	
+	<labels default="en">
+		<locale name="en">
+		</locale>
+	</labels>
+	
+	<action-overrides>
+	</action-overrides>
+	
+	<property-overrides>
+		
+	</property-overrides>
+	
+	<lineItem-overrides>
+	</lineItem-overrides>
+	
+	<hidden-overrides>
+		<hidden name="processInformation.response" defaultValue="Complete"/>
+	</hidden-overrides>
+	
+	<documentRejection>
+		<rejectionReasons>
+			<reason name="Return to Requester" commentsRequired="true" note="message.returnSubmitter">
+				<subReason name="Insfufficient Budget"/>
+				<subReason name="Other"/>
+			</reason>
+			<reason name="Terminate" commentsRequired="false" note="message.terminate">
+			</reason>
+		</rejectionReasons>
+	</documentRejection>
+	
+	
+	
+
+    <validations>
+		<validation name ="validation.check.originator.approver"/>		
+    </validations>
+	
+	
+    
+</view>

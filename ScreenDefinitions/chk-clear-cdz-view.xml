@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="chk-clear-cdz-view" template="check-request-cdz-tpl.xml"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/view.xsd">
+
+    <labels default="en">
+        <locale name="en">
+            <label name="forward" value="Submit"/>
+            <label name="reject" value="Cancel"/>
+        </locale>
+    </labels>
+
+    <property-overrides>
+		<dynamicDropDown name="group" readonly="true" /> <!--Control Station-->	
+		<dropDown name="docPriority" readonly="true" /> <!--Priority-->
+		
+		<text name="tbdString5" readonly="true" /> <!--Broker Filer-->
+	    <text name="tbdString6" readonly="true" /> <!--CM File Number-->
+		<text name="tbdString7" readonly="true" /> <!--Invoice Suffix-->
+		<text name="vendorId" readonly="true" /> <!--Vendor Number-->
+		<currency name="grossAmount" readonly="true" /> <!--Check Amount-->
+		<text name="department" readonly="true" /> <!--Division-->
+		<text name="number" readonly="true" /> <!--Vendor Ref Num-->
+		<text name="tbdString10" readonly="true" /> <!--Charge Code-->
+		<text name="tbdString8" readonly="true" /> <!--Customer-->
+    </property-overrides>
+        
+	
+    <action-overrides>
+		<!--button name="release" command="release" readonly="false" visible="false" type="submit" title="releaseTitle" styleClass="button70"/-->
+		<!--button name="updateRelease" command="updateRelease" readonly="false" visible="false" type="submit" title="updateReleaseTitle" styleClass="button70"/-->
+		<iconAction name="editRouting" readonly="true" />
+    </action-overrides>
+    
+    <hidden-overrides>
+        <hidden name="processInformation.response" defaultValue="Complete"/>
+    </hidden-overrides>
+
+     <documentRejection>
+        <rejectionReasons>
+            <reason name="Terminate" commentsRequired="true"  note="message.terminate">
+            </reason>
+        </rejectionReasons>
+    </documentRejection>
+    
+    <validations>
+    </validations>
+
+</view>

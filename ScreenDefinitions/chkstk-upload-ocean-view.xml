@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="all-rescan-view" template="check-stock-upload-ocean-tpl.xml"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/view.xsd">
+
+    <labels default="en">
+        <locale name="en">
+            <label name="forward" value="Submit"/>
+        </locale>
+    </labels>
+    
+    <property-overrides>
+    </property-overrides>
+
+    <hidden-overrides>
+        <hidden name="processInformation.response" defaultValue="Complete"/>
+        <hidden name="processInformation.comment"/>
+    </hidden-overrides>
+
+    <documentRejection>         
+    </documentRejection>
+    
+    <validations>
+    </validations>
+</view>
+
+ 

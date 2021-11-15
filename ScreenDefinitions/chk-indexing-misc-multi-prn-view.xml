@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="all-rescan-view" template="check-request-misc-multi-tpl.xml"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/view.xsd">
+
+    <labels default="en">
+        <locale name="en">
+            <label name="forward" value="Submit"/>
+            <label name="reject" value="Cancel"/>
+        </locale>
+    </labels>
+    
+    <property-overrides>
+                <text name="routingCode" defaultValue="STN"/>
+                <text name="voucherComments" defaultValue=""/> 
+    </property-overrides>
+    
+    <action-overrides>
+    <button name="release" readonly="true"/>
+    <getNext name="next" readonly="true" visible="false"/>
+    </action-overrides>
+    
+    <hidden-overrides>
+        <hidden name="processInformation.response" defaultValue="Complete"/>
+    </hidden-overrides>
+
+     <documentRejection>
+        <rejectionReasons>
+            <reason name="Cancel" commentsRequired="true"  note="message.terminate">
+            </reason>
+        </rejectionReasons>
+    </documentRejection>
+    
+    
+    <validations>
+            <validation name="validation.checkRouting"/>
+    </validations>
+
+</view>

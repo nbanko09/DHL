@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="all-rescan-view" template="check-request-upload-misc-multi-tpl.xml"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/view.xsd">
+
+    <labels default="en">
+        <locale name="en">
+            <label name="forward" value="Submit"/>
+        </locale>
+    </labels>
+    
+    <property-overrides>
+            <text name="checkStubMessage" validation="required" readonly="false"/>
+            <text name="batchNumber" validation="required" readonly="false"/>
+            <text name="voucherComments" styleClass="fivehundred" defaultValue="OVERNIGHT CHARGES TO BE PAID FOR BY REQUESTING OFFICE" forceDefault="true"/> 
+    </property-overrides>
+    
+    <action-overrides>
+    </action-overrides>
+    
+    <hidden-overrides>
+        <hidden name="processInformation.response" defaultValue="Complete"/>
+    </hidden-overrides>
+
+    <validations>
+		<validation name="validation.checkTempRouting"/>
+		<validation name="validation.stationProductvalidation"/>   
+    </validations>
+</view>

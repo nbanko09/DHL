@@ -1,0 +1,6 @@
+<customObjects>
+    <customObject reader="com.custom.persistence.DocumentExtReader" persister="com.custom.persistence.DocumentExtPersister"/>
+	<customObject reader="com.custom.persistence.OneTimeVendorReader" persister="com.custom.persistence.OneTimeVendorPersister"/>
+	<customObject persister="com.dhl.persistence.MasterFileCustomerPersister" reader="com.dhl.persistence.MasterFileCustomerReader"/>
+	<customObject persister="com.dhl.persistence.MasterVendorPersister" reader="com.dhl.persistence.MasterVendorReader"/>
+</customObjects>

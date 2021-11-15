@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<propertyTemplate
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/template.xsd">
+
+	<labels default="en">
+		<locale name="en">
+		<label name="forward" value="Submit"/>
+		<label name="group" value="Branch"/>
+		<label name="custom4.chbAccountNo" value="Customer Code(s)"/>
+		<label name="custom4.address1" value="Address"/>
+		<label name="custom4.address2" value="City State Zip"/>
+		<label name="custom4.chbNotes" value="Notes"/>
+		</locale>
+	</labels>
+	
+	<section name="doc" collapsible="false" collapsed="false">
+			<properties>
+				<textArea row="1" col="1-2" name="voucherComments" readonly="true" styleClass="comment"/> 
+				<textArea row="2" col="1-2" name="tbdComment1" styleClass="comment"/> 
+				<valueAlias row="3" col="1" name="processInformation.queueName" readonly="true"/>
+			</properties>
+		<actions>
+			<button name="forward" command="forward" readonly="false" docType="upload" type="submit" isAnchored="false" title="forwardTitle" styleClass="button70"/>
+		</actions>
+	</section>
+	
+	<section name="Misc Brokerage Request" visible="true" collapsible="false" collapsed="false">
+		<properties>
+			<dropDown row="1" col="1" name="processCode" choiceList="choice.masterfileMiscTypes" readonly="false" validation="required" onChange="reloadPage(this)"/> <!--Request Type-->
+			<text row="1" col="2" name="custom4.contactNo" validation="required, noSpecialCharacters"/> <!--Contact No-->
+			<dynamicDropDown row="1" col="3" name="group" providerClass="com.miriasystems.ui.providers.GroupsChoiceListProvider" validation="required"/> <!--Control Station-->
+			<textArea row="2" col="1-3" name="custom4.chbAccountNo" validation="required, noSpecialCharacters" styleClass="comment"/> <!--Account code-->
+			<text row="3" col="1-3" name="custom4.name" validation="required" readonly="false" styleClass="oneseventy"/> <!--Account Name-->
+			<date row="4" col="1" name="custom6.chbCatEffectiveDate" styleClass="90" validation="required"/>
+			<text row="4" col="2" name="custom6.chbCatlink" styleClass="onethirty"/> <!--Link to Master CAT-->
+		</properties>
+		<actions>
+			<iconAction name="selectApprovers" icon="/images/ico-route-w24.png" width="24" height="24" readOnlyLink="javascript:openViewRoutingWindow('$contextPath$', '$wobNumber$', 'nonPo')" link="javascript:openUploadRoutingWindow('/ManagedPay/custom', 'routing/upload.action','nonPo', 'MP_Approver1')" alwaysActive="true" readonly="false"/>
+			<iconAction name="print" icon="/images/ico-print-w24.png" width="24" height="24" link="javascript:window.print()" visible="true" alwaysActive="true"/>
+			<iconAction name="statusWindow" icon="/images/ico-history-w24.png" width="24" height="24" link="javascript:openStatusWindow('$seqId$', '$contextPath$');return false;" alwaysActive="true"/>
+			<iconAction name="help" icon="/images/ico-help-w24.png" width="24" height="24" link="javascript:openHelp('User_Interfaces/Working_with_Invoices.htm', '$contextPath$')" alwaysActive="true"/>
+		</actions>		
+	</section>
+	
+	<section name="presentCAT" visible="true" collapsible="false" collapsed="false">
+			<properties>
+			<text row="1" col="1" name="custom6.chbCatpart" validation="required" styleClass="threefourty"/> 
+			<text row="1" col="3" name="custom6.chbCatdesc" styleClass="threefourty"/> 
+			<text row="2" col="1" name="custom6.chbCatproduct" styleClass="twosixty"/> 
+			<text row="2" col="3" name="custom6.chbCatassembler" styleClass="ninety"/> 
+			<text row="3" col="1" name="custom6.chbCatmanid" styleClass="threefourty"/> 
+			<text row="3" col="3" name="custom6.chbCattariff" styleClass="onethirty"/> 
+			</properties>
+	</section>
+	
+	<section name="modifyCAT" visible="true" collapsible="false" collapsed="false">
+			<properties>
+			<text row="1" col="1" name="custom6.chbCatpart2" styleClass="threefourty"/> 
+			<text row="2" col="1" name="custom6.chbCatassembler2" styleClass="ninety"/> 
+			<text row="3" col="1" name="custom6.chbCatdesc2" styleClass="fivehundred"/> 
+			<text row="4" col="1" name="custom4.chbPortOfLading" styleClass="ninety"/> 
+			<dropDown row="4" col="2" name="custom6.chbRelated" choiceList="choice.booleanYesNo"/> 
+			<text row="5" col="1" name="custom6.chbCatmanid2" styleClass="threefourty"/>
+			<text row="6" col="1" name="custom4.chbCOrigin" styleClass="ninety"/> 
+			<text row="6" col="2" name="custom4.chbCExport" styleClass="ninety"/> 
+			<dropDown row="6" col="3" name="custom6.chbNafta"  choiceList="choice.booleanYesNo"/> 
+			<text row="7" col="1" name="custom6.chbRulingno" styleClass="onesixty"/> 
+			<text row="7" col="2" name="custom6.chbRulingtype" styleClass="ninety"/> 
+			<text row="8" col="1" name="custom6.chbCatproduct2" styleClass="oneseventy"/> 
+			</properties>
+	</section>
+	
+	<section name="tariffLines" visible="true" collapsible="false" collapsed="false">
+			<properties>
+			<text row="1" col="1" name="custom6.chbTariff" styleClass="onethirty"/> 
+			<text row="1" col="3" name="custom6.chbTariffAdd" styleClass="onethirty"/> 
+			</properties>
+	</section>
+	
+	<section name="fda" visible="true" collapsible="false" collapsed="false">
+			<properties>
+			<text row="1" col="1" name="custom6.chbFdaSeq" styleClass="oneseventy"/> 
+			<text row="2" col="1" name="custom6.chbFdaProduct" styleClass="oneseventy"/> 
+			<dropDown row="3" col="1" name="custom6.chbFdaStorage" choiceList="choice.storage"/>
+			<text row="4" col="1" name="custom6.chbFdaCountry" styleClass="threeeighty"/> 
+			<text row="5" col="1" name="custom6.chbFdaManid" styleClass="threeeighty"/> 
+			<text row="6" col="1" name="custom6.chbFdaShipper" styleClass="threeeighty"/> 
+			<text row="7" col="1" name="custom6.chbFdaDesc" styleClass="threeeighty"/> 
+			<text row="8" col="1" name="chbLabel1" defaultValue="Quantity" readonly="true" forceDefault="true"/> 
+			<text row="8" col="2" name="chbLabel2" defaultValue="Units" readonly="true" forceDefault="true"/> 
+			<text row="9" col="1" name="custom6.chbFdaQuantity1" styleClass="ninety"/> 
+			<text row="9" col="2" name="custom6.chbFdaUnit1" styleClass="ninety"/> 
+			<text row="9" col="3" name="custom6.chbFdaValue" styleClass="onefifty"/> 
+			<text row="10" col="1" name="custom6.chbFdaQuantity2" styleClass="ninety"/> 
+			<text row="10" col="2" name="custom6.chbFdaUnit2" styleClass="ninety"/> 
+			<text row="10" col="3" name="custom6.chbFdaEst" styleClass="onefifty"/> 
+			<text row="11" col="1" name="custom6.chbFdaQuantity3" styleClass="ninety"/> 
+			<text row="11" col="2" name="custom6.chbFdaUnit3" styleClass="ninety"/> 
+			<text row="11" col="3" name="custom6.chbFdaBrand" styleClass="onefifty"/> 
+			<text row="12" col="1" name="custom6.chbFdaQuantity4" styleClass="ninety"/> 
+			<text row="12" col="2" name="custom6.chbFdaUnit4" styleClass="ninety"/> 
+			<text row="12" col="3" name="custom6.chbFdaDims" styleClass="onefifty"/> 
+			<text row="13" col="1" name="custom6.chbFdaQuantity5" styleClass="ninety"/> 
+			<text row="13" col="2" name="custom6.chbFdaUnit5" styleClass="ninety"/> 
+			<text row="13" col="3" name="custom6.chbFdaContact" styleClass="onefifty"/> 
+			<text row="14" col="1" name="custom6.chbFdaQuantity6" styleClass="ninety"/> 
+			<text row="14" col="2" name="custom6.chbFdaUnit6" styleClass="ninety"/> 
+			<text row="14" col="3" name="custom6.chbFdaTel" styleClass="onefifty"/> 
+			<text row="15" col="1" name="chbLabel3" defaultValue="Affirmation of Compliance Code" readonly="true" styleClass="twohundred" forceDefault="true"/>
+			<text row="15" col="2" name="chbLabel4" defaultValue="Qualifier" readonly="true" forceDefault="true"/> 
+			<text row="16" col="1" name="custom6.chbFdaComp1" styleClass="fifty"/> 
+			<text row="16" col="2" name="custom6.chbFdaQual1" styleClass="oneseventy"/> 
+			<text row="17" col="1" name="custom6.chbFdaComp2" styleClass="fifty"/> 
+			<text row="17" col="2" name="custom6.chbFdaQual2" styleClass="oneseventy"/> 
+			<text row="18" col="1" name="custom6.chbFdaComp3" styleClass="fifty"/> 
+			<text row="18" col="2" name="custom6.chbFdaQual3" styleClass="oneseventy"/> 
+			<text row="19" col="1" name="custom6.chbFdaComp4" styleClass="fifty"/> 
+			<text row="19" col="2" name="custom6.chbFdaQual4" styleClass="oneseventy"/> 
+			<text row="20" col="1" name="custom6.chbFdaComp5" styleClass="fifty"/> 
+			<text row="20" col="2" name="custom6.chbFdaQual5" styleClass="oneseventy"/> 
+			<text row="21" col="1" name="custom6.chbFdaComp6" styleClass="fifty"/> 
+			<text row="21" col="2" name="custom6.chbFdaQual6" styleClass="oneseventy"/> 
+			<dropDown row="22" col="1" name="custom6.chbFdaAbi" choiceList="choice.booleanYesNo"/> 
+			<text row="23" col="1" name="custom6.chbFdaSub" styleClass="ninety"/> 
+			<text row="24" col="1" name="custom4.address1" styleClass="twosixty"/> 
+			<text row="24" col="2" name="custom4.contactName" styleClass="twosixty"/> 
+			<text row="25" col="1" name="custom4.chbFdaLastName" styleClass="twosixty"/> 
+			<text row="25" col="2" name="custom4.chbFdaFirstName" styleClass="twosixty"/> 
+			<text row="26" col="1" name="custom4.chbPhone" styleClass="twosixty"/> 
+			<text row="26" col="2" name="custom4.chbFax" styleClass="twosixty"/> 
+			<text row="27" col="1" name="custom6.chbBrkEmail" styleClass="twosixty"/> 
+			<text row="27" col="2" name="custom6.chbFdaFirmname" styleClass="twosixty"/> 
+			<text row="28" col="1" name="custom4.chbPaAddress1" styleClass="twosixty"/> 
+			<text row="28" col="2" name="custom4.chbPaAddress2" styleClass="twosixty"/> 
+			<text row="29" col="1" name="custom4.chbPaCity" styleClass="twosixty"/> 
+			<text row="29" col="2" name="custom4.chbPaState" styleClass="twosixty"/> 
+			<text row="30" col="1" name="custom4.chbPaCountry" styleClass="twosixty"/> 
+			<text row="30" col="2" name="custom4.chbPaZip" styleClass="twosixty"/> 
+			<dropDown row="31" col="1" name="custom6.chbFdaSubtype" choiceList="choice.submitterType"/> 
+			<dropDown row="31" col="2" name="custom6.chbFdaOwntype" choiceList="choice.ownerType"/>
+			<text row="32" col="1" name="custom6.chbArrivalport" styleClass="fifty"/> 
+			<text row="33" col="1" name="custom6.chbFdaCrossingLoc" styleClass="fifty"/> 
+			<text row="33" col="2" name="custom6.chbFdaCrossingPnt" styleClass="oneseventy"/>
+			<text row="34" col="1" name="custom6.chbFdaShipping" styleClass="fifty"/> 
+			<text row="35" col="1" name="custom6.chbFdaCarrier" styleClass="fifty"/> 
+			<text row="35" col="2" name="custom6.chbFdaCarrierName" styleClass="twosixty"/>
+			<text row="35" col="3" name="custom6.chbFdaCarrierCnt" styleClass="thirty"/> 
+			<dropDown row="36" col="1" name="custom6.chbFdaProctype" choiceList="choice.procType"/>
+			<dropDown row="36" col="2" name="custom6.chbFdaProcExemptyn" choiceList="choice.booleanYesNo"/>
+			<text row="36" col="3" name="custom6.chbFdaProcExempt" styleClass="onefifty"/> 
+			<text row="37" col="1" name="custom6.chbFdaManreg" styleClass="onethirty"/> 
+			<text row="37" col="2" name="custom6.chbFdaShpreg" styleClass="onehundred"/> 
+			</properties>
+	</section>
+	
+	
+	<section name="fccInfo" collapsible="false" collapsed="false">
+			<properties>
+			<text row="1" col="1" name="custom6.chbFccQnty" styleClass="oneseventy"/> 
+			<text row="1" col="2" name="custom6.chbFccCondition" styleClass="ninety"/> 
+			<text row="2" col="1" name="custom6.chbFccInsp" styleClass="thirty"/> 
+			<text row="2" col="2" name="custom6.chbFccApproval" styleClass="thirty"/>
+			<text row="3" col="1" name="custom6.chbFccId" styleClass="onethirty"/> 
+			<text row="4" col="1" name="custom6.chbFccTrade" styleClass="twoseventy"/> 
+			<text row="5" col="1" name="custom6.chbFccType" styleClass="oneseventy"/> 
+			<text row="6" col="1" name="custom6.chbFccDesc" styleClass="fivehundred"/> 
+			</properties>
+	</section>
+		
+	<section name="ada" collapsible="false" collapsed="false">
+			<properties>
+			<text row="1" col="1" name="custom6.chbAvaCvd" styleClass="ninety"/> 
+			<text row="1" col="2" name="custom6.chbAvaCase" styleClass="ninety"/> 
+			<textArea row="2" col="1-2" name="custom4.chbNotes" styleClass="comment"/>
+			</properties>
+	</section>
+	
+	<section name="lineItems" visible="false" collapsible="true" collapsed="true">
+		<lineItemProperties showTotal="true" showTaxTotal="false">
+			<lookup row="1" col="1" name="accountCode" lookupType="lookup.accountCode" readonly="true" inputReadonly="true" validation="required" styleClass="twohundred"/>
+			<text row="1" col="2" name="account.description" readonly="true" styleClass="twohundred"/>
+			<text row="1" col="3" name="itemDescription" readonly="false" styleClass="twohundred"/>
+			<currency row="1" col="4" name="lineTotal" readonly="false" validation="required, nonZero" styleClass="currency" onBlur="reloadPage(this)"/>
+			<checkbox row="1" col="5" name="matched" visible="false" styleClass="ten" />					 
+			<lineItemHidden row="0" col="0" name="accountERPId"/>
+			<lineItemHidden row="0" col="0" name="companyCode"/>
+		</lineItemProperties>
+		<actions>
+			<iconAction name="addLineItem" icon="/images/ico-add-line-w24.png" docType="upload" width="24" height="24" link="javascript:submitCommandUpload(this,'addLineItem','anchor_lineItems')" visible="true" alwaysActive="false"/>
+			<iconAction name="removeLineItem" icon="/images/ico-del-line-w24.png" docType="upload" width="24" height="24" link="javascript:submitCommandUpload(this,'deleteLineItem','anchor_lineItems')" visible="true" alwaysActive="false"/>	
+		</actions>
+	</section>		
+	
+	<hiddenFields>
+	<hidden name="requesterId"/>
+	<hidden name="scanVendorName"/>
+	<hidden name="type" defaultValue="MISC"/>
+	<hidden name="docPriority" defaultValue="1"/>
+	<hidden name="uploadRef"/>
+	<hidden name="originatorId"/>
+	<hidden name="retentionBoxId" defaultValue="upload" forceDefault="true"/>
+    </hiddenFields>
+
+	<processors>
+	</processors>
+</propertyTemplate>

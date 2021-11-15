@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<propertyTemplate
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/template.xsd">
+
+	<labels default="en">
+		<locale name="en">
+		<label name="tbdComment1" value="De-activate Reason"/>
+		<label name="forward" value="Submit"/>
+		<label name="group" value="Control Station"/>
+        </locale>
+	</labels>
+
+	<section name="requestCustomer" visible="true" collapsible="false" collapsed="false">
+		<properties>
+            <dropDown row="1" col="1" name="processCode" readonly="false" validation="required" choiceList="choice.product"/> <!--Product-->
+            <dropDown row="1" col="2" name="subType" choiceList="choice.masterfileCustomerSubTypes" readonly="false" validation="required" onChange="reloadPage(this)"/> <!--Request Type-->
+			<dropDown row="2" col="1" name="docPriority" choiceList="choice.priority" defaultValue="1" readonly="false" validation="required"/> <!--Priority-->
+			<text row="2" col="2" name="custom4.contactNo" validation="required, noSpecialCharacters"/> <!--Contact No-->
+			<dynamicDropDown row="3" col="1" name="group" readonly="false" providerClass="com.miriasystems.ui.providers.GroupsChoiceListProvider" validation="required"/> <!--Control Station-->
+		</properties>
+		<actions>
+			<button name="forward" command="forward" readonly="false" docType="upload" type="submit" isAnchored="false" title="forwardTitle" styleClass="button70"/>
+		</actions>		
+		</section>
+		
+<section name="customerDetails" visible="true" collapsible="false" collapsed="false">
+		<properties>
+			<textArea row="1" col="1-2" name="voucherComments" readonly="true" styleClass="comment" defaultValue="Warning! Request to deactive an account must be approved.  Please forward to a local authorized Approver or attach supporting documents."/> 
+			<text row ="2" col="1" name="custom4.accountNumber" readonly="false" validation="required"/> <!--Account Code-->
+			<text row="3" col="1-6" name="custom4.name" readonly="false" validation="required" styleClass="fulllookup"/> <!--Account Name-->
+			<label row="4" col="1" name="" position="left" />
+			<textArea row="5" col="1-6" name="tbdComment1" styleClass="comment" validation="required"/> 
+			<output row="6" col="1-6" name="processInformation.previousComment" readonly="true" styleClass="comment" escapeXml="false"/>
+			<valueAlias row="7" col="1" name="processInformation.queueName" readonly="true"/>
+		</properties>
+		<actions>
+			<iconAction name="print" icon="/images/ico-print-w24.png" width="24" height="24" link="javascript:window.print()" visible="true" alwaysActive="true"/>
+			<iconAction name="statusWindow" icon="/images/ico-history-w24.png" width="24" height="24" link="javascript:openStatusWindow('$seqId$', '$contextPath$');return false;" alwaysActive="true"/>
+			<iconAction name="help" icon="/images/ico-help-w24.png" width="24" height="24" link="javascript:openHelp('User_Interfaces/Working_with_Invoices.htm', '$contextPath$')" alwaysActive="true"/>
+		</actions>		
+	</section>
+
+	<hiddenFields>
+	<hidden name="requesterId"/>
+	<hidden name="scanVendorName"/>
+	<hidden name="type" defaultValue="CUSTOMER"/>
+	<hidden name="uploadRef"/>
+	<hidden name="originatorId"/>
+	<hidden name="retentionBoxId" defaultValue="upload" forceDefault="true"/>
+    </hiddenFields>
+
+	<processors>
+	</processors>
+</propertyTemplate>
+

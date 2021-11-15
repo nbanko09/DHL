@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<propertyTemplate
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/template.xsd">
+
+	<labels default="en">
+		<locale name="en">
+		<label name="tbdBoolean2" value="Pay by Wire/ACH/EFT"/>
+		<label name="tbdBoolean1" value="Wire/ACH/EFT Enrollment Form"/>		
+		<label name="forward" value="Submit"/>
+		<label name="group" value="Station"/>
+		</locale>
+	</labels>
+	
+	<section name="doc" collapsible="false" visible ="true" collapsed="false">
+		<properties>
+			<textArea row="1" col="1-2" name="tbdComment1" styleClass="comment"/> 
+			<output row="2" col="1-2" name="processInformation.previousComment" readonly="true" styleClass="comment" escapeXml="false"/>
+			<valueAlias row="3" col="1" name="processInformation.queueName" readonly="true"/>
+		</properties>
+		<actions>
+			<button name="forward" command="forward" readonly="false" docType="upload" type="submit" isAnchored="false" title="forwardTitle" styleClass="button70"/>
+		</actions>		
+	</section>	
+	
+	<section name="requestVendor" visible="true" collapsible="false" collapsed="false">
+		<actions>
+			<iconAction name="selectApprovers" icon="/images/ico-route-w24.png" width="24" height="24" readOnlyLink="javascript:openViewRoutingWindow('$contextPath$', '$wobNumber$', 'nonPo')" link="javascript:openUploadRoutingWindow('/ManagedPay/custom', 'routing/upload.action','nonPo', 'MP_Approver1')" alwaysActive="true" readonly="false"/>
+			<iconAction name="print" icon="/images/ico-print-w24.png" width="24" height="24" link="javascript:window.print()" visible="true" alwaysActive="true"/>
+			<iconAction name="statusWindow" icon="/images/ico-history-w24.png" width="24" height="24" link="javascript:openStatusWindow('$seqId$', '$contextPath$');return false;" alwaysActive="true"/>
+			<iconAction name="help" icon="/images/ico-help-w24.png" width="24" height="24" link="javascript:openHelp('User_Interfaces/Working_with_Invoices.htm', '$contextPath$')" alwaysActive="true"/>
+		</actions>
+		<properties>
+            <dropDown row="1" col="1" name="processCode" choiceList="choice.vendorProduct" readonly="false" validation="required"/>
+            <dropDown row="1" col="2" name="subType" choiceList="choice.masterfileVendorSubTypes" readonly="false" validation="required" onChange="reloadPage(this)"/>
+            <dropDown row="2" col="1" name="routingCode" choiceList="choice.vendorAccountType" readonly="false"/>
+			<dropDown row="2" col="2" name="docPriority" choiceList="choice.priority" defaultValue="1" readonly="false" validation="required"/> <!--Priority-->
+			<text row="3" col="1" name="custom5.contactNo" validation="required, noSpecialCharacters"/>			
+			<dynamicDropDown row="3" col="2" name="group" readonly="false" providerClass="com.miriasystems.ui.providers.GroupsChoiceListProvider" validation="required"/> <!--Control Station-->
+		</properties>
+		</section>
+	<section name="vendorDetails" visible="true" collapsible="false" collapsed="false">
+		<properties>
+			<text row ="1" col="1" name="custom5.accountNumber" readonly="true"/>
+			<text row ="1" col="3" name="custom5.accountingAccountNumber" readonly="true"/>
+			<text row="2" col="1-2" name="custom5.name" readonly="false" styleClass="fulllookup"/>
+		</properties>
+	</section>
+
+	<hiddenFields>
+	<hidden name="requesterId"/>
+	<hidden name="scanVendorName"/>
+	<hidden name="type" defaultValue="VENDOR"/>
+	<hidden name="tbdNumber4" defaultValue="1.0"/>
+	<hidden name="uploadRef"/>
+	<hidden name="originatorId"/>
+	<hidden name="retentionBoxId" defaultValue="upload" forceDefault="true"/>
+    </hiddenFields>
+
+	<processors>
+	</processors>
+</propertyTemplate>

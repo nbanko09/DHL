@@ -1,0 +1,29 @@
+<?xml version="1.0"  encoding="ISO-8859-1"  ?>
+<!DOCTYPE XMI>
+<XMI xmi.version="1.2" >
+<XMI.header>
+<XMI.documentation>
+<XMI.exporter>Ilog Rule Kit</XMI.exporter>
+<XMI.exporterVersion>4.1</XMI.exporterVersion>
+</XMI.documentation>
+<XMI.model href="ilr:0180AA48075B03010000FCC4BF018265A8C0#1"  xmi.name="Application"  xmi.version="1.2" />
+<XMI.metamodel href="ilr:09804659F3E0EA00000084662F000100007F#1"  xmi.name="Application"  xmi.version="1.2" />
+<XMI.import href="ilr:1D85AA48075B03010000FCC4BF018265A8C0#1"  xmi.name="Model"  xmi.version="1.2" />
+<XMI.import href="ilr:1E85AA48075B03010000FCC4BF018265A8C0#1"  xmi.name="Basics"  xmi.version="1.2" />
+<XMI.import href="ilr:1F85AA48075B03010000FCC4BF018265A8C0#1"  xmi.name="Rule"  xmi.version="1.2" />
+<XMI.import href="ilr:2085AA48075B03010000FCC4BF018265A8C0#1"  xmi.name="Runtime"  xmi.version="1.2" />
+<XMI.import href="ilr:2185AA48075B03010000FCC4BF018265A8C0#1"  xmi.name="Language"  xmi.version="1.2" />
+<XMI.import href="ilr:2285AA48075B03010000FCC4BF018265A8C0#1"  xmi.name="PrimitiveTypes"  xmi.version="1.2" />
+<XMI.import href="ilr:2385AA48075B03010000FCC4BF018265A8C0#1"  xmi.name="DecisionTable"  xmi.version="1.2" />
+<XMI.import href="ilr:2485AA48075B03010000FCC4BF018265A8C0#1"  xmi.name="DecisionTree"  xmi.version="1.2" />
+<XMI.import href="ilr:2585AA48075B03010000FCC4BF018265A8C0#1"  xmi.name="DefaultBusinessModel"  xmi.version="1.2" />
+<XMI.import href="ilr:2685AA48075B03010000FCC4BF018265A8C0#1"  xmi.name="Diagram"  xmi.version="1.2" />
+<XMI.import href="ilr:2785AA48075B03010000FCC4BF018265A8C0#1"  xmi.name="Graph"  xmi.version="1.2" />
+<XMI.import href="ilr:2885AA48075B03010000FCC4BF018265A8C0#1"  xmi.name="Behavioral_Elements"  xmi.version="1.2" />
+<XMI.import href="ilr:2985AA48075B03010000FCC4BF018265A8C0#1"  xmi.name="RuleFlow"  xmi.version="1.2" />
+<XMI.import href="ilr:2A85AA48075B03010000FCC4BF018265A8C0#1"  xmi.name="Deployment"  xmi.version="1.2" />
+<XMI.import href="ilr:2B85AA48075B03010000FCC4BF018265A8C0#1"  xmi.name="RuleApp"  xmi.version="1.2" />
+</XMI.header>
+<XMI.content>
+</XMI.content>
+</XMI>

@@ -1,0 +1,18 @@
+<?xml version="1.0"  encoding="ISO-8859-1"  ?>
+<!DOCTYPE XMI>
+<XMI xmi.version="1.2" >
+<XMI.header>
+<XMI.documentation>
+<XMI.exporter>Ilog Rule Kit</XMI.exporter>
+<XMI.exporterVersion>4.1</XMI.exporterVersion>
+</XMI.documentation>
+<XMI.model href="ilr:0180AA48075B03010000FCC4BF018265A8C0#1"  xmi.name="Application"  xmi.version="1.2" />
+<XMI.metamodel href="ilr:09804659F3E0EA00000084662F000100007F#1"  xmi.name="Application"  xmi.version="1.2" />
+</XMI.header>
+<XMI.content>
+<RuleApp.DeploymentNodeContainer xmi.id="a1"  xmi.uuid="ilr:09887DCFEF5C0301000096EA09018265A8C0#1"  isRoot="false"  isLeaf="false"  isAbstract="false"  name="Execution Servers"  editable="true"  creationDate="20 Apr 2005 00:10:35 GMT"  lastModificationDate="13 Jun 2005 17:07:28 GMT" >
+<Model.Namespace.contents>
+</Model.Namespace.contents>
+</RuleApp.DeploymentNodeContainer>
+</XMI.content>
+</XMI>

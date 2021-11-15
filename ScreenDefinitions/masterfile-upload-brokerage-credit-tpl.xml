@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<propertyTemplate
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/template.xsd">
+
+	<labels default="en">
+		<locale name="en">
+		<label name="tbdComment1" value="Credit Change Reason"/>
+		<label name="forward" value="Submit"/>
+		<label name="group" value="Control Station"/>
+        </locale>
+	</labels>
+
+	<section name="requestBrokerage" visible="true" collapsible="false" collapsed="false">
+		<actions>
+			<iconAction name="print" icon="/images/icon_printer.png" width="20" height="16" link="javascript:window.print()" visible="true" alwaysActive="true"/>
+			<iconAction name="selectApprovers" icon="/images/ico-route-w24.png" width="24" height="24" readOnlyLink="javascript:openViewRoutingWindow('$contextPath$', '$wobNumber$', 'nonPo')" link="javascript:openUploadRoutingWindow('/ManagedPay/custom', 'routing/upload.action','nonPo', 'MP_Approver1')" alwaysActive="true" readonly="false"/>
+			<button name="forward" command="forward" readonly="false" docType="upload" type="submit" isAnchored="false" title="forwardTitle" styleClass="button70"/>
+		</actions>
+		<properties>
+			<dropDown row="1" col="1" name="subType" choiceList="choice.masterfileCustomerBrkSubTypes" readonly="false" validation="required" onChange="reloadPage(this)"/> <!--Request Type-->
+			<dropDown row="1" col="2" name="businessUnit" choiceList="choice.creditUpdate" readonly="false" validation="required"/> <!--Credit Update-->
+			<text row="2" col="1" name="custom4.contactNo" validation="required, noSpecialCharacters"/> <!--Contact No-->
+			<dynamicDropDown row="2" col="2" name="group" readonly="false" providerClass="com.miriasystems.ui.providers.GroupsChoiceListProvider" validation="required"/> <!--Control Station-->
+		</properties>
+	</section>
+		
+	<section name="customerDetails" visible="true" collapsible="false" collapsed="false">
+		<properties>
+		<text row ="1" col="1" name="custom4.accountNumber" readonly="false" validation="required"/> <!--Account Code-->
+		<text row="2" col="1-5" name="custom4.name" readonly="false" validation="required" styleClass="fulllookup"/> <!--Account Name-->
+		</properties>
+	</section>
+		
+	<section name="doc" collapsible="false" collapsed="false">
+			<properties>
+			<textArea row="1" col="1-2" name="voucherComments" readonly="true" styleClass="comment"/> 
+			<textArea row="2" col="1-2" name="tbdComment1" validation="required" styleClass="comment"/> 
+			<output row="3" col="1-2" name="processInformation.previousComment" readonly="true" styleClass="comment" escapeXml="false"/>
+			<valueAlias row="4" col="1" name="processInformation.queueName" readonly="true"/>
+		</properties>	
+	</section>
+	
+
+	<hiddenFields>
+	<hidden name="requesterId"/>
+	<hidden name="scanVendorName"/>
+	<hidden name="type" defaultValue="CUSTOMER"/>
+	<hidden name="processCode" defaultValue="C-BRK"/>
+	<hidden name="group" defaultValue="BRK"/>
+	<hidden name="docPriority" defaultValue="1"/>
+	<hidden name="uploadRef"/>
+	<hidden name="originatorId"/>
+	<hidden name="retentionBoxId" defaultValue="upload" forceDefault="true"/>
+    </hiddenFields>
+	
+	<processors>	
+	 </processors>
+</propertyTemplate>

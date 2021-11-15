@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="nonpo-process-view" template="nonpo-tpl.xml"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/view.xsd">
+
+    <!-- View permutations:
+          -view: This is the standard view
+          -viewA: Alternatate vendor has been selected
+          -viewH: Special Handling Code has been selected
+          -viewS: Short-pay option has been selected
+    -->
+
+    <labels default="en">
+        <locale name="en">
+            <label name="forward" value="Return"/>
+            <label name="reject" value="Terminate"/>
+            <label name="scanVendorName" value="Employee Name"/>
+        </locale>
+    </labels>
+
+    <property-overrides>
+    	<text name="scanVendorName" readonly="true"/>
+       	<text name="subType" readonly="true"/>
+    	<text name="number" validation="" readonly="true"/>
+    	<textArea name="tbdComment1" validation="required" readonly="false"/>
+    	<textArea name="voucherComments" readonly="true"/>
+    	<text name="grossAmount" readonly="true"/>
+    </property-overrides>
+
+	<action-overrides>
+        
+    </action-overrides>
+
+    <hidden-overrides>
+        <hidden name="processInformation.response" defaultValue="Complete"/>
+    </hidden-overrides>
+
+     <documentRejection>
+        <rejectionReasons>
+            <reason name="Terminate" commentsRequired="true" note="message.terminate">
+            </reason>
+        </rejectionReasons>
+    </documentRejection>
+
+    <validations>
+
+    </validations>
+</view>

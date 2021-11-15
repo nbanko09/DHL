@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="all-rescan-view" template="masterfile-misc-bndpoa-tpl.xml"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/view.xsd">
+
+    <labels default="en">
+        <locale name="en">
+            <label name="forward" value="Submit"/>
+        </locale>
+    </labels>
+    
+    <property-overrides>
+    <text name="processCode" readonly="true"/>
+    <text name="custom4.contactNo" readonly="true"/>
+    <text name="custom6.chbSolicitPoa" readonly="true"/>
+    <text name="custom6.chbSolicitBond" readonly="true"/>
+    <text name="custom6.chbSolicitOther" readonly="true"/>
+    <text name="custom4.chbNotes" readonly="true"/>
+    <text name="custom4.chbIsfOtherInstructions" readonly="true"/>
+    </property-overrides>
+
+    <hidden-overrides>
+        <hidden name="processInformation.response" defaultValue="Complete"/>
+    </hidden-overrides>
+    
+      <action-overrides>
+			<button name="release" readonly="true" visible="false"/>
+ 			<button name="updateRelease" readonly="true" visible="false"/>
+      </action-overrides>
+        
+     <documentRejection>
+		 <rejectionReasons>
+			   <reason name="Return to Requester" commentsRequired="true" note="message.requester">
+			   </reason>
+		  </rejectionReasons>
+     </documentRejection>
+<validations>
+</validations>
+</view>

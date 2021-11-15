@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="all-rescan-view" template="credit-request-ocean-tpl.xml"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/view.xsd">
+
+    <labels default="en">
+        <locale name="en">
+            <label name="forward" value="Submit"/>
+            <label name="reject" value="Terminate"/>
+        </locale>
+    </labels>
+    
+    <property-overrides>
+    <text name="processCode" readonly="false"/>
+    <text name="subType" readonly="false"/>
+    <text name="group" readonly="false"/>
+    <text name="processCode" readonly="false"/>
+    <text name="number" readonly="false" validation="required"/>
+    <text name="shippingDocumentId" readonly="false" validation="required"/>
+    <text name="tbdDate1" readonly="false" validation="required"/>
+    <text name="custom5.name" readonly="false" validation="required"/>
+    <text name="custom5.accountNumber" readonly="false" validation="required"/>
+    </property-overrides>
+    
+    <lineItem-overrides>
+            	<text name="partNumber" readonly="false"/> 
+            	<text name="manfPartNumber" readonly="false"/> 
+               	<text name="lineTotal" readonly="false"/>
+               	<text name="tbdCurrency1" readonly="false"/>
+    </lineItem-overrides>
+    
+    <hidden-overrides>
+        <hidden name="processInformation.response" defaultValue="Complete"/>
+    </hidden-overrides>
+    
+    <action-overrides>
+        <button name="release" visible="false"/>
+        <getNext name="next" readonly="true" visible="false"/>
+    </action-overrides>
+
+     <documentRejection>
+        <rejectionReasons>
+            <reason name="Cancel" commentsRequired="true"  note="message.terminate">
+            </reason>
+        </rejectionReasons>
+    </documentRejection>
+
+<validations>
+      
+    </validations>
+</view>

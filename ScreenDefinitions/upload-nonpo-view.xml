@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="upload-nonpo-view" template="upload-nonpo-tpl.xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://managedpay.net/schemas/view.xsd">
+
+<labels default="en">
+		<locale name="en">
+		</locale>
+</labels>
+
+<section-overrides>	
+		<section name="New Vendor Details" visible="false"/>
+</section-overrides>
+
+<property-overrides>
+
+	<text name="checkNumber" visible="false" />
+</property-overrides>
+
+<validations>
+    <validation name="validation.accountCode"/>
+	<validation name="validation.lineItemAmount"/>
+</validations>
+
+</view>
+
+

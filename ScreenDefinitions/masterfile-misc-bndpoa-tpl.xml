@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<propertyTemplate
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/template.xsd">
+
+	<labels default="en">
+		<locale name="en">
+		<label name="forward" value="Submit"/>
+		<label name="custom4.chbNotes" value="Nature Of Request"/>
+		<label name="custom4.chbIsfOtherInstructions" value="Steps Taken"/>
+		<label name="group" value="Control Station"/>
+		</locale>
+	</labels>
+	
+	
+	<section name="doc" collapsible="false" collapsed="false">
+		<properties>
+			<valueAlias row="1" col="1" name="processInformation.queueName" readonly="true"/>
+		</properties>
+		<actions>
+			<rejectButton name="reject" readonly="false" isAnchored="false" hotKey="r"/>
+			<button name="forward" command="forward" readonly="false" docType="upload" type="submit" isAnchored="false" title="forwardTitle" styleClass="button70"/>
+		</actions>		
+	</section>		
+
+	<section name="requestPOA" visible="true" collapsible="false" collapsed="false">
+		<properties>
+			<text row="1" col="1" name="requesterName" readonly="true"/>
+			<text row="1" col="2" name="requester.email" readonly="true"/>
+			<text row="1" col="3" name="custom4.controlStation" readonly="true"/> <!--Station-->
+			<date row="2" col="1" name="createDate" readonly="true" showTime="true" styleClass="90"/> <!--Request Date-->
+	    	<date row="2" col="2" name="processInformation.deadline" readonly="true" showTime="true" styleClass="90"/> <!--Required Date-->
+            <text row="2" col="3" name="seqId" readonly="true"/> <!--Request Ticket No-->
+			<dropDown row="3" col="1" name="processCode" choiceList="choice.masterfileMiscTypes" readonly="false" validation="required" onChange="reloadPage(this)"/> <!--Request Type-->
+			<text row="3" col="2" name="custom4.contactNo" validation="required, noSpecialCharacters"/> <!--Contact No-->
+			<dynamicDropDown row="3" col="3" name="group" readonly="true" providerClass="com.miriasystems.ui.providers.GroupsChoiceListProvider" validation="required"/> <!--Control Station-->
+			<text row="4" col="1-3" name="chbLabel1" readonly="true" defaultValue="Please check all that apply." forceDefault="true" styleClass="comment"/> 
+			<checkbox row="5" col="1" name="custom6.chbSolicitPoa"/> <!--Solicit POA-->
+			<checkbox row="5" col="2" name="custom6.chbSolicitBond"/> <!--Solicit Bond-->
+			<checkbox row="5" col="3" name="custom6.chbSolicitOther"/> <!--Solicit Other-->
+			<textArea row="6" col="1-3" name="custom4.chbNotes" validation="required" styleClass="comment11"/>  <!--Nature of Request-->
+			<textArea row="7" col="1-3" name="custom4.chbIsfOtherInstructions" validation="required" styleClass="comment11"/>    <!--Steps Taken-->
+		</properties>
+		<actions>
+			<!-- The following set of actions are standard ManagedPay and should be included relatively unmodified from the baseline version in most templates -->
+			<postingReplyAction name="postings" icon="/images/ico-paid-w24.png" width="24" height="24" link="javascript:openPostingReplyWindow('$contextPath$', '$wobNumber$')" visible="true"/>
+			<iconAction name="editRouting" icon="/images/ico-route-w24.png" width="24" height="24" readOnlyLink="javascript:openViewRoutingWindow('$contextPath$', '$wobNumber$', 'nonPo')" link="javascript:openRoutingWindow('$contextPath$', '$wobNumber$', 'nonPo', 'MP_Approver1')" alwaysActive="true" readonly="false"/>			
+			<iconAction name="email" icon="/images/ico-mail-w24.png" width="24" height="24" link="javascript:openSendEmailWindow('$contextPath$', '$imageGUID$', '$wobNumber$')" alwaysActive="true"/>
+			<iconAction name="attachments" icon="/images/ico-attachment-w24.png" width="24" height="24" link="javascript:openAttachmentsWindow('$contextPath$', '$wobNumber$')" alwaysActive="true"/>
+			<attachmentCountAction name="attachmentCount" visible="true"/>
+			<!--iconAction name="vendorHistory" icon="/images/ico-vhistory-w24.png" width="24" height="24" link="javascript:openVendorHistoryWindow('$contextPath$', '$wobNumber$')" alwaysActive="true"/-->
+			<iconAction name="print" icon="/images/ico-print-w24.png" width="24" height="24" link="javascript:window.print()" visible="true" alwaysActive="true"/>
+			<!--iconAction name="barcode" icon="/images/ico-barcode-w24.png" width="24" height="24" link="javascript:openPrintBarcodeWindow('$contextPath$', '$uploadRef$', '$seqId$')" alwaysActive="true"/-->			<iconAction name="statusWindow" icon="/images/ico-history-w24.png" width="24" height="24" link="javascript:openStatusWindow('$seqId$', '$contextPath$');return false;" alwaysActive="true"/>
+			<iconAction name="help" icon="/images/ico-help-w24.png" width="24" height="24" link="javascript:openHelp('User_Interfaces/Working_with_Invoices.htm', '$contextPath$')" alwaysActive="true"/>
+		</actions>		
+	</section>
+		
+	<hiddenFields>
+		<hidden name="requesterId"/>
+		<hidden name="scanVendorName"/>
+		<hidden name="type" defaultValue="MISC"/>
+		<hidden name="processInformation.comment"/>
+    </hiddenFields>
+
+	<processors>
+    </processors>
+</propertyTemplate>

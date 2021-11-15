@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="all-rescan-view" template="check-request-upload-ocean-noprn-tpl.xml"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/view.xsd">
+
+    <labels default="en">
+        <locale name="en">
+            <label name="forward" value="Submit"/>
+        </locale>
+    </labels>
+    
+    <action-overrides>
+    </action-overrides>
+    
+     <validations>
+        <validation name="validation.checkTempRouting"/>
+        <validation name="validation.stationProductvalidation"/>      
+    </validations>
+    
+    <hidden-overrides>
+        <hidden name="processInformation.response" defaultValue="Complete"/>
+    </hidden-overrides>
+</view>

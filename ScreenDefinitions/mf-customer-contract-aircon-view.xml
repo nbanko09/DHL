@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="all-rescan-view" template="masterfile-customer-aircon-tpl.xml"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/view.xsd">
+
+    <labels default="en">
+        <locale name="en">
+             <label name="forward" value="Complete"/>
+        </locale>
+    </labels>
+    
+    <action-overrides>  	
+    </action-overrides>
+    
+    <section-overrides>         
+    </section-overrides>
+    
+    <property-overrides>
+     <textArea name="voucherComments" defaultValue="Warning:Account will be set to CASH ONLY until credit has been approved by the credit department. If credit is request, customers should be encouraged to complete the online credit application otherwise a credit application must be attached"/>
+     <text name="custom4.billToAccountCode" readonly="true"/> <!--Alt Bill To Ac-->
+	 <text name="custom4.billToAccount" readonly="true"/> <!--Alt Bill To Name-->
+	 <dropDown name="routingCode" readonly="true"/>
+	 <dropDown name="processCode" readonly="true"/>
+	 <dropDown name="docPriority" readonly="true"/>
+	 <text name="custom4.name" readonly="true"/>
+	 <text name="subType" styleClass="fulllookup" readonly="true"/>
+	 <text name="custom4.contactNo" readonly="true"/>
+	 <text name="custom4.fao" readonly="true"/>
+	 <text name="custom4.address1" readonly="true"/>
+	 <text name="custom4.address2" readonly="true"/>
+	 <text name="custom4.city" readonly="true"/>
+	 <text name="custom4.state" readonly="true"/>
+	 <text name="custom4.country" readonly="true"/>
+	 <text name="custom4.ein" readonly="true"/>
+	 <text name="custom4.contactName" readonly="true"/>
+	 <text name="custom4.phone" readonly="true"/>
+	 <text name="custom4.postalCode" readonly="true"/>
+	 <text name="custom4.fax" readonly="true"/>
+	 <text name="tbdString11" readonly="true"/>
+	 <text name="custom4.accountingContact" readonly="true"/>
+	 <text name="custom4.contactPhone" readonly="true"/>
+	 <text name="custom4.contactEmail" readonly="true"/>
+	 <text name="custom4.contractInEffect" readonly="true"/>
+	 <text name="custom4.contractNo" readonly="true"/>
+	 <text name="custom4.linkToCorpAccount" readonly="true"/>
+	 <text name="custom4.linkToArParent" readonly="true"/>
+	 <text name="custom4.brokerAccount" readonly="true"/>
+	 <text name="custom4.salesRep" readonly="true"/>
+	 <text name="custom4.accountNumber" readonly="false" validation="required"/>
+	 <text name="group" readonly="true"/>
+    </property-overrides>
+
+    <hidden-overrides>
+        <hidden name="processInformation.response" defaultValue="Complete"/>
+    </hidden-overrides>
+
+	<documentRejection>
+          <rejectionReasons>
+          <reason name="Return to Requester" commentsRequired="true" note="message.requester">
+          </reason>
+          <reason name="Send To Customer Team" commentsRequired="true" note="message.customerTeam">
+          </reason>            
+          </rejectionReasons>
+    </documentRejection>
+</view>

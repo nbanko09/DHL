@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="all-rescan-view" template="masterfile-upload-customer-credit-customer-n-tpl.xml"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/view.xsd">
+
+    <labels default="en">
+        <locale name="en">   
+        </locale>
+    </labels>
+    
+    <property-overrides>
+        <textArea name="voucherComments" defaultValue="Customer may complete credit application online or a credit application can be attached for review by the Credit Department."/>
+        <textArea name="tbdComment1" validation="required"/> 
+    </property-overrides>
+
+    <hidden-overrides>
+        <hidden name="processInformation.response" defaultValue="Complete"/>
+    </hidden-overrides>
+
+     <validations>
+                   <validation name="validation.stationProductvalidation"/>   
+    </validations>
+</view>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<propertyTemplate
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/template.xsd">
+
+	<labels default="en">
+		<locale name="en">
+		<label name="forward" value="Submit"/>
+		<label name="custom4.postalCode" value="Postal Code"/>
+		<label name="custom4.chbPaZip" value="Postal Code"/>
+		<label name="tbdBoolean1" value="Same as Mailing Address"/>
+		<label name="group" value="Control Station"/>
+		<label name="custom6.chbFdaAbi" value="Workflow Active"/>
+		<label name="businessUnit" value="Division"/>
+		</locale>
+	</labels>
+
+	<section name="request" visible="true" collapsible="false" collapsed="false">
+		<actions>
+			<getNext name="next" readonly="false" showLabel="true" visible="true" toLeft="true" styleClass="getNext70"/>
+			<rejectButton name="reject" readonly="false" isAnchored="false" title="rejectTitle" styleClass="button70"/>
+			<button name="release" command="release" readonly="false" visible="true" type="submit" title="releaseTitle" styleClass="button70"/>
+			<button name="updateRelease" command="updateRelease" readonly="false" visible="true" type="submit" title="updateReleaseTitle" styleClass="button70"/>
+			<button name="update" command="update" readonly="false" visible="true" type="submit" title="updateTitle" styleClass="button70"/>
+			<button name="forward" command="forward" readonly="false" type="submit" isAnchored="false" title="forwardTitle" styleClass="button70"/>
+		</actions>
+		<properties>
+			<text row="1" col="1" name="requesterName" readonly="true"/>
+			<text row="1" col="2" name="requester.email" readonly="true"/>
+			<text row="1" col="3" name="custom4.controlStation" readonly="true"/> <!--Station-->
+			<date row="2" col="1" name="createDate" readonly="true" showTime="true" styleClass="90"/> <!--Request Date-->
+	    	<date row="2" col="2" name="processInformation.deadline" readonly="true" showTime="true" styleClass="90"/> <!--Required Date-->
+            <text row="2" col="3" name="seqId" readonly="true"/> <!--Request Ticket No-->
+			<dropDown row="3" col="1" name="subType" choiceList="choice.masterfileCustomerBrkSubTypes" readonly="false" validation="required" onChange="reloadPage(this)"/> <!--Request Type-->
+			<text row="3" col="2" name="custom4.contactNo" validation="required, noSpecialCharacters"/> <!--Contact No-->
+			<dynamicDropDown row="3" col="3" name="group" readonly="true" providerClass="com.miriasystems.ui.providers.GroupsChoiceListProvider" validation="required"/> <!--Control Station-->
+			<text row="4" col="1" name="businessUnit" styleClass="sixty"/> <!--Customer Name-->
+			<textArea row="5" col="1-3" name="chbLabel1" readonly="true" defaultValue="In order to establish a customer code, we must have a complete physical address including Postal Code and Phone #. For US parties, the IRS# must be provided. In order to apply for a CA#, we need the foreign address." forceDefault="true" styleClass="comment"/> 
+			<text row="6" col="1-3" name="custom4.name" validation="required" styleClass="fourhundred"/> <!--Customer Name-->
+			<text row="7" col="1-3" name="custom4.chbDBA" styleClass="fourhundred"/> <!--Customer Name-->
+			<text row="8" col="1-3" name="custom4.chbAKA" styleClass="fourhundred"/> <!--Customer Name-->
+		</properties>
+	</section>
+	
+	<section name="doc" collapsible="false" collapsed="false">
+		<properties>
+			<textArea row="1" col="1-5" name="tbdComment1" readonly="true"  styleClass="comment"/> 
+			<output row="2" col="1-2" name="processInformation.previousComment" readonly="true" styleClass="comment" escapeXml="false"/>
+			<valueAlias row="3" col="1" name="processInformation.queueName" readonly="true"/>
+		</properties>
+	</section>	
+		
+	<section name="mailingAddress" visible="true" collapsible="false" collapsed="false">
+		<actions>
+			<postingReplyAction name="postings" icon="/images/ico-paid-w24.png" width="24" height="24" link="javascript:openPostingReplyWindow('$contextPath$', '$wobNumber$')" visible="true"/>
+			<iconAction name="editRouting" icon="/images/ico-route-w24.png" width="24" height="24" readOnlyLink="javascript:openViewRoutingWindow('$contextPath$', '$wobNumber$', 'nonPo')" link="javascript:openRoutingWindow('$contextPath$', '$wobNumber$', 'nonPo', 'MP_Approver1')" alwaysActive="true" readonly="false"/>			
+			<iconAction name="email" icon="/images/ico-mail-w24.png" width="24" height="24" link="javascript:openSendEmailWindow('$contextPath$', '$imageGUID$', '$wobNumber$')" alwaysActive="true"/>
+			<iconAction name="attachments" icon="/images/ico-attachment-w24.png" width="24" height="24" link="javascript:openAttachmentsWindow('$contextPath$', '$wobNumber$')" alwaysActive="true"/>
+			<attachmentCountAction name="attachmentCount" visible="true"/>
+			<!--iconAction name="vendorHistory" icon="/images/ico-vhistory-w24.png" width="24" height="24" link="javascript:openVendorHistoryWindow('$contextPath$', '$wobNumber$')" alwaysActive="true"/-->
+			<iconAction name="print" icon="/images/ico-print-w24.png" width="24" height="24" link="javascript:window.print()" visible="true" alwaysActive="true"/>
+			<!--iconAction name="barcode" icon="/images/ico-barcode-w24.png" width="24" height="24" link="javascript:openPrintBarcodeWindow('$contextPath$', '$uploadRef$', '$seqId$')" alwaysActive="true"/-->			<iconAction name="statusWindow" icon="/images/ico-history-w24.png" width="24" height="24" link="javascript:openStatusWindow('$seqId$', '$contextPath$');return false;" alwaysActive="true"/>
+			<iconAction name="help" icon="/images/ico-help-w24.png" width="24" height="24" link="javascript:openHelp('User_Interfaces/Working_with_Invoices.htm', '$contextPath$')" alwaysActive="true"/>
+		</actions>
+		<properties>
+			<text row="1" col="1-2" name="custom4.fao" readonly="false" styleClass="twosixty"/> <!--Attention-->
+			<text row="2" col="1-2" name="custom4.address1" readonly="false" styleClass="twosixty" validation="required"/> <!--Address 1-->
+			<text row="3" col="1-2" name="custom4.address2" readonly="false" styleClass="twosixty"/> <!--Address 2-->
+			<text row="4" col="1" name="custom4.city" readonly="false" validation="required" styleClass="twosixty"/> <!--City-->
+			<dropDown row="4" col="2" name="custom4.state" choiceList="choice.states" readonly="false"/> <!--State-->
+			<text row="5" col="1" name="custom4.postalCode" validation="required" readonly="false" styleClass="seventy"/> <!--Post Code-->
+			<text row="5" col="2" name="custom4.country" readonly="false" defaultValue="USA" styleClass="twoninety" validation="required"/> <!--Country-->
+		</properties>
+	</section>
+	
+	<section name="physicalAddress" visible="true" collapsible="false" collapsed="false">
+		<properties>
+			<checkbox row="1" col="1" name="tbdBoolean1" readonly="false" onClick="reloadPage(this)"/> <!-- PA same as MA-->
+			<text row ="2" col="1-2" name="custom4.chbPaFao" styleClass="twosixty" readonly="false"/> <!--FAO-->
+			<text row="3" col="1-2" name="custom4.chbPaAddress1" readonly="false" validation="required" styleClass="twosixty"/> <!--Address1-->
+			<text row="4" col="1-2" name="custom4.chbPaAddress2" readonly="false" styleClass="twosixty"/> <!--Address2-->
+			<text row="5" col="1" name="custom4.chbPaCity" readonly="false" validation="required" styleClass="twosixty"/> <!--City-->
+			<dropDown row="5" col="2" name="custom4.chbPaState" choiceList="choice.states" readonly="false"/> <!--State-->
+			<text row="6" col="1" name="custom4.chbPaZip" validation="required" readonly="false" styleClass="seventy"/> <!--Post Code-->
+			<text row="6" col="2" name="custom4.chbPaCountry" readonly="false" styleClass="twoninety" validation="required"/> <!--Country-->
+		</properties>
+	</section>
+
+	
+	<section name="accountType" visible="true" collapsible="false" collapsed="false">
+		<properties>
+			<text row="1" col="1" name="custom4.chbIrsSs" styleClass="onehundred" readonly="false" validation="required"/> <!--IRS SS-->
+			<text row="1" col="2" name="custom4.chbPhone" styleClass="onetwenty" readonly="false" validation="required"/> <!--Phone-->
+			<text row="1" col="3" name="custom4.chbFax" styleClass="onetwenty" readonly="false" /> <!--Fax-->
+			<text row="2" col="1" name="custom4.billToAccountCode" styleClass="onehundred" readonly="false" /> <!--Bill To Code-->
+			<text row="2" col="2-3" name="custom4.billToAccount"  styleClass="threetwenty" readonly="false" /> <!--Bill To Name-->
+			<checkbox row="3" col="1" name="custom4.chbImporterYN" readonly="false" /> <!--Importer-->
+			<checkbox row="3" col="2" name="custom4.chbDeliverToYN" readonly="false"/> <!--Deliver To-->
+			<checkbox row="3" col="3" name="custom4.chbBillToYN" readonly="false"/> <!--Bill To-->
+			<checkbox row="4" col="1" name="custom4.chbShipperYN" readonly="false"/> <!--Shipper-->
+			<checkbox row="4" col="2" name="custom4.chbConsigneeYN" readonly="false"/> <!--Consignee-->
+	    </properties>
+	</section>
+	
+	<section name="contactInformation" visible="true" collapsible="false" collapsed="false">
+		<properties>
+			<text row="1" col="1" name="custom4.chbContactNo" readonly="false" styleClass="fifty"/> <!--Contact No-->
+			<text row="1" col="2" name="custom4.chbContactName" readonly="false" styleClass="twosixty"/> <!--Contact Name-->
+			<text row="1" col="3" name="custom4.chbContactTitle" readonly="false" styleClass="ninety"/> <!--Title-->
+			<text row="2" col="1" name="custom4.chbContactPhone" readonly="false" styleClass="onetwenty"/> <!--Phone-->
+			<text row="2" col="2" name="custom4.chbContactFax" readonly="false" styleClass="onetwenty"/> <!--Fax-->
+			<text row="2" col="3" name="custom4.chbContactCell" readonly="false" styleClass="onetwenty"/> <!--Cell-->
+			<text row="3" col="1" name="custom4.chbContactPager" readonly="false" styleClass="onetwenty"/> <!--Pager-->
+			<text row="3" col="2" name="custom4.chbContactPagerPin" readonly="false" styleClass="seventy"/> <!--Pin-->
+			<text row="3" col="3" name="custom4.chbContactEmail" readonly="false" styleClass="threehundred"/> <!--EMail-->
+			<text row="4" col="1" name="custom4.chbContactPhone2" readonly="false" styleClass="onetwenty"/> <!--Phone2-->
+			<text row="4" col="2" name="custom4.chbContactFax2" readonly="false" styleClass="onetwenty"/> <!--Fax2-->
+			<text row="4" col="3" name="custom4.chbContactEmail2" readonly="false" styleClass="threehundred"/> <!--EMail2-->
+			<text row="5" col="1" name="custom4.chbContactEmergencyPhone" readonly="false" styleClass="onetwenty"/> <!--Emergency #-->
+			<dropDown row="5" col="3" name="custom4.chbTempPerm" choiceList="choice.tempPerm" readonly="false"/> <!--Temp or Perm-->
+			<text row="6" col="1-3" name="chbLabel4" defaultValue="FDA Submitter Details" forceDefault="true" styleClass="fulllookup" readonly="true"/>
+			<text row="7" col="1" name="custom4.chbFdaLastName" readonly="false" styleClass="twotwenty"/> <!--FDA Last Name-->
+			<text row="7" col="3" name="custom4.chbFdaFirstName" readonly="false" styleClass="twotwenty"/> <!--FDA First Name-->
+			<dropDown row="8" col="1" name="custom4.chbFdaFirmType" choiceList="choice.firmType" readonly="false"/> <!--Firm Type-->
+			<dropDown row="8" col="3" name="custom4.chbFdaMessageYN" choiceList="choice.booleanYesNo" defaultValue="0" readonly="false"/> <!--Message-->
+			<textArea row="9" col="1-3" name="custom4.chbNotes" readonly="false" styleClass="comment5"/> <!--Customer notes-->
+		</properties>
+	</section>
+	
+	<section name="activity" visible="true" collapsible="false" collapsed="false">
+		<properties>
+			<textArea row="1" col="1-2" name="chbLabel2" readonly="true" defaultValue="Please refer to the fee matrix in the Best Practices manual Sec 1.32. Requests to process fees that differ from the fee matrix or do not include a mandatory fee as stated in the matrix must be accompanied by a management approval as identified in the fee matrix." forceDefault="true" styleClass="comment"/> 
+			<dropDown row="2" col="1" name="custom4.chbChargeProfile" choiceList="choice.chargeProfile" readonly="false"/> <!--Phone-->
+			<text row="2" col="2" name="custom4.chbCustomerProfile" readonly="false"/>
+			<text row="3" col="1" name="custom4.chbSpecificProfile" readonly="false"/>
+			<currency row="4" col="1" name="custom4.chbEntryFee" readonly="false" /> <!--Fax-->
+			<currency row="4" col="2" name="custom4.chbDisbursementFee" readonly="false" /> <!--Bill To Code-->
+			<text row="5" col="1-2" name="custom4.chbOtherFee" styleClass="fulllookup" readonly="false" /> <!--Bill To Name-->
+			<currency row="6" col="1" name="custom4.chbAdditionalClass" readonly="false" /> <!--Importer-->
+			<currency row="6" col="2" name="custom4.chbAdditionalInvoice" readonly="false"/> <!--Deliver To-->
+			<currency row="7" col="1" name="custom4.chbBrokerBondCharge" readonly="false"/> <!--Bill To-->
+			<currency row="7" col="2" name="custom4.chbSebCharge" readonly="false"/> <!--Shipper-->
+		</properties>
+	</section>
+
+	<section name="importInformation" visible="true" collapsible="false" collapsed="false">
+		<properties>
+			<text row="1" col="1" name="custom4.chbDivision" styleClass="thirty" readonly="false"/>  <!--Division-->
+			<text row="1" col="2" name="custom4.chbTibMessage1" styleClass="fourty" readonly="false"/> <!--TIB Message 1 #-->
+			<text row="1" col="3" name="custom4.chbTibMessage2" styleClass="fourty" readonly="false"/> <!--TIB Message 1-->
+			<checkbox row="2" col="1" name="custom4.chbRelated" readonly="false"/> <!--Related-->
+			<text row="2" col="2" name="custom4.chbDoFrCharge" styleClass="oneseventy" readonly="false"/>   <!--DO FR Charge-->
+			<text row="2" col="3" name="custom4.chbDeliverTo" styleClass="ninety" readonly="false"/>   <!--Deliver To-->
+			<text row="3" col="1" name="custom4.chbConsignee" styleClass="oneseventy" readonly="false"/>  <!--Consignee-->
+			<text row="3" col="2" name="custom4.chbLocation" styleClass="oneseventy" readonly="false"/>  <!--Location-->
+			<text row="3" col="3" name="custom4.chbExamLoc" styleClass="fifty" readonly="false"/>    <!--Exam Location-->
+			<text row="4" col="1" name="custom4.chbTruck" styleClass="seventy" readonly="false"/>    <!--Truck-->
+			<text row="4" col="2" name="custom4.chbBrokerTeam" styleClass="onefifty" readonly="false"/>    <!--Broker team-->
+			<text row="4" col="3" name="custom4.chbMid" styleClass="onefifty" readonly="false"/>    <!--MID-->
+			<text row="5" col="1" name="custom4.chbTarrifNumber" styleClass="onehundred" readonly="false"/>    <!--Tarrif #-->
+			<text row="5" col="1" name="custom4.chbCOrigin" styleClass="onefifty" readonly="false"/>    <!--Origin-->
+			<text row="5" col="3" name="custom4.chbCExport" styleClass="onefifty" readonly="false"/>    <!--Export-->
+			<text row="6" col="1" name="custom4.chbEntryType" styleClass="thirty" readonly="false"/>    <!--Entry Type-->
+			<text row="6" col="1" name="custom4.chbMot" styleClass="oneseventy" readonly="false"/>    <!--MOT-->
+			<text row="6" col="3" name="custom4.chbPortOfEntry" styleClass="fourty" readonly="false"/>    <!--POE-->
+			<text row="7" col="1" name="custom4.chbPortOfLading" styleClass="fourty" readonly="false"/>    <!--POL-->
+			<dropDown row="7" col="2" name="custom4.chbSqueeze" choiceList="choice.booleanYesNo" defaultValue="0" readonly="false"/>    <!--Squeeze-->
+			<dropDown row="7" col="3" name="custom4.chbAutoBilling" choiceList="choice.booleanYesNo" defaultValue="0" readonly="false"/>    <!--Auto Bill-->
+			<text row="8" col="1" name="custom4.chb9802" styleClass="onefifty" readonly="false"/>    <!--9802-->
+			<dropDown row="8" col="2" name="custom4.chbRlfYN" choiceList="choice.booleanYesNo" defaultValue="0" readonly="false"/>    <!--RLF-->
+			<dropDown row="8" col="3" name="custom4.chbAitAin" choiceList="choice.ain" readonly="false"/>    <!--AIN-->
+			<text row="9" col="1" name="custom4.chbDoMessage1" styleClass="fourty" readonly="false"/>    <!--DO Message 1-->
+			<text row="9" col="2" name="custom4.chbDoMessage2" styleClass="fourty" readonly="false"/>    <!--DO Message 2-->
+			<dropDown row="9" col="3" name="custom4.chbCtpat" choiceList="choice.booleanYesNo" defaultValue="0" readonly="false"/>    <!--CTPAT-->
+			<text row="10" col="1" name="custom4.chbFedRegNumber" styleClass="oneseventy" readonly="false"/>    <!--Fed #-->
+		</properties>
+	</section>
+	
+	<section name="isfInformation" visible="true" collapsible="false" collapsed="false">
+		<properties>
+			<dropDown row="1" col="1" name="custom4.chbIsfDgfFilerYN" choiceList="choice.booleanYesNo" defaultValue="0" readonly="false"/>  <!--Acc Contact Name-->
+			<date row="1" col="2" name="custom4.chbIsfEffectiveDate" readonly="false"/> <!--Contact Tel #-->
+			<text row="1" col="3" name="custom4.chbIsfBillTo" styleClass="oneseventy" readonly="false"/> <!--Contact Tel #-->
+			<text row="2" col="1" name="custom4.chbIsfFees" styleClass="threehundred" readonly="false"/> <!--Contract In Effect-->
+			<text row="2" col="2" name="custom4.chbIsfContact" styleClass="threehundred" readonly="false"/>   <!--Contract Number-->
+			<text row="2" col="3" name="custom4.chbIsfTitle" styleClass="onehundred" readonly="false"/>   <!--Link to Corp Acc-->
+			<text row="3" col="1" name="custom4.chbIsfEmail" styleClass="threehundred" readonly="false"/>  <!--Link to A/R Parent-->
+			<text row="3" col="2" name="custom4.chbIsfPhone" readonly="false"/>  <!--Broker Ac-->
+			<text row="4" col="1-2" name="chbLabel3" defaultValue="ISF E-Mail Notifications Sent To (List E-Mails)" forceDefault="true" styleClass="fulllookup" readonly="true"/>
+			<text row="5" col="1-3" name="custom4.chbIsfAcceptanceMessage" styleClass="sixhundred" readonly="false"/>    <!--Sales Rep-->
+			<text row="6" col="1-3" name="custom4.chbIsfRejectedMessage" styleClass="sixhundred" readonly="false"/>    <!--Sales Rep-->
+			<text row="7" col="1-3" name="custom4.chbIsfAcceptedWarning" styleClass="sixhundred" readonly="false"/>    <!--Sales Rep-->
+			<text row="8" col="1-3" name="custom4.chbIsfStatusMessages" styleClass="sixhundred" readonly="false"/>    <!--Sales Rep-->
+			<text row="9" col="1-3" name="custom4.chbIsfOtherInstructions" styleClass="sixhundred" readonly="false"/>    <!--Sales Rep-->
+		</properties>
+	</section>
+	
+	<section name="stagingInformation" visible="true" collapsible="false" collapsed="false">
+		<properties>
+			<dropDown row="1" col="1" name="custom6.stagingSecurity" choiceList="choice.EPSecurity" readonly="false"/> <!--Security #-->
+			<dropDown row="1" col="2" name="custom6.stagingCommodity" choiceList="choice.EPCommodity" readonly="false"/> <!--Commodicty-->
+			<dropDown row="1" col="3" name="custom6.stagingEPTeam" choiceList="choice.EPTeam" readonly="false"/>   <!--EP Team-->
+			<dropDown row="2" col="1" name="custom6.stagingCSTeam" choiceList="choice.CSTeam" readonly="false"/>   <!--CS Team-->
+			<text row="2" col="2" name="custom6.stagingCSAgent" styleClass="twohundred" readonly="false"/>  
+			<dropDown row="2" col="3" name="custom6.stagingIOR" choiceList="choice.yesNo" readonly="false"/>  
+			<dropDown row="3" col="1" name="custom6.chbFdaAbi" choiceList="choice.booleanYesNo" readonly="false"/>   
+		</properties>
+	</section>
+	
+
+	<hiddenFields>
+		<hidden name="requesterId"/>
+		<hidden name="scanVendorName"/>
+		<hidden name="type" defaultValue="BROKERAGE"/>
+		<hidden name="processCode" defaultValue="C-BRK"/>
+		<hidden name="processInformation.comment"/>
+    </hiddenFields>
+
+	<processors>
+	</processors>
+</propertyTemplate>

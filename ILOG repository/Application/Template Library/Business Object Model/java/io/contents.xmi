@@ -1,0 +1,20 @@
+<?xml version="1.0"  encoding="ISO-8859-1"  ?>
+<!DOCTYPE XMI>
+<XMI xmi.version="1.2" >
+<XMI.header>
+<XMI.documentation>
+<XMI.exporter>Ilog Rule Kit</XMI.exporter>
+<XMI.exporterVersion>4.1</XMI.exporterVersion>
+</XMI.documentation>
+<XMI.model href="ilr:0180AA48075B03010000FCC4BF018265A8C0#1"  xmi.name="Application"  xmi.version="1.2" />
+<XMI.metamodel href="ilr:09804659F3E0EA00000084662F000100007F#1"  xmi.name="Application"  xmi.version="1.2" />
+</XMI.header>
+<XMI.content>
+<DefaultBusinessModel.Package xmi.id="a1"  xmi.uuid="ilr:5580AA48075B03010000FCC4BF018265A8C0#1"  isRoot="false"  isLeaf="false"  isAbstract="false"  name="io"  editable="true"  creationDate="19 Apr 2005 15:15:42 GMT"  lastModificationDate="19 Apr 2005 15:15:42 GMT"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Class xmi.id="a2"  xmi.uuid="ilr:5680AA48075B03010000FCC4BF018265A8C0#1"  noAction="false"  noCondition="false"  navigate="false"  bindingMode="multiple"  isSingleton="false"  isRoot="false"  isLeaf="false"  isAbstract="false"  visibility="public_vis"  name="Serializable"  editable="true"  creationDate="19 Apr 2005 15:15:42 GMT"  lastModificationDate="19 Apr 2005 15:24:59 GMT"  implicit="true"  visible="false"  deprecated="false" >
+</DefaultBusinessModel.Class>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Package>
+</XMI.content>
+</XMI>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<propertyTemplate
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/template.xsd">
+
+	<labels default="en">
+		<locale name="en">
+		<label name="tbdComment1" value="Credit Change Reason"/>
+		<label name="forward" value="Submit"/>
+		<label name="group" value="Control Station"/>
+        </locale>
+	</labels>
+
+		
+	<section name="doc" collapsible="false" collapsed="false">
+			<properties>
+			<textArea row="1" col="1-2" name="voucherComments" readonly="true" styleClass="comment"/> 
+			<textArea row="2" col="1-2" name="tbdComment1" styleClass="comment"/> 
+			<output row="3" col="1-2" name="processInformation.previousComment" readonly="true" styleClass="comment" escapeXml="false"/>
+			<valueAlias row="4" col="1" name="processInformation.queueName" readonly="true"/>
+		</properties>
+		<actions>
+			<button name="forward" command="forward" readonly="false" docType="upload" type="submit" isAnchored="false" title="forwardTitle" styleClass="button70"/>
+		</actions>		
+	</section>	
+	
+	<section name="requestCollect" visible="true" collapsible="false" collapsed="false">
+		<properties>
+			<dropDown row="1" col="1" name="processCode" readonly="false" validation="required" choiceList="choice.productAll" defaultValue="ALL"/> <!--Product-->           		
+			<dropDown row="1" col="2" name="subType" choiceList="choice.masterfileCollectSubTypes" readonly="false" validation="required" onChange="reloadPage(this)"/> <!--Request Type-->
+			<dropDown row="1" col="3" name="businessUnit" choiceList="choice.creditUpdateAll" readonly="false" validation="required" onChange="reloadPage(this)"/> <!--Credit Update-->
+			<dropDown row="2" col="1" name="docPriority" choiceList="choice.priority" defaultValue="1" readonly="false" validation="required"/> <!--Priority-->
+			<text row="2" col="2" name="custom4.contactNo" validation="required, noSpecialCharacters"/> <!--Contact No-->
+		</properties>
+		<actions>
+			<iconAction name="selectApprovers" icon="/images/ico-route-w24.png" width="24" height="24" readOnlyLink="javascript:openViewRoutingWindow('$contextPath$', '$wobNumber$', 'nonPo')" link="javascript:openUploadRoutingWindow('/ManagedPay/custom', 'routing/upload.action','nonPo', 'MP_Approver1')" alwaysActive="true" readonly="false"/>
+			<iconAction name="print" icon="/images/ico-print-w24.png" width="24" height="24" link="javascript:window.print()" visible="true" alwaysActive="true"/>
+			<iconAction name="statusWindow" icon="/images/ico-history-w24.png" width="24" height="24" link="javascript:openStatusWindow('$seqId$', '$contextPath$');return false;" alwaysActive="true"/>
+			<iconAction name="help" icon="/images/ico-help-w24.png" width="24" height="24" link="javascript:openHelp('User_Interfaces/Working_with_Invoices.htm', '$contextPath$')" alwaysActive="true"/>
+		</actions>		
+	</section>
+		
+		<section name="customerDetails" visible="true" collapsible="false" collapsed="false">
+		<properties>
+			<text row="1" col="1-2" name="scanVendorAddress1" defaultValue="Use Highest Hierarchy Level That The Action Pertains To" styleClass="fulllookup" forceDefault="True" readonly="true"/><!--blank line-->
+			<text row ="2" col="1" name="custom4.accountNumber" readonly="false" validation="required"/> <!--Account Code-->
+			<text row="3" col="1-4" name="custom4.name" readonly="false" validation="required" styleClass="fulllookup"/> <!--Account Name-->
+		</properties>
+		</section>
+	
+	<hiddenFields>
+	<hidden name="requesterId"/>
+	<hidden name="group" defaultValue="SSC"/>
+	<hidden name="type" defaultValue="COLLECT"/>
+	<hidden name="uploadRef"/>
+	<hidden name="originatorId"/>
+	<hidden name="retentionBoxId" defaultValue="upload" forceDefault="true"/>
+    </hiddenFields>
+	
+	<processors>	
+	 </processors>
+</propertyTemplate>

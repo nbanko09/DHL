@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="nonpo-indexing-view" template="nonpo-tpl.xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://managedpay.net/schemas/view.xsd">
+
+	<labels default="en">
+		<locale name="en">
+		</locale>
+	</labels>
+
+	<section-overrides>	
+	</section-overrides>
+	
+	<property-overrides>
+		<date row="1" col="3" name="tbdDate1" readonly="fales" validation="required" styleClass="date"/> <!--MS temporary Accounting Date-->
+		<lookup row="2" col="1-2" name="routingCode" lookupType="lookup.costObject1" readonly="true" styleClass="onehundredpercent"/>
+		<lookup row="3" col="1" name="company.fullName" lookupType="lookup.companyCode1" readonly="true" styleClass="fulllookup onehundredpercent"/>
+	</property-overrides>
+
+	<lineItem-overrides>
+	<lookup row="1" col="1" name="accountCode" lookupType="lookup.accountCode" readonly="false" validation="required" styleClass="twohundred"/>
+	</lineItem-overrides>
+
+	<action-overrides>
+	</action-overrides>
+
+	<hidden-overrides>
+		<hidden name="processInformation.response" defaultValue="Complete"/>
+	</hidden-overrides>
+
+	 <documentRejection>
+		<rejectionReasons>
+			<reason name="Reject" commentsRequired="true" note="message.returnException">
+				<subReason name="Duplicate invoice"/>
+				<subReason name="Incomplete documentation"/>
+				<subReason name="Not a Genuine Invoice"/>
+				<subReason name="Other"/>
+			</reason>
+			<reason name="Rescan" commentsRequired="true" note="message.rescan">
+			</reason>
+			<reason name="Vendor Maintenance" commentsRequired="true" note="message.returnVendorMaintenance">
+			</reason>
+			<reason name="Terminate" commentsRequired="true" note="message.terminate">
+			</reason>
+		</rejectionReasons>
+	</documentRejection>
+
+	<validations>
+		<validation name="validation.duplicateInvoiceCheck" messageType="warning" note="message.duplicateInvoiceValidation"/>
+		<validation name="validation.validVendor" messageType="warning" note="message.validVendorValidation"/>
+		<validation name="validation.accountCode" />
+		<validation name="validation.lineItemAmount"/>
+	</validations>
+</view>

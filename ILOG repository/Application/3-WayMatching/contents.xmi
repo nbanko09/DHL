@@ -1,0 +1,153 @@
+<?xml version="1.0"  encoding="ISO-8859-1"  ?>
+<!DOCTYPE XMI>
+<XMI xmi.version="1.2" >
+<XMI.header>
+<XMI.documentation>
+<XMI.exporter>Ilog Rule Kit</XMI.exporter>
+<XMI.exporterVersion>4.1</XMI.exporterVersion>
+</XMI.documentation>
+<XMI.model href="ilr:0180AA48075B03010000FCC4BF018265A8C0#1"  xmi.name="Application"  xmi.version="1.2" />
+<XMI.metamodel href="ilr:09804659F3E0EA00000084662F000100007F#1"  xmi.name="Application"  xmi.version="1.2" />
+</XMI.header>
+<XMI.content>
+<Rule.RulePackage xmi.id="a1"  xmi.uuid="ilr:DC8760C27ED7030100001F57FE018265A8C0#1"  isRoot="false"  isLeaf="false"  isAbstract="false"  name="3-WayMatching"  editable="true"  creationDate="13 May 2005 19:21:37 GMT"  lastModificationDate="31 May 2005 21:48:46 GMT" >
+<Model.Namespace.contents>
+<RuleFlow.RuleFlow xmi.id="a2"  xmi.uuid="ilr:DFB262545F3404010000FCC4BF018265A8C0#1"  historyVersion="false"  name="Ruleflow"  editable="true"  creationDate="31 May 2005 20:18:37 GMT"  lastModificationDate="31 May 2005 21:49:29 GMT"  currentDefinition="a3" >
+<Model.Namespace.contents>
+<RuleFlow.BusinessRuleFlowDefinition xmi.id="a3"  xmi.uuid="ilr:E1B262545F3404010000FCC4BF018265A8C0#1"  name="BusinessRuleFlowDefinition"  editable="true" >
+<RuleFlow.RuleFlowDefinition.graphModelText>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;SDM&gt;&lt;pseudoState id=&quot;ilr:E5B262545F3404010000FCC4BF018265A8C0#1&quot;&gt;&lt;property name=&quot;x&quot;&gt;145.0&lt;&#47;property&gt;&lt;property name=&quot;name&quot;&gt;Start&lt;&#47;property&gt;&lt;property name=&quot;kind&quot;&gt;initial&lt;&#47;property&gt;&lt;property name=&quot;y&quot;&gt;73.0&lt;&#47;property&gt;&lt;&#47;pseudoState&gt;&lt;finalState id=&quot;ilr:E6B262545F3404010000FCC4BF018265A8C0#1&quot;&gt;&lt;property name=&quot;x&quot;&gt;150.0&lt;&#47;property&gt;&lt;property name=&quot;name&quot;&gt;End&lt;&#47;property&gt;&lt;property name=&quot;y&quot;&gt;238.0&lt;&#47;property&gt;&lt;&#47;finalState&gt;&lt;ruleFlowState id=&quot;ilr:F9B262545F3404010000FCC4BF018265A8C0#1&quot;&gt;&lt;property name=&quot;taskName&quot;&gt;Initial Check&lt;&#47;property&gt;&lt;property name=&quot;x&quot;&gt;110.5&lt;&#47;property&gt;&lt;property name=&quot;taskType&quot;&gt;RuleFlow.RuleTask&lt;&#47;property&gt;&lt;property name=&quot;name&quot;&gt;Initial Check&lt;&#47;property&gt;&lt;property name=&quot;taskId&quot;&gt;ilr:F7B262545F3404010000FCC4BF018265A8C0#1&lt;&#47;property&gt;&lt;property name=&quot;y&quot;&gt;111.625&lt;&#47;property&gt;&lt;&#47;ruleFlowState&gt;&lt;transition from=&quot;ilr:E5B262545F3404010000FCC4BF018265A8C0#1&quot; id=&quot;ilr:FBB262545F3404010000FCC4BF018265A8C0#1&quot; islink=&quot;true&quot; to=&quot;ilr:F9B262545F3404010000FCC4BF018265A8C0#1&quot;&gt;&lt;property name=&quot;name&quot;&gt;RuleFlowTransition&lt;&#47;property&gt;&lt;&#47;transition&gt;&lt;transition from=&quot;ilr:F9B262545F3404010000FCC4BF018265A8C0#1&quot; id=&quot;ilr:FCB262545F3404010000FCC4BF018265A8C0#1&quot; islink=&quot;true&quot; to=&quot;ilr:E6B262545F3404010000FCC4BF018265A8C0#1&quot;&gt;&lt;property name=&quot;name&quot;&gt;RuleFlowTransition_2&lt;&#47;property&gt;&lt;&#47;transition&gt;&lt;&#47;SDM&gt;</RuleFlow.RuleFlowDefinition.graphModelText>
+</RuleFlow.BusinessRuleFlowDefinition>
+<RuleFlow.TaskInitialActions xmi.id="a4"  xmi.uuid="ilr:E9B262545F3404010000FCC4BF018265A8C0#1"  historyVersion="false"  name="Initial Actions"  editable="true"  creationDate="31 May 2005 20:21:19 GMT"  lastModificationDate="31 May 2005 20:44:39 GMT"  currentDefinition="a5" >
+<Model.Namespace.contents>
+<RuleFlow.ScriptIRL xmi.id="a5"  xmi.uuid="ilr:EAB262545F3404010000FCC4BF018265A8C0#1"  name="ScriptIRL"  editable="true" >
+<Basics.TextDefinition.text>foreach (POLine poLine in po.lines) {
+&#9;?context.insert(?poLine);
+}
+?context.insert(?po);
+foreach (DocumentLine lineItem in document.documentLines) { &#9;?context.insert(?lineItem); }
+insert(?document);</Basics.TextDefinition.text>
+</RuleFlow.ScriptIRL>
+</Model.Namespace.contents>
+</RuleFlow.TaskInitialActions>
+<RuleFlow.RuleTask xmi.id="a6"  xmi.uuid="ilr:F7B262545F3404010000FCC4BF018265A8C0#1"  firing="allrules"  ordering="dynamic"  algorithm="default"  historyVersion="false"  name="Initial Check"  editable="true"  creationDate="31 May 2005 21:49:29 GMT"  lastModificationDate="31 May 2005 21:49:29 GMT"  currentDefinition="a7" >
+<RuleFlow.RuleTask.rules>
+<Rule.DefaultRule name="Initial Check"  xmi.idref="a8"  xmi.uuid="ilr:F4B262545F3404010000FCC4BF018265A8C0#1" />
+</RuleFlow.RuleTask.rules>
+<RuleFlow.Task.action>
+<RuleFlow.TaskAction xmi.idref="a9"  xmi.uuid="ilr:FAB262545F3404010000FCC4BF018265A8C0#1" />
+</RuleFlow.Task.action>
+<Model.Namespace.contents>
+<RuleFlow.RuleTaskDefinition xmi.id="a7"  xmi.uuid="ilr:F8B262545F3404010000FCC4BF018265A8C0#1"  name="RuleTaskDefinition"  editable="true" >
+</RuleFlow.RuleTaskDefinition>
+</Model.Namespace.contents>
+</RuleFlow.RuleTask>
+</Model.Namespace.contents>
+<Behavioral_Elements.State_Machines.StateMachine.top>
+<Behavioral_Elements.State_Machines.CompositeState xmi.id="a10"  xmi.uuid="ilr:E0B262545F3404010000FCC4BF018265A8C0#1"  isConcurrent="false"  editable="true" >
+<Behavioral_Elements.State_Machines.CompositeState.subvertex>
+<Behavioral_Elements.State_Machines.PseudoState xmi.id="a11"  xmi.uuid="ilr:E5B262545F3404010000FCC4BF018265A8C0#1"  kind="initial"  name="Start"  editable="true" >
+<Behavioral_Elements.State_Machines.StateVertex.outgoing>
+<RuleFlow.RuleFlowTransition name="RuleFlowTransition"  xmi.idref="a12"  xmi.uuid="ilr:FBB262545F3404010000FCC4BF018265A8C0#1" />
+</Behavioral_Elements.State_Machines.StateVertex.outgoing>
+</Behavioral_Elements.State_Machines.PseudoState>
+<Behavioral_Elements.State_Machines.FinalState xmi.id="a13"  xmi.uuid="ilr:E6B262545F3404010000FCC4BF018265A8C0#1"  name="End"  editable="true" >
+<Behavioral_Elements.State_Machines.StateVertex.incoming>
+<RuleFlow.RuleFlowTransition name="RuleFlowTransition_2"  xmi.idref="a14"  xmi.uuid="ilr:FCB262545F3404010000FCC4BF018265A8C0#1" />
+</Behavioral_Elements.State_Machines.StateVertex.incoming>
+</Behavioral_Elements.State_Machines.FinalState>
+<RuleFlow.RuleFlowState xmi.id="a15"  xmi.uuid="ilr:F9B262545F3404010000FCC4BF018265A8C0#1"  isDynamic="false"  name="Initial Check"  editable="true" >
+<Behavioral_Elements.State_Machines.State.entry>
+<RuleFlow.TaskAction xmi.id="a9"  xmi.uuid="ilr:FAB262545F3404010000FCC4BF018265A8C0#1"  isAsynchronous="false"  editable="true"  task="a6" >
+</RuleFlow.TaskAction>
+</Behavioral_Elements.State_Machines.State.entry>
+<Behavioral_Elements.State_Machines.StateVertex.outgoing>
+<RuleFlow.RuleFlowTransition name="RuleFlowTransition_2"  xmi.idref="a14"  xmi.uuid="ilr:FCB262545F3404010000FCC4BF018265A8C0#1" />
+</Behavioral_Elements.State_Machines.StateVertex.outgoing>
+<Behavioral_Elements.State_Machines.StateVertex.incoming>
+<RuleFlow.RuleFlowTransition name="RuleFlowTransition"  xmi.idref="a12"  xmi.uuid="ilr:FBB262545F3404010000FCC4BF018265A8C0#1" />
+</Behavioral_Elements.State_Machines.StateVertex.incoming>
+</RuleFlow.RuleFlowState>
+</Behavioral_Elements.State_Machines.CompositeState.subvertex>
+</Behavioral_Elements.State_Machines.CompositeState>
+</Behavioral_Elements.State_Machines.StateMachine.top>
+<Behavioral_Elements.State_Machines.StateMachine.transitions>
+<RuleFlow.RuleFlowTransition xmi.id="a12"  xmi.uuid="ilr:FBB262545F3404010000FCC4BF018265A8C0#1"  name="RuleFlowTransition"  editable="true"  source="a11"  target="a15" >
+</RuleFlow.RuleFlowTransition>
+<RuleFlow.RuleFlowTransition xmi.id="a14"  xmi.uuid="ilr:FCB262545F3404010000FCC4BF018265A8C0#1"  name="RuleFlowTransition_2"  editable="true"  source="a15"  target="a13" >
+</RuleFlow.RuleFlowTransition>
+</Behavioral_Elements.State_Machines.StateMachine.transitions>
+</RuleFlow.RuleFlow>
+<Rule.Parameter xmi.id="a16"  xmi.uuid="ilr:E7B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  visible="true"  name="po"  editable="true" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="POHeader"  href="ilr:56B162545F3404010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</Rule.Parameter>
+<Rule.Parameter xmi.id="a17"  xmi.uuid="ilr:F2B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  visible="true"  name="document"  editable="true" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Document"  href="ilr:EC87C516B3D303010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</Rule.Parameter>
+<Rule.DefaultRule xmi.id="a8"  xmi.uuid="ilr:F4B262545F3404010000FCC4BF018265A8C0#1"  active="true"  historyVersion="false"  name="Initial Check"  editable="true"  creationDate="31 May 2005 20:44:39 GMT"  lastModificationDate="2 Jun 2005 20:04:16 GMT"  currentDefinition="a18" >
+<Basics.BusinessElement.library>
+<Rule.TemplateLibrary name="Template Library"  href="ilr:2B80AA48075B03010000FCC4BF018265A8C0#1" />
+</Basics.BusinessElement.library>
+<Model.Namespace.contents>
+<Language.BAL46 xmi.id="a18"  xmi.uuid="ilr:F5B262545F3404010000FCC4BF018265A8C0#1"  grammarFile="ilog\rules\brl\bal46\BAL.xsd"  javaClassname="ilog.rules.brl.IlrGrammarTokenModel"  name="BAL"  editable="true" >
+<Basics.TokenModelDefinition.tokenModelText>&lt;ilr-xml-object class=&quot;ilog.rules.brl.IlrGrammarTokenModel&quot;  version=&quot;1&quot; &gt;
+ &lt;ilr-syntax-tree&gt;
+  &lt;rule&gt;
+   &lt;conditions&gt;
+    &lt;condition&gt;
+     &lt;test&gt;
+      &lt;test-choice&gt;
+       &lt;path&gt;
+        &lt;?brl recursed ?&gt;
+        &lt;member&gt;java.lang.String boolean equals(java.lang.Object)
+         &lt;?brl bomMember=ilr:8E80AA48075B03010000FCC4BF018265A8C0#1 ?&gt;
+        &lt;&#47;member&gt;
+        &lt;object&gt;
+         &lt;member&gt;com.miriasystems.mp.domain.Document java.lang.String getBusinessUnit()
+          &lt;?brl bomMember=ilr:4388C516B3D303010000FCC4BF018265A8C0#1 ?&gt;
+         &lt;&#47;member&gt;
+        &lt;&#47;object&gt;
+        &lt;argument&gt;
+         &lt;value&gt;java.lang.String hello
+          &lt;?brl bomTypedValue=ilr:8780AA48075B03010000FCC4BF018265A8C0#1 ?&gt;
+         &lt;&#47;value&gt;
+        &lt;&#47;argument&gt;
+       &lt;&#47;path&gt;
+      &lt;&#47;test-choice&gt;
+     &lt;&#47;test&gt;
+    &lt;&#47;condition&gt;
+   &lt;&#47;conditions&gt;
+   &lt;actions&gt;
+    &lt;action&gt;
+     &lt;attribute-setter&gt;
+      &lt;target&gt;
+       &lt;member&gt;boolean isValid
+        &lt;?brl parameter=ilr:F6B262545F3404010000FCC4BF018265A8C0#1 ?&gt;
+       &lt;&#47;member&gt;
+      &lt;&#47;target&gt;
+      &lt;value&gt;
+       &lt;value&gt;true&lt;&#47;value&gt;
+      &lt;&#47;value&gt;
+     &lt;&#47;attribute-setter&gt;
+    &lt;&#47;action&gt;
+   &lt;&#47;actions&gt;
+  &lt;&#47;rule&gt;
+ &lt;&#47;ilr-syntax-tree&gt;
+&lt;&#47;ilr-xml-object&gt;
+</Basics.TokenModelDefinition.tokenModelText>
+</Language.BAL46>
+</Model.Namespace.contents>
+</Rule.DefaultRule>
+<Rule.Parameter xmi.id="a19"  xmi.uuid="ilr:F6B262545F3404010000FCC4BF018265A8C0#1"  direction="local_dir"  visible="true"  initialValue="true"  name="isValid"  editable="true" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="boolean"  href="ilr:3280AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</Rule.Parameter>
+</Model.Namespace.contents>
+</Rule.RulePackage>
+</XMI.content>
+</XMI>

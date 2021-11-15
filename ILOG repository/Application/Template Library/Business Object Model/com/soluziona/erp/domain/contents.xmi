@@ -1,0 +1,1806 @@
+<?xml version="1.0"  encoding="ISO-8859-1"  ?>
+<!DOCTYPE XMI>
+<XMI xmi.version="1.2" >
+<XMI.header>
+<XMI.documentation>
+<XMI.exporter>Ilog Rule Kit</XMI.exporter>
+<XMI.exporterVersion>4.1</XMI.exporterVersion>
+</XMI.documentation>
+<XMI.model href="ilr:0180AA48075B03010000FCC4BF018265A8C0#1"  xmi.name="Application"  xmi.version="1.2" />
+<XMI.metamodel href="ilr:09804659F3E0EA00000084662F000100007F#1"  xmi.name="Application"  xmi.version="1.2" />
+</XMI.header>
+<XMI.content>
+<DefaultBusinessModel.Package xmi.id="a1"  xmi.uuid="ilr:5AB162545F3404010000FCC4BF018265A8C0#1"  isRoot="false"  isLeaf="false"  isAbstract="false"  name="domain"  editable="true"  creationDate="31 May 2005 20:18:13 GMT"  lastModificationDate="31 May 2005 20:18:13 GMT"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Class xmi.id="a2"  xmi.uuid="ilr:56B162545F3404010000FCC4BF018265A8C0#1"  noAction="false"  noCondition="false"  navigate="false"  bindingMode="multiple"  lastUpdate="31 May 2005 20:26:11 GMT"  isSingleton="false"  isRoot="false"  isLeaf="false"  isAbstract="false"  visibility="public_vis"  name="POHeader"  editable="true"  creationDate="31 May 2005 20:18:13 GMT"  lastModificationDate="31 May 2005 20:42:00 GMT"  implicit="false"  visible="true"  deprecated="false" >
+<Model.GeneralizableElement.supertypes>
+<DefaultBusinessModel.Class name="Serializable"  href="ilr:5680AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.GeneralizableElement.supertypes>
+<Model.Namespace.contents>
+<DefaultBusinessModel.Constructor xmi.id="a3"  xmi.uuid="ilr:DCB262545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="POHeader"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+</DefaultBusinessModel.Constructor>
+<DefaultBusinessModel.Method xmi.id="a4"  xmi.uuid="ilr:8FB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getType"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a5"  xmi.uuid="ilr:8FB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a6"  xmi.uuid="ilr:C5B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getNumber"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a7"  xmi.uuid="ilr:CFB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a8"  xmi.uuid="ilr:E3B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getDate"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a9"  xmi.uuid="ilr:C1B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Date"  href="ilr:AC80AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a10"  xmi.uuid="ilr:A5B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setDate"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a11"  xmi.uuid="ilr:23B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a12"  xmi.uuid="ilr:0DB262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Date"  href="ilr:AC80AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a13"  xmi.uuid="ilr:5CB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setType"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a14"  xmi.uuid="ilr:9FB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a15"  xmi.uuid="ilr:B9B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a16"  xmi.uuid="ilr:CDB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getCurrency"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a17"  xmi.uuid="ilr:40B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false"  type="a18" >
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a19"  xmi.uuid="ilr:D7B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setCurrency"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a20"  xmi.uuid="ilr:C2B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a21"  xmi.uuid="ilr:7BB262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false"  type="a18" >
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a22"  xmi.uuid="ilr:5EB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getAmount"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a23"  xmi.uuid="ilr:A4B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Double"  href="ilr:8380AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a24"  xmi.uuid="ilr:66B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getSeqId"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a25"  xmi.uuid="ilr:F7B162545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Integer"  href="ilr:8580AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a26"  xmi.uuid="ilr:81B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getStatusCode"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a27"  xmi.uuid="ilr:70B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a28"  xmi.uuid="ilr:92B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getBusinessUnit"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a29"  xmi.uuid="ilr:88B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a30"  xmi.uuid="ilr:7DB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getRequesterId"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a31"  xmi.uuid="ilr:53B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a32"  xmi.uuid="ilr:A0B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getBuyerId"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a33"  xmi.uuid="ilr:0AB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a34"  xmi.uuid="ilr:7AB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getCreateDate"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a35"  xmi.uuid="ilr:07B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Date"  href="ilr:AC80AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a36"  xmi.uuid="ilr:5FB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getLastModifiedDate"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a37"  xmi.uuid="ilr:75B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Date"  href="ilr:AC80AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a38"  xmi.uuid="ilr:95B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getTbdDate1"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a39"  xmi.uuid="ilr:05B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Date"  href="ilr:AC80AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a40"  xmi.uuid="ilr:79B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getTbdDate2"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a41"  xmi.uuid="ilr:71B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Date"  href="ilr:AC80AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a42"  xmi.uuid="ilr:D5B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getTbdNumber1"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a43"  xmi.uuid="ilr:ABB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Integer"  href="ilr:8580AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a44"  xmi.uuid="ilr:B6B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getTbdNumber2"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a45"  xmi.uuid="ilr:7EB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Integer"  href="ilr:8580AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a46"  xmi.uuid="ilr:B0B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getTbdCurrency1"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a47"  xmi.uuid="ilr:31B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Double"  href="ilr:8380AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a48"  xmi.uuid="ilr:D4B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getTbdCurrency2"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a49"  xmi.uuid="ilr:69B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Double"  href="ilr:8380AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a50"  xmi.uuid="ilr:BEB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getTbdQuantity1"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a51"  xmi.uuid="ilr:96B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Double"  href="ilr:8380AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a52"  xmi.uuid="ilr:F3B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getTbdQuantity2"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a53"  xmi.uuid="ilr:AFB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Double"  href="ilr:8380AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a54"  xmi.uuid="ilr:C8B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getTbdString1"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a55"  xmi.uuid="ilr:FCB162545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a56"  xmi.uuid="ilr:F4B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getTbdString2"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a57"  xmi.uuid="ilr:C7B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a58"  xmi.uuid="ilr:8AB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getTbdString3"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a59"  xmi.uuid="ilr:2CB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a60"  xmi.uuid="ilr:C9B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getTbdString4"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a61"  xmi.uuid="ilr:06B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a62"  xmi.uuid="ilr:D3B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getPaymentTerm"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a63"  xmi.uuid="ilr:00B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false"  type="a64" >
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a65"  xmi.uuid="ilr:71B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getTaxCode"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a66"  xmi.uuid="ilr:8EB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false"  type="a67" >
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a68"  xmi.uuid="ilr:ECB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getVendor"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a69"  xmi.uuid="ilr:DBB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false"  type="a70" >
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a71"  xmi.uuid="ilr:DFB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setSeqId"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a72"  xmi.uuid="ilr:12B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a73"  xmi.uuid="ilr:45B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Integer"  href="ilr:8580AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a74"  xmi.uuid="ilr:9DB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setNumber"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a75"  xmi.uuid="ilr:76B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a76"  xmi.uuid="ilr:A9B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a77"  xmi.uuid="ilr:C3B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setStatusCode"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a78"  xmi.uuid="ilr:16B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a79"  xmi.uuid="ilr:C3B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a80"  xmi.uuid="ilr:E6B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setBusinessUnit"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a81"  xmi.uuid="ilr:19B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a82"  xmi.uuid="ilr:29B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a83"  xmi.uuid="ilr:F1B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setRequesterId"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a84"  xmi.uuid="ilr:6DB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a85"  xmi.uuid="ilr:6CB262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a86"  xmi.uuid="ilr:B4B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setBuyerId"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a87"  xmi.uuid="ilr:D8B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a88"  xmi.uuid="ilr:A2B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a89"  xmi.uuid="ilr:94B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setCreateDate"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a90"  xmi.uuid="ilr:0CB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a91"  xmi.uuid="ilr:2FB262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Date"  href="ilr:AC80AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a92"  xmi.uuid="ilr:99B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setLastModifiedDate"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a93"  xmi.uuid="ilr:F9B162545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a94"  xmi.uuid="ilr:59B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Date"  href="ilr:AC80AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a95"  xmi.uuid="ilr:64B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setTbdDate1"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a96"  xmi.uuid="ilr:94B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a97"  xmi.uuid="ilr:97B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Date"  href="ilr:AC80AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a98"  xmi.uuid="ilr:7CB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setTbdDate2"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a99"  xmi.uuid="ilr:D4B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a100"  xmi.uuid="ilr:77B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Date"  href="ilr:AC80AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a101"  xmi.uuid="ilr:C4B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setTbdNumber1"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a102"  xmi.uuid="ilr:C6B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a103"  xmi.uuid="ilr:24B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Integer"  href="ilr:8580AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a104"  xmi.uuid="ilr:CAB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setTbdNumber2"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a105"  xmi.uuid="ilr:B5B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a106"  xmi.uuid="ilr:4EB262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Integer"  href="ilr:8580AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a107"  xmi.uuid="ilr:90B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setTbdCurrency1"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a108"  xmi.uuid="ilr:CCB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a109"  xmi.uuid="ilr:44B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Double"  href="ilr:8380AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a110"  xmi.uuid="ilr:98B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setTbdCurrency2"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a111"  xmi.uuid="ilr:73B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a112"  xmi.uuid="ilr:A7B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Double"  href="ilr:8380AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a113"  xmi.uuid="ilr:6BB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setTbdQuantity1"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a114"  xmi.uuid="ilr:57B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a115"  xmi.uuid="ilr:65B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Double"  href="ilr:8380AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a116"  xmi.uuid="ilr:D2B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setTbdQuantity2"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a117"  xmi.uuid="ilr:C9B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a118"  xmi.uuid="ilr:64B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Double"  href="ilr:8380AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a119"  xmi.uuid="ilr:73B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setTbdString1"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a120"  xmi.uuid="ilr:39B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a121"  xmi.uuid="ilr:FBB162545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a122"  xmi.uuid="ilr:69B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setTbdString2"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a123"  xmi.uuid="ilr:74B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a124"  xmi.uuid="ilr:11B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a125"  xmi.uuid="ilr:BBB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setTbdString3"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a126"  xmi.uuid="ilr:0FB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a127"  xmi.uuid="ilr:8DB262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a128"  xmi.uuid="ilr:77B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setTbdString4"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a129"  xmi.uuid="ilr:52B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a130"  xmi.uuid="ilr:FFB162545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a131"  xmi.uuid="ilr:86B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setVendor"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a132"  xmi.uuid="ilr:BAB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a133"  xmi.uuid="ilr:89B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false"  type="a70" >
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a134"  xmi.uuid="ilr:EEB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setTaxCode"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a135"  xmi.uuid="ilr:04B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a136"  xmi.uuid="ilr:4FB262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false"  type="a67" >
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a137"  xmi.uuid="ilr:8DB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setPaymentTerm"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a138"  xmi.uuid="ilr:9DB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a139"  xmi.uuid="ilr:80B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false"  type="a64" >
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a140"  xmi.uuid="ilr:CFB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getCompany"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a141"  xmi.uuid="ilr:60B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false"  type="a142" >
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a143"  xmi.uuid="ilr:9EB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getSystemOriginator"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a144"  xmi.uuid="ilr:0BB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false"  type="a145" >
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a146"  xmi.uuid="ilr:8BB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setCompany"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a147"  xmi.uuid="ilr:A1B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a148"  xmi.uuid="ilr:5AB262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false"  type="a142" >
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a149"  xmi.uuid="ilr:B7B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setSystemOriginator"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a150"  xmi.uuid="ilr:3DB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a151"  xmi.uuid="ilr:A8B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false"  type="a145" >
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a152"  xmi.uuid="ilr:A3B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getDeleteFlag"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a153"  xmi.uuid="ilr:36B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Boolean"  href="ilr:5280AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a154"  xmi.uuid="ilr:9FB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setDeleteFlag"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a155"  xmi.uuid="ilr:93B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a156"  xmi.uuid="ilr:6AB262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Boolean"  href="ilr:5280AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a157"  xmi.uuid="ilr:9AB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getShippingDocId"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a158"  xmi.uuid="ilr:5FB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a159"  xmi.uuid="ilr:BAB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getBlockFlag"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a160"  xmi.uuid="ilr:61B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Boolean"  href="ilr:5280AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a161"  xmi.uuid="ilr:7EB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setShippingDocId"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a162"  xmi.uuid="ilr:58B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a163"  xmi.uuid="ilr:51B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a164"  xmi.uuid="ilr:D8B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setAmount"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a165"  xmi.uuid="ilr:37B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a166"  xmi.uuid="ilr:DAB262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Double"  href="ilr:8380AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a167"  xmi.uuid="ilr:C1B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setBlockFlag"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a168"  xmi.uuid="ilr:1CB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a169"  xmi.uuid="ilr:B8B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Boolean"  href="ilr:5280AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a170"  xmi.uuid="ilr:EBB262545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getLines"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a171"  xmi.uuid="ilr:EFB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Set"  href="ilr:4385AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a172"  xmi.uuid="ilr:ECB262545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setLines"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a173"  xmi.uuid="ilr:EDB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a174"  xmi.uuid="ilr:EEB262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Set"  href="ilr:4385AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Class>
+<DefaultBusinessModel.Class xmi.id="a18"  xmi.uuid="ilr:54B162545F3404010000FCC4BF018265A8C0#1"  noAction="false"  noCondition="false"  navigate="false"  bindingMode="multiple"  isSingleton="false"  isRoot="false"  isLeaf="false"  isAbstract="false"  visibility="public_vis"  name="Currency"  editable="true"  creationDate="31 May 2005 20:18:13 GMT"  lastModificationDate="31 May 2005 20:18:13 GMT"  implicit="true"  visible="false"  deprecated="false" >
+<Model.GeneralizableElement.supertypes>
+<DefaultBusinessModel.Class name="Serializable"  href="ilr:5680AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.GeneralizableElement.supertypes>
+</DefaultBusinessModel.Class>
+<DefaultBusinessModel.Class xmi.id="a67"  xmi.uuid="ilr:58B162545F3404010000FCC4BF018265A8C0#1"  noAction="false"  noCondition="false"  navigate="false"  bindingMode="multiple"  isSingleton="false"  isRoot="false"  isLeaf="false"  isAbstract="false"  visibility="public_vis"  name="TaxCode"  editable="true"  creationDate="31 May 2005 20:18:13 GMT"  lastModificationDate="31 May 2005 20:18:13 GMT"  implicit="true"  visible="false"  deprecated="false" >
+<Model.GeneralizableElement.supertypes>
+<DefaultBusinessModel.Class name="Serializable"  href="ilr:5680AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.GeneralizableElement.supertypes>
+</DefaultBusinessModel.Class>
+<DefaultBusinessModel.Class xmi.id="a64"  xmi.uuid="ilr:52B162545F3404010000FCC4BF018265A8C0#1"  noAction="false"  noCondition="false"  navigate="false"  bindingMode="multiple"  isSingleton="false"  isRoot="false"  isLeaf="false"  isAbstract="false"  visibility="public_vis"  name="PaymentTerm"  editable="true"  creationDate="31 May 2005 20:18:13 GMT"  lastModificationDate="31 May 2005 20:18:13 GMT"  implicit="true"  visible="false"  deprecated="false" >
+<Model.GeneralizableElement.supertypes>
+<DefaultBusinessModel.Class name="Serializable"  href="ilr:5680AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.GeneralizableElement.supertypes>
+</DefaultBusinessModel.Class>
+<DefaultBusinessModel.Class xmi.id="a145"  xmi.uuid="ilr:53B162545F3404010000FCC4BF018265A8C0#1"  noAction="false"  noCondition="false"  navigate="false"  bindingMode="multiple"  isSingleton="false"  isRoot="false"  isLeaf="false"  isAbstract="false"  visibility="public_vis"  name="SystemOriginator"  editable="true"  creationDate="31 May 2005 20:18:13 GMT"  lastModificationDate="31 May 2005 20:18:13 GMT"  implicit="true"  visible="false"  deprecated="false" >
+<Model.GeneralizableElement.supertypes>
+<DefaultBusinessModel.Class name="Serializable"  href="ilr:5680AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.GeneralizableElement.supertypes>
+</DefaultBusinessModel.Class>
+<DefaultBusinessModel.Class xmi.id="a70"  xmi.uuid="ilr:59B162545F3404010000FCC4BF018265A8C0#1"  noAction="false"  noCondition="false"  navigate="false"  bindingMode="multiple"  isSingleton="false"  isRoot="false"  isLeaf="false"  isAbstract="false"  visibility="public_vis"  name="Vendor"  editable="true"  creationDate="31 May 2005 20:18:13 GMT"  lastModificationDate="31 May 2005 20:18:13 GMT"  implicit="true"  visible="false"  deprecated="false" >
+<Model.GeneralizableElement.supertypes>
+<DefaultBusinessModel.Class name="Serializable"  href="ilr:5680AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.GeneralizableElement.supertypes>
+</DefaultBusinessModel.Class>
+<DefaultBusinessModel.Class xmi.id="a142"  xmi.uuid="ilr:55B162545F3404010000FCC4BF018265A8C0#1"  noAction="false"  noCondition="false"  navigate="false"  bindingMode="multiple"  isSingleton="false"  isRoot="false"  isLeaf="false"  isAbstract="false"  visibility="public_vis"  name="Company"  editable="true"  creationDate="31 May 2005 20:18:13 GMT"  lastModificationDate="31 May 2005 20:18:13 GMT"  implicit="true"  visible="false"  deprecated="false" >
+<Model.GeneralizableElement.supertypes>
+<DefaultBusinessModel.Class name="Serializable"  href="ilr:5680AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.GeneralizableElement.supertypes>
+</DefaultBusinessModel.Class>
+<DefaultBusinessModel.Class xmi.id="a175"  xmi.uuid="ilr:57B162545F3404010000FCC4BF018265A8C0#1"  noAction="false"  noCondition="false"  navigate="false"  bindingMode="multiple"  lastUpdate="31 May 2005 19:34:06 GMT"  isSingleton="false"  isRoot="false"  isLeaf="false"  isAbstract="false"  visibility="public_vis"  name="POLine"  editable="true"  creationDate="31 May 2005 20:18:14 GMT"  lastModificationDate="31 May 2005 20:18:14 GMT"  implicit="false"  visible="true"  deprecated="false" >
+<Model.GeneralizableElement.supertypes>
+<DefaultBusinessModel.Class name="Serializable"  href="ilr:5680AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.GeneralizableElement.supertypes>
+<Model.Namespace.contents>
+<DefaultBusinessModel.Constructor xmi.id="a176"  xmi.uuid="ilr:DDB262545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="POLine"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+</DefaultBusinessModel.Constructor>
+<DefaultBusinessModel.Method xmi.id="a177"  xmi.uuid="ilr:72B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getLineNumber"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a178"  xmi.uuid="ilr:7DB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Integer"  href="ilr:8580AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a179"  xmi.uuid="ilr:AAB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setLineNumber"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a180"  xmi.uuid="ilr:0EB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a181"  xmi.uuid="ilr:F6B162545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Integer"  href="ilr:8580AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a182"  xmi.uuid="ilr:8CB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getSeqId"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a183"  xmi.uuid="ilr:9CB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Integer"  href="ilr:8580AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a184"  xmi.uuid="ilr:D6B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getStatusCode"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a185"  xmi.uuid="ilr:FAB162545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a186"  xmi.uuid="ilr:82B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getCreateDate"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a187"  xmi.uuid="ilr:F8B162545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Date"  href="ilr:AC80AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a188"  xmi.uuid="ilr:A8B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getLastModifiedDate"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a189"  xmi.uuid="ilr:5DB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Date"  href="ilr:AC80AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a190"  xmi.uuid="ilr:8EB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getTbdDate1"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a191"  xmi.uuid="ilr:8AB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Date"  href="ilr:AC80AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a192"  xmi.uuid="ilr:CEB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getTbdDate2"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a193"  xmi.uuid="ilr:CEB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Date"  href="ilr:AC80AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a194"  xmi.uuid="ilr:AFB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getTbdNumber1"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a195"  xmi.uuid="ilr:CDB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Integer"  href="ilr:8580AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a196"  xmi.uuid="ilr:97B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getTbdNumber2"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a197"  xmi.uuid="ilr:86B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Integer"  href="ilr:8580AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a198"  xmi.uuid="ilr:C6B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getTbdCurrency1"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a199"  xmi.uuid="ilr:8CB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Double"  href="ilr:8380AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a200"  xmi.uuid="ilr:E0B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getTbdCurrency2"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a201"  xmi.uuid="ilr:BDB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Double"  href="ilr:8380AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a202"  xmi.uuid="ilr:9BB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getTbdQuantity1"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a203"  xmi.uuid="ilr:A5B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Double"  href="ilr:8380AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a204"  xmi.uuid="ilr:A9B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getTbdQuantity2"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a205"  xmi.uuid="ilr:1DB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Double"  href="ilr:8380AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a206"  xmi.uuid="ilr:B3B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getTbdString1"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a207"  xmi.uuid="ilr:83B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a208"  xmi.uuid="ilr:93B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getTbdString2"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a209"  xmi.uuid="ilr:02B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a210"  xmi.uuid="ilr:7FB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getTbdString3"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a211"  xmi.uuid="ilr:BEB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a212"  xmi.uuid="ilr:61B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getTbdString4"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a213"  xmi.uuid="ilr:30B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a214"  xmi.uuid="ilr:DDB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getTaxCode"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a215"  xmi.uuid="ilr:9BB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false"  type="a67" >
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a216"  xmi.uuid="ilr:63B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setSeqId"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a217"  xmi.uuid="ilr:56B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a218"  xmi.uuid="ilr:25B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Integer"  href="ilr:8580AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a219"  xmi.uuid="ilr:A1B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setStatusCode"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a220"  xmi.uuid="ilr:FDB162545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a221"  xmi.uuid="ilr:B6B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a222"  xmi.uuid="ilr:87B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setCreateDate"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a223"  xmi.uuid="ilr:10B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a224"  xmi.uuid="ilr:17B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Date"  href="ilr:AC80AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a225"  xmi.uuid="ilr:EDB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setLastModifiedDate"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a226"  xmi.uuid="ilr:09B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a227"  xmi.uuid="ilr:48B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Date"  href="ilr:AC80AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a228"  xmi.uuid="ilr:CCB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setTbdDate1"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a229"  xmi.uuid="ilr:03B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a230"  xmi.uuid="ilr:C5B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Date"  href="ilr:AC80AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a231"  xmi.uuid="ilr:E5B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setTbdDate2"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a232"  xmi.uuid="ilr:7FB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a233"  xmi.uuid="ilr:3EB262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Date"  href="ilr:AC80AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a234"  xmi.uuid="ilr:C7B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setTbdNumber1"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a235"  xmi.uuid="ilr:3BB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a236"  xmi.uuid="ilr:92B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Integer"  href="ilr:8580AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a237"  xmi.uuid="ilr:85B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setTbdNumber2"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a238"  xmi.uuid="ilr:4AB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a239"  xmi.uuid="ilr:33B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Integer"  href="ilr:8580AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a240"  xmi.uuid="ilr:EFB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setTbdCurrency1"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a241"  xmi.uuid="ilr:B7B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a242"  xmi.uuid="ilr:15B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Double"  href="ilr:8380AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a243"  xmi.uuid="ilr:DEB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setTbdCurrency2"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a244"  xmi.uuid="ilr:BBB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a245"  xmi.uuid="ilr:41B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Double"  href="ilr:8380AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a246"  xmi.uuid="ilr:B5B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setTbdQuantity1"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a247"  xmi.uuid="ilr:7AB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a248"  xmi.uuid="ilr:2EB262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Double"  href="ilr:8380AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a249"  xmi.uuid="ilr:88B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setTbdQuantity2"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a250"  xmi.uuid="ilr:38B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a251"  xmi.uuid="ilr:B3B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Double"  href="ilr:8380AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a252"  xmi.uuid="ilr:67B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setTbdString1"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a253"  xmi.uuid="ilr:CAB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a254"  xmi.uuid="ilr:49B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a255"  xmi.uuid="ilr:91B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setTbdString2"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a256"  xmi.uuid="ilr:50B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a257"  xmi.uuid="ilr:9AB262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a258"  xmi.uuid="ilr:ADB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setTbdString3"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a259"  xmi.uuid="ilr:22B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a260"  xmi.uuid="ilr:5EB262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a261"  xmi.uuid="ilr:6FB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setTbdString4"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a262"  xmi.uuid="ilr:B1B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a263"  xmi.uuid="ilr:79B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a264"  xmi.uuid="ilr:5BB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setTaxCode"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a265"  xmi.uuid="ilr:7CB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a266"  xmi.uuid="ilr:D7B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false"  type="a67" >
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a267"  xmi.uuid="ilr:6EB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getSystemOriginator"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a268"  xmi.uuid="ilr:D0B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false"  type="a145" >
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a269"  xmi.uuid="ilr:BFB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setSystemOriginator"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a270"  xmi.uuid="ilr:6BB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a271"  xmi.uuid="ilr:A0B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false"  type="a145" >
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a272"  xmi.uuid="ilr:89B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getItemCode"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a273"  xmi.uuid="ilr:1AB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a274"  xmi.uuid="ilr:A6B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getItemDescription"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a275"  xmi.uuid="ilr:21B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a276"  xmi.uuid="ilr:BDB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getAccountCode"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a277"  xmi.uuid="ilr:3AB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a278"  xmi.uuid="ilr:70B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getAccountType"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a279"  xmi.uuid="ilr:D5B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a280"  xmi.uuid="ilr:D0B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getAccountCode1"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a281"  xmi.uuid="ilr:BCB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a282"  xmi.uuid="ilr:D9B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getAccountCode2"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a283"  xmi.uuid="ilr:5BB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a284"  xmi.uuid="ilr:5DB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getAccountCode3"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a285"  xmi.uuid="ilr:1FB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a286"  xmi.uuid="ilr:E8B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getAccountCode4"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a287"  xmi.uuid="ilr:43B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a288"  xmi.uuid="ilr:E1B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getAccountCode5"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a289"  xmi.uuid="ilr:B0B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a290"  xmi.uuid="ilr:D1B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getAccountCode6"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a291"  xmi.uuid="ilr:9EB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a292"  xmi.uuid="ilr:ACB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getAccountCode7"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a293"  xmi.uuid="ilr:66B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a294"  xmi.uuid="ilr:E2B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getAccountCode8"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a295"  xmi.uuid="ilr:42B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a296"  xmi.uuid="ilr:75B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getAccountCode9"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a297"  xmi.uuid="ilr:55B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a298"  xmi.uuid="ilr:B8B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getAccountCode10"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a299"  xmi.uuid="ilr:A3B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a300"  xmi.uuid="ilr:EAB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getReceivableFlag"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a301"  xmi.uuid="ilr:1EB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Boolean"  href="ilr:5280AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a302"  xmi.uuid="ilr:B1B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getMaterialId"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a303"  xmi.uuid="ilr:F5B162545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a304"  xmi.uuid="ilr:ABB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getPartNumber"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a305"  xmi.uuid="ilr:2BB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a306"  xmi.uuid="ilr:BCB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getManfPartNumber"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a307"  xmi.uuid="ilr:91B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a308"  xmi.uuid="ilr:B9B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getOrderedQuantity"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a309"  xmi.uuid="ilr:6FB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Double"  href="ilr:8380AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a310"  xmi.uuid="ilr:7BB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getOrderedUnitPrice"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a311"  xmi.uuid="ilr:4CB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Double"  href="ilr:8380AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a312"  xmi.uuid="ilr:9CB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getOrderedUOM"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a313"  xmi.uuid="ilr:35B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a314"  xmi.uuid="ilr:84B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setItemCode"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a315"  xmi.uuid="ilr:D3B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a316"  xmi.uuid="ilr:87B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a317"  xmi.uuid="ilr:A2B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setItemDescription"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a318"  xmi.uuid="ilr:82B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a319"  xmi.uuid="ilr:14B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a320"  xmi.uuid="ilr:80B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setAccountCode1"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a321"  xmi.uuid="ilr:AEB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a322"  xmi.uuid="ilr:28B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a323"  xmi.uuid="ilr:C2B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setAccountCode2"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a324"  xmi.uuid="ilr:68B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a325"  xmi.uuid="ilr:FEB162545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a326"  xmi.uuid="ilr:F2B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setAccountCode3"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a327"  xmi.uuid="ilr:34B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a328"  xmi.uuid="ilr:C8B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a329"  xmi.uuid="ilr:E9B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setAccountCode4"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a330"  xmi.uuid="ilr:5CB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a331"  xmi.uuid="ilr:54B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a332"  xmi.uuid="ilr:83B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setAccountCode5"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a333"  xmi.uuid="ilr:BFB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a334"  xmi.uuid="ilr:84B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a335"  xmi.uuid="ilr:96B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setAccountCode6"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a336"  xmi.uuid="ilr:18B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a337"  xmi.uuid="ilr:08B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a338"  xmi.uuid="ilr:6AB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setAccountCode7"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a339"  xmi.uuid="ilr:85B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a340"  xmi.uuid="ilr:81B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a341"  xmi.uuid="ilr:A7B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setAccountCode8"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a342"  xmi.uuid="ilr:D9B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a343"  xmi.uuid="ilr:62B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a344"  xmi.uuid="ilr:EBB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setAccountCode9"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a345"  xmi.uuid="ilr:D1B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a346"  xmi.uuid="ilr:26B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a347"  xmi.uuid="ilr:68B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setAccountCode10"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a348"  xmi.uuid="ilr:13B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a349"  xmi.uuid="ilr:01B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a350"  xmi.uuid="ilr:62B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setReceivableFlag"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a351"  xmi.uuid="ilr:47B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a352"  xmi.uuid="ilr:B2B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Boolean"  href="ilr:5280AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a353"  xmi.uuid="ilr:60B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setMaterialId"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a354"  xmi.uuid="ilr:72B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a355"  xmi.uuid="ilr:C0B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a356"  xmi.uuid="ilr:E7B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setPartNumber"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a357"  xmi.uuid="ilr:3CB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a358"  xmi.uuid="ilr:A6B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a359"  xmi.uuid="ilr:DCB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setManfPartNumber"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a360"  xmi.uuid="ilr:6EB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a361"  xmi.uuid="ilr:27B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a362"  xmi.uuid="ilr:E4B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setOrderedQuantity"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a363"  xmi.uuid="ilr:99B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a364"  xmi.uuid="ilr:2AB262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Double"  href="ilr:8380AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a365"  xmi.uuid="ilr:DBB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setOrderedUnitPrice"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a366"  xmi.uuid="ilr:95B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a367"  xmi.uuid="ilr:3FB262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Double"  href="ilr:8380AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a368"  xmi.uuid="ilr:C0B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setOrderedUOM"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a369"  xmi.uuid="ilr:1BB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a370"  xmi.uuid="ilr:63B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a371"  xmi.uuid="ilr:A4B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setAccountCode"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a372"  xmi.uuid="ilr:B4B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a373"  xmi.uuid="ilr:ADB262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a374"  xmi.uuid="ilr:DAB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setAccountType"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a375"  xmi.uuid="ilr:4BB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a376"  xmi.uuid="ilr:32B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a377"  xmi.uuid="ilr:74B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getBlockFlag"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a378"  xmi.uuid="ilr:ACB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Boolean"  href="ilr:5280AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a379"  xmi.uuid="ilr:65B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setBlockFlag"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a380"  xmi.uuid="ilr:C4B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a381"  xmi.uuid="ilr:67B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Boolean"  href="ilr:5280AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a382"  xmi.uuid="ilr:76B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getPoHeader"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a383"  xmi.uuid="ilr:2DB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false"  type="a2" >
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a384"  xmi.uuid="ilr:F0B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getInvoicedQuantity"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a385"  xmi.uuid="ilr:CBB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Double"  href="ilr:8380AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a386"  xmi.uuid="ilr:78B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getReceviedQuantity"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a387"  xmi.uuid="ilr:98B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Double"  href="ilr:8380AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a388"  xmi.uuid="ilr:AEB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getDeletFlag"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a389"  xmi.uuid="ilr:78B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Boolean"  href="ilr:5280AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a390"  xmi.uuid="ilr:CBB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setPoHeader"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a391"  xmi.uuid="ilr:4DB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a392"  xmi.uuid="ilr:8BB262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false"  type="a2" >
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a393"  xmi.uuid="ilr:B2B162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setInvoicedQuantity"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a394"  xmi.uuid="ilr:AAB262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a395"  xmi.uuid="ilr:46B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Double"  href="ilr:8380AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a396"  xmi.uuid="ilr:6CB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setReceviedQuantity"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a397"  xmi.uuid="ilr:D6B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a398"  xmi.uuid="ilr:90B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Double"  href="ilr:8380AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a399"  xmi.uuid="ilr:6DB162545F3404010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setDeletFlag"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a400"  xmi.uuid="ilr:D2B262545F3404010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a401"  xmi.uuid="ilr:20B262545F3404010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Boolean"  href="ilr:5280AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Class>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Package>
+</XMI.content>
+</XMI>

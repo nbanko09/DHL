@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<propertyTemplate
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/template.xsd">
+        
+        <labels>
+		<locale name="en">			
+ 		</locale>
+	</labels>
+
+	<section name="doc111" collapsible="false" collapsed="false">
+		<properties>
+			<valueAlias row="1" col="1-2" name="processInformation.queueName" readonly="true" styleClass="twohundred"/>
+			<text row="1" col="3-4" name="originatorName" styleClass="twohundred" readonly="true"/>
+			<textArea row ="2" col="1-4" name="processInformation.comment" readonly="false" styleClass="comment" />
+			<output row="3" col="1-4" name="processInformation.previousComment" readonly="true" styleClass="comment" escapeXml="false"/>
+		</properties>
+		<actions>
+			<getNext name="next" readonly="false" showLabel="true" visible="true" toLeft="true" styleClass="getNext70"/>
+			<rejectButton name="reject" readonly="false" isAnchored="false" title="rejectTitle" styleClass="button70"/>
+			<button name="release" command="release" readonly="false" visible="true" type="submit" title="releaseTitle" styleClass="button70"/>
+			<button name="updateRelease" command="updateRelease" readonly="false" visible="true" type="submit" title="updateReleaseTitle" styleClass="button70"/>
+			<button name="update" command="update" readonly="false" visible="true" type="submit" title="updateTitle" styleClass="button70"/>
+			<button name="forward" command="forward" readonly="false" type="submit" isAnchored="false" title="forwardTitle" styleClass="button70"/>
+		</actions>
+	</section>
+	
+	<section name="docDetail" visible="true" collapsible="false" collapsed="false">
+		<properties>
+			<dropDown row="1" col="1" name="type" choiceList="choice.invoiceTypes" readonly="true" validation="required" onChange="reloadPage(this)"/>
+			<dropDown row="1" col="2" name="subType" choiceList="choice.subTypes.Source" readonly="false" validation="required" onChange="reloadPage(this)"/>
+			<text row="2" col="1" name="number" validation="noSpecialCharacters"/>
+			<date row="2" col="2" name="date" readonly="false" validation="required" styleClass="date"/>
+			<dropDown row="3" col="1" name="sensitivity" choiceList="choice.sensitivity" validation="required"  styleClass="onefifty" readonly="true" defaultValue="1" forceDefault="true" />
+			<date row="3" col="2"  name="dueDate" readonly="false" styleClass="date" />	
+			<dynamicDropDown row="1" col="3" name="companyCode"   providerClass="com.miriasystems.ui.providers.CompanyChoiceListProvider" styleClass="twohundred" readonly="false" validation="required"/>
+			<dropDown row="2" col="3" name="department" choiceList="choice.department" styleClass="twohundred" readonly="false"/>
+		</properties>
+		
+		<actions>
+			<postingReplyAction name="postings" icon="/images/ico-paid-w24.png" width="24" height="24" link="javascript:openPostingReplyWindow('$contextPath$', '$wobNumber$')" visible="true"/>
+			<iconAction name="editRouting" icon="/images/ico-route-w24.png" width="24" height="24" readOnlyLink="javascript:openViewRoutingWindow('$contextPath$', '$wobNumber$', 'nonPo')" link="javascript:openRoutingWindow('$contextPath$', '$wobNumber$', 'nonPo', 'DEV-APP1_DEV2_MPSys_Dev')" alwaysActive="true" readonly="false"/>			
+			<iconAction name="email" icon="/images/ico-mail-w24.png" width="24" height="24" link="javascript:openSendEmailWindow('$contextPath$', '$imageGUID$', '$wobNumber$')" alwaysActive="true"/>
+			<iconAction name="attachments" icon="/images/ico-attachment-w24.png" width="24" height="24" link="javascript:openAttachmentsWindow('$contextPath$', '$wobNumber$')" alwaysActive="true"/>
+			<attachmentCountAction name="attachmentCount" visible="true"/>
+			<iconAction name="vendorHistory" icon="/images/ico-vhistory-w24.png" width="24" height="24" link="javascript:openVendorHistoryWindow('$contextPath$', '$wobNumber$')" alwaysActive="true"/>
+			<iconAction name="print" icon="/images/ico-print-w24.png" width="24" height="24" link="javascript:window.print()" visible="false" alwaysActive="true"/>
+			<iconAction name="barcode" icon="/images/ico-barcode-w24.png" width="24" height="24" link="javascript:openPrintBarcodeWindow('$contextPath$', '$uploadRef$', '$seqId$')" alwaysActive="true"/>
+			<iconAction name="statusWindow" icon="/images/ico-history-w24.png" width="24" height="24" link="javascript:openStatusWindow('$seqId$', '$contextPath$');return false;" alwaysActive="true"/>
+			<iconAction name="help" icon="/images/ico-help-w24.png" width="24" height="24" link="javascript:openHelp('User_Interfaces/Working_with_Invoices.htm', '$contextPath$')" alwaysActive="true"/>	
+		</actions>
+	</section>
+	
+	<section name="VendorDetails" visible="true" collapsible="true" collapsed="false">
+		<properties>
+			<lookup row="1" col="1-2" name="vendor.name" lookupType="lookup.vendorName" readonly="true" inputReadonly="true" styleClass="fourhundred"/>
+			<lookup row="1" col="3" name="vendorId" lookupType="lookup.vendorCode" readonly="true" inputReadonly="true" styleClass="onefifty" />
+			<text row="2" col="1-3" name="vendor.address1" readonly="true" styleClass="fulllookup"/>
+			<text row="3" col="1-3" name="vendor.address2" readonly="true" styleClass="fulllookup"/>
+			<text row="4" col="1" name="vendor.city" readonly="true" />
+			<text row="4" col="2" name="vendor.state" readonly="true"/>
+			<text row="4" col="3" name="vendor.postalCode" readonly="true"/>
+		</properties>
+		<actions>
+		</actions>
+	</section>
+	
+	
+	
+	<section name="sourceInformation" visible="true" collapsible="true" collapsed="false">
+		<properties>
+			<date row="1" col="1" name="scanDate" readonly="true" styleClass="date"/>
+			<text row="1" col="2" name="scanType" readonly="true"/>
+			<text row="1" col="3" name="seqId" readonly="true" />
+			<text row="2" col="1" name="scanSource" readonly="true"/>
+			<text row="2" col="2" name="batchNumber" readonly="true"/>
+			<text row="2" col="3" name="scanSite" readonly="true"/>		
+		</properties>
+	</section>
+	
+	
+	<hiddenFields>
+		<hidden name="postingERPId"/>
+		<hidden name="vendorERPId"/>
+        <hidden name="newBatchNumber"/>
+        <hidden name="paymentTermERPId"/>
+		<hidden name="paymentTypeERPId"/>
+        <hidden name="vendor.status" defaultValue="V"/>
+		<hidden name="alternateVendor"/>
+		<hidden name="costObjectTypeId1" defaultValue="COS1"/>
+		<hidden name="uploadRef"/>
+		<hidden name="requester.userName"/>
+		<hidden name="AFENumber" defaultValue="2" forceDefault="true"/>
+		<hidden name="netAmount"/>
+    </hiddenFields>
+
+	<processors>
+    </processors>
+</propertyTemplate>

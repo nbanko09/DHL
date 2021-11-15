@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<propertyTemplate
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/template.xsd">
+
+	<labels default="en">
+		<locale name="en">
+		<label name="forward" value="Submit"/>
+		<label name="custom4.postalCode" value="Postal Code"/>
+		<label name="custom4.chbPaZip" value="Postal Code"/>
+		<label name="tbdBoolean1" value="Same as Mailing Address"/>
+		<label name="group" value="Control Station"/>
+		<label name="businessUnit" value="Division"/>
+		<label name="custom6.chbFdaAbi" value="Workflow Active"/>
+		</locale>
+	</labels>
+	
+	<section name="doc" collapsible="false" collapsed="false">
+		<properties>
+			<textArea row="1" col="1-2" name="voucherComments" readonly="true" styleClass="comment"/> 
+			<textArea row="2" col="1-2" name="tbdComment1" styleClass="comment"/> 
+			<output row="3" col="1-2" name="processInformation.previousComment" readonly="true" styleClass="comment" escapeXml="false"/>
+			<valueAlias row="4" col="1" name="processInformation.queueName" readonly="true"/>
+		</properties>
+		<actions>
+			<button name="forward" command="forward" readonly="false" docType="upload" type="submit" isAnchored="false" title="forwardTitle" styleClass="button70"/>
+		</actions>
+	</section>		
+
+	<section name="requestBrokerage" visible="true" collapsible="false" collapsed="false">
+		<properties>
+			<dropDown row="1" col="1" name="subType" choiceList="choice.masterfileCustomerBrkSubTypes" readonly="false" validation="required" onChange="reloadPage(this)"/> <!--Request Type-->
+			<text row="1" col="2" name="custom4.contactNo" validation="required, noSpecialCharacters"/> <!--Contact No-->
+			<text row="2" col="1" name="custom4.chbAccountNo" validation="required, noSpecialCharacters"/> <!--Account code-->
+			<dynamicDropDown row="3" col="1" name="group" readonly="false" providerClass="com.miriasystems.ui.providers.GroupsChoiceListProvider" validation="required"/> <!--Control Station-->
+			<text row="3" col="2" name="businessUnit" styleClass="sixty"/> <!--Division-->
+			<text row="4" col="1-2" name="custom4.name" validation="required" styleClass="fourhundred"/> <!--Customer Name-->
+			<text row="5" col="1-2" name="custom4.chbDBA" styleClass="fourhundred"/> <!--Customer Name-->
+			<text row="6" col="1-2" name="custom4.chbAKA" styleClass="fourhundred"/> <!--Customer Name-->
+		</properties>
+		<actions>
+			<iconAction name="selectApprovers" icon="/images/ico-route-w24.png" width="24" height="24" readOnlyLink="javascript:openViewRoutingWindow('$contextPath$', '$wobNumber$', 'nonPo')" link="javascript:openUploadRoutingWindow('/ManagedPay/custom', 'routing/upload.action','nonPo', 'MP_Approver1')" alwaysActive="true" readonly="false"/>
+			<iconAction name="print" icon="/images/ico-print-w24.png" width="24" height="24" link="javascript:window.print()" visible="true" alwaysActive="true"/>
+			<iconAction name="statusWindow" icon="/images/ico-history-w24.png" width="24" height="24" link="javascript:openStatusWindow('$seqId$', '$contextPath$');return false;" alwaysActive="true"/>
+			<iconAction name="help" icon="/images/ico-help-w24.png" width="24" height="24" link="javascript:openHelp('User_Interfaces/Working_with_Invoices.htm', '$contextPath$')" alwaysActive="true"/>
+		</actions>		
+	</section>
+		
+	
+	<section name="mailingAddress" visible="true" collapsible="false" collapsed="false">
+		<properties>
+			<text row="1" col="1-2" name="custom4.fao" readonly="false" styleClass="twosixty"/> <!--Attention-->
+			<text row="2" col="1-2" name="custom4.address1" readonly="false" styleClass="twosixty"/> <!--Address 1-->
+			<text row="3" col="1-2" name="custom4.address2" readonly="false" styleClass="twosixty"/> <!--Address 2-->
+			<text row="4" col="1" name="custom4.city" readonly="false" styleClass="twosixty"/> <!--City-->
+			<dropDown row="4" col="2" name="custom4.state" choiceList="choice.states" readonly="false"/> <!--State-->
+			<text row="5" col="1" name="custom4.postalCode" readonly="false" styleClass="seventy"/> <!--Post Code-->
+			<text row="5" col="2" name="custom4.country" readonly="false" defaultValue="USA" styleClass="twoninety"/> <!--Country-->
+		</properties>
+	</section>
+	
+	<section name="physicalAddress" visible="true" collapsible="false" collapsed="false">
+		<properties>
+			<checkbox row="1" col="1" name="tbdBoolean1" readonly="false" onClick="reloadPage(this)"/> <!-- PA same as MA-->
+			<text row ="2" col="1-2" name="custom4.chbPaFao" styleClass="twosixty" readonly="false"/> <!--FAO-->
+			<text row="3" col="1-2" name="custom4.chbPaAddress1" readonly="false" styleClass="twosixty"/> <!--Address1-->
+			<text row="4" col="1-2" name="custom4.chbPaAddress2" readonly="false" styleClass="twosixty"/> <!--Address2-->
+			<text row="5" col="1" name="custom4.chbPaCity" readonly="false" styleClass="twosixty"/> <!--City-->
+			<dropDown row="5" col="2" name="custom4.chbPaState" choiceList="choice.states" readonly="false"/> <!--State-->
+			<text row="6" col="1" name="custom4.chbPaZip" readonly="false" styleClass="seventy"/> <!--Post Code-->
+			<text row="6" col="2" name="custom4.chbPaCountry" readonly="false" styleClass="twoninety"/> <!--Country-->
+		</properties>
+	</section>
+
+	
+	<section name="accountType" visible="true" collapsible="true" collapsed="false">
+		<properties>
+			<text row="1" col="1" name="custom4.chbIrsSs" styleClass="onehundred" readonly="false"/> 
+			<text row="1" col="2" name="custom4.chbPhone" styleClass="onetwenty" readonly="false"/> 
+			<text row="1" col="3" name="custom4.chbFax" styleClass="onetwenty" readonly="false" /> 
+			<text row="2" col="1" name="custom4.billToAccountCode" styleClass="onehundred" readonly="false" /> 
+			<text row="2" col="2-3" name="custom4.billToAccount"  styleClass="threetwenty" readonly="false" /> 
+			<checkbox row="3" col="1" name="custom4.chbImporterYN" readonly="false" /> 
+			<checkbox row="3" col="2" name="custom4.chbDeliverToYN" readonly="false"/> 
+			<checkbox row="3" col="3" name="custom4.chbBillToYN" readonly="false"/> 
+			<checkbox row="4" col="1" name="custom4.chbShipperYN" readonly="false"/> 
+			<checkbox row="4" col="2" name="custom4.chbConsigneeYN" readonly="false"/> 
+	    </properties>
+	</section>
+	
+	<section name="contactInformation" visible="true" collapsible="true" collapsed="false">
+		<properties>
+			<text row="1" col="1" name="custom4.chbContactNo" readonly="false" styleClass="fifty"/> 
+			<text row="1" col="2" name="custom4.chbContactName" readonly="false" styleClass="twosixty"/> 
+			<text row="1" col="3" name="custom4.chbContactTitle" readonly="false" styleClass="ninety"/> 
+			<text row="2" col="1" name="custom4.chbContactPhone" readonly="false" styleClass="onetwenty"/> 
+			<text row="2" col="2" name="custom4.chbContactFax" readonly="false" styleClass="onetwenty"/> 
+			<text row="2" col="3" name="custom4.chbContactCell" readonly="false" styleClass="onetwenty"/>
+			<text row="3" col="1" name="custom4.chbContactPager" readonly="false" styleClass="onetwenty"/>
+			<text row="3" col="2" name="custom4.chbContactPagerPin" readonly="false" styleClass="seventy"/> 
+			<text row="3" col="3" name="custom4.chbContactEmail" readonly="false" styleClass="threehundred"/> 
+			<text row="4" col="1" name="custom4.chbContactPhone2" readonly="false" styleClass="onetwenty"/> 
+			<text row="4" col="2" name="custom4.chbContactFax2" readonly="false" styleClass="onetwenty"/> 
+			<text row="4" col="3" name="custom4.chbContactEmail2" readonly="false" styleClass="threehundred"/> 
+			<text row="5" col="1" name="custom4.chbContactEmergencyPhone" readonly="false" styleClass="onetwenty"/> 
+			<dropDown row="5" col="3" name="custom4.chbTempPerm" choiceList="choice.tempPerm" readonly="false"/>
+			<text row="6" col="1-3" name="chbLabel4" defaultValue="FDA Submitter Details" forceDefault="true" styleClass="fulllookup" readonly="true"/>
+			<text row="7" col="1" name="custom4.chbFdaLastName" readonly="false" styleClass="twotwenty"/> 
+			<text row="7" col="3" name="custom4.chbFdaFirstName" readonly="false" styleClass="twotwenty"/> 
+			<dropDown row="8" col="1" name="custom4.chbFdaFirmType" choiceList="choice.firmType" readonly="false"/>
+			<dropDown row="8" col="3" name="custom4.chbFdaMessageYN" choiceList="choice.booleanYesNo" defaultValue="0" readonly="false"/> 
+			<textArea row="9" col="1-3" name="custom4.chbNotes" readonly="false" styleClass="comment5"/>	
+		</properties>
+	</section>
+	
+	<section name="activity" visible="true" collapsible="true" collapsed="false">
+		<properties>
+			<textArea row="1" col="1-2" name="chbLabel2" readonly="true" defaultValue="Please refer to the fee matrix in the Best Practices manual Sec 1.32. Requests to process fees that differ from the fee matrix or do not include a mandatory fee as stated in the matrix must be accompanied by a management approval as identified in the fee matrix." forceDefault="true" styleClass="comment"/> 
+			<dropDown row="2" col="1" name="custom4.chbChargeProfile" choiceList="choice.chargeProfile" readonly="false"/> 
+			<text row="2" col="2" name="custom4.chbCustomerProfile" readonly="false"/>
+			<text row="3" col="1" name="custom4.chbSpecificProfile" readonly="false"/>
+			<currency row="4" col="1" name="custom4.chbEntryFee" readonly="false" /> 
+			<currency row="4" col="2" name="custom4.chbDisbursementFee" readonly="false" /> 
+			<text row="5" col="1-2" name="custom4.chbOtherFee" styleClass="fulllookup" readonly="false" /> 
+			<currency row="6" col="1" name="custom4.chbAdditionalClass" readonly="false" /> 
+			<currency row="6" col="2" name="custom4.chbAdditionalInvoice" readonly="false"/> 
+			<currency row="7" col="1" name="custom4.chbBrokerBondCharge" readonly="false"/> 
+			<currency row="7" col="2" name="custom4.chbSebCharge" readonly="false"/>
+		</properties>
+	</section>
+
+	<section name="importInformation" visible="true" collapsible="true" collapsed="false">
+		<properties>
+			<text row="1" col="1" name="custom4.chbDivision" styleClass="thirty" readonly="false"/>  
+			<text row="1" col="2" name="custom4.chbTibMessage1" styleClass="fourty" readonly="false"/>
+			<text row="1" col="3" name="custom4.chbTibMessage2" styleClass="fourty" readonly="false"/> 
+			<checkbox row="2" col="1" name="custom4.chbRelated" readonly="false"/> 
+			<text row="2" col="2" name="custom4.chbDoFrCharge" styleClass="oneseventy" readonly="false"/> 
+			<text row="2" col="3" name="custom4.chbDeliverTo" styleClass="ninety" readonly="false"/>  
+			<text row="3" col="1" name="custom4.chbConsignee" styleClass="oneseventy" readonly="false"/> 
+			<text row="3" col="2" name="custom4.chbLocation" styleClass="oneseventy" readonly="false"/>  
+			<text row="3" col="3" name="custom4.chbExamLoc" styleClass="fifty" readonly="false"/>    
+			<text row="4" col="1" name="custom4.chbTruck" styleClass="seventy" readonly="false"/>    
+			<text row="4" col="2" name="custom4.chbBrokerTeam" styleClass="onefifty" readonly="false"/>    
+			<text row="4" col="3" name="custom4.chbMid" styleClass="onefifty" readonly="false"/>  
+			<text row="5" col="1" name="custom4.chbTarrifNumber" styleClass="onehundred" readonly="false"/>   
+			<text row="5" col="1" name="custom4.chbCOrigin" styleClass="onefifty" readonly="false"/>    
+			<text row="5" col="3" name="custom4.chbCExport" styleClass="onefifty" readonly="false"/>    
+			<text row="6" col="1" name="custom4.chbEntryType" styleClass="thirty" readonly="false"/>  
+			<text row="6" col="1" name="custom4.chbMot" styleClass="oneseventy" readonly="false"/>   
+			<text row="6" col="3" name="custom4.chbPortOfEntry" styleClass="fourty" readonly="false"/>   
+			<text row="7" col="1" name="custom4.chbPortOfLading" styleClass="fourty" readonly="false"/>    
+			<dropDown row="7" col="2" name="custom4.chbSqueeze" choiceList="choice.booleanYesNo" defaultValue="0" readonly="false"/>   
+			<dropDown row="7" col="3" name="custom4.chbAutoBilling" choiceList="choice.booleanYesNo" defaultValue="0" readonly="false"/>   
+			<text row="8" col="1" name="custom4.chb9802" styleClass="onefifty" readonly="false"/>  
+			<dropDown row="8" col="2" name="custom4.chbRlfYN" choiceList="choice.booleanYesNo" defaultValue="0" readonly="false"/>
+			<dropDown row="8" col="3" name="custom4.chbAitAin" choiceList="choice.ain" readonly="false"/>    
+			<text row="9" col="1" name="custom4.chbDoMessage1" styleClass="fourty" readonly="false"/>   
+			<text row="9" col="2" name="custom4.chbDoMessage2" styleClass="fourty" readonly="false"/>   
+			<dropDown row="9" col="3" name="custom4.chbCtpat" choiceList="choice.booleanYesNo" defaultValue="0" readonly="false"/>   
+			<text row="10" col="1" name="custom4.chbFedRegNumber" styleClass="oneseventy" readonly="false"/>    
+		</properties>
+	</section>
+	
+	<section name="isfInformation" visible="true" collapsible="true" collapsed="false">
+		<properties>
+			<dropDown row="1" col="1" name="custom4.chbIsfDgfFilerYN" choiceList="choice.booleanYesNo" defaultValue="0" readonly="false"/>  
+			<date row="1" col="2" name="custom4.chbIsfEffectiveDate" readonly="false"/> 
+			<text row="1" col="3" name="custom4.chbIsfBillTo" styleClass="oneseventy" readonly="false"/> 
+			<text row="2" col="1" name="custom4.chbIsfFees" styleClass="threehundred" readonly="false"/> 
+			<text row="2" col="2" name="custom4.chbIsfContact" styleClass="threehundred" readonly="false"/>   
+			<text row="2" col="3" name="custom4.chbIsfTitle" styleClass="onehundred" readonly="false"/>   
+			<text row="3" col="1" name="custom4.chbIsfEmail" styleClass="threehundred" readonly="false"/>  
+			<text row="3" col="2" name="custom4.chbIsfPhone" readonly="false"/> 
+			<text row="4" col="1-2" name="chbLabel3" defaultValue="ISF E-Mail Notifications Sent To (List E-Mails)" forceDefault="true" styleClass="fulllookup" readonly="true"/>
+			<text row="5" col="1-3" name="custom4.chbIsfAcceptanceMessage" styleClass="sixhundred" readonly="false"/> 
+			<text row="6" col="1-3" name="custom4.chbIsfRejectedMessage" styleClass="sixhundred" readonly="false"/> 
+			<text row="7" col="1-3" name="custom4.chbIsfAcceptedWarning" styleClass="sixhundred" readonly="false"/>  
+			<text row="8" col="1-3" name="custom4.chbIsfStatusMessages" styleClass="sixhundred" readonly="false"/>   
+			<text row="9" col="1-3" name="custom4.chbIsfOtherInstructions" styleClass="sixhundred" readonly="false"/>   
+		</properties>
+	</section>
+	
+	<section name="stagingInformation" visible="true" collapsible="false" collapsed="false">
+		<properties>
+			<dropDown row="1" col="1" name="custom6.stagingSecurity" choiceList="choice.EPSecurity" readonly="false"/> <!--Security #-->
+			<dropDown row="1" col="2" name="custom6.stagingCommodity" choiceList="choice.EPCommodity" readonly="false"/> <!--Commodicty-->
+			<dropDown row="1" col="3" name="custom6.stagingEPTeam" choiceList="choice.EPTeam" readonly="false"/>   <!--EP Team-->
+			<dropDown row="2" col="1" name="custom6.stagingCSTeam" choiceList="choice.CSTeam" readonly="false"/>   <!--CS Team-->
+			<text row="2" col="2" name="custom6.stagingCSAgent" styleClass="twohundred" readonly="false"/>  
+			<dropDown row="2" col="3" name="custom6.stagingIOR" choiceList="choice.yesNo" readonly="false"/>  
+			<dropDown row="3" col="1" name="custom6.chbFdaAbi" choiceList="choice.booleanYesNo" readonly="false"/>   
+		</properties>
+	</section>
+	
+	<section name="lineItems" visible="false" collapsible="true" collapsed="true">
+		<lineItemProperties showTotal="true" showTaxTotal="false">
+			<lookup row="1" col="1" name="accountCode" lookupType="lookup.accountCode" readonly="true" inputReadonly="true" validation="required" styleClass="twohundred"/>
+			<text row="1" col="2" name="account.description" readonly="true" styleClass="twohundred"/>
+			<text row="1" col="3" name="itemDescription" readonly="false" styleClass="twohundred"/>
+			<currency row="1" col="4" name="lineTotal" readonly="false" validation="required, nonZero" styleClass="currency" onBlur="reloadPage(this)"/>
+			<checkbox row="1" col="5" name="matched" visible="false" styleClass="ten" />					 
+			<lineItemHidden row="0" col="0" name="accountERPId"/>
+			<lineItemHidden row="0" col="0" name="companyCode"/>
+		</lineItemProperties>
+		<actions>
+				<!-- The following set of actions are standard ActivePay and should be included relatively unmodified from the baseline version in most templates -->
+			<!--iconAction name="RemoveAllItems" icon="/images/ico-del-all-w24.png" width="24" height="24" link="javascript:submitCommand(this,'deleteAllLineItems','anchor_lineItems')" visible="true" alwaysActive="false"/-->
+			<!--iconAction name="RemoveMarkedItems" icon="/images/ico-del-match-w24.png" docType="upload" width="24" height="24" link="javascript:submitCommand(this,'deleteMarkedLines','anchor_lineItems')" visible="true" alwaysActive="false"/-->
+			<!--iconAction name="RemoveUnMarkedItems" icon="/images/ico-del-unmatched-w24.png" docType="upload" width="24" height="24" link="javascript:submitCommand(this,'deleteUnMarkedLines','anchor_lineItems')" visible="true" alwaysActive="false"/-->
+			<!--iconAction name="selectTemplate" icon="/images/ico-gltemplate-w24.png" width="24" height="24" link="javascript:openTemplateWindow('$contextPath$')" alwaysActive="false" /-->
+			<!--dropDown name="lineitemsdropdown" choiceList="choice.lineitemsdropdown" alwaysActive="false" onChange="javascript:submitCommandFromDropdown(this,'addLineItem','anchor_lineItems')"/-->
+			<iconAction name="addLineItem" icon="/images/ico-add-line-w24.png" docType="upload" width="24" height="24" link="javascript:submitCommandUpload(this,'addLineItem','anchor_lineItems')" visible="true" alwaysActive="false"/>
+			<iconAction name="removeLineItem" icon="/images/ico-del-line-w24.png" docType="upload" width="24" height="24" link="javascript:submitCommandUpload(this,'deleteLineItem','anchor_lineItems')" visible="true" alwaysActive="false"/>	
+		</actions>
+	</section>		
+	
+	<hiddenFields>
+	<hidden name="requesterId"/>
+	<hidden name="scanVendorName"/>
+	<hidden name="type" defaultValue="BROKERAGE"/>
+	<hidden name="processCode" defaultValue="C-BRK"/>
+	<hidden name="docPriority" defaultValue="1"/>
+	<hidden name="uploadRef"/>
+	<hidden name="originatorId"/>
+	<hidden name="retentionBoxId" defaultValue="upload" forceDefault="true"/>
+    </hiddenFields>
+
+	<processors>
+	</processors>
+</propertyTemplate>

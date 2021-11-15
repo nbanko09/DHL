@@ -1,0 +1,52 @@
+<managedpay baseCurrency="USD" siteRole="MPSys_Test" isolatedRegion="1" apManager="kstuart@miriasystems.com" itManager="kstuart@miriasystems.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/managedpayconfiguration.xsd">
+    <typeInformation>
+    </typeInformation>
+    <fileNet>
+      <processEngine routerUrl="DHLMP40" username="Administrator" password="admin" prefix="f_sw" queryRoster="ROSTER"/>
+        <contentEngine url="cemp:t3://dhlmp40:7001/FileNet/Engine" objectStore="ManagedPay" username="lhenry" password="lhenry" workplaceUrl="http://10.241.64.74:7001/Workplace" wsiUrl="cemp:http://DHLMP40:7001/wsi/FNCEWS40DIME/"/>
+    </fileNet>
+    
+     <userLookup providerUrl="ldap://miriadevsun:63039" providerImpl="Sun One" lookupUsername="Directory Manager" lookupPassword="sunonedm" lookupContainer="" log="true">
+                <namingSchema baseDn="dc=development,dc=local">
+                <userContainer name="OU=TESTMP"/>
+                <roleContainer name="OU=TESTMP"/>
+                <attributes>
+                    <mapping attributeName="uid" propertyName="fullUserName"/>
+                    <mapping attributeName="givenName" propertyName="firstName"/>
+                    <mapping attributeName="sn" propertyName   ="lastName"/>
+                    <mapping attributeName="cn" propertyName="displayName"/>
+                    <mapping attributeName="uid" propertyName="userName"/>
+                    <mapping attributeName="entrydn" propertyName="distinguishedName"/>
+                    <mapping attributeName="description" propertyName="description"/>
+                    <mapping attributeName="telephoneNumber" propertyName="phone"/>
+                    <mapping attributeName="mail" propertyName="email"/>
+                </attributes>
+            </namingSchema>
+       </userLookup>
+       
+    <mailSettings
+		host="192.168.198.128"
+		protocol="imap"
+		user="development/administrator"
+		password="admin"
+		userEmail="administrator@development.local"
+	/>
+	<outboundMailSettings
+		host="192.168.198.128"
+		protocol="smtp"
+		user="development/administrator"
+		password="admin"
+		userEmail="administrator@development.local"
+	/>
+
+    <serverSpecifics dialect="org.hibernate.dialect.Oracle9Dialect"
+        transactionManagerClass="org.hibernate.transaction.WeblogicTransactionManagerLookup"
+        jndiURL="t3://10.241.64.74:7001"
+        jndiInitialContextFactory="weblogic.jndi.WLInitialContextFactory"
+        baseURL="http://10.241.64.74:7001/ManagedPay"
+	  logDirectory="C:\MiriaSystems\ManagedPay\Logs"
+	  workflowLogDirectory="C:\MiriaSystems\ManagedPay\Logs"/>
+        />
+
+    <paging maxResults="1000" resultsPerPage="20"/>
+</managedpay>

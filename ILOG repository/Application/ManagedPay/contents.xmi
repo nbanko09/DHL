@@ -1,0 +1,1070 @@
+<?xml version="1.0"  encoding="ISO-8859-1"  ?>
+<!DOCTYPE XMI>
+<XMI xmi.version="1.2" >
+<XMI.header>
+<XMI.documentation>
+<XMI.exporter>Ilog Rule Kit</XMI.exporter>
+<XMI.exporterVersion>4.1</XMI.exporterVersion>
+</XMI.documentation>
+<XMI.model href="ilr:0180AA48075B03010000FCC4BF018265A8C0#1"  xmi.name="Application"  xmi.version="1.2" />
+<XMI.metamodel href="ilr:09804659F3E0EA00000084662F000100007F#1"  xmi.name="Application"  xmi.version="1.2" />
+</XMI.header>
+<XMI.content>
+<Basics.Project xmi.id="a1"  xmi.uuid="ilr:1E80AA48075B03010000FCC4BF018265A8C0#1"  isRoot="false"  isLeaf="false"  isAbstract="false"  name="ManagedPay"  editable="true"  creationDate="19 Apr 2005 15:15:42 GMT"  lastModificationDate="9 Jun 2005 16:18:49 GMT"  deployer="a2" >
+<Model.RepositoryView.explicitMembers>
+<Rule.TemplateLibrary name="Template Library"  href="ilr:2B80AA48075B03010000FCC4BF018265A8C0#1" />
+<Rule.RulePackage name="ScreenSelections"  href="ilr:C087AA48075B03010000FCC4BF018265A8C0#1" />
+<Rule.RulePackage name="ValidCodes"  href="ilr:1B955D135A67030100001F57FE018265A8C0#1" />
+<Rule.RulePackage name="3-WayMatching"  href="ilr:DC8760C27ED7030100001F57FE018265A8C0#1" />
+<Rule.RulePackage name="DuplicateInvoice"  href="ilr:DD873FEAA25D0401000096EA09016E65A8C0#1" />
+<Rule.RuleDeployer name="Deployer"  xmi.idref="a2"  xmi.uuid="ilr:2C80AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.RepositoryView.explicitMembers>
+<Model.Namespace.contents>
+<Rule.RuleDeployer xmi.id="a2"  xmi.uuid="ilr:2C80AA48075B03010000FCC4BF018265A8C0#1"  packetAsPackage="false"  importList="auto"  name="Deployer"  editable="true" >
+<Basics.Deployer.projects>
+<Basics.Project name="ManagedPay"  href="ilr:1E80AA48075B03010000FCC4BF018265A8C0#1" />
+</Basics.Deployer.projects>
+<Model.Namespace.contents>
+<Rule.XOM xmi.id="a3"  xmi.uuid="ilr:2D80AA48075B03010000FCC4BF018265A8C0#1"  explicitXOMUsed="true"  name="XOM"  editable="true" >
+<Rule.XOM.javaPath>
+<XMI.reference xmi.id="ilog.rules.repository.brm.IlrXOM$Path@195b5ad" >
+<ilr-xml-handler class="ilog.rules.repository.brm.IlrXOMPathXmlHandler"  version="1" >
+<Path Type="Path" >
+ <File>C:\cvs\ManagedPayR3\Domain\bin\domain.jar</File>
+</Path>
+</ilr-xml-handler>
+
+</XMI.reference>
+</Rule.XOM.javaPath>
+<Rule.XOM.dynamicPath>
+<XMI.reference xmi.id="ilog.rules.repository.brm.IlrXOM$DynamicPath@a742a1" >
+<ilr-xml-handler class="ilog.rules.repository.brm.IlrXOMPathXmlHandler"  version="1" >
+<Path Type="DynamicPath" >
+</Path>
+</ilr-xml-handler>
+
+</XMI.reference>
+</Rule.XOM.dynamicPath>
+</Rule.XOM>
+<Model.Tag xmi.id="a4"  xmi.uuid="ilr:2E80AA48075B03010000FCC4BF018265A8C0#1"  tagId="ilog.mof.cookieNames"  values="ilog.rules.repository.brm.IlrDefaultIRLExtractor"  name="Tag"  editable="true" >
+<Model.Tag.elements>
+<Rule.RuleDeployer name="Deployer"  xmi.idref="a2"  xmi.uuid="ilr:2C80AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.Tag.elements>
+</Model.Tag>
+</Model.Namespace.contents>
+</Rule.RuleDeployer>
+<RuleApp.RuleApp xmi.id="a5"  xmi.uuid="ilr:02887DCFEF5C0301000096EA09018265A8C0#1"  status="enable"  default="false"  xom="
+"  URI="ruleapp:ManagedPayR3RuleApp&#47;1.0"  enabled="false"  name="ManagedPayR3RuleApp"  editable="true"  BresCreationDate=""  minorVersion="0"  majorVersion="1" >
+<Model.Namespace.contents>
+<RuleApp.Ruleset xmi.id="a6"  xmi.uuid="ilr:B68813B5AA7604010000DAE2C7016E65A8C0#1"  default="false"  enabled="true"  BresCreationDate=""  minorVersion="0"  majorVersion="1"  historyVersion="false"  name="ScreenSelections"  editable="true"  creationDate="13 Jun 2005 21:57:17 GMT"  lastModificationDate="13 Jun 2005 21:57:17 GMT"  currentDefinition="a7" >
+<RuleApp.Ruleset.irl>import ilog.rules.engine.*;
+import com.miriasystems.mp.domain.*;
+import java.lang.*;
+ruleset ScreenSelections
+{
+property projectUUID = &quot;ilr:1E80AA48075B03010000FCC4BF018265A8C0#1&quot;;
+property projectName = &quot;ManagedPay&quot;;
+out java.lang.String view;
+inout com.miriasystems.mp.domain.Document apDocument;
+inout com.miriasystems.mp.domain.ProcessInformation processInformation;
+boolean nulls = false;
+};
+function void ilrmain(Object o) { &#9; &#9;
+&#9;apDocument = new Document();
+&#9;apDocument.type = &quot;non-PO&quot;;
+&#9;processInformation = new ProcessInformation();
+&#47;&#47;&#9;processInformation.queueName = &quot;test&quot;;
+&#9;execute(); 
+}
+rule Decision_Table_0 {
+    priority = maximum;
+    property uuid = &quot;ilr:6788798C416103010000BBB61D018265A8C0#1&quot;;
+    property source = &quot;DT&quot; ;
+    property lastModificationDate = java.util.Date(&quot;6&#47;13&#47;2005 14:56&quot;);
+when
+{
+    ?document: com.miriasystems.mp.domain.Document();
+    ?processInfo: com.miriasystems.mp.domain.ProcessInformation();
+    evaluate((?document.getType() equals &quot;non-PO&quot;) &amp;&amp;
+             (?processInfo.getQueueName() equals &quot;Index&quot;));
+}
+then
+{
+    view = &quot;non-po-indexing-view.xml&quot;;
+    ?context.updateContext();
+}
+
+};
+rule Decision_Table_1 {
+    priority = maximum;
+    property uuid = &quot;ilr:6788798C416103010000BBB61D018265A8C0#1&quot;;
+    property source = &quot;DT&quot; ;
+    property lastModificationDate = java.util.Date(&quot;6&#47;13&#47;2005 14:56&quot;);
+when
+{
+    ?document: com.miriasystems.mp.domain.Document();
+    ?processInfo: com.miriasystems.mp.domain.ProcessInformation();
+    evaluate((?document.getType() equals &quot;non-PO&quot;) &amp;&amp;
+             (?processInfo.getQueueName() equals &quot;Process&quot;));
+}
+then
+{
+    view = &quot;non-po-processing-view.xml&quot;;
+    ?context.updateContext();
+}
+
+};
+rule Decision_Table_2 {
+    priority = maximum;
+    property uuid = &quot;ilr:6788798C416103010000BBB61D018265A8C0#1&quot;;
+    property source = &quot;DT&quot; ;
+    property lastModificationDate = java.util.Date(&quot;6&#47;13&#47;2005 14:56&quot;);
+when
+{
+    ?document: com.miriasystems.mp.domain.Document();
+    ?processInfo: com.miriasystems.mp.domain.ProcessInformation();
+    evaluate((?document.getType() equals &quot;non-PO&quot;) &amp;&amp;
+             (?processInfo.getQueueName() equals &quot;VendorMaintenance&quot;));
+}
+then
+{
+    view = &quot;non-po-vendor-view.xml&quot;;
+    ?context.updateContext();
+}
+
+};
+rule Decision_Table_3 {
+    priority = maximum;
+    property uuid = &quot;ilr:6788798C416103010000BBB61D018265A8C0#1&quot;;
+    property source = &quot;DT&quot; ;
+    property lastModificationDate = java.util.Date(&quot;6&#47;13&#47;2005 14:56&quot;);
+when
+{
+    ?document: com.miriasystems.mp.domain.Document();
+    ?processInfo: com.miriasystems.mp.domain.ProcessInformation();
+    evaluate((?document.getType() equals &quot;non-PO&quot;) &amp;&amp;
+             (?processInfo.getQueueName() equals &quot;Confirm&quot;));
+}
+then
+{
+    view = &quot;non-po-confirmation-view.xml&quot;;
+    ?context.updateContext();
+}
+
+};
+rule Decision_Table_4 {
+    priority = maximum;
+    property uuid = &quot;ilr:6788798C416103010000BBB61D018265A8C0#1&quot;;
+    property source = &quot;DT&quot; ;
+    property lastModificationDate = java.util.Date(&quot;6&#47;13&#47;2005 14:56&quot;);
+when
+{
+    ?document: com.miriasystems.mp.domain.Document();
+    ?processInfo: com.miriasystems.mp.domain.ProcessInformation();
+    evaluate((?document.getType() equals &quot;non-PO&quot;) &amp;&amp;
+             (?processInfo.getQueueName() equals &quot;Approve&quot;));
+}
+then
+{
+    view = &quot;non-po-approval-view.xml&quot;;
+    ?context.updateContext();
+}
+
+};
+rule Decision_Table_5 {
+    priority = maximum;
+    property uuid = &quot;ilr:6788798C416103010000BBB61D018265A8C0#1&quot;;
+    property source = &quot;DT&quot; ;
+    property lastModificationDate = java.util.Date(&quot;6&#47;13&#47;2005 14:56&quot;);
+when
+{
+    ?document: com.miriasystems.mp.domain.Document();
+    ?processInfo: com.miriasystems.mp.domain.ProcessInformation();
+    evaluate((?document.getType() equals &quot;non-PO&quot;) &amp;&amp;
+             (! ((?processInfo.getQueueName() equals &quot;Index&quot;))) &amp;&amp;
+             (! ((?processInfo.getQueueName() equals &quot;Process&quot;))) &amp;&amp;
+             (! ((?processInfo.getQueueName() equals &quot;VendorMaintenance&quot;))) &amp;&amp;
+             (! ((?processInfo.getQueueName() equals &quot;Confirm&quot;))) &amp;&amp;
+             (! ((?processInfo.getQueueName() equals &quot;Approve&quot;))));
+}
+then
+{
+    view = &quot;non-po-indexing-view.xml&quot;;
+    ?context.updateContext();
+}
+
+};
+rule Decision_Table_6 {
+    priority = maximum;
+    property uuid = &quot;ilr:6788798C416103010000BBB61D018265A8C0#1&quot;;
+    property source = &quot;DT&quot; ;
+    property lastModificationDate = java.util.Date(&quot;6&#47;13&#47;2005 14:56&quot;);
+when
+{
+    ?document: com.miriasystems.mp.domain.Document();
+    ?processInfo: com.miriasystems.mp.domain.ProcessInformation();
+    evaluate((?document.getType() equals &quot;PO&quot;) &amp;&amp;
+             (?processInfo.getQueueName() equals &quot;Index&quot;));
+}
+then
+{
+    view = &quot;po-indexing-view.xml&quot;;
+    ?context.updateContext();
+}
+
+};
+rule Decision_Table_7 {
+    priority = maximum;
+    property uuid = &quot;ilr:6788798C416103010000BBB61D018265A8C0#1&quot;;
+    property source = &quot;DT&quot; ;
+    property lastModificationDate = java.util.Date(&quot;6&#47;13&#47;2005 14:56&quot;);
+when
+{
+    ?document: com.miriasystems.mp.domain.Document();
+    ?processInfo: com.miriasystems.mp.domain.ProcessInformation();
+    evaluate((?document.getType() equals &quot;PO&quot;) &amp;&amp;
+             (?processInfo.getQueueName() equals &quot;Process&quot;));
+}
+then
+{
+    view = &quot;po-processing-view.xml&quot;;
+    ?context.updateContext();
+}
+
+};
+rule Decision_Table_8 {
+    priority = maximum;
+    property uuid = &quot;ilr:6788798C416103010000BBB61D018265A8C0#1&quot;;
+    property source = &quot;DT&quot; ;
+    property lastModificationDate = java.util.Date(&quot;6&#47;13&#47;2005 14:56&quot;);
+when
+{
+    ?document: com.miriasystems.mp.domain.Document();
+    evaluate((! ((?document.getType() equals &quot;non-PO&quot;))) &amp;&amp;
+             (! ((?document.getType() equals &quot;PO&quot;))));
+}
+then
+{
+    view = &quot;non-po-indexing-view.xml&quot;;
+    ?context.updateContext();
+}
+
+};
+
+rule Initial_Check
+{
+priority = maximum;
+property uuid = &quot;ilr:EF8960CD3F7A0301000096EA09018265A8C0#1&quot;;
+property lastModificationDate = java.util.Date(&quot;5&#47;16&#47;2005 9:38&quot;);
+when
+{
+    ?context: IlrContext() from ?context;
+    evaluate((((processInformation.getQueueName() == null) || (processInformation.getQueueName().length() == 0)) ||
+             ((apDocument.getType() == null) || (apDocument.getType().length() == 0))));
+}
+then
+{
+    view = &quot;non-po-indexing-view.xml&quot;;
+    nulls = true;
+    ?context.updateContext();
+}
+
+};
+
+
+flowtask Ruleflow
+{
+property uuid = &quot;ilr:538EE1B38F6A0301000096EA09018265A8C0#1&quot;;
+property ruleflowuuid = &quot;ilr:538EE1B38F6A0301000096EA09018265A8C0#1&quot;;
+property displayname = &quot;Ruleflow&quot;;
+property mainflowtask = true;
+property lastModificationDate = java.util.Date(&quot;5&#47;16&#47;2005 9:39&quot;);
+initialaction {
+?context.insert(?apDocument); ?context.insert(?processInformation);
+}
+body {
+Initial_Check;
+if (nulls) {
+} else {
+  Decision_Table;
+}
+
+}
+};
+
+
+ruletask Decision_Table
+{
+firing = allrules;
+ordering = dynamic;
+algorithm = default;
+property uuid = &quot;ilr:638EE1B38F6A0301000096EA09018265A8C0#1&quot;;
+property ruleflowuuid = &quot;ilr:538EE1B38F6A0301000096EA09018265A8C0#1&quot;;
+property displayname = &quot;Ruleflow.Decision Table&quot;;
+property lastModificationDate = java.util.Date(&quot;5&#47;16&#47;2005 9:39&quot;);
+body {
+Decision_Table_0,
+Decision_Table_1,
+Decision_Table_2,
+Decision_Table_3,
+Decision_Table_4,
+Decision_Table_5,
+Decision_Table_6,
+Decision_Table_7,
+Decision_Table_8
+}
+};
+
+
+ruletask Initial_Check
+{
+firing = allrules;
+ordering = dynamic;
+algorithm = default;
+property uuid = &quot;ilr:5688E74D52E603010000FCC4BF018265A8C0#1&quot;;
+property ruleflowuuid = &quot;ilr:538EE1B38F6A0301000096EA09018265A8C0#1&quot;;
+property displayname = &quot;Ruleflow.Initial Check&quot;;
+property lastModificationDate = java.util.Date(&quot;5&#47;16&#47;2005 9:39&quot;);
+body {
+Initial_Check
+}
+};
+
+
+</RuleApp.Ruleset.irl>
+<RuleApp.Ruleset.topRulePackage>
+<Rule.RulePackage name="ScreenSelections"  href="ilr:C087AA48075B03010000FCC4BF018265A8C0#1" />
+</RuleApp.Ruleset.topRulePackage>
+<Model.Namespace.contents>
+<Basics.TextDefinition xmi.id="a7"  xmi.uuid="ilr:B78813B5AA7604010000DAE2C7016E65A8C0#1"  name="ruleset"  editable="false" >
+<Basics.TextDefinition.text>import ilog.rules.engine.*;
+import com.miriasystems.mp.domain.*;
+import java.lang.*;
+ruleset ScreenSelections
+{
+property projectUUID = &quot;ilr:1E80AA48075B03010000FCC4BF018265A8C0#1&quot;;
+property projectName = &quot;ManagedPay&quot;;
+out java.lang.String view;
+inout com.miriasystems.mp.domain.Document apDocument;
+inout com.miriasystems.mp.domain.ProcessInformation processInformation;
+boolean nulls = false;
+};
+function void ilrmain(Object o) { &#9; &#9;
+&#9;apDocument = new Document();
+&#9;apDocument.type = &quot;non-PO&quot;;
+&#9;processInformation = new ProcessInformation();
+&#47;&#47;&#9;processInformation.queueName = &quot;test&quot;;
+&#9;execute(); 
+}
+rule Decision_Table_0 {
+    priority = maximum;
+    property uuid = &quot;ilr:6788798C416103010000BBB61D018265A8C0#1&quot;;
+    property source = &quot;DT&quot; ;
+    property lastModificationDate = java.util.Date(&quot;6&#47;13&#47;2005 14:56&quot;);
+when
+{
+    ?document: com.miriasystems.mp.domain.Document();
+    ?processInfo: com.miriasystems.mp.domain.ProcessInformation();
+    evaluate((?document.getType() equals &quot;non-PO&quot;) &amp;&amp;
+             (?processInfo.getQueueName() equals &quot;Index&quot;));
+}
+then
+{
+    view = &quot;non-po-indexing-view.xml&quot;;
+    ?context.updateContext();
+}
+
+};
+rule Decision_Table_1 {
+    priority = maximum;
+    property uuid = &quot;ilr:6788798C416103010000BBB61D018265A8C0#1&quot;;
+    property source = &quot;DT&quot; ;
+    property lastModificationDate = java.util.Date(&quot;6&#47;13&#47;2005 14:56&quot;);
+when
+{
+    ?document: com.miriasystems.mp.domain.Document();
+    ?processInfo: com.miriasystems.mp.domain.ProcessInformation();
+    evaluate((?document.getType() equals &quot;non-PO&quot;) &amp;&amp;
+             (?processInfo.getQueueName() equals &quot;Process&quot;));
+}
+then
+{
+    view = &quot;non-po-processing-view.xml&quot;;
+    ?context.updateContext();
+}
+
+};
+rule Decision_Table_2 {
+    priority = maximum;
+    property uuid = &quot;ilr:6788798C416103010000BBB61D018265A8C0#1&quot;;
+    property source = &quot;DT&quot; ;
+    property lastModificationDate = java.util.Date(&quot;6&#47;13&#47;2005 14:56&quot;);
+when
+{
+    ?document: com.miriasystems.mp.domain.Document();
+    ?processInfo: com.miriasystems.mp.domain.ProcessInformation();
+    evaluate((?document.getType() equals &quot;non-PO&quot;) &amp;&amp;
+             (?processInfo.getQueueName() equals &quot;VendorMaintenance&quot;));
+}
+then
+{
+    view = &quot;non-po-vendor-view.xml&quot;;
+    ?context.updateContext();
+}
+
+};
+rule Decision_Table_3 {
+    priority = maximum;
+    property uuid = &quot;ilr:6788798C416103010000BBB61D018265A8C0#1&quot;;
+    property source = &quot;DT&quot; ;
+    property lastModificationDate = java.util.Date(&quot;6&#47;13&#47;2005 14:56&quot;);
+when
+{
+    ?document: com.miriasystems.mp.domain.Document();
+    ?processInfo: com.miriasystems.mp.domain.ProcessInformation();
+    evaluate((?document.getType() equals &quot;non-PO&quot;) &amp;&amp;
+             (?processInfo.getQueueName() equals &quot;Confirm&quot;));
+}
+then
+{
+    view = &quot;non-po-confirmation-view.xml&quot;;
+    ?context.updateContext();
+}
+
+};
+rule Decision_Table_4 {
+    priority = maximum;
+    property uuid = &quot;ilr:6788798C416103010000BBB61D018265A8C0#1&quot;;
+    property source = &quot;DT&quot; ;
+    property lastModificationDate = java.util.Date(&quot;6&#47;13&#47;2005 14:56&quot;);
+when
+{
+    ?document: com.miriasystems.mp.domain.Document();
+    ?processInfo: com.miriasystems.mp.domain.ProcessInformation();
+    evaluate((?document.getType() equals &quot;non-PO&quot;) &amp;&amp;
+             (?processInfo.getQueueName() equals &quot;Approve&quot;));
+}
+then
+{
+    view = &quot;non-po-approval-view.xml&quot;;
+    ?context.updateContext();
+}
+
+};
+rule Decision_Table_5 {
+    priority = maximum;
+    property uuid = &quot;ilr:6788798C416103010000BBB61D018265A8C0#1&quot;;
+    property source = &quot;DT&quot; ;
+    property lastModificationDate = java.util.Date(&quot;6&#47;13&#47;2005 14:56&quot;);
+when
+{
+    ?document: com.miriasystems.mp.domain.Document();
+    ?processInfo: com.miriasystems.mp.domain.ProcessInformation();
+    evaluate((?document.getType() equals &quot;non-PO&quot;) &amp;&amp;
+             (! ((?processInfo.getQueueName() equals &quot;Index&quot;))) &amp;&amp;
+             (! ((?processInfo.getQueueName() equals &quot;Process&quot;))) &amp;&amp;
+             (! ((?processInfo.getQueueName() equals &quot;VendorMaintenance&quot;))) &amp;&amp;
+             (! ((?processInfo.getQueueName() equals &quot;Confirm&quot;))) &amp;&amp;
+             (! ((?processInfo.getQueueName() equals &quot;Approve&quot;))));
+}
+then
+{
+    view = &quot;non-po-indexing-view.xml&quot;;
+    ?context.updateContext();
+}
+
+};
+rule Decision_Table_6 {
+    priority = maximum;
+    property uuid = &quot;ilr:6788798C416103010000BBB61D018265A8C0#1&quot;;
+    property source = &quot;DT&quot; ;
+    property lastModificationDate = java.util.Date(&quot;6&#47;13&#47;2005 14:56&quot;);
+when
+{
+    ?document: com.miriasystems.mp.domain.Document();
+    ?processInfo: com.miriasystems.mp.domain.ProcessInformation();
+    evaluate((?document.getType() equals &quot;PO&quot;) &amp;&amp;
+             (?processInfo.getQueueName() equals &quot;Index&quot;));
+}
+then
+{
+    view = &quot;po-indexing-view.xml&quot;;
+    ?context.updateContext();
+}
+
+};
+rule Decision_Table_7 {
+    priority = maximum;
+    property uuid = &quot;ilr:6788798C416103010000BBB61D018265A8C0#1&quot;;
+    property source = &quot;DT&quot; ;
+    property lastModificationDate = java.util.Date(&quot;6&#47;13&#47;2005 14:56&quot;);
+when
+{
+    ?document: com.miriasystems.mp.domain.Document();
+    ?processInfo: com.miriasystems.mp.domain.ProcessInformation();
+    evaluate((?document.getType() equals &quot;PO&quot;) &amp;&amp;
+             (?processInfo.getQueueName() equals &quot;Process&quot;));
+}
+then
+{
+    view = &quot;po-processing-view.xml&quot;;
+    ?context.updateContext();
+}
+
+};
+rule Decision_Table_8 {
+    priority = maximum;
+    property uuid = &quot;ilr:6788798C416103010000BBB61D018265A8C0#1&quot;;
+    property source = &quot;DT&quot; ;
+    property lastModificationDate = java.util.Date(&quot;6&#47;13&#47;2005 14:56&quot;);
+when
+{
+    ?document: com.miriasystems.mp.domain.Document();
+    evaluate((! ((?document.getType() equals &quot;non-PO&quot;))) &amp;&amp;
+             (! ((?document.getType() equals &quot;PO&quot;))));
+}
+then
+{
+    view = &quot;non-po-indexing-view.xml&quot;;
+    ?context.updateContext();
+}
+
+};
+
+rule Initial_Check
+{
+priority = maximum;
+property uuid = &quot;ilr:EF8960CD3F7A0301000096EA09018265A8C0#1&quot;;
+property lastModificationDate = java.util.Date(&quot;5&#47;16&#47;2005 9:38&quot;);
+when
+{
+    ?context: IlrContext() from ?context;
+    evaluate((((processInformation.getQueueName() == null) || (processInformation.getQueueName().length() == 0)) ||
+             ((apDocument.getType() == null) || (apDocument.getType().length() == 0))));
+}
+then
+{
+    view = &quot;non-po-indexing-view.xml&quot;;
+    nulls = true;
+    ?context.updateContext();
+}
+
+};
+
+
+flowtask Ruleflow
+{
+property uuid = &quot;ilr:538EE1B38F6A0301000096EA09018265A8C0#1&quot;;
+property ruleflowuuid = &quot;ilr:538EE1B38F6A0301000096EA09018265A8C0#1&quot;;
+property displayname = &quot;Ruleflow&quot;;
+property mainflowtask = true;
+property lastModificationDate = java.util.Date(&quot;5&#47;16&#47;2005 9:39&quot;);
+initialaction {
+?context.insert(?apDocument); ?context.insert(?processInformation);
+}
+body {
+Initial_Check;
+if (nulls) {
+} else {
+  Decision_Table;
+}
+
+}
+};
+
+
+ruletask Decision_Table
+{
+firing = allrules;
+ordering = dynamic;
+algorithm = default;
+property uuid = &quot;ilr:638EE1B38F6A0301000096EA09018265A8C0#1&quot;;
+property ruleflowuuid = &quot;ilr:538EE1B38F6A0301000096EA09018265A8C0#1&quot;;
+property displayname = &quot;Ruleflow.Decision Table&quot;;
+property lastModificationDate = java.util.Date(&quot;5&#47;16&#47;2005 9:39&quot;);
+body {
+Decision_Table_0,
+Decision_Table_1,
+Decision_Table_2,
+Decision_Table_3,
+Decision_Table_4,
+Decision_Table_5,
+Decision_Table_6,
+Decision_Table_7,
+Decision_Table_8
+}
+};
+
+
+ruletask Initial_Check
+{
+firing = allrules;
+ordering = dynamic;
+algorithm = default;
+property uuid = &quot;ilr:5688E74D52E603010000FCC4BF018265A8C0#1&quot;;
+property ruleflowuuid = &quot;ilr:538EE1B38F6A0301000096EA09018265A8C0#1&quot;;
+property displayname = &quot;Ruleflow.Initial Check&quot;;
+property lastModificationDate = java.util.Date(&quot;5&#47;16&#47;2005 9:39&quot;);
+body {
+Initial_Check
+}
+};
+
+
+</Basics.TextDefinition.text>
+</Basics.TextDefinition>
+</Model.Namespace.contents>
+</RuleApp.Ruleset>
+<RuleApp.Ruleset xmi.id="a8"  xmi.uuid="ilr:C08813B5AA7604010000DAE2C7016E65A8C0#1"  default="false"  enabled="true"  BresCreationDate=""  minorVersion="0"  majorVersion="1"  historyVersion="false"  name="ValidCodes"  editable="true"  creationDate="13 Jun 2005 21:57:17 GMT"  lastModificationDate="13 Jun 2005 21:57:17 GMT"  currentDefinition="a9" >
+<RuleApp.Ruleset.irl>import ilog.rules.engine.*;
+import com.miriasystems.mp.domain.*;
+import java.lang.*;
+ruleset ValidCodes
+{
+property projectUUID = &quot;ilr:1E80AA48075B03010000FCC4BF018265A8C0#1&quot;;
+property projectName = &quot;ManagedPay&quot;;
+out boolean isValid = true;
+in com.miriasystems.mp.domain.Document document;
+};
+function void ilrmain(Object o) { &#9;
+&#9;insert DocumentLine() {
+&#47;&#47;&#9;&#9;accountCode1 = &quot;account 1&quot;;
+&#9;}
+&#9;insert DocumentLine() {
+&#9;}&#9;
+&#9;execute();
+}
+rule Code_Empty
+{
+priority = maximum;
+property uuid = &quot;ilr:1F955D135A67030100001F57FE018265A8C0#1&quot;;
+property lastModificationDate = java.util.Date(&quot;5&#47;16&#47;2005 9:27&quot;);
+when
+{
+    ?document: com.miriasystems.mp.domain.Document();
+    evaluate((((?document.getRequesterName() == null) || (?document.getRequesterName().length() == 0))) &amp;&amp;
+             (isValid));
+}
+then
+{
+    isValid = false;
+    ?context.updateContext();
+}
+else
+{
+    isValid = true;
+    ?context.updateContext();
+}
+
+};
+
+
+flowtask Ruleflow
+{
+property uuid = &quot;ilr:448DE1B38F6A0301000096EA09018265A8C0#1&quot;;
+property ruleflowuuid = &quot;ilr:448DE1B38F6A0301000096EA09018265A8C0#1&quot;;
+property displayname = &quot;Ruleflow&quot;;
+property mainflowtask = true;
+property lastModificationDate = java.util.Date(&quot;4&#47;28&#47;2005 10:37&quot;);
+initialaction {
+foreach (DocumentLine lineItem in document.documentLines) { &#9;?context.insert(?lineItem); }
+}
+body {
+Account_Empty;
+
+}
+};
+
+
+ruletask Account_Empty
+{
+firing = allrules;
+ordering = dynamic;
+algorithm = default;
+property uuid = &quot;ilr:518DE1B38F6A0301000096EA09018265A8C0#1&quot;;
+property ruleflowuuid = &quot;ilr:448DE1B38F6A0301000096EA09018265A8C0#1&quot;;
+property displayname = &quot;Ruleflow.Account Empty&quot;;
+property lastModificationDate = java.util.Date(&quot;4&#47;28&#47;2005 10:37&quot;);
+body {
+Code_Empty
+}
+};
+
+
+</RuleApp.Ruleset.irl>
+<RuleApp.Ruleset.topRulePackage>
+<Rule.RulePackage name="ValidCodes"  href="ilr:1B955D135A67030100001F57FE018265A8C0#1" />
+</RuleApp.Ruleset.topRulePackage>
+<Model.Namespace.contents>
+<Basics.TextDefinition xmi.id="a9"  xmi.uuid="ilr:C18813B5AA7604010000DAE2C7016E65A8C0#1"  name="ruleset"  editable="false" >
+<Basics.TextDefinition.text>import ilog.rules.engine.*;
+import com.miriasystems.mp.domain.*;
+import java.lang.*;
+ruleset ValidCodes
+{
+property projectUUID = &quot;ilr:1E80AA48075B03010000FCC4BF018265A8C0#1&quot;;
+property projectName = &quot;ManagedPay&quot;;
+out boolean isValid = true;
+in com.miriasystems.mp.domain.Document document;
+};
+function void ilrmain(Object o) { &#9;
+&#9;insert DocumentLine() {
+&#47;&#47;&#9;&#9;accountCode1 = &quot;account 1&quot;;
+&#9;}
+&#9;insert DocumentLine() {
+&#9;}&#9;
+&#9;execute();
+}
+rule Code_Empty
+{
+priority = maximum;
+property uuid = &quot;ilr:1F955D135A67030100001F57FE018265A8C0#1&quot;;
+property lastModificationDate = java.util.Date(&quot;5&#47;16&#47;2005 9:27&quot;);
+when
+{
+    ?document: com.miriasystems.mp.domain.Document();
+    evaluate((((?document.getRequesterName() == null) || (?document.getRequesterName().length() == 0))) &amp;&amp;
+             (isValid));
+}
+then
+{
+    isValid = false;
+    ?context.updateContext();
+}
+else
+{
+    isValid = true;
+    ?context.updateContext();
+}
+
+};
+
+
+flowtask Ruleflow
+{
+property uuid = &quot;ilr:448DE1B38F6A0301000096EA09018265A8C0#1&quot;;
+property ruleflowuuid = &quot;ilr:448DE1B38F6A0301000096EA09018265A8C0#1&quot;;
+property displayname = &quot;Ruleflow&quot;;
+property mainflowtask = true;
+property lastModificationDate = java.util.Date(&quot;4&#47;28&#47;2005 10:37&quot;);
+initialaction {
+foreach (DocumentLine lineItem in document.documentLines) { &#9;?context.insert(?lineItem); }
+}
+body {
+Account_Empty;
+
+}
+};
+
+
+ruletask Account_Empty
+{
+firing = allrules;
+ordering = dynamic;
+algorithm = default;
+property uuid = &quot;ilr:518DE1B38F6A0301000096EA09018265A8C0#1&quot;;
+property ruleflowuuid = &quot;ilr:448DE1B38F6A0301000096EA09018265A8C0#1&quot;;
+property displayname = &quot;Ruleflow.Account Empty&quot;;
+property lastModificationDate = java.util.Date(&quot;4&#47;28&#47;2005 10:37&quot;);
+body {
+Code_Empty
+}
+};
+
+
+</Basics.TextDefinition.text>
+</Basics.TextDefinition>
+</Model.Namespace.contents>
+</RuleApp.Ruleset>
+<RuleApp.Ruleset xmi.id="a10"  xmi.uuid="ilr:C88813B5AA7604010000DAE2C7016E65A8C0#1"  default="false"  enabled="true"  BresCreationDate=""  minorVersion="0"  majorVersion="1"  historyVersion="false"  name="3WayMatching"  editable="true"  creationDate="13 Jun 2005 21:57:17 GMT"  lastModificationDate="13 Jun 2005 21:57:17 GMT"  currentDefinition="a11" >
+<RuleApp.Ruleset.irl>import com.miriasystems.mp.domain.*;
+import java.lang.*;
+import ilog.rules.engine.*;
+import com.miriasystems.erp.domain.*;
+ruleset __WayMatching
+{
+property projectUUID = &quot;ilr:1E80AA48075B03010000FCC4BF018265A8C0#1&quot;;
+property projectName = &quot;ManagedPay&quot;;
+in com.miriasystems.erp.domain.POHeader po;
+in com.miriasystems.mp.domain.Document document;
+boolean isValid = true;
+};
+rule Initial_Check
+{
+property uuid = &quot;ilr:F4B262545F3404010000FCC4BF018265A8C0#1&quot;;
+property lastModificationDate = java.util.Date(&quot;6&#47;2&#47;2005 13:04&quot;);
+when
+{
+    ?document: com.miriasystems.mp.domain.Document();
+    evaluate((?document.getBusinessUnit() equals &quot;hello&quot;));
+}
+then
+{
+    isValid = true;
+    ?context.updateContext();
+}
+
+};
+
+
+flowtask Ruleflow
+{
+property uuid = &quot;ilr:DFB262545F3404010000FCC4BF018265A8C0#1&quot;;
+property ruleflowuuid = &quot;ilr:DFB262545F3404010000FCC4BF018265A8C0#1&quot;;
+property displayname = &quot;Ruleflow&quot;;
+property mainflowtask = true;
+property lastModificationDate = java.util.Date(&quot;5&#47;31&#47;2005 14:49&quot;);
+initialaction {
+foreach (POLine poLine in po.lines) {
+&#9;?context.insert(?poLine);
+}
+?context.insert(?po);
+foreach (DocumentLine lineItem in document.documentLines) { &#9;?context.insert(?lineItem); }
+insert(?document);
+}
+body {
+Initial_Check;
+
+}
+};
+
+
+ruletask Initial_Check
+{
+firing = allrules;
+ordering = dynamic;
+algorithm = default;
+property uuid = &quot;ilr:F7B262545F3404010000FCC4BF018265A8C0#1&quot;;
+property ruleflowuuid = &quot;ilr:DFB262545F3404010000FCC4BF018265A8C0#1&quot;;
+property displayname = &quot;Ruleflow.Initial Check&quot;;
+property lastModificationDate = java.util.Date(&quot;5&#47;31&#47;2005 14:49&quot;);
+body {
+Initial_Check
+}
+};
+
+
+</RuleApp.Ruleset.irl>
+<RuleApp.Ruleset.topRulePackage>
+<Rule.RulePackage name="3-WayMatching"  href="ilr:DC8760C27ED7030100001F57FE018265A8C0#1" />
+</RuleApp.Ruleset.topRulePackage>
+<Model.Namespace.contents>
+<Basics.TextDefinition xmi.id="a11"  xmi.uuid="ilr:C98813B5AA7604010000DAE2C7016E65A8C0#1"  name="ruleset"  editable="false" >
+<Basics.TextDefinition.text>import com.miriasystems.mp.domain.*;
+import java.lang.*;
+import ilog.rules.engine.*;
+import com.miriasystems.erp.domain.*;
+ruleset __WayMatching
+{
+property projectUUID = &quot;ilr:1E80AA48075B03010000FCC4BF018265A8C0#1&quot;;
+property projectName = &quot;ManagedPay&quot;;
+in com.miriasystems.erp.domain.POHeader po;
+in com.miriasystems.mp.domain.Document document;
+boolean isValid = true;
+};
+rule Initial_Check
+{
+property uuid = &quot;ilr:F4B262545F3404010000FCC4BF018265A8C0#1&quot;;
+property lastModificationDate = java.util.Date(&quot;6&#47;2&#47;2005 13:04&quot;);
+when
+{
+    ?document: com.miriasystems.mp.domain.Document();
+    evaluate((?document.getBusinessUnit() equals &quot;hello&quot;));
+}
+then
+{
+    isValid = true;
+    ?context.updateContext();
+}
+
+};
+
+
+flowtask Ruleflow
+{
+property uuid = &quot;ilr:DFB262545F3404010000FCC4BF018265A8C0#1&quot;;
+property ruleflowuuid = &quot;ilr:DFB262545F3404010000FCC4BF018265A8C0#1&quot;;
+property displayname = &quot;Ruleflow&quot;;
+property mainflowtask = true;
+property lastModificationDate = java.util.Date(&quot;5&#47;31&#47;2005 14:49&quot;);
+initialaction {
+foreach (POLine poLine in po.lines) {
+&#9;?context.insert(?poLine);
+}
+?context.insert(?po);
+foreach (DocumentLine lineItem in document.documentLines) { &#9;?context.insert(?lineItem); }
+insert(?document);
+}
+body {
+Initial_Check;
+
+}
+};
+
+
+ruletask Initial_Check
+{
+firing = allrules;
+ordering = dynamic;
+algorithm = default;
+property uuid = &quot;ilr:F7B262545F3404010000FCC4BF018265A8C0#1&quot;;
+property ruleflowuuid = &quot;ilr:DFB262545F3404010000FCC4BF018265A8C0#1&quot;;
+property displayname = &quot;Ruleflow.Initial Check&quot;;
+property lastModificationDate = java.util.Date(&quot;5&#47;31&#47;2005 14:49&quot;);
+body {
+Initial_Check
+}
+};
+
+
+</Basics.TextDefinition.text>
+</Basics.TextDefinition>
+</Model.Namespace.contents>
+</RuleApp.Ruleset>
+<RuleApp.Ruleset xmi.id="a12"  xmi.uuid="ilr:D28813B5AA7604010000DAE2C7016E65A8C0#1"  default="false"  enabled="true"  BresCreationDate=""  minorVersion="0"  majorVersion="1"  historyVersion="false"  name="DuplicateInvoice"  editable="true"  creationDate="13 Jun 2005 21:57:17 GMT"  lastModificationDate="13 Jun 2005 21:57:17 GMT"  currentDefinition="a13" >
+<RuleApp.Ruleset.irl>import com.miriasystems.rules.*;
+import java.lang.*;
+import com.miriasystems.mp.domain.*;
+import ilog.rules.engine.*;
+ruleset DuplicateInvoice
+{
+property projectUUID = &quot;ilr:1E80AA48075B03010000FCC4BF018265A8C0#1&quot;;
+property projectName = &quot;ManagedPay&quot;;
+out com.miriasystems.rules.JrulesResult result;
+in com.miriasystems.mp.domain.Document document;
+};
+function void ilrmain(Object o) { &#9; &#9;
+&#9;document = new Document();
+&#9;document.shippingDocumentId = &quot;test&quot;;
+&#9;execute(); 
+}
+
+rule BAL_Rule
+{
+property uuid = &quot;ilr:CF82449F2062040100002B691C006E65A8C0#1&quot;;
+property lastModificationDate = java.util.Date(&quot;6&#47;10&#47;2005 17:13&quot;);
+when
+{
+    ?jrulesResult: com.miriasystems.rules.JrulesResult();
+}
+then
+{
+    ?jrulesResult.addToResult(&quot;duplicateInvoiceCheckVendorNumberDate&quot;);
+}
+
+};
+
+
+flowtask Ruleflow
+{
+property uuid = &quot;ilr:E387001E556304010000DAE2C7016E65A8C0#1&quot;;
+property ruleflowuuid = &quot;ilr:E387001E556304010000DAE2C7016E65A8C0#1&quot;;
+property displayname = &quot;Ruleflow&quot;;
+property mainflowtask = true;
+property lastModificationDate = java.util.Date(&quot;6&#47;10&#47;2005 17:12&quot;);
+initialaction {
+result = new JrulesResult(); context.insert(result); context.insert(document);
+}
+body {
+RuleTask;
+
+}
+};
+
+
+ruletask RuleTask
+{
+firing = allrules;
+ordering = dynamic;
+algorithm = default;
+property uuid = &quot;ilr:E987001E556304010000DAE2C7016E65A8C0#1&quot;;
+property ruleflowuuid = &quot;ilr:E387001E556304010000DAE2C7016E65A8C0#1&quot;;
+property displayname = &quot;Ruleflow.RuleTask&quot;;
+property lastModificationDate = java.util.Date(&quot;6&#47;10&#47;2005 17:12&quot;);
+body {
+BAL_Rule
+}
+};
+
+
+</RuleApp.Ruleset.irl>
+<RuleApp.Ruleset.topRulePackage>
+<Rule.RulePackage name="DuplicateInvoice"  href="ilr:DD873FEAA25D0401000096EA09016E65A8C0#1" />
+</RuleApp.Ruleset.topRulePackage>
+<Model.Namespace.contents>
+<Basics.TextDefinition xmi.id="a13"  xmi.uuid="ilr:D38813B5AA7604010000DAE2C7016E65A8C0#1"  name="ruleset"  editable="false" >
+<Basics.TextDefinition.text>import com.miriasystems.rules.*;
+import java.lang.*;
+import com.miriasystems.mp.domain.*;
+import ilog.rules.engine.*;
+ruleset DuplicateInvoice
+{
+property projectUUID = &quot;ilr:1E80AA48075B03010000FCC4BF018265A8C0#1&quot;;
+property projectName = &quot;ManagedPay&quot;;
+out com.miriasystems.rules.JrulesResult result;
+in com.miriasystems.mp.domain.Document document;
+};
+function void ilrmain(Object o) { &#9; &#9;
+&#9;document = new Document();
+&#9;document.shippingDocumentId = &quot;test&quot;;
+&#9;execute(); 
+}
+
+rule BAL_Rule
+{
+property uuid = &quot;ilr:CF82449F2062040100002B691C006E65A8C0#1&quot;;
+property lastModificationDate = java.util.Date(&quot;6&#47;10&#47;2005 17:13&quot;);
+when
+{
+    ?jrulesResult: com.miriasystems.rules.JrulesResult();
+}
+then
+{
+    ?jrulesResult.addToResult(&quot;duplicateInvoiceCheckVendorNumberDate&quot;);
+}
+
+};
+
+
+flowtask Ruleflow
+{
+property uuid = &quot;ilr:E387001E556304010000DAE2C7016E65A8C0#1&quot;;
+property ruleflowuuid = &quot;ilr:E387001E556304010000DAE2C7016E65A8C0#1&quot;;
+property displayname = &quot;Ruleflow&quot;;
+property mainflowtask = true;
+property lastModificationDate = java.util.Date(&quot;6&#47;10&#47;2005 17:12&quot;);
+initialaction {
+result = new JrulesResult(); context.insert(result); context.insert(document);
+}
+body {
+RuleTask;
+
+}
+};
+
+
+ruletask RuleTask
+{
+firing = allrules;
+ordering = dynamic;
+algorithm = default;
+property uuid = &quot;ilr:E987001E556304010000DAE2C7016E65A8C0#1&quot;;
+property ruleflowuuid = &quot;ilr:E387001E556304010000DAE2C7016E65A8C0#1&quot;;
+property displayname = &quot;Ruleflow.RuleTask&quot;;
+property lastModificationDate = java.util.Date(&quot;6&#47;10&#47;2005 17:12&quot;);
+body {
+BAL_Rule
+}
+};
+
+
+</Basics.TextDefinition.text>
+</Basics.TextDefinition>
+</Model.Namespace.contents>
+</RuleApp.Ruleset>
+</Model.Namespace.contents>
+</RuleApp.RuleApp>
+</Model.Namespace.contents>
+</Basics.Project>
+</XMI.content>
+</XMI>

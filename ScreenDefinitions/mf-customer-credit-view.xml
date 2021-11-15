@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="all-rescan-view" template="masterfile-customer-readonly-tpl.xml"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/view.xsd">
+
+    <labels default="en">
+        <locale name="en">
+            <label name="forward" value="Approve"/>
+        </locale>
+    </labels>
+    
+    <property-overrides>
+    </property-overrides>
+
+    <hidden-overrides>
+        <hidden name="processInformation.response" defaultValue="Complete"/>
+    </hidden-overrides>
+    
+    <action-overrides>
+        	<getNext name="next" readonly="false" visible="true"/>
+   </action-overrides>
+
+     <documentRejection>
+		  <rejectionReasons>
+		  <reason name="Return to Requester" commentsRequired="true" note="message.requester">
+		  </reason>
+		  <reason name="Send to Customer Team" commentsRequired="true" note="message.customerTeam">
+		  </reason>
+		  </rejectionReasons>
+    </documentRejection>
+
+</view>

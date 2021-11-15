@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="all-rescan-view" template="masterfile-collect-all-tpl.xml"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/view.xsd">
+
+    <labels default="en">
+        <locale name="en">
+            <label name="forward" value="Approve"/>
+        </locale>
+    </labels>
+    
+    <property-overrides>
+        <textArea name="voucherComments" readonly="true"/>
+        <text name="requester.displayName" readonly="true"/>
+    	<text name="requester.email" readonly="true"/>
+    	<text name="group" readonly="true"/> <!--Station-->
+    	<date name="createDate" readonly="true" showTime="true"/> <!--Request Date-->
+    	<date name="processInformation.deadline" readonly="true" showTime="true"/> <!--Required Date-->
+    	<text name="seqId" readonly="true"/> <!--Request Ticket No-->
+    	<dropDown name="subType" choiceList="choice.masterfileCollectSubTypes" readonly="true" validation="required" onChange="reloadPage(this)"/> <!--Request Type-->
+    	<dropDown name="processCode" readonly="true" validation="required" choiceList="choice.productAll" defaultValue="ALL"/> <!--Product-->           		
+    	<dropDown name="businessUnit" choiceList="choice.creditUpdateAll" readonly="true" validation="required" onChange="reloadPage(this)"/> <!--Credit Update-->
+    	<dropDown name="docPriority" choiceList="choice.priority" defaultValue="1" readonly="true" validation="required"/> <!--Priority-->
+    	<text name="custom4.contactNo" validation="required, noSpecialCharacters" readonly="true"/> <!--Contact No-->
+    	<text name="custom4.accountNumber" readonly="true" validation="required"/> <!--Account Code-->
+    	<text  name="custom4.name" readonly="true" validation="required" styleClass="fulllookup"/> <!--Account Name-->
+    	<currency name="custom4.creditLimit" readonly="true"/>  <!--Credit Limit-->
+    	<text name="custom4.customerPaymentTerms" readonly="true"/>  <!--Payment Terms-->
+    	<text name="custom4.arGrandParent" readonly="true"/>  <!--Contact Name-->
+    	<text name="custom4.arParent" readonly="true"/> <!--Contact Tel #-->
+    	<text name="custom4.accountStatus" readonly="true"/>    <!--Sales Rep-->
+    	<text name="custom4.billingLocation" readonly="true"/> <!--Contract In Effect-->
+    	<text name="custom4.collectorCode" readonly="true"/>   <!--Contract Number-->
+    	<text name="custom4.freightPaymentCompany" readonly="true"/>   <!--Link to Corp COntract-->
+    	<text name="custom4.languangePreference" readonly="true"/>   <!--Link to Corp Acc-->
+    	<text name="custom4.lineOfBusiness" readonly="true"/>  <!--Link to A/R Parent-->
+    	<checkbox name="custom4.cashOnly" readonly="true"/>  <!--Broker Ac-->
+		<text name="custom4.duns" readonly="true"/>  <!--Broker Ac-->
+        <dropDown name="routingCode" readonly="true" choiceList="choice.collectAccountType"/> <!--Product--> 
+        <text name="custom4.controlStation" readonly="true"/>  <!--Station-->
+    </property-overrides>
+    
+	<action-overrides>
+    	<getNext name="next" readonly="false" visible="true"/>
+   </action-overrides>
+
+    <hidden-overrides>
+        <hidden name="processInformation.response" defaultValue="Complete"/>
+    </hidden-overrides>
+
+     <documentRejection>
+		  <rejectionReasons>
+		  <reason name="Return to Requester" commentsRequired="true" note="message.requester">
+		  </reason>
+		   </rejectionReasons>
+    </documentRejection>
+
+</view>

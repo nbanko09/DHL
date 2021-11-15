@@ -1,0 +1,50 @@
+<?xml version="1.0"  encoding="ISO-8859-1"  ?>
+<!DOCTYPE XMI>
+<XMI xmi.version="1.2" >
+<XMI.header>
+<XMI.documentation>
+<XMI.exporter>Ilog Rule Kit</XMI.exporter>
+<XMI.exporterVersion>4.1</XMI.exporterVersion>
+</XMI.documentation>
+<XMI.model href="ilr:0180AA48075B03010000FCC4BF018265A8C0#1"  xmi.name="Application"  xmi.version="1.2" />
+<XMI.metamodel href="ilr:09804659F3E0EA00000084662F000100007F#1"  xmi.name="Application"  xmi.version="1.2" />
+</XMI.header>
+<XMI.content>
+<DefaultBusinessModel.Package xmi.id="a1"  xmi.uuid="ilr:DF877B07745E040100001F57FE016E65A8C0#1"  isRoot="false"  isLeaf="false"  isAbstract="false"  name="rules"  editable="true"  creationDate="9 Jun 2005 00:16:48 GMT"  lastModificationDate="9 Jun 2005 00:16:48 GMT"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Class xmi.id="a2"  xmi.uuid="ilr:DE877B07745E040100001F57FE016E65A8C0#1"  noAction="false"  noCondition="false"  navigate="false"  bindingMode="single"  lastUpdate="9 Jun 2005 01:39:18 GMT"  isSingleton="false"  isRoot="false"  isLeaf="false"  isAbstract="false"  visibility="public_vis"  name="JrulesResult"  editable="true"  creationDate="9 Jun 2005 00:16:48 GMT"  lastModificationDate="9 Jun 2005 01:39:57 GMT"  implicit="false"  visible="true"  deprecated="false" >
+<Model.GeneralizableElement.supertypes>
+<DefaultBusinessModel.Class name="Serializable"  href="ilr:5680AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.GeneralizableElement.supertypes>
+<Model.Namespace.contents>
+<DefaultBusinessModel.Constructor xmi.id="a3"  xmi.uuid="ilr:E5877B07745E040100001F57FE016E65A8C0#1"  isQuery="false"  visibility="public_vis"  name="JrulesResult"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+</DefaultBusinessModel.Constructor>
+<DefaultBusinessModel.Method xmi.id="a4"  xmi.uuid="ilr:E1877B07745E040100001F57FE016E65A8C0#1"  isQuery="false"  visibility="public_vis"  name="getResults"  editable="true"  static="false"  final="false"  update="false"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a5"  xmi.uuid="ilr:E2877B07745E040100001F57FE016E65A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String[&#93;"  href="ilr:ED873FEAA25D0401000096EA09016E65A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a6"  xmi.uuid="ilr:E0877B07745E040100001F57FE016E65A8C0#1"  isQuery="false"  visibility="public_vis"  name="addToResult"  editable="true"  static="false"  final="false"  update="false"  alternate="Check property {&lt;property&gt;}"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a7"  xmi.uuid="ilr:E4877B07745E040100001F57FE016E65A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:3180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a8"  xmi.uuid="ilr:54917B07745E040100001F57FE016E65A8C0#1"  direction="in_dir"  name="result"  editable="true"  visible="true"  deprecated="true" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:8780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Class>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Package>
+</XMI.content>
+</XMI>

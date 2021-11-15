@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="all-rescan-view" template="masterfile-upload-vendor-new-tpl.xml"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/view.xsd">
+
+    <labels default="en">
+        <locale name="en">
+        </locale>
+    </labels>
+    
+    <property-overrides>
+        <textArea name="voucherComments" defaultValue="Requests must be routed to an authorized Approver with required documentation. Address on Insurance for Certificate Holder must be:DHL Global Forwarding, Cartage Services, Trade Center III, 2580 Esters BLVD, PO BOX 612648, DFW Airport, TX 75216. The following is added as a test test to increase the size of the vendor request."/>
+        <text name="custom5.accountNumber" readonly="true" />
+        <text name="custom5.accountingAccountNumber" readonly="true" />
+        <text name="custom5.name" validation="required" />
+        <text name="custom5.taxId" validation="required" />
+        <text name="custom5.paymentTerms" validation="required" />
+        <text name="custom5.address1" validation="required" />
+        <text name="custom5.contactName" validation="required" />
+        <text name="custom5.phone" validation="required" />
+        <text name="custom5.city" validation="required" />
+        <text name="custom5.state" validation="required" />
+        <text name="custom5.fax" validation="required" />
+        <text name="custom5.postalCode" validation="required" />
+      </property-overrides>
+
+    <hidden-overrides>
+        <hidden name="processInformation.response" defaultValue="Complete"/>
+    </hidden-overrides>
+
+    <documentRejection>  
+    </documentRejection>
+    
+    <validations>
+        <validation name="validation.checkTempRouting"/>
+        <validation name="validation.stationProductvalidation"/>                    
+    </validations>
+</view>

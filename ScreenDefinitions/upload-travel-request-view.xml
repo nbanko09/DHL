@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<view name="upload-exp-view" template="upload-travel-request-tpl.xml"
+	
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/view.xsd">
+	
+	<labels default="en">
+		<locale name="en">	
+		</locale>
+	</labels>
+
+    <validations>
+		<validation name ="validation.check.originator.approver"/>		
+    </validations>
+	
+	
+    
+</view>

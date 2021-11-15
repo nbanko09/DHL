@@ -1,0 +1,80 @@
+<?xml version="1.0"  encoding="ISO-8859-1"  ?>
+<!DOCTYPE XMI>
+<XMI xmi.version="1.2" >
+<XMI.header>
+<XMI.documentation>
+<XMI.exporter>Ilog Rule Kit</XMI.exporter>
+<XMI.exporterVersion>4.1</XMI.exporterVersion>
+</XMI.documentation>
+<XMI.model href="ilr:0280AA48075B03010000FCC4BF018265A8C0#1"  xmi.name="Tool"  xmi.version="1.2" />
+<XMI.metamodel href="ilr:078248E58DCDEF00000099337400700110AC#1"  xmi.name="Tool"  xmi.version="1.2" />
+</XMI.header>
+<XMI.content>
+<Basics.BOM xmi.id="a1"  xmi.uuid="ilr:6682AA48075B03010000FCC4BF018265A8C0#1"  autoUpdateElements="true"  isRoot="false"  isLeaf="false"  isAbstract="false"  name="Business Object Model"  editable="true"  creationDate="19 Apr 2005 15:15:40 GMT"  lastModificationDate="19 Apr 2005 15:15:40 GMT"  historyVersion="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.PrimitiveType xmi.id="a2"  xmi.uuid="ilr:1685AA48075B03010000FCC4BF018265A8C0#1"  isRoot="false"  isLeaf="false"  isAbstract="false"  name="void"  editable="false"  creationDate="19 Apr 2005 15:15:40 GMT"  lastModificationDate="19 Apr 2005 15:15:40 GMT"  visible="true"  deprecated="false"  implicit="false" >
+</DefaultBusinessModel.PrimitiveType>
+<DefaultBusinessModel.PrimitiveType xmi.id="a3"  xmi.uuid="ilr:1285AA48075B03010000FCC4BF018265A8C0#1"  isRoot="false"  isLeaf="false"  isAbstract="false"  name="boolean"  editable="false"  creationDate="19 Apr 2005 15:15:40 GMT"  lastModificationDate="19 Apr 2005 15:15:40 GMT"  visible="true"  deprecated="false"  implicit="false" >
+</DefaultBusinessModel.PrimitiveType>
+<DefaultBusinessModel.PrimitiveType xmi.id="a4"  xmi.uuid="ilr:0E85AA48075B03010000FCC4BF018265A8C0#1"  isRoot="false"  isLeaf="false"  isAbstract="false"  name="byte"  editable="false"  creationDate="19 Apr 2005 15:15:40 GMT"  lastModificationDate="19 Apr 2005 15:15:40 GMT"  visible="true"  deprecated="false"  implicit="false" >
+</DefaultBusinessModel.PrimitiveType>
+<DefaultBusinessModel.PrimitiveType xmi.id="a5"  xmi.uuid="ilr:1485AA48075B03010000FCC4BF018265A8C0#1"  isRoot="false"  isLeaf="false"  isAbstract="false"  name="char"  editable="false"  creationDate="19 Apr 2005 15:15:40 GMT"  lastModificationDate="19 Apr 2005 15:15:40 GMT"  visible="true"  deprecated="false"  implicit="false" >
+</DefaultBusinessModel.PrimitiveType>
+<DefaultBusinessModel.PrimitiveType xmi.id="a6"  xmi.uuid="ilr:1385AA48075B03010000FCC4BF018265A8C0#1"  isRoot="false"  isLeaf="false"  isAbstract="false"  name="float"  editable="false"  creationDate="19 Apr 2005 15:15:40 GMT"  lastModificationDate="19 Apr 2005 15:15:40 GMT"  visible="true"  deprecated="false"  implicit="false" >
+</DefaultBusinessModel.PrimitiveType>
+<DefaultBusinessModel.PrimitiveType xmi.id="a7"  xmi.uuid="ilr:1085AA48075B03010000FCC4BF018265A8C0#1"  isRoot="false"  isLeaf="false"  isAbstract="false"  name="double"  editable="false"  creationDate="19 Apr 2005 15:15:40 GMT"  lastModificationDate="19 Apr 2005 15:15:40 GMT"  visible="true"  deprecated="false"  implicit="false" >
+</DefaultBusinessModel.PrimitiveType>
+<DefaultBusinessModel.PrimitiveType xmi.id="a8"  xmi.uuid="ilr:1585AA48075B03010000FCC4BF018265A8C0#1"  isRoot="false"  isLeaf="false"  isAbstract="false"  name="short"  editable="false"  creationDate="19 Apr 2005 15:15:40 GMT"  lastModificationDate="19 Apr 2005 15:15:40 GMT"  visible="true"  deprecated="false"  implicit="false" >
+</DefaultBusinessModel.PrimitiveType>
+<DefaultBusinessModel.PrimitiveType xmi.id="a9"  xmi.uuid="ilr:0F85AA48075B03010000FCC4BF018265A8C0#1"  isRoot="false"  isLeaf="false"  isAbstract="false"  name="int"  editable="false"  creationDate="19 Apr 2005 15:15:40 GMT"  lastModificationDate="19 Apr 2005 15:15:40 GMT"  visible="true"  deprecated="false"  implicit="false" >
+</DefaultBusinessModel.PrimitiveType>
+<DefaultBusinessModel.PrimitiveType xmi.id="a10"  xmi.uuid="ilr:1185AA48075B03010000FCC4BF018265A8C0#1"  isRoot="false"  isLeaf="false"  isAbstract="false"  name="long"  editable="false"  creationDate="19 Apr 2005 15:15:40 GMT"  lastModificationDate="19 Apr 2005 15:15:40 GMT"  visible="true"  deprecated="false"  implicit="false" >
+</DefaultBusinessModel.PrimitiveType>
+<Model.Association xmi.id="a11"  xmi.uuid="ilr:5E82AA48075B03010000FCC4BF018265A8C0#1"  isRoot="false"  isLeaf="false"  isAbstract="false"  name="creationDateAssoc"  editable="true"  creationDate="19 Apr 2005 15:15:41 GMT"  lastModificationDate="19 Apr 2005 15:15:41 GMT" >
+<Model.Namespace.contents>
+<Model.AssociationEnd xmi.id="a12"  xmi.uuid="ilr:6382AA48075B03010000FCC4BF018265A8C0#1"  isNavigable="false"  aggregation="none"  isChangeable="true"  name="IlrBrmDefaultRule"  editable="true" >
+<Model.AssociationEnd.multiplicity>
+<Model.MultiplicityType lower="1"  upper="1"  isOrdered="false"  isUnique="true" >
+</Model.MultiplicityType>
+</Model.AssociationEnd.multiplicity>
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="IlrBrmDefaultRule"  href="ilr:6C82AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</Model.AssociationEnd>
+<Model.AssociationEnd xmi.id="a13"  xmi.uuid="ilr:6082AA48075B03010000FCC4BF018265A8C0#1"  isNavigable="true"  aggregation="none"  isChangeable="true"  name="Date"  editable="true" >
+<Model.AssociationEnd.multiplicity>
+<Model.MultiplicityType lower="1"  upper="1"  isOrdered="false"  isUnique="true" >
+</Model.MultiplicityType>
+</Model.AssociationEnd.multiplicity>
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Date"  href="ilr:7082AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</Model.AssociationEnd>
+</Model.Namespace.contents>
+</Model.Association>
+<Model.Association xmi.id="a14"  xmi.uuid="ilr:5F82AA48075B03010000FCC4BF018265A8C0#1"  isRoot="false"  isLeaf="false"  isAbstract="false"  name="lastModificationDateAssoc"  editable="true"  creationDate="19 Apr 2005 15:15:41 GMT"  lastModificationDate="19 Apr 2005 15:15:41 GMT" >
+<Model.Namespace.contents>
+<Model.AssociationEnd xmi.id="a15"  xmi.uuid="ilr:6182AA48075B03010000FCC4BF018265A8C0#1"  isNavigable="false"  aggregation="none"  isChangeable="true"  name="IlrBrmDefaultRule"  editable="true" >
+<Model.AssociationEnd.multiplicity>
+<Model.MultiplicityType lower="1"  upper="1"  isOrdered="false"  isUnique="true" >
+</Model.MultiplicityType>
+</Model.AssociationEnd.multiplicity>
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="IlrBrmDefaultRule"  href="ilr:6C82AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</Model.AssociationEnd>
+<Model.AssociationEnd xmi.id="a16"  xmi.uuid="ilr:6282AA48075B03010000FCC4BF018265A8C0#1"  isNavigable="true"  aggregation="none"  isChangeable="true"  name="Date"  editable="true" >
+<Model.AssociationEnd.multiplicity>
+<Model.MultiplicityType lower="1"  upper="1"  isOrdered="false"  isUnique="true" >
+</Model.MultiplicityType>
+</Model.AssociationEnd.multiplicity>
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Date"  href="ilr:7082AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</Model.AssociationEnd>
+</Model.Namespace.contents>
+</Model.Association>
+</Model.Namespace.contents>
+</Basics.BOM>
+</XMI.content>
+</XMI>

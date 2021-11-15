@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="all-rescan-view" template="masterfile-misc-cat-tpl.xml"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/view.xsd">
+
+    <labels default="en">
+        <locale name="en">
+            <label name="forward" value="Submit"/>
+        </locale>
+    </labels>
+    
+    <property-overrides>
+        <text name="processCode" readonly="true" />
+        <text name="custom4.chbAccountNo" readonly="true" />
+        <text name="custom4.contactNo" readonly="true" />
+        <text name="custom4.name" readonly="true" />
+        <text name="custom6.chbCatlink" readonly="true" />
+        <text name="custom6.chbCatpart" readonly="true" />
+        <text name="custom6.chbCatdesc" readonly="true" />
+        <text name="custom6.chbCatproduct" readonly="true" />
+        <text name="custom6.chbCatassembler" readonly="true" />
+        <text name="custom6.chbCatmanid" readonly="true" />
+        <text name="custom6.chbCattariff" readonly="true" />
+        <text name="custom6.chbCatpart2" readonly="true" />
+        <text name="custom6.chbCatassembler2" readonly="true" />
+        <text name="custom6.chbCatdesc2" readonly="true" />
+        <text name="custom4.chbPortOfLading" readonly="true" />
+        <text name="custom6.chbRelated" readonly="true" />
+        <text name="custom6.chbCatmanid2" readonly="true" />
+        <text name="custom4.chbCOrigin" readonly="true" />
+        <text name="custom4.chbCExport" readonly="true" />
+        <text name="custom6.chbNafta" readonly="true" />
+        <text name="custom6.chbRulingno" readonly="true" />
+        <text name="custom6.chbRulingtype" readonly="true" />
+        <text name="custom6.chbCatproduct2" readonly="true" />
+        <text name="custom6.chbTariff" readonly="true" />
+        <text name="custom6.chbTariffAdd" readonly="true" />
+        <text name="custom6.chbFdaSeq" readonly="true" />
+        <text name="custom6.chbFdaProduct" readonly="true" />
+        <text name="custom6.chbFdaStorage" readonly="true" />
+        <text name="custom6.chbFdaCountry" readonly="true" />
+        <text name="custom6.chbFdaManid" readonly="true" />
+        <text name="custom6.chbFdaShipper" readonly="true" />
+        <text name="custom6.chbFdaDesc" readonly="true" />
+        <text name="custom6.chbFdaQuantity1" readonly="true" />
+        <text name="custom6.chbFdaUnit1" readonly="true" />
+        <text name="custom6.chbFdaQuantity2" readonly="true" />
+        <text name="custom6.chbFdaUnit2" readonly="true" />
+        <text name="custom6.chbFdaQuantity3" readonly="true" />
+        <text name="custom6.chbFdaUnit3" readonly="true" />
+        <text name="custom6.chbFdaQuantity4" readonly="true" />
+        <text name="custom6.chbFdaUnit4" readonly="true" />
+        <text name="custom6.chbFdaQuantity5" readonly="true" />
+        <text name="custom6.chbFdaUnit5" readonly="true" />
+        <text name="custom6.chbFdaQuantity6" readonly="true" />
+        <text name="custom6.chbFdaUnit6" readonly="true" />
+        <text name="custom6.chbFdaValue" readonly="true" />
+        <text name="custom6.chbFdaBrand" readonly="true" />
+        <text name="custom6.chbFdaDims" readonly="true" />
+        <text name="custom6.chbFdaContact" readonly="true" />
+        <text name="custom6.chbFdaEst" readonly="true" />
+        <text name="custom6.chbFdaTel" readonly="true" />
+        <text name="custom6.chbFdaComp1" readonly="true" />
+        <text name="custom6.chbFdaQual1" readonly="true" />
+        <text name="custom6.chbFdaComp2" readonly="true" />
+        <text name="custom6.chbFdaQual2" readonly="true" />
+        <text name="custom6.chbFdaComp3" readonly="true" />
+        <text name="custom6.chbFdaQual3" readonly="true" />
+        <text name="custom6.chbFdaComp4" readonly="true" />
+        <text name="custom6.chbFdaQual4" readonly="true" />
+        <text name="custom6.chbFdaComp5" readonly="true" />
+        <text name="custom6.chbFdaQual5" readonly="true" />
+        <text name="custom6.chbFdaComp6" readonly="true" />
+        <text name="custom6.chbFdaQual6" readonly="true" />
+        <text name="custom6.chbFdaAbi" readonly="true" />
+        <text name="custom4.address1" readonly="true" />
+        <text name="custom4.contactName" readonly="true" />
+        <text name="custom4.chbFdaLastName" readonly="true" />
+        <text name="custom4.chbFdaFirstName" readonly="true" />
+        <text name="custom4.chbPhone" readonly="true" />
+        <text name="custom4.chbFax" readonly="true" />
+        <text name="custom6.chbBrkEmail" readonly="true" />
+        <text name="custom6.chbFdaFirmname" readonly="true" />
+        <text name="custom4.chbPaAddress1" readonly="true" />
+        <text name="custom4.chbPaAddress2" readonly="true" />
+        <text name="custom4.chbPaCity" readonly="true" />
+        <text name="custom4.chbPaState" readonly="true" />
+        <text name="custom4.chbPaCountry" readonly="true" />
+        <text name="custom4.chbPaZip" readonly="true" />
+        <text name="custom6.chbFdaSubtype" readonly="true" />
+        <text name="custom6.chbFdaOwntype" readonly="true" />
+        <text name="custom6.chbArrivalport" readonly="true" />
+        <text name="custom6.chbFdaCrossingLoc" readonly="true" />
+        <text name="custom6.chbFdaCrossingPnt" readonly="true" />
+        <text name="custom6.chbFdaShipping" readonly="true" />
+        <text name="custom6.chbFdaCarrier" readonly="true" />
+        <text name="custom6.chbFdaCarrierName" readonly="true" />
+        <text name="custom6.chbFdaCarrierCnt" readonly="true" />
+        <text name="custom6.chbFdaProctype" readonly="true" />
+        <text name="custom6.chbFdaProcExemptyn" readonly="true" />
+        <text name="custom6.chbFdaProcExempt" readonly="true" />
+        <text name="custom6.chbFdaManreg" readonly="true" />
+        <text name="custom6.chbFdaShpreg" readonly="true" />
+        <text name="custom6.chbFccQnty" readonly="true" />
+        <text name="custom6.chbFccCondition" readonly="true" />	
+        <text name="custom6.chbFccInsp" readonly="true" />	
+        <text name="custom6.chbFccApproval" readonly="true" />	
+        <text name="custom6.chbFccId" readonly="true" />	
+        <text name="custom6.chbFccTrade" readonly="true" />	
+        <text name="custom6.chbFccType" readonly="true" />	
+        <text name="custom6.chbFccDesc" readonly="true" />	
+        <text name="custom6.chbAvaCvd" readonly="true" />	
+        <text name="custom6.chbAvaCase" readonly="true" />	
+    	<text name="custom4.chbNotes" readonly="true" />
+    	<text name="custom6.chbFdaSub" readonly="true" />	
+	<text name="custom6.chbCatEffectiveDate" readonly="true" />        
+    </property-overrides>
+
+    <hidden-overrides>
+        <hidden name="processInformation.response" defaultValue="Complete"/>
+    </hidden-overrides>
+    
+    <action-overrides>
+        	<getNext name="next" readonly="false" visible="true"/>
+			<button name="release" readonly="true" visible="false"/>
+ 			<button name="updateRelease" readonly="true" visible="false"/>
+   </action-overrides>
+
+<validations>
+</validations>
+</view>

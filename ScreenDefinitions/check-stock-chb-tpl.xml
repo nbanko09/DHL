@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<propertyTemplate
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/template.xsd">
+
+	<labels default="en">
+		<locale name="en">
+		<label name="processCode" value="Check Type"/>
+		<label name="tbdString11" value="Name"/>
+		<label name="tbdString12" value="Number of Checks"/>
+		<label name="tbdString3" value="Phone #"/>
+	        <label name="createDate" value="Date Requested"/>
+	        <label name="processInformation.deadline" value="Date Required"/>
+	        <label name="group" value="Station"/>
+	        <label name="checkStubMessage" value="Zip Code"/>
+		<label name="batchNumber" value="UPS #"/>
+		<label name="tbdNumber4" value="Last Check #"/>
+        </locale>
+	</labels>
+		
+	<section name="doc" collapsible="false" collapsed="false">		
+		<properties>
+					<textArea row="1" col="1-2" name="tbdComment1" styleClass="comment"/> 
+					<output row="2" col="1-2" name="processInformation.previousComment" readonly="true" styleClass="comment" escapeXml="false"/>
+					<valueAlias row="3" col="1-2" name="processInformation.queueName" styleClass="fulllookup" readonly="true"/>
+		</properties>
+		<actions>
+			<getNext name="next" readonly="false" showLabel="true" visible="true" toLeft="true" styleClass="getNext70"/>
+			<rejectButton name="reject" readonly="false" isAnchored="false" title="rejectTitle" styleClass="button70"/>
+			<button name="release" command="release" readonly="false" visible="true" type="submit" title="releaseTitle" styleClass="button70"/>
+			<button name="updateRelease" command="updateRelease" readonly="false" visible="true" type="submit" title="updateReleaseTitle" styleClass="button70"/>
+			<button name="update" command="update" readonly="false" visible="true" type="submit" title="updateTitle" styleClass="button70"/>
+			<button name="forward" command="forward" readonly="false" type="submit" isAnchored="false" title="forwardTitle" styleClass="button70"/>
+		</actions>
+	</section>
+
+	<section name="Request For #5 Alliance Checks" visible="true" collapsible="false" collapsed="false">
+			<properties>
+			<dropDown row="1" col="1" name="processCode" readonly="false" validation="required" choiceList="choice.productChkStk" onChange="reloadPage(this)"/> <!--Print-->
+			<text row="1" col="2" name="seqId" readonly="true"/> <!--Request Ticket No-->
+			<text row="2" col="1" name="requesterName" readonly="true"/>
+			<text row="2" col="2" name="requester.email" readonly="true" styleClass="fulllookup"/>
+			<date row="3" col="1" name="createDate" styleClass="90" showTime="true" readonly="true"/> <!--Request Date-->
+	        <date row="3" col="2" name="processInformation.deadline" showTime="true" styleClass="90" readonly="true"/> <!--Required Date-->
+			<text row = "4" col = "1-2" name="chbLabel1" defaultValue="Please Send New Supply of Alliance Checks" forceDefault="true" readonly="true" styleClass="threehundred"/>
+			<text row = "5" col = "1" name="tbdString12" validation="required"/>
+			<dynamicDropDown row="6" col="1" name="group" readonly="false" providerClass="com.miriasystems.ui.providers.GroupsChoiceListProvider" validation="required"/> <!--Control Station-->
+			<text row = "7" col="1" name="tbdString11" validation="required" styleClass="fivehundred"/>
+			<text row = "8" col="1" name="tbdString3" validation="required" styleClass="fivehundred"/>
+			<text row="9" col="1" name="custom5.address1" readonly="true" styleClass="fivehundred" validation="required"/>
+			<text row="10" col="1" name="custom5.address2" readonly="true" styleClass="fivehundred"/>
+			<dropDown row="11" col="1" name="docPriority" choiceList="choice.priorityStk" defaultValue="1" readonly="true"/> <!--Priority-->
+			<text row="12" col="1" name="batchNumber" readonly="true"/> <!--ups #-->
+			<text row="13" col="1" name="checkStubMessage" readonly="true"/> <!--station zip-->
+			<text row="14" col="1" name="tbdNumber4" readonly="true"/> <!--Last Number-->
+			<textArea row = "15" col = "1-2" name="chbLabel2" defaultValue="Note:Please send request when you have a 2 (two) week supply left. Checks will be sent in the weekly comat on Fridays." styleClass="comment" forceDefault="true" readonly="true"/>
+			</properties>
+		<actions>
+			<postingReplyAction name="postings" icon="/images/ico-paid-w24.png" width="24" height="24" link="javascript:openPostingReplyWindow('$contextPath$', '$wobNumber$')" visible="true"/>
+			<iconAction name="editRouting" icon="/images/ico-route-w24.png" width="24" height="24" readOnlyLink="javascript:openViewRoutingWindow('$contextPath$', '$wobNumber$', 'nonPo')" link="javascript:openRoutingWindow('$contextPath$', '$wobNumber$', 'nonPo', 'MP_Approver1')" alwaysActive="true" readonly="false"/>			
+			<iconAction name="email" icon="/images/ico-mail-w24.png" width="24" height="24" link="javascript:openSendEmailWindow('$contextPath$', '$imageGUID$', '$wobNumber$')" alwaysActive="true"/>
+			<iconAction name="attachments" icon="/images/ico-attachment-w24.png" width="24" height="24" link="javascript:openAttachmentsWindow('$contextPath$', '$wobNumber$')" alwaysActive="true"/>
+			<attachmentCountAction name="attachmentCount" visible="true"/>
+			<!--iconAction name="vendorHistory" icon="/images/ico-vhistory-w24.png" width="24" height="24" link="javascript:openVendorHistoryWindow('$contextPath$', '$wobNumber$')" alwaysActive="true"/-->
+			<iconAction name="print" icon="/images/ico-print-w24.png" width="24" height="24" link="javascript:window.print()" visible="true" alwaysActive="true"/>
+			<!--iconAction name="barcode" icon="/images/ico-barcode-w24.png" width="24" height="24" link="javascript:openPrintBarcodeWindow('$contextPath$', '$uploadRef$', '$seqId$')" alwaysActive="true"/-->			<iconAction name="statusWindow" icon="/images/ico-history-w24.png" width="24" height="24" link="javascript:openStatusWindow('$seqId$', '$contextPath$');return false;" alwaysActive="true"/>
+			<iconAction name="help" icon="/images/ico-help-w24.png" width="24" height="24" link="javascript:openHelp('User_Interfaces/Working_with_Invoices.htm', '$contextPath$')" alwaysActive="true"/>	
+		</actions>
+	</section>
+
+	<hiddenFields>
+		<hidden name="requesterId"/>
+		<hidden name="type" defaultValue="CHKSTK"/>
+		<hidden name="processInformation.comment"/>
+    </hiddenFields>
+
+	<processors>
+		
+    	</processors>
+    	
+</propertyTemplate>

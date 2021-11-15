@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="all-rescan-view" template="nonpo-tpl.xml"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/view.xsd">
+
+    <labels default="en">
+        <locale name="en">
+            <label name="forward" value="Complete"/>
+            <label name="scanVendorName" value="Employee Name"/>
+        </locale>
+    </labels>
+    
+    <property-overrides>
+         <text name="scanVendorName" validation="" readonly="true"/>
+		 <text name="number" validation="" readonly="true"/>
+         <text name="subType" readonly="true"/>
+         <textArea name="tbdComment1" readonly="false"/>
+         <text name="grossAmount" readonly="true"/>
+    </property-overrides>
+
+    <hidden-overrides>
+        <hidden name="processInformation.response" defaultValue="Complete"/>
+    </hidden-overrides>
+
+
+	<action-overrides>
+	<rejectButton name="reject" readonly="true"/>        
+	</action-overrides>
+</view>

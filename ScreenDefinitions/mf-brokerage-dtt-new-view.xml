@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="all-rescan-view" template="masterfile-brokerage-new-tpl.xml"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/view.xsd">
+
+    <labels default="en">
+        <locale name="en">
+            <label name="forward" value="Complete"/>
+        </locale>
+    </labels>
+    
+    <property-overrides>
+    <text name="subType" readonly="true" /> 
+    <text name="businessUnit" readonly="true" /> 
+    <text name="docPriority" readonly="true" />
+    <text name="custom4.contactNo" readonly="true" />
+    <text name="custom4.chbAccountNo" readonly="true" />
+    <text name="custom4.fao" readonly="true" />
+    <text name="custom4.address1" readonly="true" />
+    <text name="custom4.address2" readonly="true" />
+    <text name="custom4.name" readonly="true"/>
+    <text name="custom4.chbDBA" readonly="true" />
+    <text name="custom4.chbAKA" readonly="true" />
+    <text name="group" readonly="true"/>
+    <text name="custom4.city" readonly="true" />
+    <text name="custom4.state" readonly="true" />
+    <text name="custom4.postalCode" readonly="true" />
+    <text name="custom4.country" readonly="true" />
+    <text name="custom4.chbPaFao" readonly="true" />
+    <text name="custom4.chbPaAddress1" readonly="true" />
+    <text name="custom4.chbPaAddress2" readonly="true" />
+    <text name="custom4.chbPaCity" readonly="true" />
+    <text name="custom4.chbPaState" readonly="true" />
+    <text name="custom4.chbPaZip" readonly="true" />
+    <text name="custom4.chbPaCountry" readonly="true" />
+    <text name="routingCode" readonly="true" />
+    <text name="custom4.chbIrsSs" readonly="true" />
+    <text name="custom4.chbPhone" readonly="true" />
+    <text name="custom4.chbFax" readonly="true" />
+    <text name="custom4.billToAccountCode" readonly="true" />
+    <text name="custom4.billToAccount" readonly="true" />
+    <text name="custom4.chbImporterYN" readonly="true" />
+    <text name="custom4.chbDeliverToYN" readonly="true" />
+    <text name="custom4.chbBillToYN" readonly="true" />
+    <text name="custom4.chbShipperYN" readonly="true" />
+    <text name="custom4.chbConsigneeYN" readonly="true" />
+    <text name="custom4.chbContactNo" readonly="true" />
+    <text name="custom4.chbContactName" readonly="true" />
+    <text name="custom4.chbContactTitle" readonly="true" />
+    <text name="custom4.chbContactPhone" readonly="true" />
+    <text name="custom4.chbContactFax" readonly="true" />
+    <text name="custom4.chbContactCell" readonly="true" />
+    <text name="custom4.chbContactPager" readonly="true" />
+    <text name="custom4.chbContactPagerPin" readonly="true" />
+    <text name="custom4.chbContactEmail" readonly="true" />
+    <text name="custom4.chbContactPhone2" readonly="true" />
+    <text name="custom4.chbContactFax2" readonly="true" />
+    <text name="custom4.chbContactEmergencyPhone" readonly="true" />
+    <text name="custom4.chbContactEmail2" readonly="true" />
+    <text name="custom4.chbTempPerm" readonly="true" />
+    <text name="custom4.chbFdaLastName" readonly="true" />
+    <text name="custom4.chbFdaFirstName" readonly="true" />
+    <text name="custom4.chbFdaFirmType" readonly="true" />					
+    <text name="custom4.chbFdaMessageYN" readonly="true" />					
+    <textArea name="custom4.chbNotes" readonly="true" />
+    <dropDown name="custom4.chbChargeProfile" styleClass="fulllookup" readonly="true" />
+    <text name="custom4.chbCustomerProfile" readonly="true" />
+    <text name="custom4.chbSpecificProfile" readonly="true" />
+    <currency name="custom4.chbEntryFee" readonly="true" />
+    <currency name="custom4.chbDisbursementFee" readonly="true" />
+    <text name="custom4.chbOtherFee" readonly="true" />
+    <currency name="custom4.chbAdditionalClass" readonly="true" />
+    <currency name="custom4.chbAdditionalInvoice" readonly="true" />			
+    <currency name="custom4.chbBrokerBondCharge" readonly="true" />
+    <currency name="custom4.chbSebCharge" readonly="true" />
+    <text name="custom4.chbDivision" readonly="true" />
+    <text name="custom4.chbTibMessage1" readonly="true" />
+    <text name="custom4.chbTibMessage2" readonly="true" />
+    <text name="custom4.chbRelated" readonly="true" />
+    <text name="custom4.chbDoFrCharge" readonly="true" />
+    <text name="custom4.chbDeliverTo" readonly="true" />
+    <text name="custom4.chbConsignee" readonly="true" />
+    <text name="custom4.chbLocation" readonly="true" />
+    <text name="custom4.chbExamLoc" readonly="true" />
+    <text name="custom4.chbTruck" readonly="true" />
+    <text name="custom4.chbBrokerTeam" readonly="true" />
+    <text name="custom4.chbMid" readonly="true" />
+    <text name="custom4.chbTarrifNumber" readonly="true" />
+    <text name="custom4.chbCOrigin" readonly="true" />
+    <text name="custom4.chbCExport" readonly="true" />
+    <text name="custom4.chbEntryType" readonly="true" />
+    <text name="custom4.chbMot" readonly="true" />
+    <text name="custom4.chbPortOfEntry" readonly="true" />
+    <text name="custom4.chbPortOfLading" readonly="true" />
+    <text name="custom4.chbSqueeze" readonly="true" />
+    <dropDown name="custom4.chbAutoBilling" readonly="true" />
+    <text name="custom4.chb9802" readonly="true" />
+    <dropDown name="custom4.chbRlfYN" readonly="true" />
+    <dropDown name="custom4.chbAitAin" readonly="true" />
+    <text name="custom4.chbDoMessage1" readonly="true" />
+    <text name="custom4.chbDoMessage2" readonly="true" />
+    <dropDown name="custom4.chbCtpat" readonly="true" />
+    <text name="custom4.chbFedRegNumber" readonly="true" />
+    <dropDown name="custom4.chbIsfDgfFilerYN" readonly="true" />
+    <date name="custom4.chbIsfEffectiveDate" readonly="true" />
+    <text name="custom4.chbIsfBillTo" readonly="true" />
+    <text name="custom4.chbIsfFees" readonly="true" />
+    <text name="custom4.chbIsfContact" readonly="true" />	
+    <text name="custom4.chbIsfTitle" readonly="true" />
+    <text name="custom4.chbIsfEmail" readonly="true" />
+    <text name="custom4.chbIsfPhone" readonly="true" />
+    <text name="custom4.chbIsfAcceptanceMessage" readonly="true" />
+    <text name="custom4.chbIsfRejectedMessage" readonly="true" />
+    <text name="custom4.chbIsfAcceptedWarning" readonly="true" />
+    <text name="custom4.chbIsfStatusMessages" readonly="true" />
+    <text name="custom4.chbIsfOtherInstructions" readonly="true" />
+    <text name="tbdBoolean1" readonly="true"/>
+    <text name="custom6.stagingSecurity" readonly="true"/>
+    <text name="custom6.stagingCommodity" readonly="true"/>
+    <text name="custom6.stagingEPTeam" readonly="true"/>
+    <text name="custom6.stagingCSTeam" readonly="true"/>
+    <text name="custom6.stagingCSAgent" readonly="true"/>
+    <text name="custom6.stagingIOR" readonly="true"/>
+    <text name="custom6.chbFdaAbi" readonly="true"/>    
+    </property-overrides>
+    
+    <documentRejection>
+	   <rejectionReasons>
+		   <reason name="Return to Requester" commentsRequired="true" note="message.requester">
+		   </reason>
+		   <reason name="Send For Approval" commentsRequired="true" note="message.approver">
+		   </reason>
+		</rejectionReasons>
+     </documentRejection>
+     
+    <hidden-overrides>
+        <hidden name="processInformation.response" defaultValue="Complete"/>
+    </hidden-overrides>
+    
+    <action-overrides>
+        	
+   </action-overrides>
+
+
+</view>

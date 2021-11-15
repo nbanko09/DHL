@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="exp-process-view" template="exp-tpl.xml"
+
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/view.xsd">
+
+			
+		<labels default="en">
+				<locale name="en">
+				</locale>
+		</labels>
+	
+	
+	
+	<action-overrides>
+		<iconAction name="editRouting" readonly="false"/>
+		<button name="release" visible="false"/>
+		<iconAction name="addLineItem" readonly="false"/>
+		<iconAction name="removeLineItem" readonly="false"/>
+	</action-overrides>
+	
+	<property-overrides>
+	</property-overrides>
+	
+	<lineItem-overrides>
+	</lineItem-overrides>
+	
+	
+	
+	<hidden-overrides>
+		<hidden name="processInformation.response" defaultValue="Complete"/>
+	</hidden-overrides>
+
+	<documentRejection>
+		<rejectionReasons>
+			<reason name="Terminate" commentsRequired="false" note="message.terminate">
+			</reason>
+		</rejectionReasons>
+	</documentRejection>
+	
+	 <validations>
+		<validation name ="validation.check.originator.approver.document"/>
+		<validation name="validation.check.requester.approver.document"/>
+		<validation name="validation.MainAndSubLineTotal"/>
+		<validation name="validation.ExpenseReportAccountCodeValidation"/>
+		<validation name="validation.MileageLineItemValidation" messageType="warning"/>
+		<validation name="validation.CashLineItemValidation" messageType="warning"/>
+		<validation name="validation.accountCode"/>
+		<validation name="validation.MileageCheckValidation"/>
+    </validations>
+    
+</view>

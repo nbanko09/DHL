@@ -1,0 +1,372 @@
+<?xml version="1.0"  encoding="ISO-8859-1"  ?>
+<!DOCTYPE XMI>
+<XMI xmi.version="1.2" >
+<XMI.header>
+<XMI.documentation>
+<XMI.exporter>Ilog Rule Kit</XMI.exporter>
+<XMI.exporterVersion>4.1</XMI.exporterVersion>
+</XMI.documentation>
+<XMI.model href="ilr:0180AA48075B03010000FCC4BF018265A8C0#1"  xmi.name="Application"  xmi.version="1.2" />
+<XMI.metamodel href="ilr:09804659F3E0EA00000084662F000100007F#1"  xmi.name="Application"  xmi.version="1.2" />
+</XMI.header>
+<XMI.content>
+<Rule.RulePackage xmi.id="a1"  xmi.uuid="ilr:DD873FEAA25D0401000096EA09016E65A8C0#1"  isRoot="false"  isLeaf="false"  isAbstract="false"  name="DuplicateInvoice"  editable="true"  creationDate="8 Jun 2005 20:28:25 GMT"  lastModificationDate="9 Jun 2005 23:10:42 GMT" >
+<Model.Namespace.contents>
+<Rule.Parameter xmi.id="a2"  xmi.uuid="ilr:EC873FEAA25D0401000096EA09016E65A8C0#1"  direction="out_dir"  visible="true"  executionValue=""  name="result"  editable="true" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="JrulesResult"  href="ilr:DE877B07745E040100001F57FE016E65A8C0#1" />
+</Model.TypedElement.type>
+</Rule.Parameter>
+<Rule.Parameter xmi.id="a3"  xmi.uuid="ilr:FC873FEAA25D0401000096EA09016E65A8C0#1"  direction="in_dir"  visible="true"  executionValue="null"  name="document"  editable="true" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Document"  href="ilr:EC87C516B3D303010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</Rule.Parameter>
+<Rule.FunctionSet xmi.id="a4"  xmi.uuid="ilr:0E883FEAA25D0401000096EA09016E65A8C0#1"  historyVersion="false"  name="FunctionSet"  editable="true"  creationDate="8 Jun 2005 20:49:10 GMT"  lastModificationDate="9 Jun 2005 23:10:42 GMT"  currentDefinition="a5" >
+<Model.Namespace.contents>
+<Language.RuleIRL xmi.id="a5"  xmi.uuid="ilr:0F883FEAA25D0401000096EA09016E65A8C0#1"  name="RuleIRL"  editable="true" >
+<Basics.TextDefinition.text>function void ilrmain(Object o) { &#9; &#9;
+&#9;document = new Document();
+&#9;document.shippingDocumentId = &quot;test&quot;;
+&#9;execute(); 
+}
+</Basics.TextDefinition.text>
+</Language.RuleIRL>
+</Model.Namespace.contents>
+</Rule.FunctionSet>
+<Rule.DefaultRule xmi.id="a6"  xmi.uuid="ilr:EC877B07745E040100001F57FE016E65A8C0#1"  active="true"  historyVersion="false"  name="BuildingProductFreight"  editable="true"  creationDate="9 Jun 2005 00:19:23 GMT"  lastModificationDate="10 Jun 2005 21:43:59 GMT"  currentDefinition="a7" >
+<Basics.BusinessElement.library>
+<Rule.TemplateLibrary name="Template Library"  href="ilr:2B80AA48075B03010000FCC4BF018265A8C0#1" />
+</Basics.BusinessElement.library>
+<Model.Namespace.contents>
+<Language.BAL46 xmi.id="a7"  xmi.uuid="ilr:ED877B07745E040100001F57FE016E65A8C0#1"  grammarFile="ilog\rules\brl\bal46\BAL.xsd"  javaClassname="ilog.rules.brl.IlrGrammarTokenModel"  name="BAL"  editable="true" >
+<Basics.TokenModelDefinition.tokenModelText>&lt;ilr-xml-object class=&quot;ilog.rules.brl.IlrGrammarTokenModel&quot;  version=&quot;1&quot; &gt;
+ &lt;ilr-syntax-tree&gt;
+  &lt;rule&gt;
+   &lt;conditions&gt;
+    &lt;condition&gt;
+     &lt;test&gt;
+      &lt;test-choice&gt;
+       &lt;path&gt;
+        &lt;?brl recursed ?&gt;
+        &lt;member&gt;java.lang.String boolean equals(java.lang.Object)
+         &lt;?brl bomMember=ilr:8E80AA48075B03010000FCC4BF018265A8C0#1 ?&gt;
+        &lt;&#47;member&gt;
+        &lt;object&gt;
+         &lt;member&gt;com.miriasystems.mp.domain.Document java.lang.String getGroup()
+          &lt;?brl bomMember=ilr:BB88C516B3D303010000FCC4BF018265A8C0#1 ?&gt;
+         &lt;&#47;member&gt;
+        &lt;&#47;object&gt;
+        &lt;argument&gt;
+         &lt;value&gt;java.lang.String BuildingProductFreight
+          &lt;?brl bomTypedValue=ilr:8780AA48075B03010000FCC4BF018265A8C0#1 ?&gt;
+         &lt;&#47;value&gt;
+        &lt;&#47;argument&gt;
+       &lt;&#47;path&gt;
+      &lt;&#47;test-choice&gt;
+     &lt;&#47;test&gt;
+    &lt;&#47;condition&gt;
+   &lt;&#47;conditions&gt;
+   &lt;actions&gt;
+    &lt;action&gt;
+     &lt;path&gt;
+      &lt;member&gt;com.miriasystems.rules.JrulesResult void addToResult(java.lang.String)
+       &lt;?brl bomMember=ilr:E0877B07745E040100001F57FE016E65A8C0#1 ?&gt;
+      &lt;&#47;member&gt;
+      &lt;argument&gt;
+       &lt;value&gt;java.lang.String number
+        &lt;?brl bomTypedValue=ilr:8780AA48075B03010000FCC4BF018265A8C0#1 ?&gt;
+       &lt;&#47;value&gt;
+      &lt;&#47;argument&gt;
+     &lt;&#47;path&gt;
+    &lt;&#47;action&gt;
+    &lt;action&gt;
+     &lt;path&gt;
+      &lt;member&gt;com.miriasystems.rules.JrulesResult void addToResult(java.lang.String)
+       &lt;?brl bomMember=ilr:E0877B07745E040100001F57FE016E65A8C0#1 ?&gt;
+      &lt;&#47;member&gt;
+      &lt;argument&gt;
+       &lt;value&gt;java.lang.String vendorId
+        &lt;?brl bomTypedValue=ilr:8780AA48075B03010000FCC4BF018265A8C0#1 ?&gt;
+       &lt;&#47;value&gt;
+      &lt;&#47;argument&gt;
+     &lt;&#47;path&gt;
+    &lt;&#47;action&gt;
+   &lt;&#47;actions&gt;
+  &lt;&#47;rule&gt;
+ &lt;&#47;ilr-syntax-tree&gt;
+&lt;&#47;ilr-xml-object&gt;
+</Basics.TokenModelDefinition.tokenModelText>
+</Language.BAL46>
+</Model.Namespace.contents>
+</Rule.DefaultRule>
+<Rule.DefaultRule xmi.id="a8"  xmi.uuid="ilr:3D8D7B07745E040100001F57FE016E65A8C0#1"  active="true"  historyVersion="false"  name="ConsumerProductFreight"  editable="true"  creationDate="9 Jun 2005 01:07:52 GMT"  lastModificationDate="9 Jun 2005 23:10:42 GMT"  currentDefinition="a9" >
+<Basics.BusinessElement.library>
+<Rule.TemplateLibrary name="Template Library"  href="ilr:2B80AA48075B03010000FCC4BF018265A8C0#1" />
+</Basics.BusinessElement.library>
+<Model.Namespace.contents>
+<Language.BAL46 xmi.id="a9"  xmi.uuid="ilr:3E8D7B07745E040100001F57FE016E65A8C0#1"  grammarFile="ilog\rules\brl\bal46\BAL.xsd"  javaClassname="ilog.rules.brl.IlrGrammarTokenModel"  name="BAL"  editable="true" >
+<Basics.TokenModelDefinition.tokenModelText>&lt;ilr-xml-object class=&quot;ilog.rules.brl.IlrGrammarTokenModel&quot;  version=&quot;1&quot; &gt;
+ &lt;ilr-syntax-tree&gt;
+  &lt;rule&gt;
+   &lt;conditions&gt;
+    &lt;condition&gt;
+     &lt;test&gt;
+      &lt;test-choice&gt;
+       &lt;path&gt;
+        &lt;?brl recursed ?&gt;
+        &lt;member&gt;java.lang.String boolean equals(java.lang.Object)
+         &lt;?brl bomMember=ilr:8E80AA48075B03010000FCC4BF018265A8C0#1 ?&gt;
+        &lt;&#47;member&gt;
+        &lt;object&gt;
+         &lt;member&gt;com.miriasystems.mp.domain.Document java.lang.String getShippingDocumentId()
+          &lt;?brl bomMember=ilr:A889C516B3D303010000FCC4BF018265A8C0#1 ?&gt;
+         &lt;&#47;member&gt;
+        &lt;&#47;object&gt;
+        &lt;argument&gt;
+         &lt;value&gt;java.lang.String ConsumerProductFreight
+          &lt;?brl bomTypedValue=ilr:8780AA48075B03010000FCC4BF018265A8C0#1 ?&gt;
+         &lt;&#47;value&gt;
+        &lt;&#47;argument&gt;
+       &lt;&#47;path&gt;
+      &lt;&#47;test-choice&gt;
+     &lt;&#47;test&gt;
+    &lt;&#47;condition&gt;
+   &lt;&#47;conditions&gt;
+   &lt;actions&gt;
+    &lt;action&gt;
+     &lt;path&gt;
+      &lt;member&gt;com.miriasystems.rules.JrulesResult void addToResult(java.lang.String)
+       &lt;?brl bomMember=ilr:E0877B07745E040100001F57FE016E65A8C0#1 ?&gt;
+      &lt;&#47;member&gt;
+      &lt;argument&gt;
+       &lt;value&gt;java.lang.String duplicateInvoiceCheckVendorNumberDate
+        &lt;?brl bomTypedValue=ilr:8780AA48075B03010000FCC4BF018265A8C0#1 ?&gt;
+       &lt;&#47;value&gt;
+      &lt;&#47;argument&gt;
+     &lt;&#47;path&gt;
+    &lt;&#47;action&gt;
+   &lt;&#47;actions&gt;
+  &lt;&#47;rule&gt;
+ &lt;&#47;ilr-syntax-tree&gt;
+&lt;&#47;ilr-xml-object&gt;
+</Basics.TokenModelDefinition.tokenModelText>
+</Language.BAL46>
+</Model.Namespace.contents>
+</Rule.DefaultRule>
+<Rule.DefaultRule xmi.id="a10"  xmi.uuid="ilr:408D7B07745E040100001F57FE016E65A8C0#1"  active="true"  historyVersion="false"  name="Corporate"  editable="true"  creationDate="9 Jun 2005 01:08:35 GMT"  lastModificationDate="9 Jun 2005 23:10:42 GMT"  currentDefinition="a11" >
+<Basics.BusinessElement.library>
+<Rule.TemplateLibrary name="Template Library"  href="ilr:2B80AA48075B03010000FCC4BF018265A8C0#1" />
+</Basics.BusinessElement.library>
+<Model.Namespace.contents>
+<Language.BAL46 xmi.id="a11"  xmi.uuid="ilr:418D7B07745E040100001F57FE016E65A8C0#1"  grammarFile="ilog\rules\brl\bal46\BAL.xsd"  javaClassname="ilog.rules.brl.IlrGrammarTokenModel"  name="BAL"  editable="true" >
+<Basics.TokenModelDefinition.tokenModelText>&lt;ilr-xml-object class=&quot;ilog.rules.brl.IlrGrammarTokenModel&quot;  version=&quot;1&quot; &gt;
+ &lt;ilr-syntax-tree&gt;
+  &lt;rule&gt;
+   &lt;conditions&gt;
+    &lt;condition&gt;
+     &lt;test&gt;
+      &lt;test-choice&gt;
+       &lt;path&gt;
+        &lt;?brl recursed ?&gt;
+        &lt;member&gt;java.lang.String boolean equals(java.lang.Object)
+         &lt;?brl bomMember=ilr:8E80AA48075B03010000FCC4BF018265A8C0#1 ?&gt;
+        &lt;&#47;member&gt;
+        &lt;object&gt;
+         &lt;member&gt;com.miriasystems.mp.domain.Document java.lang.String getShippingDocumentId()
+          &lt;?brl bomMember=ilr:A889C516B3D303010000FCC4BF018265A8C0#1 ?&gt;
+         &lt;&#47;member&gt;
+        &lt;&#47;object&gt;
+        &lt;argument&gt;
+         &lt;value&gt;java.lang.String Corporate
+          &lt;?brl bomTypedValue=ilr:8780AA48075B03010000FCC4BF018265A8C0#1 ?&gt;
+         &lt;&#47;value&gt;
+        &lt;&#47;argument&gt;
+       &lt;&#47;path&gt;
+      &lt;&#47;test-choice&gt;
+     &lt;&#47;test&gt;
+    &lt;&#47;condition&gt;
+   &lt;&#47;conditions&gt;
+   &lt;actions&gt;
+    &lt;action&gt;
+     &lt;path&gt;
+      &lt;member&gt;com.miriasystems.rules.JrulesResult void addToResult(java.lang.String)
+       &lt;?brl bomMember=ilr:E0877B07745E040100001F57FE016E65A8C0#1 ?&gt;
+      &lt;&#47;member&gt;
+      &lt;argument&gt;
+       &lt;value&gt;java.lang.String duplicateInvoiceCheckVendorNumber
+        &lt;?brl bomTypedValue=ilr:8780AA48075B03010000FCC4BF018265A8C0#1 ?&gt;
+       &lt;&#47;value&gt;
+      &lt;&#47;argument&gt;
+     &lt;&#47;path&gt;
+    &lt;&#47;action&gt;
+   &lt;&#47;actions&gt;
+  &lt;&#47;rule&gt;
+ &lt;&#47;ilr-syntax-tree&gt;
+&lt;&#47;ilr-xml-object&gt;
+</Basics.TokenModelDefinition.tokenModelText>
+</Language.BAL46>
+</Model.Namespace.contents>
+</Rule.DefaultRule>
+<Rule.DefaultRule xmi.id="a12"  xmi.uuid="ilr:CF82449F2062040100002B691C006E65A8C0#1"  active="true"  historyVersion="false"  name="BAL Rule"  editable="true"  creationDate="9 Jun 2005 17:26:48 GMT"  lastModificationDate="11 Jun 2005 00:13:16 GMT"  currentDefinition="a13" >
+<Basics.BusinessElement.library>
+<Rule.TemplateLibrary name="Template Library"  href="ilr:2B80AA48075B03010000FCC4BF018265A8C0#1" />
+</Basics.BusinessElement.library>
+<Model.Namespace.contents>
+<Language.BAL46 xmi.id="a13"  xmi.uuid="ilr:D082449F2062040100002B691C006E65A8C0#1"  grammarFile="ilog\rules\brl\bal46\BAL.xsd"  javaClassname="ilog.rules.brl.IlrGrammarTokenModel"  name="BAL"  editable="true" >
+<Basics.TokenModelDefinition.tokenModelText>&lt;ilr-xml-object class=&quot;ilog.rules.brl.IlrGrammarTokenModel&quot;  version=&quot;1&quot; &gt;
+ &lt;ilr-syntax-tree&gt;
+  &lt;rule&gt;
+   &lt;actions&gt;
+    &lt;action&gt;
+     &lt;path&gt;
+      &lt;member&gt;com.miriasystems.rules.JrulesResult void addToResult(java.lang.String)
+       &lt;?brl bomMember=ilr:E0877B07745E040100001F57FE016E65A8C0#1 ?&gt;
+      &lt;&#47;member&gt;
+      &lt;argument&gt;
+       &lt;value&gt;java.lang.String duplicateInvoiceCheckVendorNumberDate
+        &lt;?brl bomTypedValue=ilr:8780AA48075B03010000FCC4BF018265A8C0#1 ?&gt;
+       &lt;&#47;value&gt;
+      &lt;&#47;argument&gt;
+     &lt;&#47;path&gt;
+    &lt;&#47;action&gt;
+   &lt;&#47;actions&gt;
+  &lt;&#47;rule&gt;
+ &lt;&#47;ilr-syntax-tree&gt;
+&lt;&#47;ilr-xml-object&gt;
+</Basics.TokenModelDefinition.tokenModelText>
+</Language.BAL46>
+</Model.Namespace.contents>
+</Rule.DefaultRule>
+<Rule.DefaultRule xmi.id="a14"  xmi.uuid="ilr:E087001E556304010000DAE2C7016E65A8C0#1"  active="true"  historyVersion="false"  name="BuildingProductFreight2"  editable="true"  creationDate="9 Jun 2005 23:06:57 GMT"  lastModificationDate="9 Jun 2005 23:10:42 GMT"  currentDefinition="a15" >
+<Basics.BusinessElement.library>
+<Rule.TemplateLibrary name="Template Library"  href="ilr:2B80AA48075B03010000FCC4BF018265A8C0#1" />
+</Basics.BusinessElement.library>
+<Model.Namespace.contents>
+<Language.BAL46 xmi.id="a15"  xmi.uuid="ilr:E187001E556304010000DAE2C7016E65A8C0#1"  grammarFile="ilog\rules\brl\bal46\BAL.xsd"  javaClassname="ilog.rules.brl.IlrGrammarTokenModel"  name="BAL"  editable="true" >
+<Basics.TokenModelDefinition.tokenModelText>&lt;ilr-xml-object class=&quot;ilog.rules.brl.IlrGrammarTokenModel&quot;  version=&quot;1&quot; &gt;
+ &lt;ilr-syntax-tree&gt;
+  &lt;rule&gt;
+   &lt;conditions&gt;
+    &lt;condition&gt;
+     &lt;test&gt;
+      &lt;test-choice&gt;
+       &lt;path&gt;
+        &lt;?brl recursed ?&gt;
+        &lt;member&gt;java.lang.String boolean equals(java.lang.Object)
+         &lt;?brl bomMember=ilr:8E80AA48075B03010000FCC4BF018265A8C0#1 ?&gt;
+        &lt;&#47;member&gt;
+        &lt;object&gt;
+         &lt;member&gt;com.miriasystems.mp.domain.Document java.lang.String getGroup()
+          &lt;?brl bomMember=ilr:BB88C516B3D303010000FCC4BF018265A8C0#1 ?&gt;
+         &lt;&#47;member&gt;
+        &lt;&#47;object&gt;
+        &lt;argument&gt;
+         &lt;value&gt;java.lang.String BuildingProductFreight
+          &lt;?brl bomTypedValue=ilr:8780AA48075B03010000FCC4BF018265A8C0#1 ?&gt;
+         &lt;&#47;value&gt;
+        &lt;&#47;argument&gt;
+       &lt;&#47;path&gt;
+      &lt;&#47;test-choice&gt;
+     &lt;&#47;test&gt;
+    &lt;&#47;condition&gt;
+   &lt;&#47;conditions&gt;
+   &lt;actions&gt;
+    &lt;action&gt;
+     &lt;path&gt;
+      &lt;member&gt;com.miriasystems.rules.JrulesResult void addToResult(java.lang.String)
+       &lt;?brl bomMember=ilr:E0877B07745E040100001F57FE016E65A8C0#1 ?&gt;
+      &lt;&#47;member&gt;
+      &lt;argument&gt;
+       &lt;value&gt;java.lang.String shippingDocumentId
+        &lt;?brl bomTypedValue=ilr:8780AA48075B03010000FCC4BF018265A8C0#1 ?&gt;
+       &lt;&#47;value&gt;
+      &lt;&#47;argument&gt;
+     &lt;&#47;path&gt;
+    &lt;&#47;action&gt;
+    &lt;action&gt;
+     &lt;path&gt;
+      &lt;member&gt;com.miriasystems.rules.JrulesResult void addToResult(java.lang.String)
+       &lt;?brl bomMember=ilr:E0877B07745E040100001F57FE016E65A8C0#1 ?&gt;
+      &lt;&#47;member&gt;
+      &lt;argument&gt;
+       &lt;value&gt;java.lang.String vendorId
+        &lt;?brl bomTypedValue=ilr:8780AA48075B03010000FCC4BF018265A8C0#1 ?&gt;
+       &lt;&#47;value&gt;
+      &lt;&#47;argument&gt;
+     &lt;&#47;path&gt;
+    &lt;&#47;action&gt;
+   &lt;&#47;actions&gt;
+  &lt;&#47;rule&gt;
+ &lt;&#47;ilr-syntax-tree&gt;
+&lt;&#47;ilr-xml-object&gt;
+</Basics.TokenModelDefinition.tokenModelText>
+</Language.BAL46>
+</Model.Namespace.contents>
+</Rule.DefaultRule>
+<RuleFlow.RuleFlow xmi.id="a16"  xmi.uuid="ilr:E387001E556304010000DAE2C7016E65A8C0#1"  historyVersion="false"  name="Ruleflow"  editable="true"  creationDate="9 Jun 2005 23:10:45 GMT"  lastModificationDate="11 Jun 2005 00:12:55 GMT"  currentDefinition="a17" >
+<Model.Namespace.contents>
+<RuleFlow.BusinessRuleFlowDefinition xmi.id="a17"  xmi.uuid="ilr:E587001E556304010000DAE2C7016E65A8C0#1"  name="BusinessRuleFlowDefinition"  editable="true" >
+<RuleFlow.RuleFlowDefinition.graphModelText>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;SDM&gt;&lt;pseudoState id=&quot;ilr:EB87001E556304010000DAE2C7016E65A8C0#1&quot;&gt;&lt;property name=&quot;x&quot;&gt;100.0&lt;&#47;property&gt;&lt;property name=&quot;y&quot;&gt;42.0&lt;&#47;property&gt;&lt;property name=&quot;name&quot;&gt;Start&lt;&#47;property&gt;&lt;property name=&quot;kind&quot;&gt;initial&lt;&#47;property&gt;&lt;&#47;pseudoState&gt;&lt;ruleFlowState id=&quot;ilr:EC87001E556304010000DAE2C7016E65A8C0#1&quot;&gt;&lt;property name=&quot;x&quot;&gt;58.5&lt;&#47;property&gt;&lt;property name=&quot;y&quot;&gt;105.13281&lt;&#47;property&gt;&lt;property name=&quot;name&quot;&gt;RuleTask&lt;&#47;property&gt;&lt;property name=&quot;taskType&quot;&gt;RuleFlow.RuleTask&lt;&#47;property&gt;&lt;property name=&quot;taskName&quot;&gt;RuleTask&lt;&#47;property&gt;&lt;property name=&quot;taskId&quot;&gt;ilr:E987001E556304010000DAE2C7016E65A8C0#1&lt;&#47;property&gt;&lt;&#47;ruleFlowState&gt;&lt;finalState id=&quot;ilr:EE87001E556304010000DAE2C7016E65A8C0#1&quot;&gt;&lt;property name=&quot;x&quot;&gt;93.0&lt;&#47;property&gt;&lt;property name=&quot;y&quot;&gt;208.0&lt;&#47;property&gt;&lt;property name=&quot;name&quot;&gt;End&lt;&#47;property&gt;&lt;&#47;finalState&gt;&lt;transition from=&quot;ilr:EB87001E556304010000DAE2C7016E65A8C0#1&quot; id=&quot;ilr:EF87001E556304010000DAE2C7016E65A8C0#1&quot; islink=&quot;true&quot; to=&quot;ilr:EC87001E556304010000DAE2C7016E65A8C0#1&quot;&gt;&lt;property name=&quot;name&quot;&gt;RuleFlowTransition&lt;&#47;property&gt;&lt;&#47;transition&gt;&lt;transition from=&quot;ilr:EC87001E556304010000DAE2C7016E65A8C0#1&quot; id=&quot;ilr:F087001E556304010000DAE2C7016E65A8C0#1&quot; islink=&quot;true&quot; to=&quot;ilr:EE87001E556304010000DAE2C7016E65A8C0#1&quot;&gt;&lt;property name=&quot;name&quot;&gt;RuleFlowTransition_2&lt;&#47;property&gt;&lt;&#47;transition&gt;&lt;&#47;SDM&gt;</RuleFlow.RuleFlowDefinition.graphModelText>
+</RuleFlow.BusinessRuleFlowDefinition>
+<RuleFlow.RuleTask xmi.id="a18"  xmi.uuid="ilr:E987001E556304010000DAE2C7016E65A8C0#1"  firing="allrules"  ordering="dynamic"  algorithm="default"  historyVersion="false"  name="RuleTask"  editable="true"  creationDate="9 Jun 2005 23:10:51 GMT"  lastModificationDate="11 Jun 2005 00:12:55 GMT"  currentDefinition="a19" >
+<RuleFlow.RuleTask.rules>
+<Rule.DefaultRule name="BAL Rule"  xmi.idref="a12"  xmi.uuid="ilr:CF82449F2062040100002B691C006E65A8C0#1" />
+</RuleFlow.RuleTask.rules>
+<RuleFlow.Task.action>
+<RuleFlow.TaskAction xmi.idref="a20"  xmi.uuid="ilr:ED87001E556304010000DAE2C7016E65A8C0#1" />
+</RuleFlow.Task.action>
+<Model.Namespace.contents>
+<RuleFlow.RuleTaskDefinition xmi.id="a19"  xmi.uuid="ilr:EA87001E556304010000DAE2C7016E65A8C0#1"  name="RuleTaskDefinition"  editable="true" >
+</RuleFlow.RuleTaskDefinition>
+</Model.Namespace.contents>
+</RuleFlow.RuleTask>
+<RuleFlow.TaskInitialActions xmi.id="a21"  xmi.uuid="ilr:F187001E556304010000DAE2C7016E65A8C0#1"  historyVersion="false"  name="Initial Actions"  editable="true"  creationDate="9 Jun 2005 23:12:06 GMT"  lastModificationDate="11 Jun 2005 00:26:47 GMT"  currentDefinition="a22" >
+<Model.Namespace.contents>
+<RuleFlow.ScriptIRL xmi.id="a22"  xmi.uuid="ilr:F287001E556304010000DAE2C7016E65A8C0#1"  text="result = new JrulesResult();
+context.insert(result);
+context.insert(document);"  name="ScriptIRL"  editable="true" >
+</RuleFlow.ScriptIRL>
+</Model.Namespace.contents>
+</RuleFlow.TaskInitialActions>
+</Model.Namespace.contents>
+<Behavioral_Elements.State_Machines.StateMachine.top>
+<Behavioral_Elements.State_Machines.CompositeState xmi.id="a23"  xmi.uuid="ilr:E487001E556304010000DAE2C7016E65A8C0#1"  isConcurrent="false"  editable="true" >
+<Behavioral_Elements.State_Machines.CompositeState.subvertex>
+<Behavioral_Elements.State_Machines.PseudoState xmi.id="a24"  xmi.uuid="ilr:EB87001E556304010000DAE2C7016E65A8C0#1"  kind="initial"  name="Start"  editable="true" >
+<Behavioral_Elements.State_Machines.StateVertex.outgoing>
+<RuleFlow.RuleFlowTransition name="RuleFlowTransition"  xmi.idref="a25"  xmi.uuid="ilr:EF87001E556304010000DAE2C7016E65A8C0#1" />
+</Behavioral_Elements.State_Machines.StateVertex.outgoing>
+</Behavioral_Elements.State_Machines.PseudoState>
+<RuleFlow.RuleFlowState xmi.id="a26"  xmi.uuid="ilr:EC87001E556304010000DAE2C7016E65A8C0#1"  isDynamic="false"  name="RuleTask"  editable="true" >
+<Behavioral_Elements.State_Machines.State.entry>
+<RuleFlow.TaskAction xmi.id="a20"  xmi.uuid="ilr:ED87001E556304010000DAE2C7016E65A8C0#1"  isAsynchronous="false"  editable="true"  task="a18" >
+</RuleFlow.TaskAction>
+</Behavioral_Elements.State_Machines.State.entry>
+<Behavioral_Elements.State_Machines.StateVertex.outgoing>
+<RuleFlow.RuleFlowTransition name="RuleFlowTransition_2"  xmi.idref="a27"  xmi.uuid="ilr:F087001E556304010000DAE2C7016E65A8C0#1" />
+</Behavioral_Elements.State_Machines.StateVertex.outgoing>
+<Behavioral_Elements.State_Machines.StateVertex.incoming>
+<RuleFlow.RuleFlowTransition name="RuleFlowTransition"  xmi.idref="a25"  xmi.uuid="ilr:EF87001E556304010000DAE2C7016E65A8C0#1" />
+</Behavioral_Elements.State_Machines.StateVertex.incoming>
+</RuleFlow.RuleFlowState>
+<Behavioral_Elements.State_Machines.FinalState xmi.id="a28"  xmi.uuid="ilr:EE87001E556304010000DAE2C7016E65A8C0#1"  name="End"  editable="true" >
+<Behavioral_Elements.State_Machines.StateVertex.incoming>
+<RuleFlow.RuleFlowTransition name="RuleFlowTransition_2"  xmi.idref="a27"  xmi.uuid="ilr:F087001E556304010000DAE2C7016E65A8C0#1" />
+</Behavioral_Elements.State_Machines.StateVertex.incoming>
+</Behavioral_Elements.State_Machines.FinalState>
+</Behavioral_Elements.State_Machines.CompositeState.subvertex>
+</Behavioral_Elements.State_Machines.CompositeState>
+</Behavioral_Elements.State_Machines.StateMachine.top>
+<Behavioral_Elements.State_Machines.StateMachine.transitions>
+<RuleFlow.RuleFlowTransition xmi.id="a25"  xmi.uuid="ilr:EF87001E556304010000DAE2C7016E65A8C0#1"  name="RuleFlowTransition"  editable="true"  source="a24"  target="a26" >
+</RuleFlow.RuleFlowTransition>
+<RuleFlow.RuleFlowTransition xmi.id="a27"  xmi.uuid="ilr:F087001E556304010000DAE2C7016E65A8C0#1"  name="RuleFlowTransition_2"  editable="true"  source="a26"  target="a28" >
+</RuleFlow.RuleFlowTransition>
+</Behavioral_Elements.State_Machines.StateMachine.transitions>
+</RuleFlow.RuleFlow>
+</Model.Namespace.contents>
+</Rule.RulePackage>
+</XMI.content>
+</XMI>

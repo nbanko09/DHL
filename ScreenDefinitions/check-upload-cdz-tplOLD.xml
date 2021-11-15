@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<propertyTemplate
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/template.xsd">
+
+	<labels default="en">
+		<locale name="en">
+		<label name="vendorId" value="Vendor Code"/>
+		<label name="department" value="Division"/>
+        </locale>
+	</labels>
+		
+	<section name="doc" collapsible="false" collapsed="false">		
+		<properties>
+			<textArea row="1" col="1-2" name="tbdComment1" styleClass="comment5"/> 
+			<output row="2" col="1-2" name="processInformation.previousComment" readonly="true" styleClass="comment" escapeXml="false"/>
+			<valueAlias row="3" col="1-2" name="processInformation.queueName" styleClass="fulllookup" readonly="true"/>
+		</properties>
+			<actions>
+			<button name="forward" command="forward" readonly="false" type="submit" isAnchored="false" title="forwardTitle" styleClass="button70"/>
+			</actions>
+	</section>
+
+	<section name="requestCheck" visible="true" collapsible="false" collapsed="false">
+		<properties>
+			<!--text row="1" col="1" name="processCode" defaultValue="R-CDZ" forceDefault="true" readonly="true" /--> <!--Request Type-->
+			<dynamicDropDown row="1" col="2" name="group" readonly="false" providerClass="com.miriasystems.ui.providers.GroupsChoiceListProvider" validation="required"/> <!--Control Station-->			
+		</properties>
+		<actions>
+			<!-- The following set of actions are standard ManagedPay and should be included relatively unmodified from the baseline version in most templates -->
+			<!--postingReplyAction name="postings" icon="/images/ico-paid-w24.png" width="24" height="24" link="javascript:openPostingReplyWindow('$contextPath$', '$wobNumber$')" visible="true"/-->
+			<!--iconAction name="editRouting" icon="/images/ico-route-w24.png" width="24" height="24" readOnlyLink="javascript:openViewRoutingWindow('$contextPath$', '$wobNumber$', 'nonPo')" link="javascript:openRoutingWindow('$contextPath$', '$wobNumber$', 'nonPo', 'DEV-APP1_DEV2_MPSys_Dev')" alwaysActive="true" readonly="false"/-->			
+			<!--iconAction name="email" icon="/images/ico-mail-w24.png" width="24" height="24" link="javascript:openSendEmailWindow('$contextPath$', '$imageGUID$', '$wobNumber$')" alwaysActive="true"/-->
+			<!--iconAction name="attachments" icon="/images/ico-attachment-w24.png" width="24" height="24" link="javascript:openAttachmentsWindow('$contextPath$', '$wobNumber$')" alwaysActive="true"/-->
+			<!--attachmentCountAction name="attachmentCount" visible="true"/-->
+			<!--iconAction name="vendorHistory" icon="/images/ico-vhistory-w24.png" width="24" height="24" link="javascript:openVendorHistoryWindow('$contextPath$', '$wobNumber$')" alwaysActive="true"/-->
+			<iconAction name="print" icon="/images/ico-print-w24.png" width="24" height="24" link="javascript:window.print()" visible="true" alwaysActive="true"/>
+			<!--iconAction name="barcode" icon="/images/ico-barcode-w24.png" width="24" height="24" link="javascript:openPrintBarcodeWindow('$contextPath$', '$uploadRef$', '$seqId$')" alwaysActive="true"/-->
+			<iconAction name="statusWindow" icon="/images/ico-history-w24.png" width="24" height="24" link="javascript:openStatusWindow('$seqId$', '$contextPath$');return false;" alwaysActive="true"/>
+			<iconAction name="help" icon="/images/ico-help-w24.png" width="24" height="24" link="javascript:openHelp('User_Interfaces/Working_with_Invoices.htm', '$contextPath$')" alwaysActive="true"/>
+		</actions>
+	</section>
+	
+	<section name="invoiceDetails" visible="true" collapsible="false" collapsed="false">
+		<properties>
+			<lookup row="1" col="1" name="requesterName" readonly="true" inputReadonly="true" lookupType="lookup.CDZRequester"/>	
+			<text row="1" col="2" name="requester.email" readonly="true"/>
+			<text row="1" col="3" name="tbdString5" readonly="false" validation="required"/><!--Broker Filer-->
+	        <text row="2" col="1" name="tbdString6" readonly="false" validation="required"/><!--File Number-->
+			<text row="2" col="2" name="tbdString7" readonly="false" validation="required"/><!--Invoice Suffix-->
+			<text row="2" col="3" name="vendorId" readonly="false" validation="required"/> <!--Vendor Number-->
+			<currency row="3" col="1" name="grossAmount" readonly="false" validation="required"/><!--check amount-->
+			<text row="3" col="2" name="department" readonly="false" validation="required"/><!--division-->
+			<text row="3" col="3" name="number" readonly="false" validation="required"/> <!--vendor ref num-->
+			<text row="4" col="1" name="tbdString10" readonly="false" validation="required"/> <!--chargeCode-->
+			<text row="4" col="2" name="tbdString8" readonly="false" validation="required"/> <!--Customer-->
+		</properties>
+	</section>	
+
+	<hiddenFields>
+			<hidden name="requesterId" validation="required"/>
+			<hidden name="postingERPId" defaultValue="ERP1"/>
+			<hidden name="vendorERPId" defaultValue="ERP1"/>
+			<hidden name="scanVendorName"/>
+        	<hidden name="newBatchNumber"/>
+        	<hidden name="paymentTermERPId" defaultValue="ERP1"/>
+        	<hidden name="processInformation.comment"/>
+			<hidden name="scanSource" defaultValue="Direct Entry"/>
+			<hidden name="tbdString9" defaultValue="Manual Upload"/>
+        </hiddenFields>
+	<processors>	
+    </processors>
+</propertyTemplate>

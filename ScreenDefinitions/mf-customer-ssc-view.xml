@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="all-rescan-view" template="masterfile-customer-readonly-tpl.xml"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/view.xsd">
+
+    <labels default="en">
+        <locale name="en">
+            <label name="forward" value="Approve"/>
+        </locale>
+    </labels>
+    
+    <property-overrides>
+        <textArea name="voucherComments" defaultValue="" forceDefault="true"/>
+        <textArea name="tbdComment1" readonly="true"/>
+    </property-overrides>
+
+    <hidden-overrides>
+        <hidden name="processInformation.response" defaultValue="Complete"/>
+    </hidden-overrides>
+
+    <section-overrides>
+            <section name="shipperInfo" visible="false"/>
+           <section name="billTo" visible="false"/>
+     </section-overrides>
+
+     <documentRejection>
+		  <rejectionReasons>
+		  <reason name="Reject" commentsRequired="true" note="message.terminate">
+		  </reason>
+		  <reason name="Return to Requester" commentsRequired="true" note="message.requester">
+		  </reason>
+		  </rejectionReasons>
+    </documentRejection>
+
+</view>

@@ -1,0 +1,50 @@
+<?xml version="1.0"  encoding="ISO-8859-1"  ?>
+<!DOCTYPE XMI>
+<XMI xmi.version="1.2" >
+<XMI.header>
+<XMI.documentation>
+<XMI.exporter>Ilog Rule Kit</XMI.exporter>
+<XMI.exporterVersion>4.1</XMI.exporterVersion>
+</XMI.documentation>
+<XMI.model href="ilr:0280AA48075B03010000FCC4BF018265A8C0#1"  xmi.name="Tool"  xmi.version="1.2" />
+<XMI.metamodel href="ilr:078248E58DCDEF00000099337400700110AC#1"  xmi.name="Tool"  xmi.version="1.2" />
+</XMI.header>
+<XMI.content>
+<Rule.TemplateLibrary xmi.id="a1"  xmi.uuid="ilr:6882AA48075B03010000FCC4BF018265A8C0#1"  isRoot="false"  isLeaf="false"  isAbstract="false"  name="Query Library"  editable="true"  creationDate="19 Apr 2005 15:15:40 GMT"  lastModificationDate="19 Apr 2005 15:15:40 GMT" >
+<Model.Namespace.contents>
+<Rule.DefaultRule xmi.id="a2"  xmi.uuid="ilr:6782AA48075B03010000FCC4BF018265A8C0#1"  active="true"  historyVersion="false"  name="Rule Query"  editable="true"  creationDate="19 Apr 2005 15:15:40 GMT"  lastModificationDate="19 Apr 2005 15:15:40 GMT"  currentDefinition="a3" >
+<Basics.BusinessElement.library>
+<Rule.TemplateLibrary name="Query Library"  href="ilr:6882AA48075B03010000FCC4BF018265A8C0#1" />
+</Basics.BusinessElement.library>
+<Model.Namespace.contents>
+<Language.BQL xmi.id="a3"  xmi.uuid="ilr:6B82AA48075B03010000FCC4BF018265A8C0#1"  grammarFile="ilog\rules\brl\BQL.xsd"  javaClassname="ilog.rules.repository.brm.query.IlrBQLTokenModel"  name="BQL"  editable="true" >
+<Basics.TokenModelDefinition.tokenModelText>&lt;ilr-xml-object class=&quot;ilog.rules.repository.brm.query.IlrBQLTokenModel&quot;  version=&quot;1&quot; &gt;
+ &lt;ilr-xml-property name=&quot;template&quot;  type=&quot;string&quot; &gt;true&lt;&#47;ilr-xml-property&gt;
+ &lt;ilr-syntax-tree&gt;
+  &lt;rule&gt;
+   &lt;?brl multipleFrozen=class-condition ?&gt;
+   &lt;?brl optionalFrozen=else-actions ?&gt;
+   &lt;class-condition&gt;
+    &lt;class&gt;ilog.rules.repository.brm.IlrBrmDefaultRule
+     &lt;?brl frozen ?&gt;
+     &lt;?brl bomClass=ilr:788793F7D9DCF200000028614700230D10AC ?&gt;
+    &lt;&#47;class&gt;
+   &lt;&#47;class-condition&gt;
+   &lt;actions&gt;
+    &lt;action&gt;
+     &lt;member&gt;ilog.rules.repository.brm.IlrBrmDefaultRule void insertAsQueryResult()
+      &lt;?brl bomMember=ilr:7B8793F7D9DCF200000028614700230D10AC ?&gt;
+     &lt;&#47;member&gt;
+    &lt;&#47;action&gt;
+   &lt;&#47;actions&gt;
+  &lt;&#47;rule&gt;
+ &lt;&#47;ilr-syntax-tree&gt;
+&lt;&#47;ilr-xml-object&gt;
+</Basics.TokenModelDefinition.tokenModelText>
+</Language.BQL>
+</Model.Namespace.contents>
+</Rule.DefaultRule>
+</Model.Namespace.contents>
+</Rule.TemplateLibrary>
+</XMI.content>
+</XMI>

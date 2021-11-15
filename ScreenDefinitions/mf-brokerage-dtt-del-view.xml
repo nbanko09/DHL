@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="all-rescan-view" template="masterfile-brokerage-del-tpl.xml"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/view.xsd">
+
+    <labels default="en">
+        <locale name="en">
+            <label name="forward" value="Complete"/>
+        </locale>
+    </labels>
+    
+    <property-overrides>
+     	<text name="subType" readonly="true"/> <!--Request Type-->
+    	<text name="docPriority" readonly="true"/> <!--Priority-->
+    	<text name="group" readonly="true"/>
+    	<text name="custom4.contactNo" readonly="true"/> <!--Contact No-->
+    	<text name="custom4.chbAccountNo" readonly="true"/> <!--Account code-->
+    	<text name="custom4.name" readonly="true"/> <!--Customer Name-->
+    	<text name="tbdComment1" readonly="true"/> <!--Reason-->
+    	<text name="custom4.name" readonly="true"/>
+    </property-overrides>
+
+    <hidden-overrides>
+        <hidden name="processInformation.response" defaultValue="Complete"/>
+    </hidden-overrides>
+    
+    <action-overrides>
+        	
+   </action-overrides>
+
+     <documentRejection>
+		 <rejectionReasons>
+			   <reason name="Return to Requester" commentsRequired="true" note="message.requester">
+			   </reason>
+			   <reason name="Send For Approval" commentsRequired="true" note="message.approver">
+			   </reason>
+		  </rejectionReasons>
+     </documentRejection>
+
+</view>

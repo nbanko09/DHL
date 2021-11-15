@@ -1,0 +1,457 @@
+<maxlengths xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/maxlengths.xsd">
+	<headerProperties>
+		<property name="processInformation.comment" maxlength="250"/>
+		<property name="apDocHeadVarchar1" maxlength="64"/>
+		<property name="apDocHeadVarchar2" maxlength="64"/>
+		<property name="apDocHeadVarchar3" maxlength="64"/>
+		<property name="apDocHeadVarchar4" maxlength="64"/>
+		<property name="docNumber" maxlength="20"/> 
+		<property name="docImageGUID" maxlength="40"/>
+		<property name="docType" maxlength="16"/>
+		<property name="docSubType" maxlength="16"/>
+		<property name="docGroup" maxlength="16"/>
+		<property name="docStatus" maxlength="20"/>
+		<property name="docDepartment" maxlength="20"/>
+		<property name="poReference" maxlength="20"/>
+		<property name="businessCode" maxlength="16"/>
+		<property name="currencySeqId" maxlength="3"/>
+		
+
+		<!--  start header properties -->
+		
+		<property name="seqId" maxlength="16"/>
+		<property name="poId" maxlength="32"/> 
+		<property name="companyCode" maxlength="16"/>
+		<property name="vendorId" maxlength="16"/>
+		<property name="vendorERPId" maxlength="16"/>
+		<property name="currencyId" maxlength="3"/>
+		<property name="taxId" maxlength="16"/>
+		<property name="taxERPId" maxlength="16"/>
+		<property name="paymentTermId" maxlength="8"/>
+		<property name="paymentTermERPId" maxlength="16"/>
+		<property name="paymentTypeId" maxlength="16"/>
+		<property name="paymentTypeERPId" maxlength="16"/>
+		<property name="postingERPId" maxlength="64"/>
+		<property name="erpDocId" maxlength="64"/>
+		<property name="ceLibraryId" maxlength="40"/>
+		<property name="ceDocumentId" maxlength="40"/>
+		<property name="wobNumber" maxlength="40"/>
+		<property name="number" maxlength="20"/>  <!--DB=32Char Reset from 12 in the baseline-->
+		<property name="shippingDocumentId" maxlength="32"/>
+		<property name="type" maxlength="16"/>
+		<property name="subType" maxlength="16"/>
+		<property name="group" maxlength="16"/>
+		<property name="date" maxlength="16"/>
+		<property name="receiveDate" maxlength="16"/>
+		<property name="baselineDate" maxlength="16"/>
+		<property name="dueDate" maxlength="16"/>
+		<property name="discountDueDate" maxlength="16"/>
+		<property name="scanVendorName" maxlength="64"/>
+		<property name="scanVendorAddress1" maxlength="64"/>
+		<property name="scanVendorAddress2" maxlength="64"/>
+		<property name="scanAmount" maxlength="19"/>
+		<property name="alternatevendor" maxlength="5"/>
+		<property name="statusCode" maxlength="16"/>
+		<property name="docPriority" maxlength="16"/>
+		<property name="sensitivity" maxlength="16"/>
+		<property name="department" maxlength="4"/>	 <!-- DHL Departments are 4 chars, the DB Max 32 -->
+		<property name="businessUnit" maxlength="36"/>   <!-- Max 36 -->
+		<property name="grossAmount" maxlength="19"/>
+		<property name="taxAmount1" maxlength="19"/>
+		<property name="taxAmount2" maxlength="19"/>
+		<property name="taxAmount3" maxlength="19"/>
+		<property name="taxAmount4" maxlength="19"/>
+		<property name="netAmount" maxlength="19"/>
+		<property name="freightAmount1" maxlength="19"/>
+		<property name="freightAmount2" maxlength="19"/>
+		<property name="discountAmount" maxlength="19"/>
+		<property name="scanDate" maxlength="16"/>
+		<property name="scanSite" maxlength="32"/>
+		<property name="scanBy" maxlength="64"/>
+		<property name="scanSource" maxlength="32"/>
+		<property name="scanType" maxlength="32"/>
+		<property name="batchNumber" maxlength="64"/>
+		<property name="batchOrdinal" maxlength="16"/>
+		<property name="newBatchNumber" maxlength="64"/>
+		<property name="newBatchOrdinal" maxlength="16"/>
+		<property name="requesterId" maxlength="150"/>
+		<property name="requesterName" maxlength="64"/>
+		<property name="routingCode" maxlength="16"/>
+		<property name="processCode" maxlength="20"/>
+		<property name="afeNumber" maxlength="7"/>   <!-- updated to 7 - since some screens store GL Account Code in this field -->
+		<property name="buyerId" maxlength="64"/>
+		<property name="buyerName" maxlength="64"/>
+		<property name="separateCheck" maxlength="5"/>
+		<property name="specialHandlingCode" maxlength="500"/>
+		<property name="checkStubMessage" maxlength="10"/>
+		<property name="voucherComments" maxlength="800"/>
+		<property name="retentionBoxId" maxlength="32"/>
+		<property name="createDate" maxlength="24"/>
+		<property name="lastModifiedDate" maxlength="24"/>
+		<property name="rejectionReason" maxlength="230"/>
+		<property name="tbdDate1" maxlength="16"/>
+		<property name="tbdDate2" maxlength="16"/>
+		<property name="tbdNumber1" maxlength="16"/>
+		<property name="tbdNumber2" maxlength="16"/>
+		<property name="tbdCurrency1" maxlength="19"/>
+		<property name="tbdCurrency2" maxlength="19"/>
+		<property name="tbdQuantity1" maxlength="23"/>
+		<property name="tbdQuantity2" maxlength="23"/>
+		<property name="tbdString1" maxlength="64"/>
+		<property name="tbdString2" maxlength="32"/>  <!-- legacy DHL has this set to 3 - but data moved to tbdSting12 -->
+		<property name="tbdString3" maxlength="64"/>
+		<property name="tbdString4" maxlength="2"/>  <!-- legacy DHL has this set to 2 - some screens store Location in this field -->
+		<property name="tbdString5" maxlength="13"/>
+	    <property name="tbdString6" maxlength="10"/>
+		<property name="tbdString7" maxlength="2"/>
+		<property name="tbdString8" maxlength="10"/>
+		<property name="tbdString9" maxlength="14"/>
+		<property name="tbdString10" maxlength="4"/>
+		<property name="tbdString12" maxlength="3"/>  <!-- legacy DHL has this set to 3 - some screens store Function in this field -->
+		<property name="custom2.name2" maxlength="31"/>
+		<property name="custom2.address1" maxlength="31"/>
+		<property name="custom2.address2" maxlength="31"/>
+		<property name="custom2.address2" maxlength="31"/>
+		<property name="custom2.address4" maxlength="25"/>
+		<property name="custom2.postalCode" maxlength="9"/>
+		<property name="custom2.taxId" maxlength="11"/>
+		<property name="custom1.tbdString3" maxlength="8"/>
+		<property name="custom1.tbdString10" maxlength="10"/>
+		<property name="custom1.tbdString12" maxlength="10"/>
+		<property name="custom1.tbdString19" maxlength="30"/>
+		<property name="custom1.tbdString24" maxlength="30"/>
+		<property name="custom1.tbdComment1" maxlength="500"/>
+		<property name="custom1.tbdComment3" maxlength="140"/>
+		<property name="custom1.tbdComment4" maxlength="140"/>
+		<property name="custom1.tbdString9" maxlength="32"/>
+		<property name="custom1.tbdString5" maxlength="32"/>
+		<property name="custom1.tbdString6" maxlength="32"/>
+		<property name="custom1.tbdString7" maxlength="32"/>
+		<property name="custom1.tbdString8" maxlength="32"/>
+		<property name="custom1.tbdString11" maxlength="32"/>
+		<property name="custom1.tbdString13" maxlength="32"/>
+		<property name="custom1.tbdString14" maxlength="32"/>
+		<property name="custom1.tbdString15" maxlength="32"/>
+		<property name="custom1.tbdString16" maxlength="32"/>
+		<property name="custom1.tbdString17" maxlength="32"/>
+		<property name="custom1.tbdString18" maxlength="32"/>
+		<property name="custom1.tbdString19" maxlength="32"/>
+		<property name="custom1.tbdString21" maxlength="32"/>
+		<property name="custom1.tbdString22" maxlength="32"/>
+		<property name="custom1.tbdString23" maxlength="32"/>
+
+		
+		
+<!-- legacy DHL M$P custom properties -->
+		<!-- MP_CUSTOM_MASTERFILE_CUSTOMER data fields -->
+        <property name="custom4.accountType" maxlength="20"/>
+		<property name="custom4.product" maxlength="10"/>  <!-- added DHL01-88 -->
+		<property name="custom4.name" maxlength="30"/>
+		<property name="custom4.address1" maxlength="35"/>
+		<property name="custom4.address2" maxlength="35"/>
+		<property name="custom4.fao" maxlength="35"/>
+		<property name="custom4.city" maxlength="35"/>
+		<property name="custom4.state" maxlength="25"/>
+		<property name="custom4.postalCode" maxlength="9"/>
+		<property name="custom4.country" maxlength="40"/>
+		<property name="custom4.phone" maxlength="15"/>
+		<property name="custom4.fax" maxlength="15"/>
+		<property name="custom4.ein" maxlength="20"/>
+		<property name="custom4.contactName" maxlength="30"/>
+		<property name="custom4.contactPhone" maxlength="15"/>
+		<property name="custom4.billToAccount" maxlength="40"/>
+		<property name="custom4.billToAccountCode" maxlength="10"/>
+		<property name="custom4.poaLocation" maxlength="64"/>
+		<property name="custom4.poaFl" maxlength="1"/>  <!-- added DHL01-88 -->
+		<property name="custom4.salesRep" maxlength="64"/>
+		<property name="custom4.linkToCorpContract" maxlength="16"/>
+		<property name="custom4.linkToCorpAccount" maxlength="16"/>
+		<property name="custom4.linkToArParent" maxlength="16"/>
+		<property name="custom4.brokerAccount" maxlength="20"/>
+		<property name="custom4.accountNumber" maxlength="16"/>
+		<property name="custom4.creditUpdate" maxlength="20"/>
+		<property name="custom4.contactNo" maxlength="15"/>
+		<property name="custom4.controlStation" maxlength="3"/>
+		<property name="custom4.contractNo" maxlength="16"/>
+		<property name="custom4.brokerName" maxlength="45"/>
+		<property name="custom4.arGrandParent" maxlength="40"/>
+		<property name="custom4.arParent" maxlength="40"/>
+		<property name="custom4.accountStatus" maxlength="16"/>
+		<property name="custom4.billingLocation" maxlength="40"/>
+		<property name="custom4.collectorCode" maxlength="16"/>
+		<property name="custom4.freightPaymentCompany" maxlength="40"/>  <!-- added DHL01-88 -->
+		<property name="custom4.languangePreference" maxlength="16"/>
+		<property name="custom4.lineOfBusiness" maxlength="16"/>
+		<property name="custom4.customerPaymentTerms" maxlength="16"/>
+		<property name="custom4.duns" maxlength="40"/>
+		<property name="custom4.accountingContact" maxlength="32"/>
+		<property name="custom4.scac" maxlength="4"/>
+		<property name="custom4.mailToAccount" maxlength="30"/>  <!-- added DHL01-88 -->
+		<property name="custom4.contactEmail" maxlength="30"/>
+		<property name="custom4.chbAccountNo" maxlength="199"/>
+		<property name="custom4.chbPaFao" maxlength="35"/>
+		<property name="custom4.chbPaAddress1" maxlength="35"/>
+		<property name="custom4.chbPaAddress2" maxlength="35"/>
+		<property name="custom4.chbPaCity" maxlength="30"/>
+		<property name="custom4.chbPaState" maxlength="25"/>
+		<property name="custom4.chbPaZip" maxlength="9"/>
+		<property name="custom4.chbPaCountry" maxlength="30"/>
+		<property name="custom4.chbIrsSs" maxlength="12"/>
+		<property name="custom4.chbPhone" maxlength="15"/>
+		<property name="custom4.chbFax" maxlength="15"/>
+		<property name="custom4.chbContactNo" maxlength="2"/>
+		<property name="custom4.chbContactName" maxlength="30"/>
+		<property name="custom4.chbContactTitle" maxlength="10"/>
+		<property name="custom4.chbContactPhone" maxlength="15"/>
+		<property name="custom4.chbContactFax" maxlength="15"/>
+		<property name="custom4.chbContactCell" maxlength="15"/>
+		<property name="custom4.chbContactPager" maxlength="15"/>
+		<property name="custom4.chbContactPagerPin" maxlength="6"/>
+		<property name="custom4.chbContactEmail" maxlength="40"/>
+		<property name="custom4.chbContactPhone2" maxlength="15"/>
+		<property name="custom4.chbContactFax2" maxlength="15"/>
+		<property name="custom4.chbContactEmergencyPhone" maxlength="15"/>
+		<property name="custom4.chbContactEmail2" maxlength="40"/>
+		<property name="custom4.chbTempPerm" maxlength="1"/>  <!-- added DHL01-88 -->
+		<property name="custom4.chbFdaLastName" maxlength="30"/>
+		<property name="custom4.chbFdaFirstName" maxlength="30"/>
+		<property name="custom4.chbFdaFirmType" maxlength="1"/>
+		<property name="custom4.chbNotes" maxlength="500"/>
+		<property name="custom4.chbActivityLevel" maxlength="1"/>  <!-- added DHL01-88 -->
+		<property name="custom4.chbPercentBusiness" maxlength="2"/>  <!-- added DHL01-88 -->
+		<property name="custom4.chbChargeProfile" maxlength="1"/>  <!-- updated from 16 to 1 for DHL01-88 -->
+		<property name="custom4.chbDivision" maxlength="4"/>
+		<property name="custom4.chbTibMessage1" maxlength="2"/>  <!-- updated from 4 to 2 for DHL01-88 -->
+		<property name="custom4.chbTibMessage2" maxlength="2"/>  <!-- updated from 4 to 2 for DHL01-88 -->
+		<property name="custom4.chbDoFrCharge" maxlength="20"/>  
+		<property name="custom4.chbDeliverTo" maxlength="10"/>
+		<property name="custom4.chbConsignee" maxlength="20"/>
+		<property name="custom4.chbLocation" maxlength="20"/>
+		<property name="custom4.chbExamLoc" maxlength="4"/>
+		<property name="custom4.chbTruck" maxlength="8"/>
+		<property name="custom4.chbBrokerTeam" maxlength="20"/>
+		<property name="custom4.chbMid" maxlength="18"/>
+		<property name="custom4.chbTarrifNumber" maxlength="12"/>
+		<property name="custom4.chbCOrigin" maxlength="10"/>
+		<property name="custom4.chbCExport" maxlength="10"/>
+		<property name="custom4.chbEntryType" maxlength="2"/>
+		<property name="custom4.chbMot" maxlength="20"/>
+		<property name="custom4.chbPortOfEntry" maxlength="4"/>
+		<property name="custom4.chbPortOfLading" maxlength="10"/>
+		<property name="custom4.chb9802" maxlength="20"/>
+		<property name="custom4.chbAitAin" maxlength="20"/>
+		<property name="custom4.chbDoMessage1" maxlength="4"/>
+		<property name="custom4.chbDoMessage2" maxlength="4"/>
+		<property name="custom4.chbFedRegNumber" maxlength="20"/>
+		<property name="custom4.chbIsfBillTo" maxlength="20"/>
+		<property name="custom4.chbIsfContact" maxlength="40"/>  <!-- updated from 40 to 30 for DHL01-88 -->
+		<property name="custom4.chbIsfTitle" maxlength="10"/>
+		<property name="custom4.chbIsfEmail" maxlength="40"/>
+		<property name="custom4.chbIsfPhone" maxlength="15"/>
+		<property name="custom4.chbIsfMailNotification" maxlength="80"/>  <!-- added DHL01-88 -->
+		<property name="custom4.chbIsfAcceptanceMessage" maxlength="80"/>
+		<property name="custom4.chbIsfRejectedMessage" maxlength="80"/>
+		<property name="custom4.chbIsfAcceptedWarning" maxlength="80"/>
+		<property name="custom4.chbIsfStatusMessages" maxlength="80"/>
+		<property name="custom4.chbIsfOtherInstructions" maxlength="500"/>
+		<property name="custom4.chbLabel1" maxlength="300"/>  <!-- added DHL01-88 -->
+		<property name="custom4.chbLabel2" maxlength="300"/>  <!-- added DHL01-88 -->
+		<property name="custom4.chbLabel3" maxlength="300"/>  <!-- added DHL01-88 -->
+		<property name="custom4.chbLabel4" maxlength="300"/>  <!-- added DHL01-88 -->
+		<property name="custom4.chbDBA" maxlength="55"/>
+		<property name="custom4.chbAKA" maxlength="55"/>
+		<property name="custom4.chbOtherFee" maxlength="64"/>  <!-- added DHL01-88 -->
+		<property name="custom4.chbIsfFees" maxlength="40"/>
+		<property name="custom4.chbCustomerProfile" maxlength="16"/>
+		<property name="custom4.chbSpecificProfile" maxlength="16"/>
+		<!-- MP_CUSTOM_MASTERFILE_VENDOR data fields -->
+		<property name="custom5.accountType" maxlength="20"/>
+		<property name="custom5.product" maxlength="10"/>  <!-- added DHL01-88 -->
+		<property name="custom5.name" maxlength="64"/>
+		<property name="custom5.address1" maxlength="64"/>
+		<property name="custom5.address2" maxlength="64"/>
+		<property name="custom5.fao" maxlength="64"/>
+		<property name="custom5.city" maxlength="64"/>
+		<property name="custom5.state" maxlength="25"/>
+		<property name="custom5.postalCode" maxlength="10"/>
+		<property name="custom5.country" maxlength="40"/>
+		<property name="custom5.phone" maxlength="15"/>
+		<property name="custom5.fax" maxlength="15"/>
+		<property name="custom5.taxId" maxlength="20"/>
+		<property name="custom5.contactName" maxlength="40"/>
+		<property name="custom5.contactPhone" maxlength="15"/>
+		<property name="custom5.paymentTerms" maxlength="16"/>
+		<property name="custom5.deleteReason" maxlength="64"/>  <!-- added DHL01-88 -->
+		<property name="custom5.accountNumber" maxlength="20"/>  <!-- added DHL01-88 -->
+		<property name="custom5.contactNo" maxlength="15"/>  <!-- added DHL01-88 -->
+		<property name="custom5.controlStation" maxlength="10"/>  <!-- added DHL01-88 -->
+		<property name="custom5.accountingAccountNumber" maxlength="20"/>
+		<property name="custom5.message1" maxlength="255"/>  <!-- added DHL01-88 -->
+		<property name="custom5.message2" maxlength="255"/>  <!-- added DHL01-88 -->
+		<!-- MP_CUSTOM_MFC_EXT1 data fields -->
+		<property name="custom6.chbPortcode" maxlength="10"/>  <!-- updated from 15 to 10 for DHL01-88 -->
+		<property name="custom6.chbPoaReq" maxlength="15"/>
+		<property name="custom6.chbPoaTime" maxlength="3"/>  <!-- updated from 15 to 3 for DHL01-88 -->
+		<property name="custom6.chbCatlink" maxlength="10"/>  <!-- updated from 15 to 10 for DHL01-88 -->
+		<property name="custom6.chbCatpart" maxlength="40"/>
+		<property name="custom6.chbCatdesc" maxlength="40"/>
+		<property name="custom6.chbCatproduct" maxlength="30"/>
+		<property name="custom6.chbCatassembler" maxlength="10"/>
+		<property name="custom6.chbCatmanid" maxlength="10"/>  <!-- updated from 40 to 10 for DHL01-88 -->
+		<property name="custom6.chbCattariff" maxlength="15"/>
+		<property name="custom6.chbCatpart2" maxlength="40"/>
+		<property name="custom6.chbCatdesc2" maxlength="40"/>  <!-- updated from 60 to 40 for DHL01-88 -->
+		<property name="custom6.chbCatproduct2" maxlength="20"/>
+		<property name="custom6.chbCatassembler2" maxlength="10"/>
+		<property name="custom6.chbCatmanid2" maxlength="10"/>  <!-- updated from 40 to 10 for DHL01-88 -->
+		<property name="custom6.chbRelated" maxlength="10"/>  <!-- added DHL01-88 -->
+		<property name="custom6.chbNafta" maxlength="10"/>  <!-- added DHL01-88 -->
+		<property name="custom6.chbRulingno" maxlength="5"/>  <!-- updated from 18 to 5 for DHL01-88 -->
+		<property name="custom6.chbRulingtype" maxlength="5"/>  <!-- updated from 10 to 5 for DHL01-88 -->
+		<property name="custom6.chbTariffAdd" maxlength="5"/>  <!-- updated from 15 to 5 for DHL01-88 -->
+		<property name="custom6.chbFdaSeq" maxlength="5"/>  <!-- updated from 20 to 5 for DHL01-88 -->
+		<property name="custom6.chbFdaProduct" maxlength="7"/>  <!-- updated from 20 to 7 for DHL01-88 -->
+		<property name="custom6.chbFdaStorage" maxlength="1"/> 
+		<property name="custom6.chbFdaCountry" maxlength="2"/>  <!-- updated from 45 to 2 for DHL01-88 -->
+		<property name="custom6.chbFdaManid" maxlength="15"/>  <!-- updated from 45 to 15 for DHL01-88 -->
+		<property name="custom6.chbFdaShipper" maxlength="15"/>  <!-- updated from 45 to 15 for DHL01-88 -->
+		<property name="custom6.chbFdaDesc" maxlength="20"/>
+		<property name="custom6.chbFdaBrand" maxlength="20"/>
+		<property name="custom6.chbFdaContact" maxlength="10"/>  <!-- updated from 20 to 10 for DHL01-88 -->
+		<property name="custom6.chbFdaDims" maxlength="20"/>
+		<property name="custom6.chbFdaEst" maxlength="20"/>
+		<property name="custom6.chbFdaQuantity1" maxlength="10"/>
+		<property name="custom6.chbFdaQuantity2" maxlength="10"/>
+		<property name="custom6.chbFdaQuantity3" maxlength="10"/>
+		<property name="custom6.chbFdaQuantity4" maxlength="10"/>
+		<property name="custom6.chbFdaQuantity5" maxlength="10"/>
+		<property name="custom6.chbFdaQuantity6" maxlength="10"/>
+		<property name="custom6.chbFdaTel" maxlength="10"/>  <!-- updated from 20 to 10 for DHL01-88 -->
+		<property name="custom6.chbFdaUnit1" maxlength="5"/>  <!-- updated from 10 to 5 for DHL01-88 -->
+		<property name="custom6.chbFdaUnit2" maxlength="5"/>  <!-- updated from 10 to 5 for DHL01-88 -->
+		<property name="custom6.chbFdaUnit3" maxlength="5"/>  <!-- updated from 10 to 5 for DHL01-88 -->
+		<property name="custom6.chbFdaUnit4" maxlength="5"/>  <!-- updated from 10 to 5 for DHL01-88 -->
+		<property name="custom6.chbFdaUnit5" maxlength="5"/>  <!-- updated from 10 to 5 for DHL01-88 -->
+		<property name="custom6.chbFdaUnit6" maxlength="5"/>  <!-- updated from 10 to 5 for DHL01-88 -->
+		<property name="custom6.chbFdaValue" maxlength="10"/> <!-- updated from 20 to 10 for DHL01-88 -->
+		<property name="custom6.chbFdaComp1" maxlength="3"/>  <!-- updated from 6 to 3 for DHL01-88 -->
+		<property name="custom6.chbFdaComp2" maxlength="3"/>  <!-- updated from 6 to 3 for DHL01-88 -->
+		<property name="custom6.chbFdaComp3" maxlength="3"/>  <!-- updated from 6 to 3 for DHL01-88 -->
+		<property name="custom6.chbFdaComp4" maxlength="3"/>  <!-- updated from 6 to 3 for DHL01-88 -->
+		<property name="custom6.chbFdaComp5" maxlength="3"/>  <!-- updated from 6 to 3 for DHL01-88 -->
+		<property name="custom6.chbFdaComp6" maxlength="3"/>  <!-- updated from 6 to 3 for DHL01-88 -->
+		<property name="custom6.chbFdaQual1" maxlength="20"/>
+		<property name="custom6.chbFdaQual2" maxlength="20"/>
+		<property name="custom6.chbFdaQual3" maxlength="20"/>
+		<property name="custom6.chbFdaQual4" maxlength="20"/>
+		<property name="custom6.chbFdaQual5" maxlength="20"/>
+		<property name="custom6.chbFdaQual6" maxlength="20"/>
+		<property name="custom6.chbFdaSub" maxlength="10"/>
+		<property name="custom6.chbFdaFirmname" maxlength="20"/>  <!-- updated from 30 to 20 for DHL01-88 -->
+		<property name="custom6.chbFdaSubtype" maxlength="1"/>
+		<property name="custom6.chbFdaOwntype" maxlength="1"/>
+		<property name="custom6.chbFdaCrossingLoc" maxlength="5"/> <!-- updated from 6 to 5 for DHL01-88 -->
+		<property name="custom6.chbFdaCrossingPnt" maxlength="5"/> <!-- updated from 20 to 5 for DHL01-88 -->
+		<property name="custom6.chbFdaShipping" maxlength="3"/>  <!-- updated from 6 to 3 for DHL01-88 -->
+		<property name="custom6.chbFdaCarrier" maxlength="5"/> <!-- updated from 6 to 5 for DHL01-88 -->
+		<property name="custom6.chbFdaCarrierName" maxlength="20"/>  <!-- updated from 30 to 20 for DHL01-88 -->
+		<property name="custom6.chbFdaCarrierCnt" maxlength="3"/>
+		<property name="custom6.chbFdaProctype" maxlength="1"/>
+		<property name="custom6.chbFdaProcExempt" maxlength="20"/>
+		<property name="custom6.chbFdaManreg" maxlength="10"/>  <!-- updated from 15 to 10 for DHL01-88 -->
+		<property name="custom6.chbFdaShpreg" maxlength="10"/>  <!-- updated from 12 to 10 for DHL01-88 -->
+		<property name="custom6.chbFccQnty" maxlength="15"/>  <!-- updated from 20 to 15 for DHL01-88 -->
+		<property name="custom6.chbFccCondition" maxlength="10"/>
+		<property name="custom6.chbFccInsp" maxlength="2"/>
+		<property name="custom6.chbFccApproval" maxlength="2"/>
+		<property name="custom6.chbFccId" maxlength="15"/>
+		<property name="custom6.chbFccTrade" maxlength="30"/>
+		<property name="custom6.chbFccType" maxlength="20"/>
+		<property name="custom6.chbFccDesc" maxlength="30"/>  <!-- updated from 60 to 30 for DHL01-88 -->
+		<property name="custom6.chbAvaCvd" maxlength="10"/>
+		<property name="custom6.chbAvaCase" maxlength="10"/>
+		<property name="custom6.chbPoaReqName" maxlength="15"/>
+		<property name="custom6.chbBrkAddress1" maxlength="30"/>
+		<property name="custom6.chbBrkAddress2" maxlength="30"/>
+		<property name="custom6.chbBrkFax" maxlength="15"/>  <!-- updated from 20 to 15 for DHL01-88 -->
+		<property name="custom6.chbBrkTel" maxlength="15"/>  <!-- updated from 20 to 15 for DHL01-88 -->
+		<property name="custom6.chbBrkEmail" maxlength="30"/>  <!-- updated from 45 to 30 for DHL01-88 -->
+		<property name="custom6.chbDistrict" maxlength="30"/>  <!-- updated from 60 to 30 for DHL01-88 -->
+		<property name="custom6.chbTariff" maxlength="15"/>
+		<property name="custom6.chbArrivalport" maxlength="6"/>  
+		<property name="custom6.stgSecurity" maxlength="1"/>  <!-- added DHL01-88 -->
+		<property name="custom6.stgCommodity" maxlength="1"/>  <!-- added DHL01-88 -->
+		<property name="custom6.stgEPTeam" maxlength="2"/>  <!-- added DHL01-88 -->
+		<property name="custom6.stgCSTeam" maxlength="2"/>  <!-- added DHL01-88 -->
+		<property name="custom6.stgIOR" maxlength="1"/>  <!-- added DHL01-88 -->
+<!-- end legacy DHL M$P custom properties -->
+
+		<!--  end header properties -->
+	</headerProperties>
+
+	<lineItemProperties>
+		<property name="docUnitOfMeasure" maxlength="20"/>
+		<property name="orderedUnitOfMeasure" maxlength="20"/>
+		<property name="accountCode1" maxlength="20"/>
+		<property name="accountCode2" maxlength="20"/>
+		<property name="accountCode3" maxlength="20"/>
+		<property name="accountCode4" maxlength="20"/>
+		<property name="accountCode5" maxlength="20"/>
+		<property name="accountCode6" maxlength="20"/>
+		<property name="accountCode7" maxlength="20"/>
+		<property name="accountCode8" maxlength="20"/>
+		<property name="accountCode9" maxlength="20"/>
+		<property name="accountCode10" maxlength="20"/>
+		<property name="packingSlipNumber" maxlength="16"/>
+		<property name="lineStatusCode" maxlength="16"/>
+		<property name="apDocDetVarchar1" maxlength="64"/>
+		<property name="apDocDetVarchar2" maxlength="64"/>
+		<property name="apDocDetVarchar3" maxlength="64"/>
+		<property name="apDocDetVarchar4" maxlength="64"/>
+
+		<!-- start line item properties -->
+		<property name="seqId" maxlength="16"/>
+		<property name="document.seqId" maxlength="16"/> <!--nested object-->
+		<property name="poNumber" maxlength="32"/>
+		<property name="poLineNumber" maxlength="16"/>
+		<property name="poERPId" maxlength="16"/>
+		<property name="taxId" maxlength="16"/>
+		<property name="taxERPId" maxlength="16"/>
+		<property name="costObjectId1" maxlength="3"/>  <!-- GL Account Location - legacy DHL has this set to 3 to match Account Code -->
+		<property name="costObjectId2" maxlength="2"/>  <!-- GL Account Function - legacy DHL has this set to 2 to match Account Code -->
+		<property name="lineNumber" maxlength="3"/>  <!-- legacy DHL has this set to 16 -->
+		<property name="quantity" maxlength="19"/>
+		<property name="unitPrice" maxlength="19"/>
+		<property name="lineTotal" maxlength="23"/>
+		<property name="uom" maxlength="3"/>
+		<property name="taxAmount" maxlength="19"/>
+		<property name="itemCode" maxlength="16"/>
+		<property name="itemDescription" maxlength="64"/>  <!-- legacy DHL has this set to 30 -->
+		<property name="accountCode" maxlength="7"/>   <!-- GL Account - legacy DHL has this set to 7 from 128 -->
+		<property name="accountERPId" maxlength="16"/>
+		<property name="lineStatusCode" maxlength="16"/>
+		<property name="materialId" maxlength="8"/>  <!-- legacy DHL has this set to 8 from 16 -->
+		<property name="partNumber" maxlength="16"/>
+		<property name="manfPartNumber" maxlength="16"/>
+		<property name="createDate" maxlength="16"/>
+		<property name="lastModifiedDate" maxlength="16"/>
+		<property name="tbdDate1" maxlength="16"/>
+		<property name="tbdDate2" maxlength="16"/>
+		<property name="tbdNumber1" maxlength="16"/>
+		<property name="tbdNumber2" maxlength="16"/>
+		<property name="tbdCurrency1" maxlength="19"/>
+		<property name="tbdCurrency2" maxlength="19"/>
+		<property name="tbdQuantity1" maxlength="23"/>
+		<property name="tbdQuantity2" maxlength="23"/>
+		<property name="tbdString1" maxlength="6"/>   <!-- legacy DHL has this set to 6 from 20 -->
+		<property name="tbdString2" maxlength="3"/>  <!-- legacy DHL has this set to 3 from 64 -->
+		<property name="tbdString3" maxlength="2"/>  <!-- legacy DHL has this set to 2 from 64 -->
+		<property name="tbdString4" maxlength="64"/>
+		<property name="companyCode" maxlength="16"/>
+		<property name="costObjectTypeId1" maxlength="16"/>
+		<property name="costObjectTypeId2" maxlength="16"/>
+		<!-- end line item properties -->
+
+
+	</lineItemProperties>
+</maxlengths>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="all-rescan-view" template="masterfile-customer-process-air-tpl.xml"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/view.xsd">
+
+    <labels default="en">
+        <locale name="en">
+            <label name="forward" value="Complete"/>
+        </locale>
+    </labels>
+    
+    <property-overrides>
+        <textArea name="voucherComments" defaultValue=""/>
+        <textArea name="tbdComment1" readonly="true"/>
+     </property-overrides>
+
+    <hidden-overrides>
+        <hidden name="processInformation.response" defaultValue="Complete"/>
+    </hidden-overrides>
+
+	    <action-overrides>
+        <iconAction name="addLineItem" readonly="true" visible="false"/>
+    	<iconAction name="removeLineItem" readonly="true" visible="false"/>
+    	<iconAction name="editRouting" readonly="true"/>
+	<getNext name="next" readonly="true" visible="false"/>
+	<rejectButton name="reject" readonly="true" visible="false"/>
+	<button name="forward" readonly="true" visible="false"/>
+	<button name="update" readonly="true" visible="false"/>
+        <button name="release" readonly="true" visible="false"/>
+	<button name="updateRelease" readonly="true" visible="false"/>		
+   </action-overrides>	
+	
+     <documentRejection>
+		 <rejectionReasons>
+			 <reason name="Send to Credit Team" commentsRequired="true" note="message.creditTeam">
+				 </reason>
+			 <reason name="Return to Requester" commentsRequired="true" note="message.requester">
+				 </reason>
+			 </rejectionReasons>
+    </documentRejection>
+
+</view>

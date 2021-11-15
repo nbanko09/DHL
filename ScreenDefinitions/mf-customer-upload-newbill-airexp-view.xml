@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="all-rescan-view" template="masterfile-upload-customer-air-tpl.xml"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/view.xsd">
+
+    <labels default="en">
+        <locale name="en">
+    </locale>
+    </labels>
+    
+    <section-overrides>
+           <!--section name="shipperInfo" visible="true"/-->        
+    </section-overrides>
+
+    <property-overrides>
+        <textArea name="voucherComments" defaultValue="Account will be set to CASH ONLY until credit has been approved. Customer may complete credit application online or credit application can be attached for review by the Credit Department."/>
+  </property-overrides>
+
+    <hidden-overrides>
+        <hidden name="processInformation.response" defaultValue="Complete"/>
+    </hidden-overrides>
+
+     <validations>
+        <validation name="validation.stationProductvalidation"/>   
+    </validations>
+</view>

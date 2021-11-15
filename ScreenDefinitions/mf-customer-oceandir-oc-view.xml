@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="all-rescan-view" template="masterfile-customer-process-oc-tpl.xml"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/view.xsd">
+
+    <labels default="en">
+        <locale name="en">
+            <label name="forward" value="Approve"/>
+        </locale>
+    </labels>
+    
+    <property-overrides>
+            <textArea name="voucherComments" defaultValue=""/>
+            <text name="custom4.contactEmail" readonly="true"/>
+            <text name="custom4.accountNumber" validation=""/>
+     </property-overrides>
+
+    <hidden-overrides>"
+        <hidden name="processInformation.response" defaultValue="Complete"/>
+    </hidden-overrides>
+
+	<action-overrides>
+        	<iconAction name="editRouting" readonly="false"/>
+   </action-overrides>
+
+     <documentRejection>
+		 <rejectionReasons>
+		 <reason name="Return to Requester" commentsRequired="true" note="message.requester">
+		 </reason>
+		 </rejectionReasons>
+    </documentRejection>
+
+</view>

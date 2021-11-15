@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="all-rescan-view" template="masterfile-customer-air-tpl.xml"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/view.xsd">
+
+    <labels default="en">
+        <locale name="en">
+            <label name="forward" value="Submit"/>
+        </locale>
+    </labels>
+    
+    <section-overrides>
+               <section name="shipperInfo" visible="false"/>
+    </section-overrides>
+    
+    <property-overrides>
+        <textArea name="voucherComments" defaultValue="Warning:Account will be set to CASH ONLY until credit has been approved by the credit department. If credit is request, customers should be encouraged to complete the online credit application otherwise a credit application must be attached"/>
+        <text name="custom4.billToAccountCode" readonly="true"/> <!--Alt Bill To Ac-->
+	<text name="custom4.billToAccount" readonly="true"/> <!--Alt Bill To Name-->
+    </property-overrides>
+
+    <hidden-overrides>
+        <hidden name="processInformation.response" defaultValue="Complete"/>
+    </hidden-overrides>
+
+    <documentRejection>
+		  <rejectionReasons>
+		  <reason name="Cancel" commentsRequired="true" note="message.terminate">
+		  </reason>
+		  </rejectionReasons>
+    </documentRejection>
+
+</view>

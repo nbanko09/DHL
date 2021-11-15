@@ -1,0 +1,353 @@
+<?xml version="1.0"  encoding="ISO-8859-1"  ?>
+<!DOCTYPE XMI>
+<XMI xmi.version="1.2" >
+<XMI.header>
+<XMI.documentation>
+<XMI.exporter>Ilog Rule Kit</XMI.exporter>
+<XMI.exporterVersion>4.1</XMI.exporterVersion>
+</XMI.documentation>
+<XMI.model href="ilr:0280AA48075B03010000FCC4BF018265A8C0#1"  xmi.name="Tool"  xmi.version="1.2" />
+<XMI.metamodel href="ilr:078248E58DCDEF00000099337400700110AC#1"  xmi.name="Tool"  xmi.version="1.2" />
+</XMI.header>
+<XMI.content>
+<DefaultBusinessModel.Package xmi.id="a1"  xmi.uuid="ilr:9E82AA48075B03010000FCC4BF018265A8C0#1"  isRoot="false"  isLeaf="false"  isAbstract="false"  name="brm"  editable="true"  creationDate="19 Apr 2005 15:15:41 GMT"  lastModificationDate="19 Apr 2005 15:15:41 GMT"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Class xmi.id="a2"  xmi.uuid="ilr:7182AA48075B03010000FCC4BF018265A8C0#1"  noAction="false"  noCondition="false"  navigate="false"  bindingMode="none"  isSingleton="false"  isRoot="false"  isLeaf="false"  isAbstract="false"  visibility="public_vis"  name="TextFormat"  editable="true"  creationDate="19 Apr 2005 15:15:41 GMT"  lastModificationDate="19 Apr 2005 15:15:41 GMT"  implicit="false"  visible="false"  deprecated="false" >
+<DefaultBusinessModel.PartitionableElement.domain>
+<DefaultBusinessModel.EnumeratedDomain xmi.id="a3"  xmi.uuid="ilr:1885AA48075B03010000FCC4BF018265A8C0#1"  visible="true"  deprecated="false"  name="Domain"  editable="true" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.EnumeratedDomainItem xmi.id="a4"  xmi.uuid="ilr:0285AA48075B03010000FCC4BF018265A8C0#1"  alternate="&amp;ilog.rules.repository.brm.query.TextFormat.Syntactic"  visible="true"  translation="IlrBrmConstants.TOKEN_MODEL_DEFINITION_CLASS"  deprecated="false"  name="Syntactic"  editable="true" >
+</DefaultBusinessModel.EnumeratedDomainItem>
+<DefaultBusinessModel.EnumeratedDomainItem xmi.id="a5"  xmi.uuid="ilr:0885AA48075B03010000FCC4BF018265A8C0#1"  alternate="&amp;ilog.rules.repository.brm.query.TextFormat.IRL"  visible="true"  translation="IlrBrmConstants.IRL_DEFINITION_CLASS"  deprecated="false"  name="IRL"  editable="true" >
+</DefaultBusinessModel.EnumeratedDomainItem>
+<DefaultBusinessModel.EnumeratedDomainItem xmi.id="a6"  xmi.uuid="ilr:0585AA48075B03010000FCC4BF018265A8C0#1"  alternate="&amp;ilog.rules.repository.brm.query.TextFormat.Code"  visible="true"  translation="IlrBrmConstants.CODE_DEFINITION_CLASS"  deprecated="false"  name="Code"  editable="true" >
+</DefaultBusinessModel.EnumeratedDomainItem>
+</Model.Namespace.contents>
+</DefaultBusinessModel.EnumeratedDomain>
+</DefaultBusinessModel.PartitionableElement.domain>
+</DefaultBusinessModel.Class>
+<DefaultBusinessModel.Class xmi.id="a7"  xmi.uuid="ilr:6C82AA48075B03010000FCC4BF018265A8C0#1"  noAction="false"  noCondition="false"  navigate="false"  bindingMode="single"  isSingleton="false"  isRoot="false"  isLeaf="false"  isAbstract="false"  visibility="public_vis"  name="IlrBrmDefaultRule"  editable="true"  creationDate="19 Apr 2005 15:15:41 GMT"  lastModificationDate="19 Apr 2005 15:15:41 GMT"  implicit="false"  alternate="&amp;ilog.rules.repository.brm.query.IlrBrmDefaultRule"  visible="true"  translation="IlrBrmDefaultRule(!isTemplate())"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Properties xmi.id="a8"  xmi.uuid="ilr:E784AA48075B03010000FCC4BF018265A8C0#1"  tagId="hideObjectMethods"  values="true"  name="hideObjectMethods"  editable="true"  visible="true"  deprecated="false" >
+<Model.Tag.elements>
+<DefaultBusinessModel.Class name="IlrBrmDefaultRule"  xmi.idref="a7"  xmi.uuid="ilr:6C82AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.Tag.elements>
+</DefaultBusinessModel.Properties>
+<DefaultBusinessModel.Field xmi.id="a9"  xmi.uuid="ilr:9382AA48075B03010000FCC4BF018265A8C0#1"  isDerived="false"  isChangeable="true"  visibility="public_vis"  scope="instance_level"  name="priority"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.repository.brm.query.IlrBrmDefaultRule.Priority"  visible="true"  translation="((java.lang.String) {this}.getValue({this}.getProperty(IlrBrmConstants.PRIORITY_PROPERTY)))"  deprecated="false" >
+<Model.StructuralFeature.multiplicity>
+<Model.MultiplicityType lower="0"  upper="-1"  isOrdered="false"  isUnique="true" >
+</Model.MultiplicityType>
+</Model.StructuralFeature.multiplicity>
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:7782AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Field>
+<DefaultBusinessModel.Field xmi.id="a10"  xmi.uuid="ilr:9182AA48075B03010000FCC4BF018265A8C0#1"  isDerived="false"  isChangeable="true"  visibility="public_vis"  scope="instance_level"  name="active"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.repository.brm.query.IlrBrmDefaultRule.Active"  visible="true"  deprecated="false" >
+<DefaultBusinessModel.ModelElement.translation>(((java.lang.Boolean) {this}.getValue({this}.getProperty(IlrBrmConstants.ACTIVE_PROPERTY))).booleanValue())</DefaultBusinessModel.ModelElement.translation>
+<Model.StructuralFeature.multiplicity>
+<Model.MultiplicityType lower="0"  upper="-1"  isOrdered="false"  isUnique="true" >
+</Model.MultiplicityType>
+</Model.StructuralFeature.multiplicity>
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Boolean"  href="ilr:8382AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Field>
+<DefaultBusinessModel.Field xmi.id="a11"  xmi.uuid="ilr:8E82AA48075B03010000FCC4BF018265A8C0#1"  isDerived="false"  isChangeable="true"  visibility="public_vis"  scope="instance_level"  name="annotation"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.repository.brm.query.IlrBrmDefaultRule.Annotation"  visible="true"  deprecated="false" >
+<DefaultBusinessModel.ModelElement.translation>((java.lang.String) {this}.getValue({this}.getProperty(ilog.rules.repository.model.IlrConstants.ANNOTATION_PROPERTY)))</DefaultBusinessModel.ModelElement.translation>
+<Model.StructuralFeature.multiplicity>
+<Model.MultiplicityType lower="0"  upper="-1"  isOrdered="false"  isUnique="true" >
+</Model.MultiplicityType>
+</Model.StructuralFeature.multiplicity>
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:7782AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Field>
+<DefaultBusinessModel.Field xmi.id="a12"  xmi.uuid="ilr:9082AA48075B03010000FCC4BF018265A8C0#1"  isDerived="false"  isChangeable="true"  visibility="public_vis"  scope="instance_level"  name="pack"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.repository.brm.query.IlrBrmDefaultRule.Package"  visible="true"  translation="((java.lang.String) {this}.getPackage().getName())"  deprecated="false" >
+<Model.StructuralFeature.multiplicity>
+<Model.MultiplicityType lower="0"  upper="-1"  isOrdered="false"  isUnique="true" >
+</Model.MultiplicityType>
+</Model.StructuralFeature.multiplicity>
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="PackageString"  href="ilr:7682AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Field>
+<DefaultBusinessModel.Field xmi.id="a13"  xmi.uuid="ilr:8D82AA48075B03010000FCC4BF018265A8C0#1"  isDerived="false"  isChangeable="true"  visibility="public_vis"  scope="instance_level"  name="name"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.repository.brm.query.IlrBrmDefaultRule.Name"  visible="true"  deprecated="false" >
+<DefaultBusinessModel.ModelElement.translation>((java.lang.String) {this}.getValue({this}.getProperty(ilog.rules.repository.model.IlrConstants.NAME_PROPERTY)))</DefaultBusinessModel.ModelElement.translation>
+<Model.StructuralFeature.multiplicity>
+<Model.MultiplicityType lower="0"  upper="-1"  isOrdered="false"  isUnique="true" >
+</Model.MultiplicityType>
+</Model.StructuralFeature.multiplicity>
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:7782AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Field>
+<DefaultBusinessModel.Field xmi.id="a14"  xmi.uuid="ilr:9282AA48075B03010000FCC4BF018265A8C0#1"  isDerived="false"  isChangeable="true"  visibility="public_vis"  scope="instance_level"  name="editable"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.repository.brm.query.IlrBrmDefaultRule.Editable"  visible="true"  deprecated="false" >
+<DefaultBusinessModel.ModelElement.translation>(((java.lang.Boolean) {this}.getValue({this}.getProperty(ilog.rules.repository.model.IlrConstants.EDITABLE_PROPERTY))).booleanValue())</DefaultBusinessModel.ModelElement.translation>
+<Model.StructuralFeature.multiplicity>
+<Model.MultiplicityType lower="0"  upper="-1"  isOrdered="false"  isUnique="true" >
+</Model.MultiplicityType>
+</Model.StructuralFeature.multiplicity>
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Boolean"  href="ilr:8382AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Field>
+<DefaultBusinessModel.Field xmi.id="a15"  xmi.uuid="ilr:8F82AA48075B03010000FCC4BF018265A8C0#1"  isDerived="false"  isChangeable="true"  visibility="public_vis"  scope="instance_level"  name="isWorkingVersion"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.repository.brm.query.IlrBrmDefaultRule.IsWorkingVersion"  visible="true"  translation="({this}.isWorkingVersion())"  deprecated="false" >
+<Model.StructuralFeature.multiplicity>
+<Model.MultiplicityType lower="0"  upper="-1"  isOrdered="false"  isUnique="true" >
+</Model.MultiplicityType>
+</Model.StructuralFeature.multiplicity>
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Boolean"  href="ilr:8382AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Field>
+<DefaultBusinessModel.Reference xmi.id="a16"  xmi.uuid="ilr:0C85AA48075B03010000FCC4BF018265A8C0#1"  static="false"  final="false"  update="false"  visibility="public_vis"  scope="instance_level"  name="creationDate"  editable="true"  alternate="&amp;ilog.rules.repository.brm.query.IlrBrmDefaultRule.CreationDate"  visible="true"  deprecated="false"  isChangeable="true" >
+<DefaultBusinessModel.ModelElement.translation>(ilrContextUtil.getQueryDate({this}, ilog.rules.repository.model.IlrConstants.CREATION_DATE_PROPERTY))</DefaultBusinessModel.ModelElement.translation>
+<Model.StructuralFeature.multiplicity>
+<Model.MultiplicityType lower="1"  upper="1"  isOrdered="false"  isUnique="true" >
+</Model.MultiplicityType>
+</Model.StructuralFeature.multiplicity>
+<Model.Reference.exposedEnd>
+<Model.AssociationEnd name="IlrBrmDefaultRule"  href="ilr:6382AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.Reference.exposedEnd>
+<Model.Reference.referencedEnd>
+<Model.AssociationEnd name="Date"  href="ilr:6082AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.Reference.referencedEnd>
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Date"  href="ilr:7082AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Reference>
+<DefaultBusinessModel.Reference xmi.id="a17"  xmi.uuid="ilr:0D85AA48075B03010000FCC4BF018265A8C0#1"  static="false"  final="false"  update="false"  visibility="public_vis"  scope="instance_level"  name="lastModificationDate"  editable="true"  alternate="&amp;ilog.rules.repository.brm.query.IlrBrmDefaultRule.LastModificationDate"  visible="true"  deprecated="false"  isChangeable="true" >
+<DefaultBusinessModel.ModelElement.translation>(ilrContextUtil.getQueryDate({this}, ilog.rules.repository.model.IlrConstants.LAST_MODIFICATION_DATE_PROPERTY))</DefaultBusinessModel.ModelElement.translation>
+<Model.StructuralFeature.multiplicity>
+<Model.MultiplicityType lower="1"  upper="1"  isOrdered="false"  isUnique="true" >
+</Model.MultiplicityType>
+</Model.StructuralFeature.multiplicity>
+<Model.Reference.exposedEnd>
+<Model.AssociationEnd name="IlrBrmDefaultRule"  href="ilr:6182AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.Reference.exposedEnd>
+<Model.Reference.referencedEnd>
+<Model.AssociationEnd name="Date"  href="ilr:6282AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.Reference.referencedEnd>
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Date"  href="ilr:7082AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Reference>
+<DefaultBusinessModel.Method xmi.id="a18"  xmi.uuid="ilr:E782AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getClass"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.repository.brm.query.IlrBrmDefaultRule.GetClass"  visible="true"  translation="(ilrContextUtil.getQueryClass({this}, &quot;{0}&quot;))"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a19"  xmi.uuid="ilr:6C83AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="IlrQueryClass"  href="ilr:8B82AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a20"  xmi.uuid="ilr:D583AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="className"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="IlrLibraryClass"  href="ilr:7982AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a21"  xmi.uuid="ilr:BB82AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getQueryTag"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.repository.brm.query.IlrBrmDefaultRule.GetQueryTag"  visible="true"  translation="(ilrContextUtil.getQueryTag({this}, {0}))"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a22"  xmi.uuid="ilr:A483AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="IlrQueryTag"  href="ilr:6E82AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a23"  xmi.uuid="ilr:9184AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="tagName"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:7782AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a24"  xmi.uuid="ilr:DD82AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getTopPackage"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.repository.brm.query.IlrBrmDefaultRule.GetTopPackage"  visible="true"  translation="(ilrContextUtil.getTopPackage({this}))"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a25"  xmi.uuid="ilr:6C84AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:7782AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a26"  xmi.uuid="ilr:C182AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getText"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.repository.brm.query.IlrBrmDefaultRule.GetText"  visible="true"  translation="(ilrContextUtil.getText({this}, {0}))"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a27"  xmi.uuid="ilr:6383AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:7782AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a28"  xmi.uuid="ilr:7984AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="type"  editable="true"  visible="true"  deprecated="false"  type="a2" >
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a29"  xmi.uuid="ilr:A382AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="getClassMember"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.repository.brm.query.IlrBrmDefaultRule.GetClassMember"  visible="true"  translation="(ilrContextUtil.getQueryClassMember({this}, {0}))"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a30"  xmi.uuid="ilr:5784AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="IlrQueryClassMember"  href="ilr:8282AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a31"  xmi.uuid="ilr:7384AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="classMemberName"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="IlrLibraryClassMbr"  href="ilr:7482AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a32"  xmi.uuid="ilr:C382AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="insertAsQueryResult"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.repository.brm.query.IlrBrmDefaultRule.InsertAsQueryResult"  visible="true"  translation="ilrContextUtil.addQueryResult({this})"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a33"  xmi.uuid="ilr:2A84AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:1685AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a34"  xmi.uuid="ilr:B182AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="delete"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.repository.brm.query.IlrBrmDefaultRule.Delete"  visible="true"  translation="{this}.delete()"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a35"  xmi.uuid="ilr:C883AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:1685AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a36"  xmi.uuid="ilr:3A83AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setPriority"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.repository.brm.query.IlrBrmDefaultRule.SetPriority"  visible="true"  translation="{this}.setValue({this}.getProperty(IlrBrmConstants.PRIORITY_PROPERTY), {0})"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a37"  xmi.uuid="ilr:6B84AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:1685AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a38"  xmi.uuid="ilr:A383AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="newValue"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:7782AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a39"  xmi.uuid="ilr:F882AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setActive"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.repository.brm.query.IlrBrmDefaultRule.SetActive"  visible="true"  translation="{this}.setValue({this}.getProperty(IlrBrmConstants.ACTIVE_PROPERTY), new Boolean(&quot;{0}&quot;))"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a40"  xmi.uuid="ilr:5983AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:1685AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a41"  xmi.uuid="ilr:AA83AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="newValue"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Boolean"  href="ilr:8382AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a42"  xmi.uuid="ilr:ED82AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setAnnotation"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.repository.brm.query.IlrBrmDefaultRule.SetAnnotation"  visible="true"  deprecated="false" >
+<DefaultBusinessModel.ModelElement.translation>{this}.setValue({this}.getProperty(ilog.rules.repository.model.IlrConstants.ANNOTATION_PROPERTY), {0})</DefaultBusinessModel.ModelElement.translation>
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a43"  xmi.uuid="ilr:7F84AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:1685AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a44"  xmi.uuid="ilr:9B83AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="newValue"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:7782AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a45"  xmi.uuid="ilr:1183AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setPackage"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.repository.brm.query.IlrBrmDefaultRule.SetPackage"  visible="true"  translation="ilrContextUtil.setPackage({0}, {this})"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a46"  xmi.uuid="ilr:C383AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:1685AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a47"  xmi.uuid="ilr:CB83AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="newValue"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:7782AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a48"  xmi.uuid="ilr:1383AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="copyTo"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.repository.brm.query.IlrBrmDefaultRule.CopyTo"  visible="true"  translation="ilrContextUtil.copyTo({0}, {this})"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a49"  xmi.uuid="ilr:A783AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:1685AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a50"  xmi.uuid="ilr:4684AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="newValue"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:7782AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a51"  xmi.uuid="ilr:DF82AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setName"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.repository.brm.query.IlrBrmDefaultRule.SetName"  visible="true"  translation="{this}.setValue({this}.getProperty(ilog.rules.repository.model.IlrConstants.NAME_PROPERTY), {0})"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a52"  xmi.uuid="ilr:8C84AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:1685AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a53"  xmi.uuid="ilr:2584AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="newValue"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:7782AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a54"  xmi.uuid="ilr:1783AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="setEditable"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.repository.brm.query.IlrBrmDefaultRule.SetEditable"  visible="true"  deprecated="false" >
+<DefaultBusinessModel.ModelElement.translation>{this}.setValue({this}.getProperty(ilog.rules.repository.model.IlrConstants.EDITABLE_PROPERTY), new Boolean(&quot;{0}&quot;))</DefaultBusinessModel.ModelElement.translation>
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a55"  xmi.uuid="ilr:C583AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:1685AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a56"  xmi.uuid="ilr:6E83AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="newValue"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Boolean"  href="ilr:8382AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a57"  xmi.uuid="ilr:0A83AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="addValueTag"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.repository.brm.query.IlrBrmDefaultRule.AddValueTag"  visible="true"  translation="ilrContextUtil.addValueTag({this}, {0}, {1})"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a58"  xmi.uuid="ilr:8F83AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:1685AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a59"  xmi.uuid="ilr:1084AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="value"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:7782AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a60"  xmi.uuid="ilr:7883AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="tag"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:7782AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a61"  xmi.uuid="ilr:2D83AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="replaceInTopPackage"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.repository.brm.query.IlrBrmDefaultRule.ReplaceInTopPackage"  visible="true"  translation="ilrContextUtil.replaceInTopPackage({0}, {this})"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a62"  xmi.uuid="ilr:A683AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="void"  href="ilr:1685AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a63"  xmi.uuid="ilr:4A83AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="topPackage"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="String"  href="ilr:7782AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Class>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Package>
+</XMI.content>
+</XMI>

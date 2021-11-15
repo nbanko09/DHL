@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<quartz version="1.1" xmlns="http://www.quartzscheduler.org/ns/quartz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.quartzscheduler.org/ns/quartz http://www.quartzscheduler.org/ns/quartz/job_scheduling_data_1_1.xsd">
+    <job>
+        <job-detail>
+            <name>extractEventLogJob</name>
+            <group>ReportingGroup</group>
+            <job-class>com.miriasystems.reporting.jobs.ExtractEventLogJob</job-class>
+            <volatility>false</volatility>
+            <durability>false</durability>
+            <recover>false</recover>
+        </job-detail>
+        <trigger>
+            <cron>
+                <name>extractEventLogJob</name>
+                <group>ReportingGroup</group>
+                <job-name>allTrigger</job-name>
+                <job-group>allTriggers</job-group>
+                <cron-expression>0 0/5 * ? * *</cron-expression>
+            </cron>
+        </trigger>
+    </job>
+</quartz>

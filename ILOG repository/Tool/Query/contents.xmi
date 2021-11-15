@@ -1,0 +1,36 @@
+<?xml version="1.0"  encoding="ISO-8859-1"  ?>
+<!DOCTYPE XMI>
+<XMI xmi.version="1.2" >
+<XMI.header>
+<XMI.documentation>
+<XMI.exporter>Ilog Rule Kit</XMI.exporter>
+<XMI.exporterVersion>4.1</XMI.exporterVersion>
+</XMI.documentation>
+<XMI.model href="ilr:0280AA48075B03010000FCC4BF018265A8C0#1"  xmi.name="Tool"  xmi.version="1.2" />
+<XMI.metamodel href="ilr:078248E58DCDEF00000099337400700110AC#1"  xmi.name="Tool"  xmi.version="1.2" />
+</XMI.header>
+<XMI.content>
+<Basics.Project xmi.id="a1"  xmi.uuid="ilr:6582AA48075B03010000FCC4BF018265A8C0#1"  isRoot="false"  isLeaf="false"  isAbstract="false"  name="Query"  editable="true"  creationDate="19 Apr 2005 15:15:40 GMT"  lastModificationDate="19 Apr 2005 15:15:40 GMT"  deployer="a2" >
+<Model.RepositoryView.explicitMembers>
+<Rule.TemplateLibrary name="Query Library"  href="ilr:6882AA48075B03010000FCC4BF018265A8C0#1" />
+<Rule.RuleDeployer name="Deployer"  xmi.idref="a2"  xmi.uuid="ilr:6A82AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.RepositoryView.explicitMembers>
+<Model.Namespace.contents>
+<Rule.RuleDeployer xmi.id="a2"  xmi.uuid="ilr:6A82AA48075B03010000FCC4BF018265A8C0#1"  packetAsPackage="false"  importList="auto"  name="Deployer"  editable="true" >
+<Basics.Deployer.projects>
+<Basics.Project name="Query"  href="ilr:6582AA48075B03010000FCC4BF018265A8C0#1" />
+</Basics.Deployer.projects>
+<Model.Namespace.contents>
+<Rule.XOM xmi.id="a3"  xmi.uuid="ilr:6982AA48075B03010000FCC4BF018265A8C0#1"  explicitXOMUsed="true"  name="XOM"  editable="true" >
+</Rule.XOM>
+<Model.Tag xmi.id="a4"  xmi.uuid="ilr:6482AA48075B03010000FCC4BF018265A8C0#1"  tagId="ilog.mof.cookieNames"  values="ilog.rules.repository.brm.IlrDefaultIRLExtractor"  name="Tag"  editable="true" >
+<Model.Tag.elements>
+<Rule.RuleDeployer name="Deployer"  xmi.idref="a2"  xmi.uuid="ilr:6A82AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.Tag.elements>
+</Model.Tag>
+</Model.Namespace.contents>
+</Rule.RuleDeployer>
+</Model.Namespace.contents>
+</Basics.Project>
+</XMI.content>
+</XMI>

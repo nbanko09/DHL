@@ -1,0 +1,503 @@
+<?xml version="1.0"  encoding="ISO-8859-1"  ?>
+<!DOCTYPE XMI>
+<XMI xmi.version="1.2" >
+<XMI.header>
+<XMI.documentation>
+<XMI.exporter>Ilog Rule Kit</XMI.exporter>
+<XMI.exporterVersion>4.1</XMI.exporterVersion>
+</XMI.documentation>
+<XMI.model href="ilr:0180AA48075B03010000FCC4BF018265A8C0#1"  xmi.name="Application"  xmi.version="1.2" />
+<XMI.metamodel href="ilr:09804659F3E0EA00000084662F000100007F#1"  xmi.name="Application"  xmi.version="1.2" />
+</XMI.header>
+<XMI.content>
+<DefaultBusinessModel.Package xmi.id="a1"  xmi.uuid="ilr:3B80AA48075B03010000FCC4BF018265A8C0#1"  isRoot="false"  isLeaf="false"  isAbstract="false"  name="lang"  editable="true"  creationDate="19 Apr 2005 15:15:42 GMT"  lastModificationDate="8 Jun 2005 20:30:02 GMT"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Class xmi.id="a2"  xmi.uuid="ilr:3C80AA48075B03010000FCC4BF018265A8C0#1"  noAction="false"  noCondition="false"  navigate="false"  bindingMode="multiple"  isSingleton="false"  isRoot="false"  isLeaf="false"  isAbstract="false"  visibility="public_vis"  name="Void"  editable="true"  creationDate="19 Apr 2005 15:15:42 GMT"  lastModificationDate="8 Jun 2005 20:30:02 GMT"  implicit="true"  visible="false"  deprecated="false" >
+</DefaultBusinessModel.Class>
+<DefaultBusinessModel.Class xmi.id="a3"  xmi.uuid="ilr:5280AA48075B03010000FCC4BF018265A8C0#1"  noAction="false"  noCondition="false"  navigate="false"  bindingMode="multiple"  isSingleton="false"  isRoot="false"  isLeaf="false"  isAbstract="false"  visibility="public_vis"  name="Boolean"  editable="true"  creationDate="19 Apr 2005 15:15:42 GMT"  lastModificationDate="8 Jun 2005 20:30:02 GMT"  implicit="true"  visible="false"  deprecated="false" >
+</DefaultBusinessModel.Class>
+<DefaultBusinessModel.Class xmi.id="a4"  xmi.uuid="ilr:5380AA48075B03010000FCC4BF018265A8C0#1"  noAction="false"  noCondition="false"  navigate="false"  bindingMode="multiple"  isSingleton="false"  isRoot="false"  isLeaf="false"  isAbstract="false"  visibility="public_vis"  name="Byte"  editable="true"  creationDate="19 Apr 2005 15:15:42 GMT"  lastModificationDate="8 Jun 2005 20:30:02 GMT"  implicit="true"  visible="false"  deprecated="false" >
+<Model.GeneralizableElement.supertypes>
+<DefaultBusinessModel.Class name="Number"  xmi.idref="a5"  xmi.uuid="ilr:5480AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.GeneralizableElement.supertypes>
+</DefaultBusinessModel.Class>
+<DefaultBusinessModel.Class xmi.id="a5"  xmi.uuid="ilr:5480AA48075B03010000FCC4BF018265A8C0#1"  noAction="false"  noCondition="false"  navigate="true"  bindingMode="none"  isSingleton="false"  isRoot="false"  isLeaf="false"  isAbstract="false"  visibility="public_vis"  name="Number"  editable="true"  creationDate="19 Apr 2005 15:15:42 GMT"  lastModificationDate="8 Jun 2005 20:30:02 GMT"  implicit="true"  visible="false"  deprecated="false" >
+<Model.GeneralizableElement.supertypes>
+<DefaultBusinessModel.Class name="Serializable"  href="ilr:5680AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.GeneralizableElement.supertypes>
+<Model.Namespace.contents>
+<DefaultBusinessModel.Properties xmi.id="a6"  xmi.uuid="ilr:2782AA48075B03010000FCC4BF018265A8C0#1"  tagId="propagateArgumentType"  values="true"  name="propagateArgumentType"  editable="true"  visible="true"  deprecated="false" >
+<Model.Tag.elements>
+<DefaultBusinessModel.Class name="Number"  xmi.idref="a5"  xmi.uuid="ilr:5480AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.Tag.elements>
+</DefaultBusinessModel.Properties>
+<DefaultBusinessModel.Method xmi.id="a7"  xmi.uuid="ilr:5780AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="is"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.bal.Number.Is"  visible="true"  translation="{this} == {0}"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a8"  xmi.uuid="ilr:5880AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="boolean"  href="ilr:3280AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a9"  xmi.uuid="ilr:5980AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false"  type="a10" >
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Properties xmi.id="a11"  xmi.uuid="ilr:4082AA48075B03010000FCC4BF018265A8C0#1"  tagId="default"  values="true"  name="default"  editable="true"  visible="true"  deprecated="false" >
+<Model.Tag.elements>
+<DefaultBusinessModel.Method name="is"  xmi.idref="a7"  xmi.uuid="ilr:5780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.Tag.elements>
+</DefaultBusinessModel.Properties>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a12"  xmi.uuid="ilr:5A80AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="isNot"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.bal.Number.IsNot"  visible="true"  translation="{this} != {0}"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a13"  xmi.uuid="ilr:5B80AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="boolean"  href="ilr:3280AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a14"  xmi.uuid="ilr:5C80AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false"  type="a10" >
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a15"  xmi.uuid="ilr:5D80AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="equals"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.bal.Object.Equals"  visible="false"  translation="{this} equals {0}"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a16"  xmi.uuid="ilr:5E80AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="boolean"  href="ilr:3280AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a17"  xmi.uuid="ilr:5F80AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false"  type="a10" >
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a18"  xmi.uuid="ilr:6080AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="doesNotEqual"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.bal.Object.DoesNotEqual"  visible="false"  translation="! ({this} equals {0})"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a19"  xmi.uuid="ilr:6180AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="boolean"  href="ilr:3280AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a20"  xmi.uuid="ilr:6280AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false"  type="a10" >
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a21"  xmi.uuid="ilr:6380AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="isGreaterThan"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.bal.Number.GreaterThan"  visible="true"  translation="{this} &gt; {0}"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a22"  xmi.uuid="ilr:6480AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="boolean"  href="ilr:3280AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a23"  xmi.uuid="ilr:6580AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false"  type="a5" >
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a24"  xmi.uuid="ilr:6680AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="isGreaterThanOrEquals"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.bal.Number.GreaterThanOrEqual"  visible="true"  translation="{this} &gt;= {0}"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a25"  xmi.uuid="ilr:6780AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="boolean"  href="ilr:3280AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a26"  xmi.uuid="ilr:6880AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false"  type="a5" >
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a27"  xmi.uuid="ilr:6980AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="isLessThan"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.bal.Number.LessThan"  visible="true"  translation="{this} &lt; {0}"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a28"  xmi.uuid="ilr:6A80AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="boolean"  href="ilr:3280AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a29"  xmi.uuid="ilr:6B80AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false"  type="a5" >
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a30"  xmi.uuid="ilr:6C80AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="isLessThanOrEquals"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.bal.Number.LessThanOrEqual"  visible="true"  translation="{this} &lt;= {0}"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a31"  xmi.uuid="ilr:6D80AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="boolean"  href="ilr:3280AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a32"  xmi.uuid="ilr:6E80AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false"  type="a5" >
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a33"  xmi.uuid="ilr:6F80AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="isBetween"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.bal.Number.IsBetween"  visible="true"  translation="{this} &gt;= {0} &amp;&amp; {this} &lt;= {1}"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a34"  xmi.uuid="ilr:7080AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="boolean"  href="ilr:3280AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a35"  xmi.uuid="ilr:7180AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="min"  editable="true"  visible="true"  deprecated="false"  type="a5" >
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a36"  xmi.uuid="ilr:7280AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="max"  editable="true"  visible="true"  deprecated="false"  type="a5" >
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Properties xmi.id="a37"  xmi.uuid="ilr:2382AA48075B03010000FCC4BF018265A8C0#1"  tagId="noTruncation"  values="true"  name="noTruncation"  editable="true"  visible="true"  deprecated="false" >
+<Model.Tag.elements>
+<DefaultBusinessModel.Method name="isBetween"  xmi.idref="a33"  xmi.uuid="ilr:6F80AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.Tag.elements>
+</DefaultBusinessModel.Properties>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a38"  xmi.uuid="ilr:7380AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="isBetweenIE"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.bal.Number.IsBetweenIE"  visible="true"  translation="{this} &gt;= {0} &amp;&amp; {this} &lt; {1}"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a39"  xmi.uuid="ilr:7480AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="boolean"  href="ilr:3280AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a40"  xmi.uuid="ilr:7580AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="min"  editable="true"  visible="true"  deprecated="false"  type="a5" >
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a41"  xmi.uuid="ilr:7680AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="max"  editable="true"  visible="true"  deprecated="false"  type="a5" >
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Properties xmi.id="a42"  xmi.uuid="ilr:3982AA48075B03010000FCC4BF018265A8C0#1"  tagId="noTruncation"  values="true"  name="noTruncation"  editable="true"  visible="true"  deprecated="false" >
+<Model.Tag.elements>
+<DefaultBusinessModel.Method name="isBetweenIE"  xmi.idref="a38"  xmi.uuid="ilr:7380AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.Tag.elements>
+</DefaultBusinessModel.Properties>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a43"  xmi.uuid="ilr:7780AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="isBetweenEI"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.bal.Number.IsBetweenEI"  visible="true"  translation="{this} &gt; {0} &amp;&amp; {this} &lt;= {1}"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a44"  xmi.uuid="ilr:7880AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="boolean"  href="ilr:3280AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a45"  xmi.uuid="ilr:7980AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="min"  editable="true"  visible="true"  deprecated="false"  type="a5" >
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a46"  xmi.uuid="ilr:7A80AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="max"  editable="true"  visible="true"  deprecated="false"  type="a5" >
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Properties xmi.id="a47"  xmi.uuid="ilr:0A82AA48075B03010000FCC4BF018265A8C0#1"  tagId="noTruncation"  values="true"  name="noTruncation"  editable="true"  visible="true"  deprecated="false" >
+<Model.Tag.elements>
+<DefaultBusinessModel.Method name="isBetweenEI"  xmi.idref="a43"  xmi.uuid="ilr:7780AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.Tag.elements>
+</DefaultBusinessModel.Properties>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a48"  xmi.uuid="ilr:7B80AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="isBetweenEE"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.bal.Number.IsBetweenEE"  visible="true"  translation="{this} &gt; {0} &amp;&amp; {this} &lt; {1}"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a49"  xmi.uuid="ilr:7C80AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="boolean"  href="ilr:3280AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a50"  xmi.uuid="ilr:7D80AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="min"  editable="true"  visible="true"  deprecated="false"  type="a5" >
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a51"  xmi.uuid="ilr:7E80AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="max"  editable="true"  visible="true"  deprecated="false"  type="a5" >
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Properties xmi.id="a52"  xmi.uuid="ilr:1082AA48075B03010000FCC4BF018265A8C0#1"  tagId="noTruncation"  values="true"  name="noTruncation"  editable="true"  visible="true"  deprecated="false" >
+<Model.Tag.elements>
+<DefaultBusinessModel.Method name="isBetweenEE"  xmi.idref="a48"  xmi.uuid="ilr:7B80AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.Tag.elements>
+</DefaultBusinessModel.Properties>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a53"  xmi.uuid="ilr:7F80AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="isNull"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.bal.Object.IsNull"  visible="false"  translation="({this} == null)"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a54"  xmi.uuid="ilr:8080AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="boolean"  href="ilr:3280AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Class>
+<DefaultBusinessModel.Class xmi.id="a10"  xmi.uuid="ilr:3D80AA48075B03010000FCC4BF018265A8C0#1"  noAction="false"  noCondition="false"  navigate="true"  bindingMode="none"  isSingleton="false"  isRoot="false"  isLeaf="false"  isAbstract="false"  visibility="public_vis"  name="Object"  editable="true"  creationDate="19 Apr 2005 15:15:42 GMT"  lastModificationDate="8 Jun 2005 20:30:02 GMT"  implicit="true"  visible="false"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Properties xmi.id="a55"  xmi.uuid="ilr:1D82AA48075B03010000FCC4BF018265A8C0#1"  tagId="propagateArgumentType"  values="true"  name="propagateArgumentType"  editable="true"  visible="true"  deprecated="false" >
+<Model.Tag.elements>
+<DefaultBusinessModel.Class name="Object"  xmi.idref="a10"  xmi.uuid="ilr:3D80AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.Tag.elements>
+</DefaultBusinessModel.Properties>
+<DefaultBusinessModel.Method xmi.id="a56"  xmi.uuid="ilr:3E80AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="is"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.bal.Object.Is"  visible="true"  translation="{this} == {0}"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a57"  xmi.uuid="ilr:3F80AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="boolean"  href="ilr:3280AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a58"  xmi.uuid="ilr:4080AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false"  type="a10" >
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Properties xmi.id="a59"  xmi.uuid="ilr:0682AA48075B03010000FCC4BF018265A8C0#1"  tagId="default"  values="true"  name="default"  editable="true"  visible="true"  deprecated="false" >
+<Model.Tag.elements>
+<DefaultBusinessModel.Method name="is"  xmi.idref="a56"  xmi.uuid="ilr:3E80AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.Tag.elements>
+</DefaultBusinessModel.Properties>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a60"  xmi.uuid="ilr:4180AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="isNot"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.bal.Object.IsNot"  visible="true"  translation="{this} != {0}"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a61"  xmi.uuid="ilr:4280AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="boolean"  href="ilr:3280AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a62"  xmi.uuid="ilr:4380AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false"  type="a10" >
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a63"  xmi.uuid="ilr:4480AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="equals"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.bal.Object.Equals"  visible="false"  translation="{this} equals {0}"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a64"  xmi.uuid="ilr:4580AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="boolean"  href="ilr:3280AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a65"  xmi.uuid="ilr:4680AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false"  type="a10" >
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a66"  xmi.uuid="ilr:4780AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="doesNotEqual"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.bal.Object.DoesNotEqual"  visible="false"  translation="! ({this} equals {0})"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a67"  xmi.uuid="ilr:4880AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="boolean"  href="ilr:3280AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a68"  xmi.uuid="ilr:4980AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false"  type="a10" >
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a69"  xmi.uuid="ilr:4A80AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="isNull"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.bal.Object.IsNull"  visible="false"  translation="({this} == null)"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a70"  xmi.uuid="ilr:4B80AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="boolean"  href="ilr:3280AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a71"  xmi.uuid="ilr:4C80AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="isIn"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.bal.Object.IsIn"  visible="true"  translation="{this} in \{ {0} \}"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a72"  xmi.uuid="ilr:4D80AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="boolean"  href="ilr:3280AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a73"  xmi.uuid="ilr:4E80AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="values"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Collection"  href="ilr:EC80AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a74"  xmi.uuid="ilr:4F80AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="isNotIn"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.bal.Object.IsNotIn"  visible="true"  translation="{this} !in \{ {0} \}"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a75"  xmi.uuid="ilr:5080AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="boolean"  href="ilr:3280AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a76"  xmi.uuid="ilr:5180AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="values"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Collection"  href="ilr:EC80AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Class>
+<DefaultBusinessModel.Class xmi.id="a77"  xmi.uuid="ilr:8180AA48075B03010000FCC4BF018265A8C0#1"  noAction="false"  noCondition="false"  navigate="false"  bindingMode="multiple"  isSingleton="false"  isRoot="false"  isLeaf="false"  isAbstract="false"  visibility="public_vis"  name="Character"  editable="true"  creationDate="19 Apr 2005 15:15:42 GMT"  lastModificationDate="8 Jun 2005 20:30:02 GMT"  implicit="true"  visible="false"  deprecated="false" >
+</DefaultBusinessModel.Class>
+<DefaultBusinessModel.Class xmi.id="a78"  xmi.uuid="ilr:8280AA48075B03010000FCC4BF018265A8C0#1"  noAction="false"  noCondition="false"  navigate="false"  bindingMode="multiple"  isSingleton="false"  isRoot="false"  isLeaf="false"  isAbstract="false"  visibility="public_vis"  name="Float"  editable="true"  creationDate="19 Apr 2005 15:15:42 GMT"  lastModificationDate="8 Jun 2005 20:30:02 GMT"  implicit="true"  visible="false"  deprecated="false" >
+<Model.GeneralizableElement.supertypes>
+<DefaultBusinessModel.Class name="Number"  xmi.idref="a5"  xmi.uuid="ilr:5480AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.GeneralizableElement.supertypes>
+</DefaultBusinessModel.Class>
+<DefaultBusinessModel.Class xmi.id="a79"  xmi.uuid="ilr:8380AA48075B03010000FCC4BF018265A8C0#1"  noAction="false"  noCondition="false"  navigate="false"  bindingMode="multiple"  isSingleton="false"  isRoot="false"  isLeaf="false"  isAbstract="false"  visibility="public_vis"  name="Double"  editable="true"  creationDate="19 Apr 2005 15:15:42 GMT"  lastModificationDate="8 Jun 2005 20:30:02 GMT"  implicit="true"  visible="false"  deprecated="false" >
+<Model.GeneralizableElement.supertypes>
+<DefaultBusinessModel.Class name="Number"  xmi.idref="a5"  xmi.uuid="ilr:5480AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.GeneralizableElement.supertypes>
+</DefaultBusinessModel.Class>
+<DefaultBusinessModel.Class xmi.id="a80"  xmi.uuid="ilr:8480AA48075B03010000FCC4BF018265A8C0#1"  noAction="false"  noCondition="false"  navigate="false"  bindingMode="multiple"  isSingleton="false"  isRoot="false"  isLeaf="false"  isAbstract="false"  visibility="public_vis"  name="Short"  editable="true"  creationDate="19 Apr 2005 15:15:42 GMT"  lastModificationDate="8 Jun 2005 20:30:02 GMT"  implicit="true"  visible="false"  deprecated="false" >
+<Model.GeneralizableElement.supertypes>
+<DefaultBusinessModel.Class name="Number"  xmi.idref="a5"  xmi.uuid="ilr:5480AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.GeneralizableElement.supertypes>
+</DefaultBusinessModel.Class>
+<DefaultBusinessModel.Class xmi.id="a81"  xmi.uuid="ilr:8580AA48075B03010000FCC4BF018265A8C0#1"  noAction="false"  noCondition="false"  navigate="false"  bindingMode="multiple"  isSingleton="false"  isRoot="false"  isLeaf="false"  isAbstract="false"  visibility="public_vis"  name="Integer"  editable="true"  creationDate="19 Apr 2005 15:15:42 GMT"  lastModificationDate="8 Jun 2005 20:30:02 GMT"  implicit="true"  visible="false"  deprecated="false" >
+<Model.GeneralizableElement.supertypes>
+<DefaultBusinessModel.Class name="Number"  xmi.idref="a5"  xmi.uuid="ilr:5480AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.GeneralizableElement.supertypes>
+</DefaultBusinessModel.Class>
+<DefaultBusinessModel.Class xmi.id="a82"  xmi.uuid="ilr:8680AA48075B03010000FCC4BF018265A8C0#1"  noAction="false"  noCondition="false"  navigate="false"  bindingMode="multiple"  isSingleton="false"  isRoot="false"  isLeaf="false"  isAbstract="false"  visibility="public_vis"  name="Long"  editable="true"  creationDate="19 Apr 2005 15:15:42 GMT"  lastModificationDate="8 Jun 2005 20:30:02 GMT"  implicit="true"  visible="false"  deprecated="false" >
+<Model.GeneralizableElement.supertypes>
+<DefaultBusinessModel.Class name="Number"  xmi.idref="a5"  xmi.uuid="ilr:5480AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.GeneralizableElement.supertypes>
+</DefaultBusinessModel.Class>
+<DefaultBusinessModel.Class xmi.id="a83"  xmi.uuid="ilr:8780AA48075B03010000FCC4BF018265A8C0#1"  noAction="false"  noCondition="false"  navigate="true"  bindingMode="none"  isSingleton="false"  isRoot="false"  isLeaf="false"  isAbstract="false"  visibility="public_vis"  name="String"  editable="true"  creationDate="19 Apr 2005 15:15:42 GMT"  lastModificationDate="8 Jun 2005 20:30:02 GMT"  implicit="true"  visible="false"  deprecated="false"  arrayClass="a84" >
+<Model.GeneralizableElement.supertypes>
+<DefaultBusinessModel.Class name="Serializable"  href="ilr:5680AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.GeneralizableElement.supertypes>
+<Model.Namespace.contents>
+<DefaultBusinessModel.Method xmi.id="a85"  xmi.uuid="ilr:8880AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="is"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.bal.Object.Is"  visible="false"  translation="{this} == {0}"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a86"  xmi.uuid="ilr:8980AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="boolean"  href="ilr:3280AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a87"  xmi.uuid="ilr:8A80AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false"  type="a10" >
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Properties xmi.id="a88"  xmi.uuid="ilr:1482AA48075B03010000FCC4BF018265A8C0#1"  tagId="propagateArgumentType"  values="true"  name="propagateArgumentType"  editable="true"  visible="true"  deprecated="false" >
+<Model.Tag.elements>
+<DefaultBusinessModel.Method name="is"  xmi.idref="a85"  xmi.uuid="ilr:8880AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.Tag.elements>
+</DefaultBusinessModel.Properties>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a89"  xmi.uuid="ilr:8B80AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="isNot"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.bal.Object.IsNot"  visible="false"  translation="{this} != {0}"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a90"  xmi.uuid="ilr:8C80AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="boolean"  href="ilr:3280AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a91"  xmi.uuid="ilr:8D80AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false"  type="a10" >
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Properties xmi.id="a92"  xmi.uuid="ilr:1E82AA48075B03010000FCC4BF018265A8C0#1"  tagId="propagateArgumentType"  values="true"  name="propagateArgumentType"  editable="true"  visible="true"  deprecated="false" >
+<Model.Tag.elements>
+<DefaultBusinessModel.Method name="isNot"  xmi.idref="a89"  xmi.uuid="ilr:8B80AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.Tag.elements>
+</DefaultBusinessModel.Properties>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a93"  xmi.uuid="ilr:8E80AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="equals"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.bal.String.Equals"  visible="true"  translation="{this} equals {0}"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a94"  xmi.uuid="ilr:8F80AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="boolean"  href="ilr:3280AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a95"  xmi.uuid="ilr:9080AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false"  type="a10" >
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Properties xmi.id="a96"  xmi.uuid="ilr:3482AA48075B03010000FCC4BF018265A8C0#1"  tagId="default"  values="true"  name="default"  editable="true"  visible="true"  deprecated="false" >
+<Model.Tag.elements>
+<DefaultBusinessModel.Method name="equals"  xmi.idref="a93"  xmi.uuid="ilr:8E80AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.Tag.elements>
+</DefaultBusinessModel.Properties>
+<DefaultBusinessModel.Properties xmi.id="a97"  xmi.uuid="ilr:3C82AA48075B03010000FCC4BF018265A8C0#1"  tagId="propagateArgumentType"  values="true"  name="propagateArgumentType"  editable="true"  visible="true"  deprecated="false" >
+<Model.Tag.elements>
+<DefaultBusinessModel.Method name="equals"  xmi.idref="a93"  xmi.uuid="ilr:8E80AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.Tag.elements>
+</DefaultBusinessModel.Properties>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a98"  xmi.uuid="ilr:9180AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="doesNotEqual"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.bal.String.DoesNotEqual"  visible="true"  translation="! ({this} equals {0})"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a99"  xmi.uuid="ilr:9280AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="boolean"  href="ilr:3280AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a100"  xmi.uuid="ilr:9380AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false"  type="a10" >
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Properties xmi.id="a101"  xmi.uuid="ilr:3382AA48075B03010000FCC4BF018265A8C0#1"  tagId="propagateArgumentType"  values="true"  name="propagateArgumentType"  editable="true"  visible="true"  deprecated="false" >
+<Model.Tag.elements>
+<DefaultBusinessModel.Method name="doesNotEqual"  xmi.idref="a98"  xmi.uuid="ilr:9180AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.Tag.elements>
+</DefaultBusinessModel.Properties>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a102"  xmi.uuid="ilr:9480AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="isEmpty"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.bal.String.IsEmpty"  visible="true"  translation="(({this} == null) || ({this}.length() == 0))"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a103"  xmi.uuid="ilr:9580AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="boolean"  href="ilr:3280AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a104"  xmi.uuid="ilr:9680AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="isNotEmpty"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.bal.String.IsNotEmpty"  visible="true"  translation="(({this} != null) &amp;&amp; ({this}.length() &gt; 0))"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a105"  xmi.uuid="ilr:9780AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="boolean"  href="ilr:3280AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a106"  xmi.uuid="ilr:9880AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="contains"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.bal.String.Contains"  visible="true"  translation="{this}.indexOf({0}) != -1"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a107"  xmi.uuid="ilr:9980AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="boolean"  href="ilr:3280AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a108"  xmi.uuid="ilr:9A80AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false"  type="a83" >
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a109"  xmi.uuid="ilr:9B80AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="doesNotContain"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.bal.String.DoesNotContain"  visible="true"  translation="{this}.indexOf({0}) == -1"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a110"  xmi.uuid="ilr:9C80AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="boolean"  href="ilr:3280AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a111"  xmi.uuid="ilr:9D80AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false"  type="a83" >
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a112"  xmi.uuid="ilr:9E80AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="startsWith"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.bal.String.StartsWith"  visible="true"  translation="{this}.startsWith({0})"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a113"  xmi.uuid="ilr:9F80AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="boolean"  href="ilr:3280AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a114"  xmi.uuid="ilr:A080AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false"  type="a83" >
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a115"  xmi.uuid="ilr:A180AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="doesNotStartWith"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.bal.String.DoesNotStartWith"  visible="true"  translation="! {this}.startsWith({0})"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a116"  xmi.uuid="ilr:A280AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="boolean"  href="ilr:3280AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a117"  xmi.uuid="ilr:A380AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false"  type="a83" >
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a118"  xmi.uuid="ilr:A480AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="endsWith"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.bal.String.EndsWith"  visible="true"  translation="{this}.endsWith({0})"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a119"  xmi.uuid="ilr:A580AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="boolean"  href="ilr:3280AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a120"  xmi.uuid="ilr:A680AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false"  type="a83" >
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a121"  xmi.uuid="ilr:A780AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="doesNotEndWith"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.bal.String.DoesNotEndWith"  visible="true"  translation="! {this}.endsWith({0})"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a122"  xmi.uuid="ilr:A880AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="boolean"  href="ilr:3280AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a123"  xmi.uuid="ilr:A980AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false"  type="a83" >
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Class>
+<DefaultBusinessModel.Class xmi.id="a124"  xmi.uuid="ilr:AA80AA48075B03010000FCC4BF018265A8C0#1"  noAction="false"  noCondition="false"  navigate="false"  bindingMode="multiple"  isSingleton="false"  isRoot="false"  isLeaf="false"  isAbstract="false"  visibility="public_vis"  name="Cloneable"  editable="true"  creationDate="19 Apr 2005 15:15:42 GMT"  lastModificationDate="8 Jun 2005 20:30:02 GMT"  implicit="true"  visible="false"  deprecated="false" >
+</DefaultBusinessModel.Class>
+<DefaultBusinessModel.Class xmi.id="a125"  xmi.uuid="ilr:3F85AA48075B03010000FCC4BF018265A8C0#1"  noAction="false"  noCondition="false"  navigate="false"  bindingMode="multiple"  isSingleton="false"  isRoot="false"  isLeaf="false"  isAbstract="true"  visibility="public_vis"  name="Comparable"  editable="true"  creationDate="19 Apr 2005 15:24:59 GMT"  lastModificationDate="8 Jun 2005 20:30:02 GMT"  implicit="true"  visible="false"  deprecated="false" >
+</DefaultBusinessModel.Class>
+<DefaultBusinessModel.Class xmi.id="a126"  xmi.uuid="ilr:4185AA48075B03010000FCC4BF018265A8C0#1"  noAction="false"  noCondition="false"  navigate="false"  bindingMode="multiple"  isSingleton="false"  isRoot="false"  isLeaf="false"  isAbstract="true"  visibility="public_vis"  name="CharSequence"  editable="true"  creationDate="19 Apr 2005 15:24:59 GMT"  lastModificationDate="8 Jun 2005 20:30:02 GMT"  implicit="true"  visible="false"  deprecated="false" >
+</DefaultBusinessModel.Class>
+<DefaultBusinessModel.Class xmi.id="a84"  xmi.uuid="ilr:ED873FEAA25D0401000096EA09016E65A8C0#1"  noAction="false"  noCondition="false"  navigate="false"  bindingMode="multiple"  isSingleton="false"  isRoot="false"  isLeaf="false"  isAbstract="false"  visibility="public_vis"  name="String[&#93;"  editable="true"  creationDate="8 Jun 2005 20:30:02 GMT"  lastModificationDate="8 Jun 2005 20:30:02 GMT"  implicit="false"  visible="true"  deprecated="false"  componentType="a83" >
+</DefaultBusinessModel.Class>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Package>
+</XMI.content>
+</XMI>

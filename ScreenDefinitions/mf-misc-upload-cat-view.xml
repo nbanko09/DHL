@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="all-rescan-view" template="masterfile-upload-misc-cat-tpl.xml"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/view.xsd">
+
+    <labels default="en">
+        <locale name="en">
+            <label name="forward" value="Submit"/>
+            <label name="requestCAT" value="Request Details - New CAT"/>
+        </locale>
+    </labels>
+    
+    <section-overrides>
+    </section-overrides>
+    
+    <property-overrides>
+    <text name = "custom6.chbCattariff" validation="required"/>
+    </property-overrides>
+
+    <hidden-overrides>
+        <hidden name="processInformation.response" defaultValue="Complete"/>
+    </hidden-overrides>
+    
+    <action-overrides>
+        	<getNext name="next" readonly="false" visible="true"/>
+   </action-overrides>
+
+	<validations>
+		<validation name="validation.fdacheck"/>
+	</validations>
+
+</view>

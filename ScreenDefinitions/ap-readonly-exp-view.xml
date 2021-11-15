@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="ap-readonly-exp-view" template="nonpo-tpl.xml" readonly="true"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/view.xsd">
+
+    <!-- View permutations:
+          -view: This is the standard view
+          -viewA: Alternatate vendor has been selected
+          -viewH: Special Handling Code has been selected
+          -viewS: Short-pay option has been selected
+    -->
+
+    <labels default="en">
+        <locale name="en">
+            <label name="forward" value="Submit"/>
+            <label name="scanVendorName" value="Employee Name"/>
+        </locale>
+    </labels>
+
+    <property-overrides>
+    </property-overrides>
+
+	<action-overrides>
+        
+    </action-overrides>
+
+    <hidden-overrides>
+        <hidden name="processInformation.response" defaultValue="Complete"/>
+    </hidden-overrides>
+
+     <documentRejection>
+        <rejectionReasons>
+            <reason name="Pending" commentsRequired="true" note="message.sendToPending">
+            </reason>
+            <reason name="Rescan" commentsRequired="true" note="message.rescan">
+            </reason>
+            <reason name="Rejected" commentsRequired="true" note="message.sendToRejected">
+            </reason>
+            <reason name="New Indexing Queue" commentsRequired="true" note="message.sendToNewIndexing">
+            </reason>
+        </rejectionReasons>
+    </documentRejection>
+
+    <validations>
+
+    </validations>
+</view>

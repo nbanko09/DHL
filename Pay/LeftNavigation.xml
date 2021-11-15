@@ -1,0 +1,68 @@
+<navigation name="section.mpnavigation" colapsible="false" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+<!-- Version 6.6  2016.07.15 -->
+
+
+    <initpage href="/filenet/search.do?searchName=InboxSearchPay"/>
+    <action href="/filenet/search.do?searchName=InboxSearchPay" target="right" image="/images/ico-inbox-c24.png" name="action.myinbox" searchName="InboxSearchPay"/>
+		
+		
+		<!--   Main Team Queues Section         -->
+   <section name="section.queues.indexing" collapsed="true" roles="MP_Administrator1, MP_Administrator2, MP_Administrator3, MP_Administrator4, MP_Processor1, MP_Processor2" >
+		<action href="/filenet/search.do?searchName=IndexingSearch" target="right" image="/images/ico-folder-w16.png" name="action.indexing"    searchName="IndexingSearch"/>  
+		<action href="/filenet/search.do?searchName=IndexingSearchNP" target="right" image="/images/ico-folder-w16.png" name="action.indexingNP"  searchName="IndexingSearchNP"/> 
+		<action href="/filenet/search.do?searchName=IndexingSearchPO" target="right" image="/images/ico-folder-w16.png" name="action.indexingPO"  searchName="IndexingSearchPO"/>  
+	</section>
+	
+	<section name="section.queues.process" collapsed="true" roles="MP_Administrator1, MP_Administrator2, MP_Administrator3, MP_Administrator4, MP_Processor1, MP_Processor2" >
+		<action href="/filenet/search.do?searchName=ProcessingSearch" target="right" image="/images/ico-folder-w16.png" name="action.processing"  searchName="ProcessingSearch" />
+	</section>
+	
+	<section name="section.queues.review" roles="MP_Administrator1, MP_Administrator2, MP_Administrator3, MP_Administrator4" collapsed="true" >
+		<action href="/filenet/search.do?searchName=ReviewSearchSupervisor" target="right" image="/images/ico-folder-w16.png" name="action.review.supervisor" searchName="ReviewSearchSupervisor" />
+		<action href="/filenet/search.do?searchName=ReviewSearchSpecial" target="right" image="/images/ico-folder-w16.png" name="action.review.special"    searchName="ReviewSearchSpecial" />
+		<action href="/filenet/search.do?searchName=CorpFacilitiesSearch" target="right" image="/images/ico-folder-w16.png" name="action.corpfacilities" searchName="CorpFacilitiesSearch"/>  
+		<action href="/filenet/search.do?searchName=HighDollarReview" target="right" image="/images/ico-folder-w16.png" name="action.highdollar.review" searchName="HighDollarReview"  /> 
+		<action href="/filenet/search.do?searchName=APReviewSearch" target="right" image="/images/ico-folder-w16.png" name="action.APReview"  searchName="APReviewSearch"/>		
+	</section>
+	
+		
+	<!--   Main Exceptions Queues        -->
+    <section name="section.queues.exceptions" collapsed="true" roles="MP_Administrator1, MP_Administrator2, MP_Administrator3, MP_Administrator4, MP_Processor1, MP_Processor2">
+		<action href="/filenet/search.do?searchName=ExceptionSearch" target="right" image="/images/ico-folder-w16.png" name="action.generalexception" searchName="ExceptionSearch"/>    
+		<action href="/filenet/search.do?searchName=AwaitingReceipt" target="right" image="/images/ico-folder-w16.png" name="action.awaitingreceipt" searchName="AwaitingReceipt"/>  
+		<action href="/filenet/search.do?searchName=DuplicateSearch" target="right" image="/images/ico-folder-w16.png" name="action.duplicatereview" searchName="DuplicateSearch"/> 		
+		<action href="/filenet/search.do?searchName=VendorMaintenanceSearch" target="right" image="/images/ico-folder-w16.png" name="action.vendormaintenance" searchName="VendorMaintenanceSearch"/>     
+        <action href="/filenet/search.do?searchName=RescanSearch" target="right" image="/images/ico-folder-w16.png" name="action.rescan" searchName="RescanSearch"/>	
+		<action href="/filenet/search.do?searchName=TerminateSearch" target="right" image="/images/ico-folder-w16.png" name="action.terminate" searchName="TerminateSearch"/>	
+		<action href="/filenet/search.do?searchName=OverrideEditSearch" target="right" image="/images/ico-folder-w16.png" name="action.overrideEditAP" searchName="OverrideEditSearch" roles="MP_Administrator1, MP_Administrator2, MP_Administrator3, MP_Administrator4"/>		
+	</section>
+	
+	<!--   Create Items Section       -->
+	<section name="section.requests" roles=" MP_Administrator1, MP_Administrator2, MP_Administrator3, MP_Administrator4, MP_Indexer1, MP_Processor1, MP_Approver1, MP_Approver2" collapsed="true">
+		<action href="/filenet/upload.do?view=upload-nonpo-view.xml" target="right" image="/images/ico-add-doc-w16.png" name="action.nonpo" />   		
+		<action href="/filenet/upload.do?view=upload-po-view.xml" target="right" image="/images/ico-add-doc-w16.png" name="action.po" />
+		<action href="/filenet/upload.do?view=upload-xls-view.xml&amp;flag=excel" target="right" image="/images/ico-add-doc-w16.png" name="action.excel"/>			
+    </section>
+	
+	
+    <!--  Posting Queues Section         -->    
+	<section name="section.postingqueues" roles="MP_Administrator1, MP_Administrator2, MP_Administrator3, MP_Administrator4" collapsed="true" >
+		<action href="/filenet/search.do?searchName=PostingSearch" target="right" image="/images/ico-folder-w16.png" name="action.posting"  searchName="PostingSearch"/>
+		<action href="/filenet/search.do?searchName=PostingFailedSearch" target="right" image="/images/ico-folder-w16.png" name="action.postingfailed" searchName="PostingFailedSearch"/>
+		<action href="/filenet/search.do?searchName=PaymentSearch" target="right" image="/images/ico-folder-w16.png" name="action.payment" searchName="PaymentSearch"/>
+		<action href="/filenet/search.do?searchName=ClearanceSearch" target="right" image="/images/ico-folder-w16.png" name="action.clearance" searchName="ClearanceSearch"/>
+		<action href="/filenet/search.do?searchName=CancelledInvoiceSearch" target="right" image="/images/ico-folder-w16.png" name="action.cancelled" searchName="CancelledInvoiceSearch"/>
+				
+	</section>             
+
+	<!--   Tools        -->
+    <section name="section.tools" collapsed="true">
+        <action href="/documents/reassign.do?userIsSelf=true&amp;new=true" target="right" image="/images/ico-wrench-w16.png" name="action.reassignSelf"/>
+        <action href="/documents/reassign.do?userIsSelf=false&amp;new=true" target="right" image="/images/ico-wrench-w16.png" name="action.reassignDelegate"/>
+        <action href="/protected/preferences.do" target="right" image="/images/ico-wrench-w16.png" name="action.preferences"/>
+		
+    </section>
+	
+
+         
+</navigation>

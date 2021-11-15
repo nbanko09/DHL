@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="all-rescan-view" template="check-stock-lsr-tpl.xml"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/view.xsd">
+
+    <labels default="en">
+        <locale name="en">
+            <label name="forward" value="Submit"/>
+            <label name="reject" value="Cancel"/>
+        </locale>
+    </labels>
+    
+        <action-overrides>
+                <button name="release" visible="false"/>
+                <getNext name="next" readonly="true" visible="false"/>
+    </action-overrides>
+    
+    <property-overrides>
+    <text name="tbdString11" readonly="false"/>
+    <text name="tbdString2" readonly="false"/>
+    <text name="tbdString3" readonly="false"/>    
+    <text name="group" readonly="false"/>    
+    <text name="processCode" readonly="false"/>    
+    <text name="tbdComment1" readonly="false"/> 
+    <text name="batchNumber" readonly="false"/>    
+        <text name="checkStubMessage" readonly="false"/>    
+        <text name="tbdNumber4" readonly="false"/>
+        <text name="custom5.address1" readonly="false"/>
+    <text name="custom5.address2" readonly="false"/>
+    <text name="docPriority" readonly="false"/>
+      </property-overrides>
+
+    <hidden-overrides>
+        <hidden name="processInformation.response" defaultValue="Complete"/>
+        <hidden name="processInformation.comment"/>
+    </hidden-overrides>
+
+      <documentRejection>
+             <rejectionReasons>
+                 <reason name="Cancel" commentsRequired="true"  note="message.terminate">
+                 </reason>
+             </rejectionReasons>
+    </documentRejection>
+    
+    <validations>
+    
+    </validations>
+
+</view>
+
+ 

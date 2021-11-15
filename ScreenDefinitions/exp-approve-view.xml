@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="exp-approve-view" template="exp-tpl.xml"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/view.xsd">
+		
+		
+		<labels default="en">
+				<locale name="en">
+				</locale>
+		</labels>
+
+    <action-overrides>
+		<iconAction name="editRouting" readonly="false"/>
+		<button name="release" visible="false"/>
+		<button name="updateRelease" visible="false"/>
+	</action-overrides>
+	
+	<property-overrides>
+		<lookup name="processCode" readonly="true"/>
+	</property-overrides>
+	
+	<lineItem-overrides>
+	</lineItem-overrides>
+	
+	<hidden-overrides>
+		<hidden name="processInformation.response" defaultValue="Complete"/>
+	</hidden-overrides>
+	
+	 <validations>
+     	<validation  name="validation.check.originator.approver.document"/>
+		<validation name="validation.check.requester.approver.document"/>
+		<validation name="validation.accountCode"/>
+		<validation name="validation.MainAndSubLineTotal"/>
+    </validations>
+
+	<documentRejection>
+		<rejectionReasons>
+			<reason name="Return to Requester" commentsRequired="true" note="message.returnSubmitter">
+				<subReason name="Unauthorized purchases"/>
+				<subReason name="Missing receipts"/>
+			</reason>
+			<reason name="Hold" commentsRequired="true" note="message.rematchHold">
+			</reason>
+		</rejectionReasons>
+	</documentRejection>
+    
+</view>

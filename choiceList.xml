@@ -1,0 +1,1155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<choiceLists xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<!-- Note that the values will normally be numbers, but they are not
+		necessarily numbered -->
+		
+		<list name="choice.invoiceTypes">
+			<!-- This choicelist is mandatory for use in the advanced search. The name of this list must not be changed.
+					Although this choicelist may not be used for the individual view implementation (can be replaced by more specific invoice types that are dependant on group
+					it should always contain the total number of invoice types in the implementation as it will be used for reporting -->
+
+			<choice value="PO" label="PO"/>
+			<choice value="NON-PO" label="Non-PO"/>
+			<choice value="EDI" label="EDI"/>
+			<choice value="EXP" label="Expense Report"/>
+			<choice value="PEXP" label="Purchase Card"/>
+			<choice value="DOC" label="Doc"/>
+			<choice value="TAX" label="Tax"/>
+			
+			<choice value="VENDOR" label="Vendor Request"/>
+			<choice value="CUSTOMER" label="Customer Request"/>
+			<choice value="COLLECT" label="Collections Request"/>
+			<choice value="CHECKREQ" label="Check/EFT Request"/>
+			<choice value="BROKERAGE" label="Brokerage Request"/>
+			<choice value="MISC" label="Miscellaneous Request"/>
+			<choice value="AP" label="AP Invoice"/>
+			<choice value="CHKSTK" label="Check Stock Request"/>
+		</list>
+		
+			<list name="choice.invoiceSubTypes.upload">
+		<!-- This choicelist is mandatory for use in the advanced search. The name of this list must not be changed.
+					Although this choicelist may not be used for the individual view implementation (can be replaced by more specific invoice types that are dependant on group
+					it should always contain the total number of invoice types in the implementation as it will be used for reporting -->
+						
+			<!--  Custom for CMA -->
+			<choice value="INV" label="Standard"/>
+			<choice value="CM" label="Credit Memo"/>
+			<choice value="FXA" label="Fixed Assets"/>
+	
+		</list>
+		
+	
+		<list name="choice.invoiceSubTypes">
+		<!-- This choicelist is mandatory for use in the advanced search. The name of this list must not be changed.
+					Although this choicelist may not be used for the individual view implementation (can be replaced by more specific invoice types that are dependant on group
+					it should always contain the total number of invoice types in the implementation as it will be used for reporting -->
+						
+			<!--  Custom for CMA -->
+			<choice value="INV" label="Standard"/>
+			<choice value="CM" label="Credit Memo"/>
+			<choice value="FXA" label="Fixed Assets"/>
+			<choice value="NEWBILL" label="New Billable Account"/>
+			<choice value="NEWNONBILL" label="New Non-Billable Account"/>
+			<choice value="UPDATE" label="Update Existing Account"/>
+			<choice value="CREDIT" label="Credit Request"/>
+			<choice value="COLLECTREQ" label="Collections Request"/>
+			<choice value="DEACTIVATE" label="Deactivate Account"/>
+			<choice value="BONDQRY" label="Bond Query"/>
+			<choice value="BONDPOA" label="POA Request"/>
+			<choice value="POATRF" label="POA Transfer"/>
+			<choice value="NEWCAT" label="New CAT"/>
+			<choice value="MODCAT" label="Modify CAT"/>
+			<choice value="R-OCEAN" label="Ocean Request"/>
+			<choice value="R-MISC" label="Misc Request"/>
+			<choice value="R-OCRD" label="Ocean Credit Card Request"/>
+			<choice value="R-ACRD" label="Alliance Credit Card Request"/>
+		</list>
+
+		<list name="choice.invoiceSubTypes.PO">
+			<choice value="INV"  label="Standard"/>
+			<choice value="CM" label="Credit Memo"/>
+			<choice value="FXA" label="Fixed Assets"/>
+
+		</list>
+		
+		<list name="choice.invoiceSubTypes.NONPO">
+			<choice value="INV" label="Standard"/>
+			<choice value="CM" label="Credit Memo"/>
+			<choice value="FXA" label="Fixed Assets"/>
+		
+		</list>
+		
+		<list name="choice.expenseSubTypes">
+			<!-- This choicelist is mandatory for use in the advanced search. The name of this list must not be changed.
+					Although this choicelist may not be used for the individual view implementation (can be replaced by more specific invoice types that are dependant on group
+					it should always contain the total number of invoice types in the implementation as it will be used for reporting -->
+			<choice value="REGULAR" label="Credit Card"/>
+			<choice value="PRE-PAID" label="Pre-Paid Card"/>
+			<choice value="TRAVEL" label="Travel Request" />
+		</list>
+		
+		
+		<list name="choice.subTypes.doc">
+			<choice value="DOC01" label="W-8BEN" />
+			<choice value="DOC02" label="W-8ECI" />
+			<choice value="DOC03" label="W-8EXP" />
+			<choice value="DOC04" label="W-8IMY" />
+			<choice value="DOC05" label="W-8BEN-E" />
+			<choice value="DOC06" label="W-9" />
+			<choice value="Other" label="Other" />	
+		</list>
+
+		<list name="choice.separateCheck">
+			<choice value="Y" label="Y" />
+			<choice value="N" label="N" />
+		</list>
+
+
+		<list name="choice.routingCodes">
+			<choice value="CC" label="Cost Center" />
+			<choice value="PREAPPROVED" label="PreApproved" />
+				
+		</list>
+		
+	
+		<list name="choice.specialHandlingCodes">
+			<choice value="N" label="N - No Special Handling" />
+			<choice value="1" label="1 - Future Use" />
+			<choice value="2" label="2 - Print Remit Copy" />
+			<choice value="3" label="3 - Return for final disposition" />
+			<choice value="4" label="4 - Future Use" />
+			<choice value="5" label="5 - Rent Vendor" />
+			<choice value="6" label="6 - Expedited - FedEx" />
+			<choice value="7" label="7 - EE Travel / Ent Reimbursements" />
+		</list>
+		
+		<list name="choice.priority">
+			<!-- This choicelist is mandatory for use in the advanced search. The name of this list must NOT be changed. -->
+        <choice value="1" label="Normal"/>
+        <choice value="2" label="Urgent"/>
+
+		</list>
+		
+		<list name="choice.sensitivity">
+			<!-- This choicelist is mandatory for use in the advanced search. The name of this list must NOT be changed. -->
+			<choice value="1" label="Normal"/>
+			<choice value="2" label="Sensitive"/>
+			<choice value="3" label="Confidential"/>
+		</list>
+	
+
+		
+		<list name="choice.legal.entity">
+			<choice value="Partnership" label="Partnership" />
+			<choice value="LLP" label="LLP" />
+			<choice value="LLC" label="LLC" />
+			<choice value="Corporation" label="Corporation" />
+			<choice value="Individual" label="Individual" />
+			<choice value="Other" label="Other" />
+		</list>	
+		
+
+
+		<list name="choice.taxExpCode">
+			<choice value="S" label="Standard" />
+			<choice value="E" label="Exempt" />
+			<choice value="U" label="Accrued" />
+		</list>
+		
+		
+		<list name="choice.department">
+			<choice value="Department1" label="Department 1" />
+			<choice value="Department2" label="Department 2"/>
+			<choice value="Department3" label="Department 3"/>
+		</list>
+		
+		<list name="choice.buyer.status">
+			<choice value="1" label="Buyer Approved" />
+			<choice value="2" label="Buyer Rejected" />
+		</list>
+				
+		<list name="choice.customtypes">
+			<!-- This choicelist is mandatory for use in the advanced search. The name of this list must not be changed.
+					Although this choicelist may not be used for the individual view implementation (can be replaced by more specific invoice types that are dependant on group
+					it should always contain the total number of invoice types in the implementation as it will be used for reporting -->
+			<choice value="DEFAULT" label="DEFAULT"/>
+			
+		</list>
+				
+		<list name="choice.attachmentTypes">
+			<!-- This choicelist is mandatory for use in the Attachments function. The name of this list must not be changed. -->
+			<!-- Note that option value 0 is reserved -->
+			<!-- Note that option value 15 is internally used for attachments that are based on ad-hoc emails -->
+			<choice value="15" label="Email"/>
+			<!-- Customize options here -->
+			<choice value="1" label="AP Documents"/>
+			<choice value="2" label="AR Documents"/>
+			<choice value="3" label="Journal Documents"/>
+			<choice value="4" label="Expense Attachments"/>
+		</list>
+					
+		<list name="choice.paymentTerms">
+			<choice value="B" label="NET 10 DAYS"/>
+			<choice value="Z" label="NET 45 DAYS"/>
+			<choice value="NC" label="NET 60 DAYS"/>
+			<choice value="01" label="NET 30 DAYS"/>
+		</list>
+		
+	<list name="choice.states">
+		<choice value="AL" label="Alabama"/>
+		<choice value="AK" label="Alaska"/>
+		<choice value="AB" label="Alberta"/>
+		<choice value="AZ" label="Arizona"/>
+		<choice value="AR" label="Arkansas"/>
+		<choice value="CA" label="California"/>
+		<choice value="CO" label="Colorado"/>
+		<choice value="CT" label="Connecticut"/>
+		<choice value="DE" label="Delaware"/>
+		<choice value="DC" label="District of Columbia"/>
+		<choice value="FL" label="Florida"/>
+		<choice value="." label="Foreign Vendor"/>
+		<choice value="GA" label="Georgia"/>
+		<choice value="HI" label="Hawaii"/>
+		<choice value="ID" label="Idaho"/>
+		<choice value="IL" label="Illinois"/>
+		<choice value="IN" label="Indiana"/>
+		<choice value="IA" label="Iowa"/>
+		<choice value="KS" label="Kansas"/>
+		<choice value="KY" label="Kentucky"/>
+		<choice value="LA" label="Louisiana"/>
+		<choice value="ME" label="Maine"/>
+		<choice value="MD" label="Maryland"/>
+		<choice value="MA" label="Massachusetts"/>
+		<choice value="MI" label="Michigan"/>
+		<choice value="MN" label="Minnesota"/>
+		<choice value="MS" label="Mississippi"/>
+		<choice value="MO" label="Missouri"/>
+		<choice value="MT" label="Montana"/>
+		<choice value="NE" label="Nebraska"/>
+		<choice value="NV" label="Nevada"/>
+		<choice value="NH" label="New Hampshire"/>
+		<choice value="NJ" label="New Jersey"/>
+		<choice value="NM" label="New Mexico"/>
+		<choice value="NY" label="New York"/>
+		<choice value="NC" label="North Carolina"/>
+		<choice value="ND" label="North Dakota"/>
+		<choice value="OH" label="Ohio"/>
+		<choice value="OK" label="Oklahoma"/>
+		<choice value="OR" label="Oregon"/>
+		<choice value="PA" label="Pennsylvania"/>
+		<choice value="PR" label="Puerto Rico"/>
+		<choice value="RI" label="Rhode Island"/>
+		<choice value="SC" label="South Carolina"/>
+		<choice value="SD" label="South Dakota"/>
+		<choice value="TN" label="Tennessee"/>
+		<choice value="TX" label="Texas"/>
+		<choice value="UT" label="Utah"/>
+		<choice value="VT" label="Vermont"/>
+		<choice value="VA" label="Virginia"/>
+		<choice value="WA" label="Washington"/>
+		<choice value="WV" label="West Virginia"/>
+		<choice value="WI" label="Wisconsin"/>
+		<choice value="WY" label="Wyoming"/>
+	</list>
+	
+		<list name="choice.provinces">
+		<choice value="AB" label="Alberta"/>
+		<choice value="BC" label="British Columbia"/>
+		<choice value="MB" label="Manitoba"/>
+		<choice value="NB" label="New Brunswick"/>
+		<choice value="NF" label="New Foundland"/>
+		<choice value="NS" label="Nova Scotia"/>
+		<choice value="ON" label="Ontario"/>
+		<choice value="PE" label="Prince Edward Island"/>
+		<choice value="QC" label="Quebec"/>
+		<choice value="SK" label="Saskatchewan"/>
+	</list>
+
+	<list name="choice.statesAndProvinces">
+		<choice value="AL" label="Alabama"/>
+		<choice value="AK" label="Alaska"/>
+		<choice value="AB" label="Alberta"/>
+		<choice value="AZ" label="Arizona"/>
+		<choice value="AR" label="Arkansas"/>
+		<choice value="BC" label="British Columbia"/>
+		<choice value="CA" label="California"/>
+		<choice value="CO" label="Colorado"/>
+		<choice value="CT" label="Connecticut"/>
+		<choice value="DE" label="Delaware"/>
+		<choice value="DC" label="District of Columbia"/>
+		<choice value="FL" label="Florida"/>
+		<choice value="." label="Foreign Vendor"/>
+		<choice value="GA" label="Georgia"/>
+		<choice value="HI" label="Hawaii"/>
+		<choice value="ID" label="Idaho"/>
+		<choice value="IL" label="Illinois"/>
+		<choice value="IN" label="Indiana"/>
+		<choice value="IA" label="Iowa"/>
+		<choice value="KS" label="Kansas"/>
+		<choice value="KY" label="Kentucky"/>
+		<choice value="KT" label="Kentucky"/>
+		<choice value="LA" label="Louisiana"/>
+		<choice value="ME" label="Maine"/>
+		<choice value="MB" label="Manitoba"/>
+		<choice value="MD" label="Maryland"/>
+		<choice value="MA" label="Massachusetts"/>
+		<choice value="MI" label="Michigan"/>
+		<choice value="MN" label="Minnesota"/>
+		<choice value="MS" label="Mississippi"/>
+		<choice value="MO" label="Missouri"/>
+		<choice value="MT" label="Montana"/>
+		<choice value="NE" label="Nebraska"/>
+		<choice value="NV" label="Nevada"/>
+		<choice value="NB" label="New Brunswick"/>
+		<choice value="NF" label="New Foundland"/>
+		<choice value="NH" label="New Hampshire"/>
+		<choice value="NJ" label="New Jersey"/>
+		<choice value="NM" label="New Mexico"/>
+		<choice value="NY" label="New York"/>
+		<choice value="NC" label="North Carolina"/>
+		<choice value="ND" label="North Dakota"/>
+		<choice value="NS" label="Nova Scotia"/>
+		<choice value="OH" label="Ohio"/>
+		<choice value="OK" label="Oklahoma"/>
+		<choice value="ON" label="Ontario"/>
+		<choice value="OR" label="Oregon"/>
+		<choice value="PA" label="Pennsylvania"/>
+		<choice value="PE" label="Prince Edward Island"/>
+		<choice value="PR" label="Puerto Rico"/>
+		<choice value="QC" label="Quebec"/>
+		<choice value="RI" label="Rhode Island"/>
+		<choice value="SK" label="Saskatchewan"/>
+		<choice value="SC" label="South Carolina"/>
+		<choice value="SD" label="South Dakota"/>
+		<choice value="TN" label="Tennessee"/>
+		<choice value="TX" label="Texas"/>
+		<choice value="UT" label="Utah"/>
+		<choice value="VT" label="Vermont"/>
+		<choice value="VA" label="Virginia"/>
+		<choice value="WA" label="Washington"/>
+		<choice value="WV" label="West Virginia"/>
+		<choice value="WI" label="Wisconsin"/>
+		<choice value="WY" label="Wyoming"/>
+	</list>
+		
+	<!-- Common Active Pay Choice Lists -->
+	
+	<list name="choice.companyCode">
+			<choice value="001" label="Company 1"/>
+			<choice value="002" label="Company 2"/>
+	</list>
+		
+	<list name="choice.orgCode">
+		<choice value="001" label="Org Code 1"/>
+		<choice value="002" label="Org Code 2"/>
+	</list>	
+		
+			
+	<list name="choice.currency">
+			<choice value="USD" label="USD"/>
+			<choice value="CDN" label="Canadian Dollar"/>
+	</list>
+		
+	<list name="choice.messageSubTypes">
+		<choice value="M1" label="Invoice"/>
+		<choice value="M2" label="Payment"/>
+		<choice value="M3" label="Address"/>
+		<choice value="M4" label="Misc"/>
+	</list>
+	
+	<list name="choice.arTypes">
+		<choice value="AR" label="Accounts Receivable"/>
+	</list>
+	
+	<list name="choice.arSubTypes">
+		<choice value="AR1" label="Merchandise Receivable"/>
+		<choice value="AR2" label="Non-Merchandise Receivable"/>
+	</list>
+	
+	<list name="choice.ediInvoiceTypes">
+		<choice value="EDI" label="EDI"/>
+	</list>
+	
+
+		
+	<list name="choice.voucherInvoiceTypes">
+		<choice value="NON-PO" label="Non-PO Voucher"/>
+		<choice value="PO" label="PO Voucher"/>
+	</list>
+	
+	<list name="choice.approvalException.type">
+		<choice value="APPROVE" label="Approval"/>
+		<choice value="GL REVIEW" label="GL Review Accounts"/>
+		<choice value="FIXED ASSET" label="FXA Accounts"/>
+	</list>
+	
+	<list name="choice.approvalException.type.search">
+		<choice value="0" label="--None--"/>
+		<choice value="APPROVE" label="Approval"/>
+		<choice value="GL REVIEW" label="GL Review Accounts"/>
+		<choice value="FIXED ASSET" label="FXA Accounts"/>
+	</list>
+	
+	<list name="choice.comments">
+		<choice value="1" label="Charged Wrong Tax Amount"/>
+		<choice value="2" label="Vendor Charged More Than Negotiated"/>
+		<choice value="3" label="Did Not Receive Goods or Service"/>
+		<choice value="4" label="Invoice Had Previous Paid Balance"/>
+		<choice value="5" label="Multiple Approvals Needed"/>
+	</list>
+	
+	<list name="choice.credit">
+		<choice value="0" label="Credit Reason 1"/>
+		<choice value="1" label="Credit Reason 2"/>
+	</list>
+
+	<list name="choice.paymentType">
+		<choice value="1" label="Check"/>
+		<choice value="2" label="Auto Deposit"/>
+		<choice value="4" label="Wire Transfer"/>
+		<choice value="5" label="CRD Refund Check"/>
+	</list>
+
+    <list name="choice.expenseLineTypes">
+		<choice value="Cash" label="Cash"/>
+		<choice value="Credit" label="CC Corp"/>
+    </list>
+
+	<list name="choice.truncated">
+		<choice value="0" label="No"/>
+		<choice value="1" label="Yes"/>
+    </list>
+	
+	<list name="choice.costObjectType">
+		<choice value="GW1" label="Budget Center"/>
+		<choice value="GW2" label="State"/>
+		<choice value="GW3" label="Affil"/>
+		<choice value="GW4" label="Agnt"/>
+	</list>
+	
+	<list name="choice.lineType">
+		<choice value="H" label="Header"/>
+		<choice value="D" label="Detail"/>
+	</list>
+	
+	<list name="choice.freightTerms">
+		<choice value="1" label="Pre-Paid"/>
+		<choice value="3" label="Collect"/>
+		<choice value="5" label="Third Party Collect"/>
+	</list>
+	
+
+<!-- Expense Choice Lists -->
+
+	<list name="choice.advanceAmounts">
+		<choice value="100" label="$100"/>
+		<choice value="150" label="$150"/>	
+		<choice value="200" label="$200"/>
+		<choice value="250" label="$250"/>
+		<choice value="300" label="$300"/>
+		<choice value="350" label="$350"/>
+		<choice value="400" label="$400"/>
+		<choice value="450" label="$450"/>
+		<choice value="500" label="$500"/>
+		<choice value="600" label="$600"/>
+		<choice value="700" label="$700"/>
+		<choice value="800" label="$800"/>
+		<choice value="900" label="$900"/>
+		<choice value="1000" label="$1000"/>
+		<choice value="1500" label="$1500"/>
+		<choice value="2000" label="$2000"/>
+		<choice value="2500" label="$2500"/>
+		<choice value="3000" label="$3000"/>
+		<choice value="3500" label="$3500"/>
+		<choice value="4000" label="$4000"/>
+		<choice value="4500" label="$4500"/>
+		<choice value="5000" label="$5000"/>
+	</list>
+
+	<list name="choice.department">
+		<choice value="1" label="Marketing"/>
+		<choice value="2" label="Merchandise Merchandise"/>	
+		<choice value="3" label="Custom Merchandise"/>
+		<choice value="4" label="In Store Events"/>
+	</list>
+
+	<list name="choice.frequency">
+		<choice value="1" label="Ad Hoc"/>
+		<choice value="2" label="Monthly"/>	
+		<choice value="3" label="Quarterly"/>
+		<choice value="4" label="Year-End"/>
+	</list>
+
+	<list name="choice.subledger">
+		<choice value="1" label="SL001"/>
+		<choice value="2" label="SL002"/>	
+		<choice value="3" label="SL003"/>
+		<choice value="4" label="SL004"/>
+	</list>
+
+	<list name="choice.portalstatus">
+		<choice value="Processing" label="Processing"/>
+		<choice value="Payment Scheduled" label="Payment Scheduled"/>		
+		<choice value="Approved" label="Approved" /> 
+		<choice value="Paid" label="Paid"/>
+		<choice value="Cleared" label="Cleared"/>
+		<choice value="Message" label="Message" /> 
+	</list>
+
+	<list name="choice.accrual">
+		<choice value="REG" label="Regular"/>
+		<choice value="APC" label="Coded Invoices"/>
+		<choice value="APN" label="Uncoded Invoices"/>
+		<choice value="EXP" label="Expense Reports"/>
+	</list>
+	
+	<list name="choice.accrual2">
+		<choice value="APC" label="Coded Invoices"/>
+		<choice value="APN" label="Uncoded Invoices"/>
+		<choice value="EXP" label="Expense Reports"/>
+	</list>
+
+	<list name="choice.queueNumber">
+		<choice value="1" label="Draft-Not Submitted"/>
+		<choice value="2" label="Ready for Approval"/>
+		<choice value="3" label="Posting"/>
+		<choice value="4" label="Posting Failed"/>
+		<choice value="5" label="Vendor Maintenance"/>
+		<choice value="6" label="Exception"/>
+		<choice value="7" label="Rejected for review"/>
+
+	</list>
+		
+	<list name="choice.lineitemsdropdown">
+		<choice value="5" label="5"/>
+		<choice value="10" label="10"/>
+		<choice value="20" label="20"/>
+	</list>
+
+	<list name="choice.UOM">
+		<choice value="EA" label="EA" />
+		<choice value="LB" label="LBS"/>
+		<choice value="GL" label="GAL"/>
+		<choice value="DY" label="DAY"/>
+		<choice value="WK" label="WEEK"/>
+		<choice value="MH" label="MONTH"/>
+		<choice value="YR" label="YEAR"/>
+		<choice value="LTR" label="LTR"/>
+	</list>
+	
+	
+    <list name="choice.invoiceSubTypes-NONPO">
+        <!--  This choicelist is mandatory for use in the advanced search and reporting. The name of this list must NOT be changed.
+               Although this choicelist may not be used for the individual view implementation (can be replaced by more specific invoice types that are dependant on group
+               it should always contain the total number of invoice types in the implementation. -->
+        <choice value="DOE" label="DOE"/>
+        <!-- choice value="DOM" label="DOM"/-->  <!-- removed, no longer processing this subtype -->
+        <!--choice value="FMS" label="FMS"/-->  <!-- removed, no longer processing this subtype -->
+        <choice value="EXP" label="Expenses"/>
+    </list>
+    
+    
+    <list name="choice.interimAPProduct">
+            <choice value="DOE" label="DOE"/>
+            <!--choice value="DOM" label="DOM"/-->  <!-- removed, no longer processing this subtype -->
+            <!--choice value="FMS" label="FMS"/-->  <!-- removed, no longer processing this subtype -->
+            <choice value="EXP" label="Expenses"/>
+    </list>
+
+    <list name="choice.invoiceSubTypes-PO">
+        <!-- This choicelist is mandatory for use in the advanced search and reporting. The name of this list must NOT be changed.
+               Although this choicelist may not be used for the individual view implementation (can be replaced by more specific invoice types that are dependant on group
+               it should always contain the total number of invoice types in the implementation. -->
+        <choice value="NORMAL" label="Normal"/>
+        <choice value="NONRCV" label="Non-receivables"/>
+    </list>
+
+	    <list name="choice.priorityChk">
+            <!-- This choicelist is mandatory for use in the advanced search. The name of this list must NOT be changed. -->
+            <choice value="1" label="Normal"/>
+            <choice value="3" label="Low"/>
+    </list>
+    
+    <list name="choice.priorityStk">
+            <choice value="1" label="Normal - 2nd Day"/>
+            <choice value="2" label="Rush - Next Day"/>
+    </list>
+    
+    <list name="choice.interimAPGroup">
+                <choice value="U1" label="U1"/>
+                <choice value="U3" label="U3"/>
+    </list>
+    
+    <list name="choice.interimAPDesc">
+                    <choice value="Air Express Int" label="Air Express Int"/>
+                    <choice value="Danzas Corp" label="Danzas Corp"/>
+    </list>
+    
+	<list name="choice.specialHandling">
+        <choice value="RUSH" label="Rush check"/>
+        <choice value="CPU" label="Regular check pickup"/>
+    </list>
+	
+	   <!-- Vendor Portal lists -->
+
+
+    <list name="choice.vp.statusCode">
+        <choice value="1" label="Received"/>
+        <choice value="2" label="Ready For Payment"/>
+        <choice value="3" label="Paid"/>
+    </list>
+
+    <list name="choice.vp.status">
+        <choice value="1" label="Inactive"/>
+        <choice value="2" label="Locked"/>
+        <choice value="3" label="Invited"/>
+        <choice value="4" label="Active"/>
+        <choice value="5" label="Blocked"/>
+    </list>
+
+    <list name="choice.vp.inviteValidForInDays">
+        <choice value="-1" label="No Expiration"/>
+        <choice value="7" label="7 Days"/>
+        <choice value="14" label="14 Days"/>
+        <choice value="30" label="30 Days"/>
+        <choice value="60" label="60 Days"/>
+        <choice value="90" label="90 Days"/>
+    </list>
+
+    <list name="choice.vp.maxUsersForVendor">
+        <choice value="-1" label="Unlimited"/>
+        <choice value="1" label="1"/>
+        <choice value="3" label="3"/>
+        <choice value="5" label="5"/>
+        <choice value="7" label="7"/>
+        <choice value="10" label="10"/>
+        <choice value="20" label="20"/>
+    </list>
+
+    <list name="choice.vp.daysValidForPassword">
+        <choice value="-1" label="No Expiration"/>
+        <choice value="7" label="7 Days"/>
+        <choice value="14" label="14 Days"/>
+        <choice value="30" label="30 Days"/>
+        <choice value="60" label="60 Days"/>
+        <choice value="90" label="90 Days"/>
+        <choice value="180" label="180 Days"/>
+    </list>
+
+    <list name="choice.vp.passwordMinLength">
+        <choice value="4" label="4 Characters"/>
+        <choice value="5" label="5 Characters"/>
+        <choice value="6" label="6 Characters"/>
+        <choice value="7" label="7 Characters"/>
+        <choice value="8" label="8 Characters"/>
+    </list>
+
+
+    <list name="choice.vp.passwordComplexity">
+        <choice value="0" label="No Rules"/>
+        <choice value="1" label="Alphabetic characters"/>
+        <choice value="2" label="Alphabetic characters (both cases required)"/>
+        <choice value="3" label="Mixture of characters and numbers."/>
+        <choice value="4" label="Mixture of characters (both cases required) and numbers"/>
+        <choice value="5" label="Mixture of characters (both cases required), numbers, and special characters."/>
+    </list>
+
+
+    <!-- DHL MasteFile Specific Lists -->
+
+
+	<list name="choice.masterfileTypes">
+	    <choice value="VENDOR" label="Vendor"/>
+	    <choice value="CUSTOMER" label="Customer"/>
+	    <choice value="COLLECT" label="Collections"/>
+	</list>
+	
+ 
+ 	<list name="choice.product">
+        <choice value="C-AIR" label="Air"/>
+        <choice value="C-OCEAN" label="Ocean"/>
+        <choice value="C-DOM" label="Domestic"/>
+        <!--choice value="C-BRK" label="Alliance/CHB"/-->
+	</list>
+
+ 	<list name="choice.productAll">
+        <choice value="C-ALL" label="All Products"/>
+        <choice value="C-AIR" label="Air Import/Export"/>
+        <choice value="C-OCEAN" label="Ocean Import/Export"/>
+        <choice value="C-DOM" label="Domestic"/>
+        <!--choice value="C-BRK" label="Alliance/CHB"/-->
+	</list>
+	
+	
+	<list name="choice.vendorProduct">
+		<choice value="V-DOM" label="Domestic"/>
+		<choice value="V-LOGISA" label="Air"/>
+		<choice value="V-LOGISO" label="Ocean"/>
+		<choice value="V-BRK" label="Brokerage"/>
+		<choice value="V-GEN" label="General"/>
+		<choice value="V-EMP" label="Employee"/>
+	</list>
+	
+	<list name="choice.productChkStk">
+		<choice value="GREEN" label="#6 Green Checks"/>
+		<choice value="OCEAN" label="#8 Ocean Checks"/>
+		<choice value="CHB" label="#5 Alliance Checks"/>
+		<choice value="LSR" label="Laser Stock"/>
+	</list>
+	
+	<list name="choice.productInbox">
+		<choice value="C-ALL" label="All Products"/>
+		<choice value="C-AIR" label="Air Import/Export"/>
+		<choice value="C-OCEAN" label="Ocean Import/Export"/>
+		<choice value="C-DOM" label="Domestic"/>
+		<choice value="C-BRK" label="Alliance/CHB"/>
+		<choice value="V-DOM" label="Domestic"/>
+		<choice value="V-LOGISA" label="Air"/>
+		<choice value="V-LOGISO" label="Ocean"/>
+		<choice value="V-BRK" label="Brokerage"/>
+		<choice value="V-GEN" label="General"/>
+		<choice value="V-EMP" label="Employee"/>
+		<choice value="R-OCEAN" label="Ocean Request"/>
+        <choice value="R-MISC" label="Misc Request"/>
+        <choice value="R-OCRD" label="Ocean Credit Card Request"/>
+        <choice value="R-ACRD" label="Alliance Credit Card Request"/>
+        <choice value="R-CDZ" label="CDZ Urgent Request"/>
+        <choice value="GREEN" label="#6 Green Checks"/>
+		<choice value="OCEAN" label="#8 Ocean Checks"/>
+		<choice value="CHB" label="#5 Alliance Checks"/>
+		<choice value="LSR" label="Laser Stock"/>
+		<choice value="BONDQRY" label="Bond Query"/>
+		<choice value="BONDPOA" label="POA Request"/>
+		<choice value="POATRF" label="POA Transfer"/>
+		<choice value="NEWCAT" label="New CAT"/>
+		<choice value="MODCAT" label="Modify CAT"/>
+	</list>
+	
+	
+	
+	<list name="choice.productChkOcean">
+		<choice value="R-PRN" label="Station Printer"/>
+		<choice value="R-NOPRN" label="No Station Printer"/>
+	</list>
+	
+	<list name="choice.productChkMisc">
+		<choice value="R-SINGLE" label="Single Page"/>
+		<choice value="R-MULTI" label="Multi-Page"/>
+	</list>
+
+
+	<list name="choice.masterfileCustomerSubTypes">
+        <choice value="NEWBILL" label="New Billable Account"/>
+        <choice value="NEWNONBILL" label="New Non-Billable Account"/>
+        <choice value="UPDATE" label="Update Existing Account"/>
+        <choice value="CREDIT" label="Credit Request"/>
+        <choice value="DEACTIVATE" label="Deactivate Account"/>
+	</list>
+
+	<list name="choice.masterfileCustomerConSubTypes">
+		<choice value="NEWBILL" label="New Customer Account"/>
+		<choice value="UPDATE" label="Update Existing Account"/>
+		<choice value="DEACTIVATE" label="Deactivate Account"/>
+	</list>
+
+
+	
+	<list name="choice.masterfileCustomerOcSubTypes">
+		<choice value="NEWBILL" label="New Billable Account"/>
+		<choice value="NEWNONBILL" label="New Non-Billable Account"/>
+		<choice value="UPDATE" label="Update Existing Account"/>
+		<choice value="CREDIT" label="Credit Request"/>
+		<choice value="DEACTIVATE" label="Deactivate Account"/>
+	</list>
+	
+	<list name="choice.masterfileCustomerAirSubTypes">
+		<choice value="NEWBILL" label="New Customer Account"/>
+		<choice value="UPDATE" label="Update Existing Account"/>
+		<choice value="CREDIT" label="Credit Request"/>
+		<choice value="DEACTIVATE" label="Deactivate Account"/>
+	</list>
+	
+	<list name="choice.masterfileCustomerDomSubTypes">
+		<choice value="NEWBILL" label="New Billable Customer"/>
+		<choice value="UPDATE" label="Update Existing Account"/>
+		<choice value="CREDIT" label="Credit Request"/>
+		<choice value="DEACTIVATE" label="Deactivate Account"/>
+	</list>
+	
+	<list name="choice.masterfileCustomerBrkSubTypes">
+		<choice value="NEW" label="New Customer"/>
+		<choice value="UPDATE" label="Modification"/>
+		<choice value="MULTIMOD" label="Multiple Code Modification"/>
+		<choice value="DEACTIVATE" label="Close Out"/>
+	</list>
+	
+	<list name="choice.masterfileMiscTypes">
+		<choice value="BONDQRY" label="Bond Query"/>
+		<choice value="BONDPOA" label="POA Request"/>
+		<choice value="POATRF" label="POA Transfer"/>
+		<choice value="NEWCAT" label="New CAT"/>
+		<choice value="MODCAT" label="Modify CAT"/>
+	</list>
+	
+	
+	<list name="choice.masterfileCollectSubTypes">
+		<choice value="CREDIT" label="Credit Request"/>
+		<choice value="COLLECTREQ" label="Collections Request"/>
+	</list>
+
+	<list name="choice.masterfileVendorSubTypes">
+        <choice value="NEW" label="Create New Account"/>
+        <choice value="UPDATE" label="Update Existing Account"/>
+        <choice value="DEL" label="Deactivate Account"/>
+	</list>
+
+	<list name="choice.checkRequestSubTypes">
+        <choice value="R-OCEAN" label="Ocean Request"/>
+        <choice value="R-MISC" label="Misc Request"/>
+    </list>
+        
+    <list name="choice.crdCrdRequestSubTypes">
+		<choice value="R-OCRD" label="Ocean Credit Card Request"/>
+		<choice value="R-ACRD" label="Alliance Credit Card Request"/>
+    </list>
+
+	<list name="choice.customerAccountType">
+		<choice value="TYPE1" label="Billable Type 1"/>
+		<choice value="OCS1" label="Ocean Carrier Type 1"/>
+		<choice value="AGT1" label="Agent Type 1"/>
+		<choice value="TYPE6" label="Non-Billable Type 6"/>
+		<choice value="OCS6" label="Ocean Carrier (SS) Type 6"/>
+		<choice value="AGT6" label="Agent Type 6"/>
+		<choice value="BILL" label="Billing"/>
+		<choice value="TP" label="Third Party/Bill To"/>
+		<choice value="OTH" label="Other (specify)"/>
+		<choice value="EXPIMP" label="Export/Import Account"/>
+		<choice value="EXPCON" label="Export Consignee"/>
+	</list>
+	
+	<list name="choice.customerAccountTypeBrk">
+        <choice value="BILL" label="Billable"/>
+        <choice value="NONBILL" label="Non-Billable"/>
+        <choice value="OTH" label="Other (specify)"/>
+        </list>
+	
+	<list name="choice.collectAccountType">
+		<choice value="GCS" label="GCS"/>
+		<choice value="MNC" label="MNC"/>
+		<choice value="SMC" label="SMC"/>
+        </list>
+	
+	<list name="choice.customerAccountTypeOcBill">
+        <choice value="TYPE1" label="Billable Type 1"/>
+        <choice value="OCS1" label="Ocean Carrier Type 1"/>
+        <choice value="AGT1" label="Agent Type 1"/>
+        </list>
+
+	<list name="choice.customerAccountTypeOcNoBill">
+        <choice value="TYPE6" label="Non-Billable Type 6"/>
+        <choice value="OCS6" label="Ocean Carrier (SS) Type 6"/>
+        <choice value="AGT6" label="Agent Type 6"/>
+        </list>
+        
+        <list name="choice.customerAccountTypeOc">
+		<choice value="TYPE1" label="Billable Type 1"/>
+		<choice value="OCS1" label="Ocean Carrier Type 1"/>
+        <choice value="AGT1" label="Agent Type 1"/>
+        <choice value="TYPE6" label="Non-Billable Type 6"/>
+		<choice value="OCS6" label="Ocean Carrier (SS) Type 6"/>
+        <choice value="AGT6" label="Agent Type 6"/>
+        </list>
+
+
+	<list name="choice.customerAccountTypeDom">
+        <choice value="BILL" label="Billing"/>
+        <choice value="TP" label="Third Party/Bill To"/>
+        <choice value="OTH" label="Other (specify)"/>
+        </list>
+	
+	
+	<list name="choice.customerAccountTypeAir">
+	<choice value="EXPIMP" label="Export/Import Account"/>
+	<choice value="EXPCON" label="Export Consignee"/>
+	</list>
+
+	
+
+	<list name="choice.vendorAccountType">
+        <choice value="AIR" label="Airline"/>
+        <choice value="MISC" label="Misc"/>
+        <choice value="CRT" label="Cartage"/>       
+        <choice value="OC" label="Ocean Carrier/SSL"/>
+        <choice value="EMP" label="Employee"/>
+        <choice value="CLM" label="Claims"/>
+        <choice value="REF" label="Refunds"/>
+        <choice value="AGT" label="Agent"/>
+        
+        
+	</list>
+
+	<list name="choice.poaFL">
+        <choice value="F" label="Full"/>
+        <choice value="L" label="Limited"/>
+	</list>
+
+	<list name="choice.creditUpdate">
+        <choice value="REMOVE" label="TEMPORARILY Remove From Cash"/>
+        <choice value="REVIEW" label="Request Credit Review"/>
+        <choice value="OTH" label="Other"/>
+	</list>
+	
+	<list name="choice.creditUpdateAll">
+	<choice value="PLACE" label="Place on Cash"/>
+	<choice value="CRDHLD" label="Place on Credit Hold"/>
+	<choice value="REMOVE" label="TEMPORARILY Remove From Cash"/>
+	<choice value="CRDREM" label="Remove From Credit Hold"/>
+	<choice value="REVIEW" label="Request Credit Review"/>
+	<choice value="CHANGE" label="Change Credit Limit/Terms"/>
+	<choice value="OTH" label="Other"/>
+	</list>
+
+	<list name="choice.yesNo">
+        <choice value="Yes" label="Yes"/>
+        <choice value="No" label="No"/>
+	</list>
+	
+	<list name="choice.booleanYesNo">
+	<choice value="true" label="Yes"/>
+	<choice value="false" label="No"/>
+	</list>
+	
+	<list name="choice.ain">
+	<choice value="A" label="Advance"/>
+	<choice value="I" label="Invoice By Request"/>
+	<choice value="N" label="No"/>
+	</list>
+	
+	
+	<list name="choice.updateArea">
+	<choice value="ALL" label="All Details"/>
+	<choice value="CUST" label="Customer Details"/>
+	<choice value="SHP" label="Shipper Info"/>
+	<choice value="ADD" label="Additonal Info"/>
+	<choice value="OTH" label="Other"/>
+	</list>
+	
+	<list name="choice.updateAreaCon">
+	<choice value="ALL" label="All Details"/>
+	<choice value="CUST" label="Customer Details"/>
+	<choice value="ADD" label="Additonal Info"/>
+	<choice value="OTH" label="Other"/>
+	</list>
+
+	<list name="choice.updateAreaDom">
+	<choice value="ALL" label="All Details"/>
+	<choice value="BILL" label="Bill To"/>
+	<choice value="CUST" label="Customer Details"/>
+	<choice value="ADD" label="Additonal Info"/>
+	<choice value="OTH" label="Other"/>
+	</list>
+
+
+	<list name="choice.sendTo">
+	<choice value="VND" label="Vendor"/>
+	<choice value="STN" label="Station"/>
+	</list>
+	
+	<list name="choice.pages">
+	<choice value="R-SINGLE" label="Single"/>
+	<choice value="R-MULTI" label="Multi"/>
+	</list>
+
+	<list name="choice.howOcean">
+	<choice value="OV" label="Overnight"/>
+	<choice value="RG" label="Regular Mail"/>
+	</list>
+	
+	<list name="choice.howMisc">
+	<choice value="OV" label="Overnight"/>
+	<choice value="RG" label="Regular Mail"/>
+	<choice value="PR" label="Print At Station"/>
+	</list>
+	
+	<list name="choice.brokerage">
+	<choice value="BCS" label="BCS"/>
+	<choice value="CSP" label="Cdn Shpt"/>
+	<choice value="ISP" label="Int Shpt"/>
+	</list>
+	
+	<list name="choice.tempPerm">
+	<choice value="T" label="Temporary"/>
+	<choice value="P" label="Permanent"/>
+	</list>
+	
+	<list name="choice.firmType">
+	<choice value="M" label="M"/>
+	<choice value="S" label="S"/>
+	<choice value="C" label="C"/>
+	<choice value="I" label="I"/>
+	<choice value="U" label="U"/>
+	<choice value="F" label="F"/>
+	</list>
+	
+
+	<list name="choice.chargeProfile">
+	<choice value="A" label="Std Northern Border Casual"/>
+	<choice value="B" label="Same Charge Profile as Customer #"/>
+	<choice value="C" label="Std International Import"/>
+	<choice value="D" label="Std Southern Border Casual"/>
+	<choice value="E" label="Use Charge Profile"/>
+	<choice value="F" label="Use Profile Outlined Below"/>
+	</list>
+
+	<list name="choice.storage">
+	<choice value="R" label="Refrigerated"/>
+	<choice value="F" label="Frozen"/>
+	<choice value="A" label="Ambient Temperature"/>
+	</list>
+	
+	<list name="choice.submitterType">
+	<choice value="I" label="I"/>
+	<choice value="M" label="M"/>
+	<choice value="S" label="S"/>
+	<choice value="C" label="C"/>
+	<choice value="U" label="U"/>
+	<choice value="F" label="F"/>
+	</list>
+	
+	<list name="choice.ownerType">
+	<choice value="I" label="I"/>
+	<choice value="M" label="M"/>
+	<choice value="C" label="C"/>
+	<choice value="U" label="U"/>
+	</list>
+	
+	<list name="choice.procType">
+	<choice value="M" label="M"/>
+	<choice value="C" label="C"/>
+	<choice value="G" label="G"/>
+	</list>
+	
+	<list name="choice.oceanVendors">
+	<choice value="66199" label="66199 - Norfolk Southern"/>
+	<choice value="72341" label="72341 - CP Rail"/>
+	<choice value="44127" label="44127 - CSX"/>
+	<choice value="61284" label="61284 - BNSF"/>
+	<choice value="APM" label="APM - UNIVERSAL MARITIME"/>
+	<choice value="APL" label="APL"/>
+	<choice value="EAG" label="EAGLE MARINE"/>
+	<choice value="ITS" label="ITS-TRANSBAY"/>
+	<choice value="LBCT " label="LBCT"/>
+	<choice value="MAH" label="MAHER TERMINALS"/>
+	<choice value="NYCT" label="NYCT"/>
+	<choice value="PNCT" label="PNCT"/>
+	<choice value="PCT" label="PACIFIC CONTAINER TERM"/>
+	<choice value="EVR" label="PORT EVERGLADES"/>
+	<choice value="POM" label="PORT OF MIAMI"/>
+	<choice value="SHT" label="SHIPPERS TRANSPORT"/>
+	<choice value="SSAC" label="SSA COOPER"/>
+	<choice value="SSAT" label="SSA TERMINALS"/>
+	<choice value="STV" label="STEVEDORING SVC"/>
+	<choice value="TRA" label="TRAPAC"/>
+	<choice value="UPR" label="UP RAILROAD"/>
+	<choice value="YUS" label="YUSEN"/>
+	<choice value="OTH" label="OTHER VENDORS"/>
+	</list>
+	
+	<list name="choice.chbVendors">
+	<choice value="NORDT" label="NORDT - Norfolk Southern"/>
+	<choice value="CPRAI" label="CPRAI - CP Rail"/>
+	<choice value="CSXIN" label="CSXIN - CSX"/>
+	<choice value="BRLNO" label="BRLNO - BNSF"/>
+	<choice value="APM" label="APM - UNIVERSAL MARITIME"/>
+	<choice value="APL" label="APL"/>
+	<choice value="EAG" label="EAGLE MARINE"/>
+	<choice value="ITS" label="ITS-TRANSBAY"/>
+	<choice value="LBCT " label="LBCT"/>
+	<choice value="MAH" label="MAHER TERMINALS"/>
+	<choice value="NYCT" label="NYCT"/>
+	<choice value="PNCT" label="PNCT"/>
+	<choice value="PCT" label="PACIFIC CONTAINER TERM"/>
+	<choice value="EVR" label="PORT EVERGLADES"/>
+	<choice value="POM" label="PORT OF MIAMI"/>
+	<choice value="SHT" label="SHIPPERS TRANSPORT"/>
+	<choice value="SSAC" label="SSA COOPER"/>
+	<choice value="SSAT" label="SSA TERMINALS"/>
+	<choice value="STV" label="STEVEDORING SVC"/>
+	<choice value="TRA" label="TRAPAC"/>
+	<choice value="UPR" label="UP RAILROAD"/>
+	<choice value="YUS" label="YUSEN"/>
+	<choice value="OTH" label="OTHER VENDORS"/>
+	</list>
+
+	<list name="choice.chbPayType">
+	<choice value="EXM" label="Exam"/>
+	<choice value="ANC" label="Ancillary"/>
+	<choice value="DEM" label="Demurrage"/>
+	</list>
+
+	<list name="choice.EPSecurity">
+	<choice value="I" label="I-ISF"/>
+	<choice value="F" label="F-FDA"/>
+	<choice value="B" label="B-Both"/>
+	</list>
+	
+	<list name="choice.EPCommodity">
+	<choice value="A" label="A-ADD/CVD"/>
+	<choice value="B" label="B-TSCA"/>
+	<choice value="C" label="C-FCC"/>
+	<choice value="D" label="D-STEEL"/>
+	<choice value="E" label="E-GOVT"/>
+	<choice value="F" label="F-F and W"/>
+	<choice value="G" label="G-LACEY"/>
+	<choice value="H" label="H-CMPLX"/>
+	<choice value="I" label="I-CHEM"/>
+	<choice value="J" label="J-USDA"/>
+	<choice value="K" label="K-CSPC(Ind)"/>
+	<choice value="L" label="L-OGA"/>
+	<choice value="M" label="M-DCMA"/>
+	<choice value="N" label="N-FDA"/>
+	<choice value="O" label="O-FDAOASIS"/>
+	<choice value="P" label="P-AUTO"/>
+	<choice value="Q" label="Q-CSPC(Hse)"/>
+	<choice value="R" label="R-TECH"/>
+	<choice value="S" label="S-TEXTILES"/>
+	<choice value="T" label="T-GENERAL"/>
+	</list>
+	
+	<list name="choice.EPTeam">
+	<choice value="01" label="01-General Account"/>
+	<choice value="10" label="10-Boeing"/>
+	<choice value="11" label="11-E and M Aerospace"/>
+	<choice value="12" label="12-Automotive"/>
+	<choice value="13" label="13-Life Science"/>
+	<choice value="14" label="14-Consumer Retail"/>
+	<choice value="15" label="15-ISF"/>
+	<choice value="16" label="16-Technology Consumer"/>
+	<choice value="17" label="17-Technology Network"/>
+	<choice value="18" label="18-E and M Construction"/>
+	<choice value="19" label="19-E and M Industrial"/>
+	</list>
+	
+	<list name="choice.CSTeam">
+	<choice value="01" label="01-General Account"/>
+	<choice value="10" label="10-Boeing"/>
+	<choice value="11" label="11-E and M Aerospace"/>
+	<choice value="12" label="12-Automotive"/>
+	<choice value="13" label="13-Life Science"/>
+	<choice value="14" label="14-Consumer Retail"/>
+	<choice value="15" label="15-ISF"/>
+	<choice value="16" label="16-Technology Consumer"/>
+	<choice value="17" label="17-Technology Network"/>
+	<choice value="18" label="18-E and M Construction"/>
+	<choice value="19" label="19-E and M Industrial"/>
+	</list>
+
+	<list name="choice.payTypes">
+	<choice value="CHK" label="Check"/>
+	<choice value="EFT" label="EFT"/>
+	</list>
+	
+</choiceLists>
+    
+

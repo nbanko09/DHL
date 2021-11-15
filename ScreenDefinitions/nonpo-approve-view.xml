@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<view name="nonpo-approve-view" template="nonpo-tpl.xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<labels default="en">
+		<locale name="en">
+		</locale>
+	</labels>
+
+	<section-overrides>
+	</section-overrides>
+
+	<property-overrides>
+		<dynamicDropDown name="companyCode" readonly="true"/>
+		<dropDown name="subType" readonly="true" />
+		<lookup name="routingCode" readonly="true"/>
+		<lookup name="vendorId" readonly="true" validation=""/>
+		<dropDown name="type" readonly="true"/>	
+		<dropDown name="subType" readonly="true"/>	
+		<lookup name="vendor.name" readonly="true" />
+		<text name="number" readonly="true" />
+		<date name="date" readonly="true" />
+		<date name="dueDate" readonly="true"/>
+		<currency name="grossAmount" readonly="false"/>
+		<currency name="freightAmount1" readonly="true" />
+		<currency name="taxAmount1" readonly="true" />
+		<currency name="taxAmount2" readonly="true" />
+		<text name="voucherComments" readonly="false" />
+		<text name="tbdString2" readonly="true" />
+		<text name="routingCode" readonly="true" />
+		<text name="scanAmount" readonly="true" />
+		<text name="tbdBoolean1" readonly="true" />
+		<text name="paymentTypeId" readonly="true" />
+		<text name="checkStubMessage" readonly="false"/>
+		<text name="scanVendorAddress2" readonly="true" />
+		<dynamicDropDown name="paymentTermId" readonly="true"/>
+		<text name="tbdString1" readonly="true"/>
+		<text name="tbdString2" readonly="true"/>
+		<dropDown name="tbdString3" readonly="true"/>
+		<dropDown name="tbdString4" readonly="true"/>
+		<lookup name="taxId" readonly="true"/>
+	</property-overrides>
+
+	<action-overrides>
+		<iconAction name="editRouting" readonly="false" />
+		<iconAction name="postings" visible="true" />
+		<button name="release" visible="false"/>
+		<button name="updateRelease" visible="false"/>
+		</action-overrides>
+
+	<hidden-overrides>
+		<hidden name="processInformation.response" defaultValue="Complete"/>
+	</hidden-overrides>
+
+	<documentRejection>
+		<rejectionReasons>
+			<reason name="Reject" commentsRequired="true" note="message.returnException">
+				<subReason name="Duplicate invoice"/>
+				<subReason name="Incomplete documentation"/>
+				<subReason name="Not a Genuine Invoice"/>
+				<subReason name="Other"/>
+			</reason>
+			<reason name="Rescan" commentsRequired="true" note="message.rescan">
+			</reason>
+			<reason name="Vendor Maintenance" commentsRequired="true" note="message.returnVendorMaintenance">
+			</reason>
+			<reason name="Terminate" commentsRequired="true" note="message.terminate">
+			</reason>
+			<reason name="Duplicate" commentsRequired="true" note="message.duplicatereivew">  </reason>
+		</rejectionReasons>
+	</documentRejection>
+
+	<validations>
+		<validation name="validation.shortpay" note="message.shortPayValidation" messageType="warning"/>
+		<validation name="validation.accountCode"/>
+		<validation name="validation.lineItemAmount"/>
+		<validation name="validation.ApprovedAmountValidator"/>
+	</validations>
+</view>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<propertyTemplate
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/template.xsd">
+	<labels>
+		<!-- Label overrides for this template -->
+		<locale name="en">
+            <label name="forward" value="Upload"/>
+		</locale>
+	</labels>
+
+	<section name="invoice" visible="true" collapsible="false" collapsed="false">
+		<properties>
+			<text row="1" col="1" name="number" readonly="false" validation="noSpecialCharacters"/>
+			<date row="2" col="1" name="date" readonly="false" validation="" styleClass="date"/>
+			<date row="2" col="2" name="receiveDate" readonly="false" styleClass="date"/>
+			<dynamicDropDown row="3" col="1" name="group" readonly="false" providerClass="com.miriasystems.ui.providers.GroupsChoiceListProvider" onChange="reloadPage(this)"/>
+			<dropDown row="3" col="2" name="docPriority" choiceList="choice.priority" defaultValue="1" readonly="false" validation="required"/>
+			<dropDown row="4" col="1" name="type" choiceList="choice.invoiceTypes" readonly="false" validation="required"/>
+			<dropDown row="4" col="2" name="sensitivity" choiceList="choice.sensitivity" readonly="false" defaultValue="1"/>
+			<dropDown row="5" col="1" name="subType" choiceList="choice.invoiceSubTypes" defaultValue="NORMAL" readonly="false"/>
+			<dynamicDropDown row="5" col="2" name="companyCode" readonly="false" providerClass="com.miriasystems.ui.providers.CompanyChoiceListProvider" validation="required" />
+			<lookup row="6" col="1" name="requester.displayName" lookupType="lookup.requester" readonly="false" validation=""/>
+			<text row="6" col="2" name="requester.email" readonly="true"/>
+			<text row="7" col="1" name="poId" readonly="false" validation=""/>
+			<lookup row="7" col="2" name="buyerId" lookupType="lookup.buyer" readonly="false"/>
+            <dynamicDropDown row="8" col="1" name="postingERPId" readonly="false" providerClass="com.miriasystems.ui.providers.SystemOriginatorChoiceListProvider" />
+        </properties>
+		<actions>
+			<button name="forward" command="forward" readonly="false" docType="upload" type="submit" isAnchored="false" title="forwardTitle" styleClass="button70"/>
+		</actions>
+	</section>
+	<section name="invoiceDetails" visible="true" collapsible="true" collapsed="false">
+		<properties>
+			<lookup row="1" col="1-3" name="vendor.name" lookupType="lookup.vendorCode" readonly="false" styleClass="fulllookup"/>
+			<lookup row="2" col="1" name="vendorId" lookupType="lookup.vendorCode" readonly="false" validation=""/>
+			<dynamicDropDown row="2" col="2" name="paymentTermId" providerClass="com.miriasystems.ui.providers.PaymentTermChoiceListProvider" validation=""/>
+			<currency row="3" col="1" name="grossAmount" validation="required" styleClass="currency"/>
+			<dynamicDropDown row="3" col="2" name="currencyId" providerClass="com.miriasystems.ui.providers.CurrencyChoiceListProvider" validation="required" defaultValue="USD"/>
+			<currency row="4" col="1" name="taxAmount1" readonly="false" styleClass="currency"/>
+			<date row="4" col="2" readonly="true" name="discountDueDate" styleClass="date"/>
+			<currency row="5" col="1" name="freightAmount1" readonly="false" styleClass="currency"/>
+			<currency row="5" col="2" name="discountAmount" readonly="false" styleClass="currency"/>
+			<currency row="6" col="1" name="netAmount" readonly="false" styleClass="currency"/>
+		</properties>
+	</section>
+
+	<section name="vendorDetails" visible="true" collapsible="true" collapsed="true">
+		<properties>
+			<text row="1" col="1-3" name="vendor.name2" readonly="true" styleClass="fulllookup"/>
+			<text row="2" col="1-4" name="vendor.address1" readonly="true" styleClass="fulllookup"/>
+			<text row="3" col="1-4" name="vendor.address2" readonly="true" styleClass="fulllookup"/>
+			<text row="4" col="1-4" name="vendor.address3" readonly="true" styleClass="fulllookup"/>
+			<text row="5" col="1-4" name="vendor.address4" readonly="true" styleClass="fulllookup"/>
+			<text row="6" col="1" name="vendor.city" readonly="true" />
+			<text row="6" col="2" name="vendor.state" readonly="true"/>
+			<text row="6" col="3" name="vendor.postalCode" readonly="true"/>
+			<text row="7" col="1" name="vendor.country.name" readonly="true"/>
+			<text row="8" col="1" name="vendor.status" readonly="true"/>
+			<text row="8" col="2" name="vendor.taxId" readonly="true"/>
+			<label row="9" col="1" name="" position="left"/>
+			<text row="10" col="1" name="vendor.paymentTerm.code" readonly="true"/>
+			<text row="10" col="2" name="vendor.payToCode" readonly="true"/>
+			<text row="10" col="3" name="vendor.approvalCode" readonly="true"/>
+			<text row="11" col="1" name="vendor.currency.code" readonly="true"/>
+			<checkbox row="11" col="2" name="vendor.payBlock" readonly="true"/>
+			<checkbox row="11" col="3" name="vendor.postBlock" readonly="true"/>
+			<text row="12" col="1" name="vendor.bankName" readonly="true"/>
+			<text row="12" col="2" name="vendor.bankAccountNumber" readonly="true"/>
+			<label row="13" col="1" name="" position="left" />
+			<label row="14" col="1" name="vendorContact" position="left"/>
+			<text row="15" col="1" name="vendor.contact" readonly="true"/>
+			<text row="15" col="2" name="vendor.phone" readonly="true"/>
+			<text row="16" col="1" name="vendor.email" readonly="true" styleClass="fulllookup"/>
+			<text row="16" col="2" name="vendor.fax" readonly="true"/>
+	    </properties>
+	</section>
+
+	<section name="sourceInformation" visible="true" collapsible="true" collapsed="false">
+		<properties>
+			<date row="1" col="1" name="scanDate" readonly="false" styleClass="date"/>
+			<date row="1" col="2" name="lastModifiedDate" readonly="true" styleClass="date"/>
+			<text row="2" col="1" name="scanType" readonly="false" defaultValue="Manual Upload"/>
+			<text row="2" col="2" name="scanSource" readonly="false"/>
+			<text row="2" col="3" name="retentionBoxId" readonly="false"/>
+			<text row="3" col="1" name="batchNumber" readonly="false"/>
+			<text row="3" col="2" name="batchOrdinal" readonly="false"/>
+		</properties>
+	</section>
+
+	<hiddenFields>
+	    <hidden name="requesterId"/>
+	    <!--<hidden name="postingERPId"/>-->
+	    <hidden name="vendorERPId"/>
+    </hiddenFields>
+
+    <processors>
+    </processors>
+</propertyTemplate>

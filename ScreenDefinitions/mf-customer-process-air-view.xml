@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="all-rescan-view" template="masterfile-customer-process-air-tpl.xml"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/view.xsd">
+
+    <labels default="en">
+        <locale name="en">
+            <label name="forward" value="Complete"/>
+        </locale>
+    </labels>
+    
+    <property-overrides>
+        <text name="custom4.accountNumber" readonly="false" validation="required"/>
+        <textArea name="voucherComments" defaultValue=""/>
+     </property-overrides>
+
+    <hidden-overrides>
+        <hidden name="processInformation.response" defaultValue="Complete"/>
+    </hidden-overrides>
+    
+    <action-overrides>
+    	<getNext name="next" readonly="false" visible="true"/>
+	<iconAction name="editRouting" readonly="true"/>
+   </action-overrides>
+
+     <documentRejection>
+		 <rejectionReasons>
+			 <reason name="Send to Credit Team" commentsRequired="true" note="message.creditTeam">
+				 </reason>
+			 <reason name="Return to Requester" commentsRequired="true" note="message.requester">
+				 </reason>
+			 <reason name="Send To Contracts" commentsRequired="true" note="message.contracts">
+				 </reason>              
+			 </rejectionReasons>
+    </documentRejection>
+
+</view>

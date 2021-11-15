@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<propertyTemplate
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/template.xsd">
+
+	<labels default="en">
+		<locale name="en">
+		<label name="processCode" value="Check Type"/>
+		<label name="tbdString11" value="Name"/>
+		<label name="tbdString12" value="Number of Checks"/>
+		<label name="tbdString3" value="Phone #"/>
+		<label name="createDate" value="Date Requested"/>
+		<label name="processInformation.deadline" value="Date Required"/>
+		<label name="group" value="Station"/>
+		<label name="checkStubMessage" value="Zip Code"/>
+		<label name="batchNumber" value="UPS #"/>
+		<label name="tbdNumber4" value="Last Check #"/>
+        </locale>
+	</labels>
+		
+	<section name="doc" collapsible="false" collapsed="false">		
+		<properties>
+			<textArea row="1" col="1-2" name="tbdComment1" styleClass="comment"/> 
+			<output row="2" col="1-2" name="processInformation.previousComment" readonly="true" styleClass="comment" escapeXml="false"/>
+			<valueAlias row="3" col="1-2" name="processInformation.queueName" styleClass="fulllookup" readonly="true"/>
+		</properties>
+		<actions>
+			<button name="forward" command="forward" readonly="false" docType="upload" type="submit" isAnchored="false" title="forwardTitle" styleClass="button70"/>
+		</actions>
+	</section>
+
+	<section name="Request For #6 Green Checks" visible="true" collapsible="false" collapsed="false">
+			<properties>
+			<dropDown row="1" col="1" name="processCode" readonly="false" validation="required" choiceList="choice.productChkStk" onChange="reloadPage(this)"/> <!--Print-->
+			<text row = "2" col = "1" name="chbLabel1" defaultValue="Please Send New Supply of Station Checks (Air)" forceDefault="true" readonly="true" styleClass="threehundred"/>
+			<text row = "3" col = "1" name="tbdString12" validation="required"/>
+			<dynamicDropDown row="4" col="1" name="group" readonly="false" providerClass="com.miriasystems.ui.providers.GroupsChoiceListProvider" validation="required"/> <!--Control Station-->
+			<text row = "5" col="1" name="tbdString11" validation="required" styleClass="fivehundred"/>
+			<text row = "6" col="1" name="tbdString3" validation="required" styleClass="fivehundred"/>
+			<text row="7" col="1" name="custom5.address1" readonly="false" styleClass="fivehundred" validation="required"/>
+			<text row="8" col="1" name="custom5.address2" readonly="false" styleClass="fivehundred"/>
+			<dropDown row="9" col="1" name="docPriority" choiceList="choice.priorityStk" defaultValue="1" readonly="false" validation="required"/> <!--Priority-->
+			<text row="10" col="1" name="batchNumber" readonly="false" validation="required"/> <!--ups #-->
+			<text row="11" col="1" name="checkStubMessage" readonly="false" validation="required"/> <!--station zip-->
+			<text row="12" col="1" name="tbdNumber4" readonly="false" validation="required"/> <!--Last Number-->
+			<textArea row = "13" col = "1" name="chbLabel2" defaultValue="Note:All Requests Must Be Verified With AP Records. Any Station With Outstanding, Unreported Checks Will Have Their Order Held Up! Checks will go out in weekly COMAT." styleClass="comment" forceDefault="true" readonly="true"/>
+			<textArea row = "14" col = "1" name="chbLabel3" defaultValue="***These check can only be used for Transportation related costs. They are not to be used for advances, overhead etc.*** " forceDefault="true" readonly="true" styleClass="comment" />
+			</properties>
+		<actions>
+			<iconAction name="print" icon="/images/ico-print-w24.png" width="24" height="24" link="javascript:window.print()" visible="true" alwaysActive="true"/>
+			<iconAction name="statusWindow" icon="/images/ico-history-w24.png" width="24" height="24" link="javascript:openStatusWindow('$seqId$', '$contextPath$');return false;" alwaysActive="true"/>
+			<iconAction name="help" icon="/images/ico-help-w24.png" width="24" height="24" link="javascript:openHelp('User_Interfaces/Working_with_Invoices.htm', '$contextPath$')" alwaysActive="true"/>
+		</actions>
+	</section>
+
+
+	<hiddenFields>
+		<hidden name="requesterId"/>
+		<hidden name="type" defaultValue="CHKSTK"/>
+		<hidden name="processInformation.comment"/>
+		<hidden name="uploadRef"/>
+		<hidden name="originatorId"/>
+		<hidden name="retentionBoxId" defaultValue="upload" forceDefault="true"/>
+    </hiddenFields>
+
+	<processors>
+	</processors>
+</propertyTemplate>

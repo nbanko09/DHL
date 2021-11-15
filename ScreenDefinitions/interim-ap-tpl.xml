@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<propertyTemplate
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/template.xsd">
+	<labels default="en">
+		<locale name="en">
+		<label name="number" value="Invoice Number"/>
+		<label name="scanVendorName" value="Vendor Name"/>
+		<label name="subType" value="Type"/>
+		<label name="erpDocId" value="Voucher #"/>
+		<label name="batchNumber" value="Batch Number"/>
+		<label name="forward" value="Submit"/>
+		<label name="tbdComment1" value="DHL Comment"/>
+		<label name="voucherComments" value="HP Comment"/>
+		<label name="group" value="Company"/>
+		<label name="type" value="Product"/>
+		<label name="businessUnit" value="Company Code" /> <!-- added since now using Business Unit to store Company Code for AP docs -->
+	</locale>
+	</labels>
+	<section name="doc" collapsible="false" collapsed="false">
+	
+	
+		<!-- The following section is standard ManagedPay and should be included relatively unmodified from the baseline version in most templates -->
+		<properties>
+			<valueAlias row="1" col="1" name="processInformation.queueName" readonly="true"/>
+			<!--date row="1" col="2" name="processInformation.deadline" readonly="true" styleClass="date"/-->
+			<output row="2" col="1-2" name="processInformation.previousComment" readonly="true" styleClass="comment" escapeXml="false"/>
+			<textArea row="3" col="1-2" name="tbdComment1" styleClass="comment" readonly="true"/>
+			<textArea row="4" col="1-2" name="voucherComments" styleClass="comment" validation="noSpecialCharacters" readonly="false"/>
+		</properties>
+		<actions>
+			<getNext name="next" readonly="false" showLabel="true" visible="true" toLeft="true" styleClass="getNext70"/>
+			<rejectButton name="reject" readonly="false" isAnchored="false" title="rejectTitle" styleClass="button70"/>
+			<button name="release" command="release" readonly="false" visible="true" type="submit" title="releaseTitle" styleClass="button70"/>
+			<button name="updateRelease" command="updateRelease" readonly="false" visible="true" type="submit" title="updateReleaseTitle" styleClass="button70"/>
+			<button name="update" command="update" readonly="false" visible="true" type="submit" title="updateTitle" styleClass="button70"/>
+			<button name="forward" command="forward" readonly="false" type="submit" isAnchored="false" title="forwardTitle" styleClass="button70"/>
+		</actions>
+	</section>
+	<section name="invoice" visible="true" collapsible="false" collapsed="false">
+		<properties>
+			<dropDown row="1" col="1" name="subType" choiceList="choice.interimAPProduct" readonly="false" validation="required" onChange="reloadPage(this)"/>
+			<text row="1" col="2" name="scanVendorName" readonly="false" styleClass="fulllookup" validation="required"/>
+			<text row="2" col="1" name="number" validation="required, noSpecialCharacters"/>
+			<currency row="2" col="2" name="grossAmount" validation="required"/>
+			<text row="3" col="1" name="erpDocId" readonly="true"/>
+		</properties>
+		<actions>
+			<!-- The following set of actions are standard ManagedPay and should be included relatively unmodified from the baseline version in most templates -->
+			<postingReplyAction name="postings" icon="/images/ico-paid-w24.png" width="24" height="24" link="javascript:openPostingReplyWindow('$contextPath$', '$wobNumber$')" visible="true"/>
+			<iconAction name="editRouting" icon="/images/ico-route-w24.png" width="24" height="24" readOnlyLink="javascript:openViewRoutingWindow('$contextPath$', '$wobNumber$', 'nonPo')" link="javascript:openRoutingWindow('$contextPath$', '$wobNumber$', 'nonPo', 'MP_Approver1')" alwaysActive="true" readonly="false"/>			
+			<iconAction name="email" icon="/images/ico-mail-w24.png" width="24" height="24" link="javascript:openSendEmailWindow('$contextPath$', '$imageGUID$', '$wobNumber$')" alwaysActive="true"/>
+			<iconAction name="attachments" icon="/images/ico-attachment-w24.png" width="24" height="24" link="javascript:openAttachmentsWindow('$contextPath$', '$wobNumber$')" alwaysActive="true"/>
+			<attachmentCountAction name="attachmentCount" visible="true"/>
+			<!--iconAction name="vendorHistory" icon="/images/ico-vhistory-w24.png" width="24" height="24" link="javascript:openVendorHistoryWindow('$contextPath$', '$wobNumber$')" alwaysActive="true"/-->
+			<iconAction name="print" icon="/images/ico-print-w24.png" width="24" height="24" link="javascript:window.print()" visible="true" alwaysActive="true"/>
+			<!--iconAction name="barcode" icon="/images/ico-barcode-w24.png" width="24" height="24" link="javascript:openPrintBarcodeWindow('$contextPath$', '$uploadRef$', '$seqId$')" alwaysActive="true"/-->			<iconAction name="statusWindow" icon="/images/ico-history-w24.png" width="24" height="24" link="javascript:openStatusWindow('$seqId$', '$contextPath$');return false;" alwaysActive="true"/>
+			<iconAction name="help" icon="/images/ico-help-w24.png" width="24" height="24" link="javascript:openHelp('User_Interfaces/Working_with_Invoices.htm', '$contextPath$')" alwaysActive="true"/>	
+		</actions>
+	</section>
+	
+	
+	<section name="sourceInformation" visible="true" collapsible="true" collapsed="false">
+		<properties>
+			<date row="1" col="1" name="scanDate" readonly="true" styleClass="date"/>
+			<text row="1" col="2" name="scanBy" readonly="true"/>
+			<dropDown row="2" col="1" name="group" choiceList="choice.interimAPGroup" readonly="false"/>
+			<!--dropDown row="2" col="2" name="companyCode" choiceList="choice.interimAPDesc" readonly="false"/--> <!-- replace Company Code with Business Unit -->
+			<dropDown row="2" col="2" name="businessUnit" choiceList="choice.interimAPDesc" readonly="false"/>
+			<text row="3" col="1" name="batchNumber" readonly="true"/>
+			<text row="3" col="2" name="scanSite" readonly="true"/>
+			<text row="4" col="1" name="seqId" readonly="true"/>
+		</properties>
+	</section>
+
+	<hiddenFields>
+	   <hidden name="processInformation.comment"/>
+    </hiddenFields>
+
+	<processors>	
+    </processors>
+</propertyTemplate>

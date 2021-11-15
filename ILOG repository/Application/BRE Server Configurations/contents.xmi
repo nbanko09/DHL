@@ -1,0 +1,22 @@
+<?xml version="1.0"  encoding="ISO-8859-1"  ?>
+<!DOCTYPE XMI>
+<XMI xmi.version="1.2" >
+<XMI.header>
+<XMI.documentation>
+<XMI.exporter>Ilog Rule Kit</XMI.exporter>
+<XMI.exporterVersion>4.1</XMI.exporterVersion>
+</XMI.documentation>
+<XMI.model href="ilr:0180AA48075B03010000FCC4BF018265A8C0#1"  xmi.name="Application"  xmi.version="1.2" />
+<XMI.metamodel href="ilr:09804659F3E0EA00000084662F000100007F#1"  xmi.name="Application"  xmi.version="1.2" />
+</XMI.header>
+<XMI.content>
+<RuleApp.DeploymentNodeConfigurationContainer xmi.id="a1"  xmi.uuid="ilr:0A887DCFEF5C0301000096EA09018265A8C0#1"  isRoot="false"  isLeaf="false"  isAbstract="false"  name="BRE Server Configurations"  editable="true"  creationDate="20 Apr 2005 00:10:35 GMT"  lastModificationDate="10 Jun 2005 22:31:31 GMT" >
+<Model.Namespace.contents>
+<RuleApp.DeploymentNodeConfiguration xmi.id="a2"  xmi.uuid="ilr:0B887DCFEF5C0301000096EA09018265A8C0#1"  URL="http:&#47;&#47;localhost:7001&#47;bres"  password="password"  login="bres"  serverName="http client"  name="Local"  editable="true" >
+</RuleApp.DeploymentNodeConfiguration>
+<RuleApp.DeploymentNodeConfiguration xmi.id="a3"  xmi.uuid="ilr:43886AE7336804010000BBB61D016E65A8C0#1"  URL="http:&#47;&#47;mpint02:7001&#47;bres"  password="password"  login="bres"  serverName="http client"  name="MPINT02"  editable="true" >
+</RuleApp.DeploymentNodeConfiguration>
+</Model.Namespace.contents>
+</RuleApp.DeploymentNodeConfigurationContainer>
+</XMI.content>
+</XMI>

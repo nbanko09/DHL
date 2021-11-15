@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<propertyTemplate
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/template.xsd">
+
+	<labels default="en">
+		<locale name="en">
+		<label name="tbdString11" value="Dest Airport"/>
+		<label name="forward" value="Submit"/>
+		<label name="custom4.state" value="State/Provence"/>
+		<label name="group" value="Control Station"/>
+		</locale>
+	</labels>
+
+	
+	<section name="doc" collapsible="false" collapsed="false">
+		<properties>
+			<textArea row="1" col="1-2" name="voucherComments" readonly="true" styleClass="comment"/> 
+			<textArea row="2" col="1-2" name="tbdComment1" styleClass="comment"/> 
+			<output row="3" col="1-2" name="processInformation.previousComment" readonly="true" styleClass="comment" escapeXml="false"/>
+			<valueAlias row="4" col="1" name="processInformation.queueName" readonly="true"/>
+		</properties>
+		<actions>
+			<button name="forward" command="forward" readonly="false" docType="upload" type="submit" isAnchored="false" title="forwardTitle" styleClass="button70"/>
+		</actions>		
+	</section>		
+	
+	<section name="requestCustomer" visible="true" collapsible="false" collapsed="false">
+		<properties>
+			<dropDown row="1" col="1" name="processCode" readonly="false" validation="required" choiceList="choice.product" onChange="reloadPage(this)"/>/> <!--Product-->
+			<dropDown row="1" col="2" name="subType" choiceList="choice.masterfileCustomerConSubTypes" readonly="false" validation="required" onChange="reloadPage(this)"/> <!--Request Type-->
+			<dropDown row="1" col="3" name="routingCode" choiceList="choice.customerAccountTypeAir" readonly="false" validation="required" onChange="reloadPage(this)"/> <!--Account Type-->
+			<dropDown row="2" col="1" name="docPriority" choiceList="choice.priority" defaultValue="1" readonly="false" validation="required"/> <!--Priority-->
+			<text row="2" col="2" name="custom4.contactNo" validation="required, noSpecialCharacters"/> <!--Contact No-->
+			<dynamicDropDown row="2" col="3" name="group" validation="required" readonly="false" providerClass="com.miriasystems.ui.providers.GroupsChoiceListProvider"/> <!--Control Station-->
+		</properties>
+		<actions>
+			<iconAction name="print" icon="/images/ico-print-w24.png" width="24" height="24" link="javascript:window.print()" visible="true" alwaysActive="true"/>
+			<iconAction name="statusWindow" icon="/images/ico-history-w24.png" width="24" height="24" link="javascript:openStatusWindow('$seqId$', '$contextPath$');return false;" alwaysActive="true"/>
+			<iconAction name="help" icon="/images/ico-help-w24.png" width="24" height="24" link="javascript:openHelp('User_Interfaces/Working_with_Invoices.htm', '$contextPath$')" alwaysActive="true"/>
+		</actions>		
+		</section>
+		
+	<section name="customerDetails" visible="true" collapsible="false" collapsed="false">
+		<properties>
+			<text row ="1" col="1" name="custom4.accountNumber" readonly="true" validation="required"/> <!--Account Code-->
+			<text row="2" col="1-4" name="custom4.name" readonly="false" validation="required" styleClass="fulllookup"/> <!--Account Name-->
+			<text row="3" col="1-4" name="custom4.fao" readonly="false" styleClass="fulllookup"/> <!--Attention-->
+			<text row="4" col="1-4" name="custom4.address1" readonly="false" styleClass="fulllookup"/> <!--Address 1-->
+			<text row="5" col="1" name="custom4.city" readonly="false"/> <!--City-->
+			<text row="5" col="4" name="custom4.state" readonly="false"/> <!--State-->
+			<text row="6" col="1" name="custom4.postalCode" readonly="false"/> <!--Post Code-->
+			<text row="6" col="4" name="custom4.country" readonly="false"/> <!--Country-->
+			<text row="7" col="1" name="tbdString11" readonly="false" validation="required"/> <!--Dest Airport-->
+		</properties>
+	</section>
+
+
+	<section name="additionalInformation" visible="true" collapsible="false" collapsed="false">
+		<properties>
+			<text row="1" col="1" name="custom4.accountingContact" readonly="false"/>  <!--Acc Contact Name-->
+			<text row="1" col="2" name="custom4.salesRep" readonly="false"/>    <!--Sales Rep-->			
+			<text row="2" col="1" name="custom4.contactName" readonly="false"/>  <!--Contact Name-->
+			<text row="2" col="2" name="custom4.contactPhone" readonly="false"/> <!--Contact Tel #-->
+			<text row="2" col="3" name="custom4.contactEmail" readonly="false"/> <!--Contact Tel #-->
+			<checkbox row="3" col="1" name="custom4.contractInEffect" readonly="false"/> <!--Contract In Effect-->
+			<text row="3" col="2" name="custom4.contractNo" readonly="false"/>   <!--Contract Number-->
+			<text row="4" col="1" name="custom4.linkToCorpAccount" readonly="false"/>   <!--Link to Corp Acc-->
+			<text row="4" col="2" name="custom4.brokerAccount" readonly="false"/>  <!--Broker Ac-->				
+		</properties>
+	</section>
+
+
+	<hiddenFields>
+	<hidden name="requesterId"/>
+	<hidden name="scanVendorName"/>
+	<hidden name="type" defaultValue="CUSTOMER"/>
+	<hidden name="uploadRef"/>
+	<hidden name="originatorId"/>
+	<hidden name="retentionBoxId" defaultValue="upload" forceDefault="true"/>
+    </hiddenFields>
+
+	<processors>
+	</processors>
+</propertyTemplate>

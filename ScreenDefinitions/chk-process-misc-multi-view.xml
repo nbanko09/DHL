@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="all-rescan-view" template="check-request-misc-multi-tpl.xml"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/view.xsd">
+
+    <labels default="en">
+        <locale name="en">
+            <label name="forward" value="Complete"/>
+        </locale>
+    </labels>
+
+<property-overrides>
+	<date name="processInformation.deadline" readonly="true"/> <!--Required Date-->
+	<text name="subType" readonly="true" /> <!--Request Type-->
+	<text name="processCode" readonly="true" /> <!--Pages-->
+	<text name="department" readonly="true"/> <!--How-->
+	<text name="routingCode" readonly="true"/> <!--Send To-->
+	<text name="tbdComment1" readonly="true"/> <!--comments #-->
+	<text name="batchNumber" readonly="true"/> <!--ups #-->
+	<text name="checkStubMessage" readonly="true"/> <!--station zip-->
+	<text name="group" readonly="true"/> <!--Control Station-->
+	<text name="seqId" readonly="true"/> <!--Request Ticket No-->
+	<text name="voucherComments" readonly="true"/> 
+	<text name="custom5.name" readonly="true"/>
+	<text name="custom5.address1" readonly="true"/>
+	<text name="custom5.address2" readonly="true"/>
+	<text name="custom5.city" readonly="true"/>
+	<text name="number" readonly="true"/>
+	<text name="tbdString2" readonly="true"/>
+	<text name="tbdString3" readonly="true"/>
+	<text name="tbdString4" readonly="true"/>
+	<text name="custom5.fao" readonly="true"/>
+	<text name="afeNumber" readonly="true"/>
+	<text name="docPriority" readonly="true"/>
+	<text name="batchNumber" readonly="true"/>
+	<text name="businessUnit" readonly="true"/>
+</property-overrides>
+
+<lineItem-overrides>
+	<text name="accountCode" readonly="true"/> <!-- Invoice Number-->
+	<date name="tbdDate1" readonly="true"/> <!-- Date-->
+	<currency name="lineTotal" readonly="true"/> <!--Amount-->
+	<text name="tbdString4" readonly="true"/> <!-- Separate Check-->
+	<text name="itemCode" readonly="true"/> <!-- Voucher-->
+	<text name="uom" readonly="true"/> <!-- Separate Check-->
+</lineItem-overrides>
+
+<action-overrides>
+	<getNext name="next" readonly="false" visible="true"/>
+        <iconAction name="addLineItem" readonly="true" visible="false"/>
+	<iconAction name="removeLineItem" readonly="true" visible="false"/>
+	<iconAction name="editRouting" readonly="true"/>
+   </action-overrides>
+    
+    <hidden-overrides>
+        <hidden name="processInformation.response" defaultValue="Complete"/>
+    </hidden-overrides>
+
+     <documentRejection>
+        <rejectionReasons>
+            <reason name="Reject" commentsRequired="true"  note="message.requester">
+            </reason>
+        </rejectionReasons>
+    </documentRejection>
+
+</view>

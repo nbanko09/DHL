@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<labels default="en" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<!-- ONLY ADD CUSTOMER LABEL OVER RIDES TO THIS FILE -->
+
+		<locale name="en">
+			<label name="action.bulk" value="New - Bulk Upload"/>
+	
+			<label name="freightAmount1" value="Shipping Amount"/>
+		
+			<label name="account.code1" value="Company"/>
+			<label name="account.code2" value="Location"/>
+			<label name="account.code3" value="Department"/>
+			<label name="account.code4" value="Major"/>
+			<label name="account.code5" value="Minor"/>
+			
+			<label name="search.account.code" value="GL Account Code"/>
+			<label name="search.account.code1" value="Company"/>
+			<label name="search.account.code2" value="Location"/>
+			<label name="search.account.code3" value="Department"/>
+
+			<label name="poLine.itemDescription" value="Item Description"/> 
+			<label name="account.description" value="GL Code Description"/>
+
+			<label name="vendorAddress.type" value="Address Type"/>
+			<label name="vendorAddress.addressType" value="Address Type"/>
+			<label name="enCryptCC" value="P-Card Number"/>
+			<label name="message.receipts" value="The work item will be sent to awaiting receipts."/>
+		</locale>
+</labels>
+
+

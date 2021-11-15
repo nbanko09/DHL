@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="all-rescan-view" template="masterfile-brokerage-credit-tpl.xml"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/view.xsd">
+
+    
+        <labels default="en">
+            <locale name="en">
+                <label name="forward" value="Approve"/>
+                <label name="reject" value="Reject"/>
+            </locale>
+    </labels>
+    
+    <property-overrides>
+        <textArea name="voucherComments" readonly="true" defaultValue=""/>
+        <textArea name="tbdComment1" readonly="true"/>
+        <dropDown name="subType" readonly="true"/> <!--Request Type-->
+	<dropDown name="businessUnit" readonly="true"/> <!--Credit Update-->
+	<text name="custom4.contactNo" readonly="true"/> <!--Contact No-->
+	<text name="group" readonly="true"/> <!--Control Station-->
+	<text name="custom4.accountNumber" readonly="true"/> <!--Account Code-->
+	<text name="custom4.name" readonly="true"/> <!--Account Name-->
+     </property-overrides>
+
+    <hidden-overrides>
+        <hidden name="processInformation.response" defaultValue="Complete"/>
+    </hidden-overrides>
+
+	<action-overrides>
+		<button name="release" visible="false"/>
+	</action-overrides>
+    
+    
+      <documentRejection>
+			<rejectionReasons>
+			<reason name="Reject" commentsRequired="true" note="message.terminate">
+			</reason>
+			<reason name="Return to Requester" commentsRequired="true" note="message.requester">
+			</reason>
+			 </rejectionReasons>
+    </documentRejection>
+
+
+</view>

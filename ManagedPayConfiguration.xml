@@ -1,0 +1,111 @@
+<managedpay baseCurrency="USD" siteRole="DEV-APP1_DEV2_MPSys_Dev" isolatedRegion="2"
+            apManager="dramakrishnan"
+            itManager="managedpay@hotmail.com"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/managedpayconfiguration.xsd">
+    <typeInformation>
+        <negativeCurrencyTypes>
+            <invoiceType>NPCREDIT</invoiceType>
+        </negativeCurrencyTypes>
+    </typeInformation>
+	<properties>
+	<!--The below properties are to reset the Approval limit to Zero if there is a title change etc
+		If the below properites are missing then it would not reset the approval limit-->
+		<property name="APPROVAL_LIMIT_RESET">FALSE</property>	
+		<property name="REQUEST_SET_ON_UPLOAD">TRUE</property>			
+		<property name="CLIENT_NAME">DEV2</property>
+		<!--property name="NON_LOCK_LIST">AutoClear</property-->
+		<property name="POSTING_RW_Q_LIST">Posting|PrePosting</property>
+		<property name="ORG_SECURITY">FALSE</property>
+		<property name="GROUP">MP</property>	
+
+		<property name="USE_DEFAULT_BANNER">TRUE</property>
+	
+		<property name="SYSTEM_TIME_ZONE">America/New_York</property>
+		<property name="DISPLAY_TIME_ZONE">Asia/Pyongyang</property>
+		
+		<!--The below property is to trigger the validation for primary documents when uploading an invoice.-->
+		<property name="PRIMARY_DOCUMENT_REQUIRED_FOR_UPLOAD">FALSE</property>
+		
+		<!--The below property is to display the image with the ICN plugin -->		
+		<property name="ICN_URL">http://dev-app1:9081/navigator/launch.jsp?desktop=AP&amp;feature=ICNViewerIntegrationFeature&amp;sideChrome=0</property>
+		<property name="ICN_RepositoryId">ActivePayDev2</property>
+		
+		<!--The below properties are to read the DATACAP export files. If DATACAP_FOLDER_LOGIN is set to TRUE then it will use the credentials to login
+			else if will access the UNC path directly-->	
+		<property name="DATACAP_FOLDER_LOGIN">TRUE</property>
+		<property name="DATACAP_FOLDER_LOGIN_USERNAME">development\Administrator</property>
+		<property name="DATACAP_FOLDER_LOGIN_PASSWORD">XxQE5Su1Cmo=</property>
+		<!--The below value is mandatory irrespective of credentials,if connecting through credentials then sbm protocol is needed-->
+		<property name="DATACAP_FOLDER_EXPORT_LOCATION">smb://10.212.212.121/Datacap/APMailroomDev2/export/</property>
+		
+			<!--The below properties are needed for invoice coming through mailroom -->
+		<property name="DB_DRIVER_CLASS">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+		<property name="DB_JDBC_URL">jdbc:sqlserver://10.212.212.80:1433;DatabaseName=MP_APP_DHL</property>
+		<property name="DB_USER_CUSTOM">CUSTOM_USER</property>
+		<property name="DB_USER_CUSTOM_PWD">CBHE9e7Loak=</property>
+		<property name="DB_USER_MPDB">CUSTOM_USER</property>
+		<property name="DB_USER_MPDB_PWD">CBHE9e7Loak=</property>
+<!--Number of icons to display in DemandCenter (MIR-714)-->
+		<property name="APPMAX">11</property>
+		
+		<!-- the below properties are lists of queue names for interfaces CMAP-531/MIR-474 -->
+		<property name="POSTING_QUEUE_NAMES">POSTING</property>
+
+		<!--the below porperties is for routing window DHL01-165 -->
+		<property name="SYSTEMS_USERS">DEV-APP1_DEV2_MPSys_Dev</property>
+
+	</properties>
+    <fileNet>
+        <processEngine routerUrl="CP2" username="Administrator" password="XxQE5Su1Cmo=" prefix="DEV2_OS1.dbo"/>
+	<contentEngine url="iiop://dev-filenet1:2810/FileNet/Engine" wsiUrl="http://dev-filenet1:9081/wsi/FNCEWS40MTOM/" objectStore="ActivePayDEV2" username="administrator" password="XxQE5Su1Cmo=" domain="ActivePayDEV2" workplaceUrl="http://dev-app1:9081/navigator/bookmark.jsp?desktop=AP&amp;repositoryId=ActivePay" defaultUploadFile="DummyFile.tif"/>
+    </fileNet>
+
+	<userLookup providerUrl="ldap://miriadevad:389" lookupUsername="Administrator" lookupPassword="XxQE5Su1Cmo=" lookupContainer="CN=Users" log="true">
+	 <namingSchema baseDn="DC=development,DC=local">
+		  <userContainer name="CN=Users" /> 
+		  <roleContainer name="OU=DEV-APP1_DEV2" /> 
+		 <attributes>
+		  <mapping attributeName="userPrincipalName" propertyName="fullUserName" /> 
+		  <mapping attributeName="givenName" propertyName="firstName" /> 
+		  <mapping attributeName="sn" propertyName="lastName" /> 
+		  <mapping attributeName="displayName" propertyName="displayName" /> 
+		  <mapping attributeName="distinguishedName" propertyName="distinguishedName" /> 
+		  <mapping attributeName="description" propertyName="description" /> 
+		  <mapping attributeName="telephoneNumber" propertyName="phone" /> 
+		  <mapping attributeName="mail" propertyName="email" /> 
+		  <mapping attributeName="sAMAccountName" propertyName="userName" />
+		  <mapping attributeName="employeeId" propertyName="employeeNumber"/>
+	  
+		  </attributes>
+	  </namingSchema>
+  </userLookup>
+  <mailSettings
+		host="10.212.212.46"
+			protocol="smtp"
+			user="mpay"
+			password="mpay"
+			userEmail="mpay@mpay.com"
+	/>
+
+	<outboundMailSettings
+	    	host="10.212.212.46"
+			protocol="smtp"
+			user="mpay"
+			password="mpay"
+			userEmail="mpay@mpay.com"
+	/>
+
+    <serverSpecifics dialect="com.miriasystems.database.SQLServer2012Dialect"
+		transactionManagerClass="org.hibernate.transaction.WebSphereTransactionManagerLookup"
+        jndiInitialContextFactory="com.ibm.websphere.naming.WsnInitialContextFactory"
+        jndiURL="iiop://dev-app1:2810/"          
+        baseURL="http://dev-app1:9081/ManagedPay"
+        logDirectory="E:\MiriaSystems\DEV2\ActiveOps\Logs"
+        workflowLogDirectory="E:\MiriaSystems\DEV2\ActiveOps\Logs"
+        additionalJndiProperties="com.ibm.websphere.naming.jndicache.cacheobject=none,name=value"
+        />
+
+    <paging maxResults="1000" resultsPerPage="20" linesPerPage="3"/>
+	
+</managedpay>

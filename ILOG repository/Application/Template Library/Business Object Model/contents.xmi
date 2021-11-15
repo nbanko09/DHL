@@ -1,0 +1,39 @@
+<?xml version="1.0"  encoding="ISO-8859-1"  ?>
+<!DOCTYPE XMI>
+<XMI xmi.version="1.2" >
+<XMI.header>
+<XMI.documentation>
+<XMI.exporter>Ilog Rule Kit</XMI.exporter>
+<XMI.exporterVersion>4.1</XMI.exporterVersion>
+</XMI.documentation>
+<XMI.model href="ilr:0180AA48075B03010000FCC4BF018265A8C0#1"  xmi.name="Application"  xmi.version="1.2" />
+<XMI.metamodel href="ilr:09804659F3E0EA00000084662F000100007F#1"  xmi.name="Application"  xmi.version="1.2" />
+</XMI.header>
+<XMI.content>
+<Basics.BOM xmi.id="a1"  xmi.uuid="ilr:3080AA48075B03010000FCC4BF018265A8C0#1"  autoUpdateElements="true"  isRoot="false"  isLeaf="false"  isAbstract="false"  name="Business Object Model"  editable="true"  creationDate="19 Apr 2005 15:15:42 GMT"  lastModificationDate="19 Apr 2005 18:45:10 GMT"  historyVersion="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.PrimitiveType xmi.id="a2"  xmi.uuid="ilr:3180AA48075B03010000FCC4BF018265A8C0#1"  isRoot="false"  isLeaf="false"  isAbstract="false"  name="void"  editable="false"  creationDate="19 Apr 2005 15:15:42 GMT"  lastModificationDate="19 Apr 2005 18:44:33 GMT"  visible="true"  deprecated="false"  implicit="false" >
+</DefaultBusinessModel.PrimitiveType>
+<DefaultBusinessModel.PrimitiveType xmi.id="a3"  xmi.uuid="ilr:3280AA48075B03010000FCC4BF018265A8C0#1"  isRoot="false"  isLeaf="false"  isAbstract="false"  name="boolean"  editable="false"  creationDate="19 Apr 2005 15:15:42 GMT"  lastModificationDate="19 Apr 2005 18:44:33 GMT"  visible="true"  deprecated="false"  implicit="false" >
+</DefaultBusinessModel.PrimitiveType>
+<DefaultBusinessModel.PrimitiveType xmi.id="a4"  xmi.uuid="ilr:3380AA48075B03010000FCC4BF018265A8C0#1"  isRoot="false"  isLeaf="false"  isAbstract="false"  name="byte"  editable="false"  creationDate="19 Apr 2005 15:15:42 GMT"  lastModificationDate="19 Apr 2005 18:44:33 GMT"  visible="true"  deprecated="false"  implicit="false" >
+</DefaultBusinessModel.PrimitiveType>
+<DefaultBusinessModel.PrimitiveType xmi.id="a5"  xmi.uuid="ilr:3480AA48075B03010000FCC4BF018265A8C0#1"  isRoot="false"  isLeaf="false"  isAbstract="false"  name="char"  editable="false"  creationDate="19 Apr 2005 15:15:42 GMT"  lastModificationDate="19 Apr 2005 18:44:33 GMT"  visible="true"  deprecated="false"  implicit="false" >
+</DefaultBusinessModel.PrimitiveType>
+<DefaultBusinessModel.PrimitiveType xmi.id="a6"  xmi.uuid="ilr:3580AA48075B03010000FCC4BF018265A8C0#1"  isRoot="false"  isLeaf="false"  isAbstract="false"  name="float"  editable="false"  creationDate="19 Apr 2005 15:15:42 GMT"  lastModificationDate="19 Apr 2005 18:44:33 GMT"  visible="true"  deprecated="false"  implicit="false" >
+</DefaultBusinessModel.PrimitiveType>
+<DefaultBusinessModel.PrimitiveType xmi.id="a7"  xmi.uuid="ilr:3680AA48075B03010000FCC4BF018265A8C0#1"  isRoot="false"  isLeaf="false"  isAbstract="false"  name="double"  editable="false"  creationDate="19 Apr 2005 15:15:42 GMT"  lastModificationDate="19 Apr 2005 18:44:33 GMT"  visible="true"  deprecated="false"  implicit="false" >
+</DefaultBusinessModel.PrimitiveType>
+<DefaultBusinessModel.PrimitiveType xmi.id="a8"  xmi.uuid="ilr:3780AA48075B03010000FCC4BF018265A8C0#1"  isRoot="false"  isLeaf="false"  isAbstract="false"  name="short"  editable="false"  creationDate="19 Apr 2005 15:15:42 GMT"  lastModificationDate="19 Apr 2005 18:44:33 GMT"  visible="true"  deprecated="false"  implicit="false" >
+</DefaultBusinessModel.PrimitiveType>
+<DefaultBusinessModel.PrimitiveType xmi.id="a9"  xmi.uuid="ilr:3880AA48075B03010000FCC4BF018265A8C0#1"  isRoot="false"  isLeaf="false"  isAbstract="false"  name="int"  editable="false"  creationDate="19 Apr 2005 15:15:42 GMT"  lastModificationDate="19 Apr 2005 18:44:33 GMT"  visible="true"  deprecated="false"  implicit="false" >
+</DefaultBusinessModel.PrimitiveType>
+<DefaultBusinessModel.PrimitiveType xmi.id="a10"  xmi.uuid="ilr:3980AA48075B03010000FCC4BF018265A8C0#1"  isRoot="false"  isLeaf="false"  isAbstract="false"  name="long"  editable="false"  creationDate="19 Apr 2005 15:15:42 GMT"  lastModificationDate="19 Apr 2005 18:44:33 GMT"  visible="true"  deprecated="false"  implicit="false" >
+</DefaultBusinessModel.PrimitiveType>
+<Diagram.ClassDiagram xmi.id="a11"  xmi.uuid="ilr:2F80AA48075B03010000FCC4BF018265A8C0#1"  modelText="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;SDM&#47;&gt;"  name="ClassDiagram"  editable="true" >
+</Diagram.ClassDiagram>
+</Model.Namespace.contents>
+</Basics.BOM>
+</XMI.content>
+</XMI>

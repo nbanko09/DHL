@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="all-rescan-view" template="masterfile-misc-bndqry-tpl.xml"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/view.xsd">
+
+    <labels default="en">
+        <locale name="en">
+            <label name="forward" value="Complete"/>
+        </locale>
+    </labels>
+    
+    <property-overrides>
+       <text name="processCode" readonly="true"/>
+       <text name="custom4.chbAccountNo" readonly="true"/>
+       <text name="custom4.contactNo" readonly="true"/>
+    </property-overrides>
+
+    <hidden-overrides>
+        <hidden name="processInformation.response" defaultValue="Complete"/>
+    </hidden-overrides>
+    
+    <action-overrides>
+        	<getNext name="next" readonly="false" visible="true"/>
+   </action-overrides>
+   
+   <documentRejection>
+		  <rejectionReasons>
+			  <reason name="Return to Requester" commentsRequired="true" note="message.requester">
+			  </reason>    
+		   </rejectionReasons>
+     </documentRejection>
+   
+
+<validations>
+</validations>
+
+</view>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<quartz version="1.1" xmlns="http://www.quartzscheduler.org/ns/quartz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.quartzscheduler.org/ns/quartz http://www.quartzscheduler.org/ns/quartz/job_scheduling_data_1_1.xsd">
+	
+	
+	<job>
+		<job-detail>
+			<name>DHLCDZCheckRequestInBound</name>
+			<group>invoiceOutputGroup</group>
+			<job-class>com.miriasystems.custom.etl.jobs.DHLProcessingJobs</job-class>
+			<volatility>false</volatility>
+			<durability>false</durability>
+			<recover>false</recover>
+			<job-data-map allows-transient-data="true">
+                <entry>
+                    <key>inputFolder</key>
+					<!--Location of the input file-->
+                    <value>E:\\MiriaSystems\\DEV2\\Interfaces\\InBound\\DHLCDZCheckRequest</value>
+                </entry>
+				<entry>
+                    <key>fileName</key>
+					<!--File pattern the process will pick up-->
+                    <value>*.dat</value>
+                </entry>
+				<entry>
+                    <key>archiveFilePath</key>
+					<!--Location where the inputfile will be moved after processing-->
+                    <value>E:\\MiriaSystems\\DEV2\\Interfaces\\InBound\\DHLCDZCheckRequest\\Archive</value>
+                </entry>
+				<entry>
+                    <key>headerNames</key>
+					<!--
+					Prefix the property with the data type ST=String,DB=double,DT=Date,FL=Float,IT=Integer
+					The middle part specifies to which it is mapped. Document or Lines D-Document and DL for DocumentLines					
+					-->
+                    <value>Ignore|DT_D_tbdDate1|DT_D_tbdDate1|Ignore|ST_D_tbdString5|ST_D_tbdString6|ST_D_tbdString7|DB_D_grossAmount|ST_D_vendorId|ST_D_number|ST_D_department|ST_D_tbdString10|ST_D_tbdString8|ST_D_tbdString9</value>
+                </entry>
+				<entry>
+                    <key>errorFolder</key>
+					<!--If there are any errors in the lines those lines will be written to this folder -->
+                    <value>E:\\MiriaSystems\\DEV2\\Interfaces\\InBound\\DHLCDZCheckRequest\\Error</value>
+                </entry>
+				<entry>
+                    <key>imageLocation</key>
+					<!--Sample file to kick off the workflow it can be anything like txt,tif,pdf etc-->
+                    <value>E:\MiriaSystems\DEV2\ActiveOps\Common\DummyFile.tif</value>
+                </entry>
+				<entry>
+                    <key>documentClassName</key>
+					<!--Name of the Document Class to checkin the document-->
+                    <value>APDocument</value>
+                </entry>
+				<entry>
+                    <key>documentTitle</key>
+					<!--This can be set to any property from the haedernames above-->
+                    <value>number</value>
+                </entry>
+				<entry>
+                    <key>scanSource</key>
+					<!--This has to be set else it will be treated as an invoice from DataCap-->
+                    <value>CHECKREQ</value>
+                </entry>
+				<entry>
+                    <key>headerline</key>
+					<!--If the first line has header labels then set it to true so first line  will be ignored-->
+                    <value>true</value>
+                </entry>
+				<entry>
+                    <key>service</key>
+					<!--The job to invoke-->
+                    <value>INBOUND</value>
+                </entry>
+				<entry>
+                    <key>defaultValues</key>
+					<!--The below properties will be the static Default values-->
+                    <value>ST_D_scanType=CHECKREQ|ST_D_type=CHECKREQ|ST_D_subType=CDZ|ST_D_processCode=R-CDZ|ST_D_retentionBoxId=INTERFACE|ST_D_docPriority=2</value>
+                </entry>				
+            </job-data-map>
+		</job-detail>
+		<trigger>
+			<cron>
+				<name>DHLCDZCheckRequestInBound</name>
+				<group>invoiceOutputGroup</group>
+				<job-name>allTrigger</job-name>
+				<job-group>allTriggers</job-group>
+				<cron-expression>0 0/15 * ? * *</cron-expression>
+			</cron>
+		</trigger>
+	</job>
+	
+	<job>
+		<job-detail>
+			<name>DHLCDZCheckRequestOUTBound</name>
+			<group>invoiceOutputGroup</group>
+			<job-class>com.miriasystems.custom.etl.jobs.DHLProcessingJobs</job-class>
+			<volatility>false</volatility>
+			<durability>false</durability>
+			<recover>false</recover>
+			<job-data-map allows-transient-data="true">
+                <entry>
+                    <key>outputlocation</key>
+                    <value>E:\\MiriaSystems\\DEV2\\Interfaces\\OUTBound\\DHLCDZCheckRequest\\OUTPUT\\</value>
+                </entry>
+				<entry>
+                    <key>outboundTemplateName</key>
+                    <value>DHLCDZOutBound.ftl</value>
+                </entry>		
+				
+				<entry>
+                    <key>fileName</key>
+                    <value>CDZ_OUTBOUND_</value>
+                </entry>		
+				<entry>
+                    <key>outputfileEXT</key>
+                    <value>.xml</value>
+                </entry>				
+				<entry>
+                    <key>service</key>
+					<!--The job to invoke-->
+                    <value>OUTBOUND</value>
+                </entry>
+				
+            </job-data-map>
+		</job-detail>
+		<trigger>
+			<cron>
+				<name>DHLCDZCheckRequestOUTBound</name>
+				<group>invoiceOutputGroup</group>
+				<job-name>allTrigger</job-name>
+				<job-group>allTriggers</job-group>
+				<!--<cron-expression>0 0/2 * ? * *</cron-expression>-->
+				<cron-expression>0 0/20 * ? * *</cron-expression>
+				<!--cron-expression>0 0/59 * ? * *</cron-expression-->
+			</cron>
+		</trigger>
+	</job>	
+	
+</quartz>

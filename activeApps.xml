@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+The file names listed in here will be search *in order* for a label.  The first file
+in this list must also define the default locale.  Subsequent attempts to redefine the
+default locale will be ignored.
+
+User Roles mapping:
+Friendly Name	             		  Role Name
+Mailroom Processor	                  MP_Scanner1 
+AP Indexer	                          MP_Indexer1 
+AP Processor Pre-Approved	          MP_Processor3
+AP Processor Cost Center	          MP_Processor1
+Approver 	                          MP_Approver1 
+AP Supervisor Review	              MP_Confirmer1
+AP Manager	                          MP_Confirmer2
+Fixed Assets Review	                  MP_Confirmer3
+General Exception	                  MP_Processor8
+Vendor Maintenance	                  MP_VendorMaintenance1
+Waiting Rescan	                      MP_Processor9
+Terminate	                          MP_Processor10
+Administrator 1	                      MP_Administrator1
+Administrator 2	                      MP_Administrator2
+Administrator 3	                      MP_Administrator3
+Search Only	                          MP_Search1
+Use Tax Processor	                  MP_Auditor1
+Use Tax Manager	                      MP_Auditor2
+Internal Use Tax Auditor	          MP_Auditor3
+External Use Tax Auditor	          MP_Auditor4
+-->
+
+<root>
+
+<apps>
+	<app name="Common" default="true" roles="">
+		<dcApp name="Null" url="index.jsp?app=" target="_parent" desktop="Null" disableImg="Null" order="11" displayName="Common"/>
+	</app>
+	
+	<app name="Pay"  roles="MP_Administrator4, MP_Administrator1, MP_Administrator2, MP_Administrator3">
+		<dcApp name="Pay" url="index.jsp?app=" target="_parent" desktop="Pay" disableImg="Pay" order="1" displayName="Active AP"/>
+	</app>
+	
+   	<app name="Mailroom"  roles="MP_Administrator4">
+		<dcApp name="Mailroom" url="http://10.212.212.124:9080/navigator/?desktop=" target="_blank" desktop="APMAilroomDev2" disableImg="Mailroom" order="2" displayName="Active Mailroom"/>
+	</app>
+	
+	<app name="Expense"  roles="MP_Administrator4">
+	<dcApp name="Expense" url="index.jsp?app=" target="_parent" desktop="Expense" disableImg="Expense" order="3" displayName="Active Expense"/>
+	</app>
+	
+	<app name="Report"  roles="MP_Administrator4">
+	<dcApp name="Report" url="index.jsp?app=" target="_parent" desktop="Report" disableImg="Report" order="4" displayName="Active Report"/>
+	</app>
+
+	<app name="Navigator"  roles="MP_Administrator4" >
+		<dcApp name="Navigator" url="http://10.212.212.120:9080/navigator/?desktop=" target="_blank" desktop="ACP" disableImg="Navigator" order="5" displayName="Navigator"/>
+	</app>
+	
+	<app name="Doc"  roles="MP_Administrator4">
+		<dcApp name="Doc" url="index.jsp?app=" target="_parent" desktop="Doc" disableImg="Doc" order="6" displayName="Active Doc"/>
+	</app>
+	
+	<app name="Search"  roles="MP_Administrator4, MP_Administrator1, MP_Administrator2, MP_Administrator3, MP_Search1">
+		<dcApp name="Search" url="index.jsp?app=" target="_parent" desktop="Search" disableImg="Search" order="7" displayName="Active Search"/>
+	</app>
+	
+	<app name="Tax"  roles="MP_Administrator4" >
+		<dcApp name="Tax" url="index.jsp?app=" target="_parent" desktop="Tax" disableImg="Tax" order="8" displayName="Active Tax"/>
+	</app>
+	
+	<app name="DHL"  roles="MP_Administrator4, MP_Administrator1, MP_Administrator2, MP_Administrator3, MP_Indexer1, MP_Indexer2, MP_Indexer3, MP_Processor1, MP_Processor2, MP_Processor3, MP_Processor5, MP_Processor6, MP_Processor7, MP_Processor8, MP_Processor9, MP_Confirmer1, MP_Buyer1, MP_Buyer2, MP_Auditor1, MP_Auditor2, MP_Auditor3, MP_Auditor4, MP_Approver1, MP_Approver2, MP_Approver3, MP_Approver4, MP_Approver5, MP_Scanner1, MP_VendorMaintenance1">
+		<dcApp name="DHL" url="index.jsp?app=" target="_parent" desktop="DHL" disableImg="DHL" order="9" displayName="Active DHL"/>
+	</app>
+	
+
+	<app name="Admin" roles="MP_Administrator1, MP_Administrator2, MP_Administrator3, MP_Administrator4">	
+		<dcApp name="Null" url="index.jsp?app=" target="_parent" desktop="Null" disableImg="" order="10"/>	
+	</app>	
+	
+</apps>
+
+<DocumentTypes>
+	<app type="CASH"  name="Expense"/>
+	<app type="EXP"  name="Expense"/>
+	<app type="MISC"  name="Pay"/>
+	<app type="NON-PO"  name="Pay"/>
+	<app type="PO"  name="Pay"/>
+	<app type="EDI"  name="Pay"/>
+	<app type="RECEIVER"  name="Pay"/>
+    <app type="DOC" name="Doc"/>
+	<app type="TAX" name="Doc"/>
+	
+	<app type="CHECKREQ" name="DHL"/>
+	<app type="CHKSTK" name="DHL"/>
+	<app type="BROKEAGE" name="DHL"/>
+	<app type="CUSTOMER" name="DHL"/>
+	<app type="MISC" name="DHL"/>
+	<app type="COLLECT" name="DHL"/>
+	<app type="VENDOR" name="DHL"/>
+	<app type="AP" name="DHL"/>
+</DocumentTypes>
+
+</root>

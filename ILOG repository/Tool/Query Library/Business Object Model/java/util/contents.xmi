@@ -1,0 +1,381 @@
+<?xml version="1.0"  encoding="ISO-8859-1"  ?>
+<!DOCTYPE XMI>
+<XMI xmi.version="1.2" >
+<XMI.header>
+<XMI.documentation>
+<XMI.exporter>Ilog Rule Kit</XMI.exporter>
+<XMI.exporterVersion>4.1</XMI.exporterVersion>
+</XMI.documentation>
+<XMI.model href="ilr:0280AA48075B03010000FCC4BF018265A8C0#1"  xmi.name="Tool"  xmi.version="1.2" />
+<XMI.metamodel href="ilr:078248E58DCDEF00000099337400700110AC#1"  xmi.name="Tool"  xmi.version="1.2" />
+</XMI.header>
+<XMI.content>
+<DefaultBusinessModel.Package xmi.id="a1"  xmi.uuid="ilr:9A82AA48075B03010000FCC4BF018265A8C0#1"  isRoot="false"  isLeaf="false"  isAbstract="false"  name="util"  editable="true"  creationDate="19 Apr 2005 15:15:40 GMT"  lastModificationDate="19 Apr 2005 15:15:40 GMT"  visible="true"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Class xmi.id="a2"  xmi.uuid="ilr:8882AA48075B03010000FCC4BF018265A8C0#1"  noAction="false"  noCondition="false"  navigate="true"  bindingMode="none"  isSingleton="false"  isRoot="false"  isLeaf="false"  isAbstract="false"  visibility="public_vis"  name="Date"  editable="true"  creationDate="19 Apr 2005 15:15:40 GMT"  lastModificationDate="19 Apr 2005 15:15:40 GMT"  implicit="false"  visible="false"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Properties xmi.id="a3"  xmi.uuid="ilr:D084AA48075B03010000FCC4BF018265A8C0#1"  tagId="valueEditor"  values="ilog.rules.brl.IlrDateValueEditor"  name="valueEditor"  editable="true"  visible="true"  deprecated="false" >
+<Model.Tag.elements>
+<DefaultBusinessModel.Class name="Date"  xmi.idref="a2"  xmi.uuid="ilr:8882AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.Tag.elements>
+</DefaultBusinessModel.Properties>
+<DefaultBusinessModel.Method xmi.id="a4"  xmi.uuid="ilr:3883AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="is"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.bal.Object.Is"  visible="false"  translation="{this} == {0}"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a5"  xmi.uuid="ilr:E183AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="boolean"  href="ilr:1285AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a6"  xmi.uuid="ilr:5683AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Object"  href="ilr:6F82AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Properties xmi.id="a7"  xmi.uuid="ilr:EC84AA48075B03010000FCC4BF018265A8C0#1"  tagId="propagateArgumentType"  values="true"  name="propagateArgumentType"  editable="true"  visible="true"  deprecated="false" >
+<Model.Tag.elements>
+<DefaultBusinessModel.Method name="is"  xmi.idref="a4"  xmi.uuid="ilr:3883AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.Tag.elements>
+</DefaultBusinessModel.Properties>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a8"  xmi.uuid="ilr:B282AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="isNot"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.bal.Object.IsNot"  visible="false"  translation="{this} != {0}"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a9"  xmi.uuid="ilr:5984AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="boolean"  href="ilr:1285AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a10"  xmi.uuid="ilr:5083AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Object"  href="ilr:6F82AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Properties xmi.id="a11"  xmi.uuid="ilr:F484AA48075B03010000FCC4BF018265A8C0#1"  tagId="propagateArgumentType"  values="true"  name="propagateArgumentType"  editable="true"  visible="true"  deprecated="false" >
+<Model.Tag.elements>
+<DefaultBusinessModel.Method name="isNot"  xmi.idref="a8"  xmi.uuid="ilr:B282AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.Tag.elements>
+</DefaultBusinessModel.Properties>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a12"  xmi.uuid="ilr:D982AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="equals"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.bal.Date.Equals"  visible="true"  translation="{this} equals {0}"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a13"  xmi.uuid="ilr:8883AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="boolean"  href="ilr:1285AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a14"  xmi.uuid="ilr:9884AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Object"  href="ilr:6F82AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Properties xmi.id="a15"  xmi.uuid="ilr:DB84AA48075B03010000FCC4BF018265A8C0#1"  tagId="default"  values="true"  name="default"  editable="true"  visible="true"  deprecated="false" >
+<Model.Tag.elements>
+<DefaultBusinessModel.Method name="equals"  xmi.idref="a12"  xmi.uuid="ilr:D982AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.Tag.elements>
+</DefaultBusinessModel.Properties>
+<DefaultBusinessModel.Properties xmi.id="a16"  xmi.uuid="ilr:C784AA48075B03010000FCC4BF018265A8C0#1"  tagId="propagateArgumentType"  values="true"  name="propagateArgumentType"  editable="true"  visible="true"  deprecated="false" >
+<Model.Tag.elements>
+<DefaultBusinessModel.Method name="equals"  xmi.idref="a12"  xmi.uuid="ilr:D982AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.Tag.elements>
+</DefaultBusinessModel.Properties>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a17"  xmi.uuid="ilr:AE82AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="doesNotEqual"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.bal.Date.DoesNotEqual"  visible="true"  translation="! ({this} equals {0})"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a18"  xmi.uuid="ilr:5A84AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="boolean"  href="ilr:1285AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a19"  xmi.uuid="ilr:0584AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="arg"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Object"  href="ilr:6F82AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Properties xmi.id="a20"  xmi.uuid="ilr:E584AA48075B03010000FCC4BF018265A8C0#1"  tagId="propagateArgumentType"  values="true"  name="propagateArgumentType"  editable="true"  visible="true"  deprecated="false" >
+<Model.Tag.elements>
+<DefaultBusinessModel.Method name="doesNotEqual"  xmi.idref="a17"  xmi.uuid="ilr:AE82AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.Tag.elements>
+</DefaultBusinessModel.Properties>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a21"  xmi.uuid="ilr:0E83AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="after"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.bal.Date.After"  visible="true"  translation="{this}.after({0})"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a22"  xmi.uuid="ilr:8184AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="boolean"  href="ilr:1285AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a23"  xmi.uuid="ilr:6684AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="after"  editable="true"  visible="true"  deprecated="false"  type="a2" >
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a24"  xmi.uuid="ilr:C682AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="afterOrEquals"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.bal.Date.AfterOrEquals"  visible="true"  translation="{this}.compareTo({0}) &gt;= 0"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a25"  xmi.uuid="ilr:3784AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="boolean"  href="ilr:1285AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a26"  xmi.uuid="ilr:5684AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="after"  editable="true"  visible="true"  deprecated="false"  type="a2" >
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a27"  xmi.uuid="ilr:D682AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="before"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.bal.Date.Before"  visible="true"  translation="{this}.before({0})"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a28"  xmi.uuid="ilr:7983AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="boolean"  href="ilr:1285AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a29"  xmi.uuid="ilr:8A83AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="before"  editable="true"  visible="true"  deprecated="false"  type="a2" >
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a30"  xmi.uuid="ilr:E482AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="beforeOrEquals"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.bal.Date.BeforeOrEquals"  visible="true"  translation="{this}.compareTo({0}) &lt;= 0"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a31"  xmi.uuid="ilr:5483AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="boolean"  href="ilr:1285AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a32"  xmi.uuid="ilr:C783AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="before"  editable="true"  visible="true"  deprecated="false"  type="a2" >
+</DefaultBusinessModel.Parameter>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a33"  xmi.uuid="ilr:1883AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="isBetween"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.bal.Date.IsBetween"  visible="true"  translation="({this}.after({0}) &amp;&amp; {this}.before({1})) || ({this}.after({1}) &amp;&amp; {this}.before({0})) "  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a34"  xmi.uuid="ilr:0884AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="boolean"  href="ilr:1285AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a35"  xmi.uuid="ilr:F883AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="after"  editable="true"  visible="true"  deprecated="false"  type="a2" >
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a36"  xmi.uuid="ilr:9A84AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="before"  editable="true"  visible="true"  deprecated="false"  type="a2" >
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Properties xmi.id="a37"  xmi.uuid="ilr:DD84AA48075B03010000FCC4BF018265A8C0#1"  tagId="noTruncation"  values="true"  name="noTruncation"  editable="true"  visible="true"  deprecated="false" >
+<Model.Tag.elements>
+<DefaultBusinessModel.Method name="isBetween"  xmi.idref="a33"  xmi.uuid="ilr:1883AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.Tag.elements>
+</DefaultBusinessModel.Properties>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a38"  xmi.uuid="ilr:1583AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="isBetweenIE"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.bal.Date.IsBetweenIE"  visible="true"  deprecated="false" >
+<DefaultBusinessModel.ModelElement.translation>({this}.compareTo({0})&gt;=0 &amp;&amp; {this}.compareTo({1})&lt;0) || ({this}.compareTo({1})&gt;=0 &amp;&amp; {this}.compareTo({0})&lt;0) </DefaultBusinessModel.ModelElement.translation>
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a39"  xmi.uuid="ilr:5783AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="boolean"  href="ilr:1285AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a40"  xmi.uuid="ilr:0E84AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="after"  editable="true"  visible="true"  deprecated="false"  type="a2" >
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a41"  xmi.uuid="ilr:6F83AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="before"  editable="true"  visible="true"  deprecated="false"  type="a2" >
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Properties xmi.id="a42"  xmi.uuid="ilr:B484AA48075B03010000FCC4BF018265A8C0#1"  tagId="noTruncation"  values="true"  name="noTruncation"  editable="true"  visible="true"  deprecated="false" >
+<Model.Tag.elements>
+<DefaultBusinessModel.Method name="isBetweenIE"  xmi.idref="a38"  xmi.uuid="ilr:1583AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.Tag.elements>
+</DefaultBusinessModel.Properties>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a43"  xmi.uuid="ilr:D782AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="isBetweenEI"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.bal.Date.IsBetweenEI"  visible="true"  deprecated="false" >
+<DefaultBusinessModel.ModelElement.translation>({this}.compareTo({0})&gt;0 &amp;&amp; {this}.compareTo({1})&lt;=0) || ({this}.compareTo({1})&gt;0 &amp;&amp; {this}.compareTo({0})&lt;=0) </DefaultBusinessModel.ModelElement.translation>
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a44"  xmi.uuid="ilr:9C83AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="boolean"  href="ilr:1285AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a45"  xmi.uuid="ilr:ED83AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="after"  editable="true"  visible="true"  deprecated="false"  type="a2" >
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a46"  xmi.uuid="ilr:FA83AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="before"  editable="true"  visible="true"  deprecated="false"  type="a2" >
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Properties xmi.id="a47"  xmi.uuid="ilr:D484AA48075B03010000FCC4BF018265A8C0#1"  tagId="noTruncation"  values="true"  name="noTruncation"  editable="true"  visible="true"  deprecated="false" >
+<Model.Tag.elements>
+<DefaultBusinessModel.Method name="isBetweenEI"  xmi.idref="a43"  xmi.uuid="ilr:D782AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.Tag.elements>
+</DefaultBusinessModel.Properties>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a48"  xmi.uuid="ilr:9F82AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="isBetweenII"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.bal.Date.IsBetweenII"  visible="true"  deprecated="false" >
+<DefaultBusinessModel.ModelElement.translation>({this}.compareTo({0})&gt;=0 &amp;&amp; {this}.compareTo({1})&lt;=0) || ({this}.compareTo({1})&gt;=0 &amp;&amp; {this}.compareTo({0})&lt;=0) </DefaultBusinessModel.ModelElement.translation>
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a49"  xmi.uuid="ilr:2D84AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="boolean"  href="ilr:1285AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a50"  xmi.uuid="ilr:B183AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="after"  editable="true"  visible="true"  deprecated="false"  type="a2" >
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a51"  xmi.uuid="ilr:8284AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="before"  editable="true"  visible="true"  deprecated="false"  type="a2" >
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Properties xmi.id="a52"  xmi.uuid="ilr:A184AA48075B03010000FCC4BF018265A8C0#1"  tagId="noTruncation"  values="true"  name="noTruncation"  editable="true"  visible="true"  deprecated="false" >
+<Model.Tag.elements>
+<DefaultBusinessModel.Method name="isBetweenII"  xmi.idref="a48"  xmi.uuid="ilr:9F82AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.Tag.elements>
+</DefaultBusinessModel.Properties>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a53"  xmi.uuid="ilr:E082AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="isAtDayTime"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.bal.Date.IsAtDayTime"  visible="true"  deprecated="false" >
+<DefaultBusinessModel.ModelElement.translation>(ilog.rules.brl.IlrDateUtil.getDayOfWeek({this}) == {0} &amp;&amp; ilog.rules.brl.IlrDateUtil.getTime({this}).equals({1}))</DefaultBusinessModel.ModelElement.translation>
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a54"  xmi.uuid="ilr:8B84AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="boolean"  href="ilr:1285AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a55"  xmi.uuid="ilr:6183AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="day"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="DayOfWeek"  href="ilr:8682AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a56"  xmi.uuid="ilr:8383AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="time"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Time"  href="ilr:7F82AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Properties xmi.id="a57"  xmi.uuid="ilr:A384AA48075B03010000FCC4BF018265A8C0#1"  tagId="noTruncation"  values="true"  name="noTruncation"  editable="true"  visible="true"  deprecated="false" >
+<Model.Tag.elements>
+<DefaultBusinessModel.Method name="isAtDayTime"  xmi.idref="a53"  xmi.uuid="ilr:E082AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.Tag.elements>
+</DefaultBusinessModel.Properties>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a58"  xmi.uuid="ilr:F282AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="isAtMonthYear"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.bal.Date.IsAtMonthYear"  visible="true"  deprecated="false" >
+<DefaultBusinessModel.ModelElement.translation>(ilog.rules.brl.IlrDateUtil.getMonth({this}) == {0} &amp;&amp; ilog.rules.brl.IlrDateUtil.getYear({this}) == {1})</DefaultBusinessModel.ModelElement.translation>
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a59"  xmi.uuid="ilr:FD83AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="boolean"  href="ilr:1285AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a60"  xmi.uuid="ilr:5C84AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="month"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Month"  href="ilr:8082AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a61"  xmi.uuid="ilr:0D84AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="year"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Year"  href="ilr:8182AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Properties xmi.id="a62"  xmi.uuid="ilr:A484AA48075B03010000FCC4BF018265A8C0#1"  tagId="noTruncation"  values="true"  name="noTruncation"  editable="true"  visible="true"  deprecated="false" >
+<Model.Tag.elements>
+<DefaultBusinessModel.Method name="isAtMonthYear"  xmi.idref="a58"  xmi.uuid="ilr:F282AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.Tag.elements>
+</DefaultBusinessModel.Properties>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a63"  xmi.uuid="ilr:E982AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="isAtDate"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.bal.Date.IsAtDate"  visible="true"  translation="ilog.rules.brl.IlrDateUtil.getDate({this}).equals({0})"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a64"  xmi.uuid="ilr:7483AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="boolean"  href="ilr:1285AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a65"  xmi.uuid="ilr:9984AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="date"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="SimpleDate"  href="ilr:7D82AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Properties xmi.id="a66"  xmi.uuid="ilr:ED84AA48075B03010000FCC4BF018265A8C0#1"  tagId="noTruncation"  values="true"  name="noTruncation"  editable="true"  visible="true"  deprecated="false" >
+<Model.Tag.elements>
+<DefaultBusinessModel.Method name="isAtDate"  xmi.idref="a63"  xmi.uuid="ilr:E982AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.Tag.elements>
+</DefaultBusinessModel.Properties>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a67"  xmi.uuid="ilr:FD82AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="isAtTime"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.bal.Date.IsAtTime"  visible="true"  translation="ilog.rules.brl.IlrDateUtil.getTime({this}).equals({0})"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a68"  xmi.uuid="ilr:9583AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="boolean"  href="ilr:1285AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a69"  xmi.uuid="ilr:8583AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="time"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Time"  href="ilr:7F82AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Properties xmi.id="a70"  xmi.uuid="ilr:A984AA48075B03010000FCC4BF018265A8C0#1"  tagId="noTruncation"  values="true"  name="noTruncation"  editable="true"  visible="true"  deprecated="false" >
+<Model.Tag.elements>
+<DefaultBusinessModel.Method name="isAtTime"  xmi.idref="a67"  xmi.uuid="ilr:FD82AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.Tag.elements>
+</DefaultBusinessModel.Properties>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a71"  xmi.uuid="ilr:0F83AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="isAtMonth"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.bal.Date.IsAtMonth"  visible="true"  translation="ilog.rules.brl.IlrDateUtil.getMonth({this}) == {0}"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a72"  xmi.uuid="ilr:8684AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="boolean"  href="ilr:1285AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a73"  xmi.uuid="ilr:4C83AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="month"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Month"  href="ilr:8082AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Properties xmi.id="a74"  xmi.uuid="ilr:A084AA48075B03010000FCC4BF018265A8C0#1"  tagId="noTruncation"  values="true"  name="noTruncation"  editable="true"  visible="true"  deprecated="false" >
+<Model.Tag.elements>
+<DefaultBusinessModel.Method name="isAtMonth"  xmi.idref="a71"  xmi.uuid="ilr:0F83AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.Tag.elements>
+</DefaultBusinessModel.Properties>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a75"  xmi.uuid="ilr:B482AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="isAtDayOfWeek"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.bal.Date.IsAtDayOfWeek"  visible="true"  translation="ilog.rules.brl.IlrDateUtil.getDayOfWeek({this}) == {0}"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a76"  xmi.uuid="ilr:3C84AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="boolean"  href="ilr:1285AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a77"  xmi.uuid="ilr:5383AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="dayOfWeek"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="DayOfWeek"  href="ilr:8682AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Properties xmi.id="a78"  xmi.uuid="ilr:EE84AA48075B03010000FCC4BF018265A8C0#1"  tagId="noTruncation"  values="true"  name="noTruncation"  editable="true"  visible="true"  deprecated="false" >
+<Model.Tag.elements>
+<DefaultBusinessModel.Method name="isAtDayOfWeek"  xmi.idref="a75"  xmi.uuid="ilr:B482AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.Tag.elements>
+</DefaultBusinessModel.Properties>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+<DefaultBusinessModel.Method xmi.id="a79"  xmi.uuid="ilr:DB82AA48075B03010000FCC4BF018265A8C0#1"  isQuery="false"  visibility="public_vis"  name="isAtYear"  editable="true"  static="false"  final="false"  update="false"  alternate="&amp;ilog.rules.bal.Date.IsAtYear"  visible="true"  translation="ilog.rules.brl.IlrDateUtil.getYear({this}) == {0}"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Parameter xmi.id="a80"  xmi.uuid="ilr:4483AA48075B03010000FCC4BF018265A8C0#1"  direction="return_dir"  name="RETURN"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.PrimitiveType name="boolean"  href="ilr:1285AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Parameter xmi.id="a81"  xmi.uuid="ilr:3084AA48075B03010000FCC4BF018265A8C0#1"  direction="in_dir"  name="year"  editable="true"  visible="true"  deprecated="false" >
+<Model.TypedElement.type>
+<DefaultBusinessModel.Class name="Year"  href="ilr:8182AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.TypedElement.type>
+</DefaultBusinessModel.Parameter>
+<DefaultBusinessModel.Properties xmi.id="a82"  xmi.uuid="ilr:9F84AA48075B03010000FCC4BF018265A8C0#1"  tagId="noTruncation"  values="true"  name="noTruncation"  editable="true"  visible="true"  deprecated="false" >
+<Model.Tag.elements>
+<DefaultBusinessModel.Method name="isAtYear"  xmi.idref="a79"  xmi.uuid="ilr:DB82AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.Tag.elements>
+</DefaultBusinessModel.Properties>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Method>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Class>
+<DefaultBusinessModel.Class xmi.id="a83"  xmi.uuid="ilr:7A82AA48075B03010000FCC4BF018265A8C0#1"  noAction="false"  noCondition="false"  navigate="true"  bindingMode="none"  isSingleton="false"  isRoot="false"  isLeaf="false"  isAbstract="false"  visibility="public_vis"  name="Collection"  editable="true"  creationDate="19 Apr 2005 15:15:40 GMT"  lastModificationDate="19 Apr 2005 15:15:40 GMT"  implicit="false"  visible="false"  deprecated="false" >
+<Model.Namespace.contents>
+<DefaultBusinessModel.Properties xmi.id="a84"  xmi.uuid="ilr:AC84AA48075B03010000FCC4BF018265A8C0#1"  tagId="ilog.rules.bom.modifiers"  values="interface"  name="Properties"  editable="true"  visible="true"  deprecated="false" >
+<Model.Tag.elements>
+<DefaultBusinessModel.Class name="Collection"  xmi.idref="a83"  xmi.uuid="ilr:7A82AA48075B03010000FCC4BF018265A8C0#1" />
+</Model.Tag.elements>
+</DefaultBusinessModel.Properties>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Class>
+</Model.Namespace.contents>
+</DefaultBusinessModel.Package>
+</XMI.content>
+</XMI>

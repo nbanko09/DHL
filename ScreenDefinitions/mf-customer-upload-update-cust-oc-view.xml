@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="all-rescan-view" template="masterfile-upload-customer-update-all-oc-tpl.xml"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/view.xsd">
+
+    <labels default="en">
+        <locale name="en">
+        </locale>
+    </labels>
+    
+    <section-overrides>
+		<section name="additionalInformation" visible="false" />
+		<section name="shipperInfo" visible="false"/>
+    </section-overrides>
+        
+    <property-overrides>
+        <textArea name="voucherComments" defaultValue="Warning! Request to update an account must be approved. Please forward to a local authorized Approver or attach supporting documentation."/>
+    </property-overrides>
+
+    <hidden-overrides>
+        <hidden name="processInformation.response" defaultValue="Complete"/>
+    </hidden-overrides>
+
+    <validations>
+    </validations>
+</view>
